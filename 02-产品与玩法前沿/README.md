@@ -6,6 +6,8 @@
 - [2.2 美国市场](2.2-美国市场.md) — AI-native 创业潮（Inworld/Hidden Door/Latitude/Altera)
 - [2.3 日韩市场](2.3-日韩市场.md) — Krafton/Nexon/NCSoft/CyberAgent 实验室
 - [2.4 跨区域趋势综合](2.4-跨区域趋势综合.md) — 主 agent 汇总
+- [2.5 UGC AI Playable Maker](2.5-UGC-AI-Playable-Maker.md) — GPF 品类定义与 19 产品案例
+- [**2.6 GPF 深度专题**](2.6-GPF深度专题.md) — 8 家产品七字段拆解 / 27 sources / 经济学三前提推导 **（权威）**
 
 ## 资产
 

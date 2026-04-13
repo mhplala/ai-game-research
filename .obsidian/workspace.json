@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-跨品类启发/5.5-可迁移矩阵.md",
+                "file": "02-产品与玩法前沿/2.6-GPF深度专题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.5-可迁移矩阵"
+              "title": "2.6-GPF深度专题"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05-跨品类启发/5.5-可迁移矩阵.md",
+                "file": "02-产品与玩法前沿/2.6-GPF深度专题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "5.5-可迁移矩阵 的反向链接列表"
+              "title": "2.6-GPF深度专题 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05-跨品类启发/5.5-可迁移矩阵.md",
+                "file": "02-产品与玩法前沿/2.6-GPF深度专题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "5.5-可迁移矩阵 的出链列表"
+              "title": "2.6-GPF深度专题 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05-跨品类启发/5.5-可迁移矩阵.md",
+                "file": "02-产品与玩法前沿/2.6-GPF深度专题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "5.5-可迁移矩阵 的大纲"
+              "title": "2.6-GPF深度专题 的大纲"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "c0cfd64a24ec8c1c",
   "lastOpenFiles": [
+    "docs/assets/search-index.json",
     "docs/downloads.html",
     "docs/index.html",
     "docs/modules/06-机会地图整合/风险警示.html",
@@ -195,14 +196,17 @@
     "docs/modules/06-机会地图整合/B-投资机会.html",
     "docs/modules/06-机会地图整合/A-产品机会.html",
     "docs/modules/06-机会地图整合",
-    "docs/modules/04-玩家行为与留存心理/index.html",
-    "项目认知与市场认知.md",
+    "03-技术栈与可行性GAP/3.1-现有技术栈能力.md",
     "质量评审报告.md",
     "校验点5-最终简报.md",
+    "06-机会地图整合/机会地图.md",
+    "05-跨品类启发/5.5-可迁移矩阵.md",
+    "02-产品与玩法前沿/2.6-GPF深度专题.gemini.md",
+    "02-产品与玩法前沿/2.6-GPF深度专题.md",
+    "项目认知与市场认知.md",
     "06-机会地图整合/风险警示.md",
     "06-机会地图整合/B-投资机会.md",
     "06-机会地图整合/C-行业趋势判断.md",
-    "06-机会地图整合/机会地图.md",
     "06-机会地图整合/A-产品机会.md",
     "06-机会地图整合/D-战略进入路径.md",
     "01-赛道现状与市场结构/1.4-玩家全景图.md",
@@ -210,16 +214,12 @@
     "01-赛道现状与市场结构/1.2-市场规模与增速.md",
     "02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.md",
     "02-产品与玩法前沿/2.4-跨区域趋势综合.md",
-    "05-跨品类启发/5.5-可迁移矩阵.md",
     "05-跨品类启发/5.4-陪伴与工具.md",
     "05-跨品类启发/5.3-教育与游戏.md",
     "05-跨品类启发/5.1-广告与游戏.md",
     "02-产品与玩法前沿/2.3-日韩市场.md",
     "05-跨品类启发/5.2-社交与游戏.md",
     "04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.md",
-    "04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.md",
-    "04-玩家行为与留存心理/4.2-留存曲线特征.md",
-    "04-玩家行为与留存心理/4.1-付费心理与Token经济学.md",
-    "03-技术栈与可行性GAP/3.1-现有技术栈能力.md"
+    "04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.md"
   ]
 }
