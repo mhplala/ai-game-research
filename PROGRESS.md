@@ -331,6 +331,6 @@
 
 1. 写 methodology.md + glossary.md（主 agent,2 分钟）
 2. 写 gemini_fallback.py（主 agent,5 分钟）
-3. 复用口腔项目的工具链（symlink 或复制 scripts/,2 分钟）
+3. 复用既有工具链（symlink 或复制 scripts/,2 分钟）
 4. 派第一批 6 个 Claude sub-agents（模块 1.1/1.2/1.3/3/4/5)
 5. Monitor 盯，卡住派 Gemini 兜底

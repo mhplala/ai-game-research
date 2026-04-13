@@ -122,7 +122,6 @@
     <article class="article"><div class="article-breadcrumb"><a href="index.html">总览</a> · 研究方案</div><h1 id="ai-playable">AI 小游戏与 Playable 体验赛道研究 — 完整研究方案<a class="headerlink" href="#ai-playable" title="Permanent link">#</a></h1>
 <blockquote>
 <p>版本：v1.0 · 创建日期：2026-04-13
-上游项目：<code>/Users/bytedance/research 牙刷/</code>（儿童口腔，方法论母本）
 负责：Claude Opus 4.6 (1M context) + Gemini 3.1 Pro Preview（双路 fallback)</p>
 </blockquote>
 <hr />
@@ -135,7 +134,7 @@
 <p><strong>重点</strong>：不做&rdquo;AI 工具辅助开发&rdquo;的研究（那是开发工具话题），只做 <strong>&ldquo;AI 作为玩法机制本身&rdquo;</strong> 或 <strong>&ldquo;AI 改变分发/变现/留存&rdquo;</strong> 的部分。</p>
 <hr />
 <h2 id="2">2. 研究目的 · 四视角&rdquo;全都要&rdquo;<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
-<p>与上一个项目（儿童口腔）的&rdquo;品牌方策划新品线&rdquo;单一视角不同，本项目<strong>同时服务四种读者</strong>:</p>
+<p>与上一个项目的单一视角不同，本项目<strong>同时服务四种读者</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -170,7 +169,7 @@
 <p><strong>四视角在每个模块的&rdquo;洞察&rdquo;章节都要分别回答</strong>，不是单独一个模块。</p>
 <hr />
 <h2 id="3-1">3. 五大研究模块（+ 1 整合）<a class="headerlink" href="#3-1" title="Permanent link">#</a></h2>
-<p>镜像口腔项目结构（工具链复用），但内容全部新写：</p>
+<p>镜像既有研究结构（工具链复用），但内容全部新写：</p>
 <h3 id="00">模块 00 · 方法论与术语<a class="headerlink" href="#00" title="Permanent link">#</a></h3>
 <ul>
 <li>methodology.md — 可信度分级 / 引用格式 / 安全网规则</li>
@@ -201,7 +200,7 @@
 </ul>
 <h3 id="04">模块 04 · 玩家行为与留存心理<a class="headerlink" href="#04" title="Permanent link">#</a></h3>
 <ul>
-<li>不是儿童发展心理学，而是 <strong>&ldquo;为什么玩家为 AI 游戏付费 / 留存 / 退坑&rdquo;</strong></li>
+<li>聚焦 <strong>&ldquo;为什么玩家为 AI 游戏付费 / 留存 / 退坑&rdquo;</strong></li>
 <li>4.1 付费心理与 Token 经济学（AI Dungeon/Character.AI subscription 模式）</li>
 <li>4.2 留存曲线特征（AI 游戏的 D1/D7/D30 vs 传统小游戏）</li>
 <li>4.3 情感依恋与 AI NPC(Replika/Character.AI 的启示）</li>
@@ -226,7 +225,7 @@
 </ul>
 <hr />
 <h2 id="4-tier">4. 地域 Tier 分层<a class="headerlink" href="#4-tier" title="Permanent link">#</a></h2>
-<p>与口腔项目（日本医学中心）不同，AI 游戏赛道是<strong>双中心</strong>:</p>
+<p>AI 游戏赛道是<strong>双中心</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -260,7 +259,7 @@
 </table>
 <hr />
 <h2 id="5">5. 信息源策略<a class="headerlink" href="#5" title="Permanent link">#</a></h2>
-<p>比口腔项目更重电商/融资/媒体数据（因为赛道缺学术基础）：</p>
+<p>本赛道缺学术基础，因此更重电商/融资/媒体数据：</p>
 <table>
 <thead>
 <tr>
@@ -289,7 +288,7 @@
 </table>
 <hr />
 <h2 id="6-gemini">6. 执行流水线 · 并行 + Gemini 兜底<a class="headerlink" href="#6-gemini" title="Permanent link">#</a></h2>
-<p>与口腔项目不同，这次设计 <strong>双路 fallback</strong> 机制：</p>
+<p>本次设计 <strong>双路 fallback</strong> 机制：</p>
 <h3 id="claude">正常流程（Claude 为主）<a class="headerlink" href="#claude" title="Permanent link">#</a></h3>
 <ol>
 <li>派 5-7 个 Claude sub-agents 并行做第一批模块</li>
@@ -306,7 +305,7 @@
 <ol start="7">
 <li>主 agent 做模块 2.4 / 1.4 全景图整合（用 Claude + Gemini 双写，取优）</li>
 <li>跑 <code>quality_audit.py</code>(Gemini 2.5 Flash 评审）</li>
-<li>跑 <code>optimize_parallel.py</code>(Gemini 3.1 Pro 改写，复用口腔项目脚本）</li>
+<li>跑 <code>optimize_parallel.py</code>(Gemini 3.1 Pro 改写）</li>
 <li>跑 <code>regression_check.py</code> 分类 SAFE/DANGER</li>
 <li>建苹果风静态站点（复用 <code>build_site.py</code>)</li>
 <li>二次评审 + 对比前后</li>
@@ -314,7 +313,7 @@
 </ol>
 <hr />
 <h2 id="7-1">7. 工具链（全部复用 + 新增 1 个）<a class="headerlink" href="#7-1" title="Permanent link">#</a></h2>
-<h3 id="_2">从口腔项目完整复用<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h3 id="_2">完整复用既有工具链<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ul>
 <li><code>scripts/build_site.py</code> — 苹果风静态站点</li>
 <li><code>scripts/normalize_punct.py</code> — 中文标点规范化</li>
@@ -328,7 +327,7 @@
 </ul>
 <hr />
 <h2 id="8">8. 安全网设计<a class="headerlink" href="#8" title="Permanent link">#</a></h2>
-<p>从口腔项目继承的原则（已证明有效）：</p>
+<p>继承已证明有效的原则：</p>
 <ol>
 <li><strong>每个关键节点 git commit</strong>（快照可回滚）</li>
 <li><strong><code>optimize_parallel.py</code> 产出到 <code>optimized/</code> 镜像目录，不动原文</strong></li>
@@ -343,7 +342,7 @@
 <p><strong>关键平台</strong>：微信小游戏 / 抖音小游戏 / 快手小游戏 / QQ 小游戏 / Meta Horizon / Facebook Instant Games / Steam / Poki / CrazyGames / itch.io</p>
 <hr />
 <h2 id="10">10. 交付物清单<a class="headerlink" href="#10" title="Permanent link">#</a></h2>
-<p>完成后产出（和口腔项目结构完全同构）：
+<p>完成后产出：
 - <code>README.md</code> / <code>research-plan.md</code> / <code>PROGRESS.md</code> / <code>sources.md</code> / <code>校验点X-简报.md</code>
 - <code>00-方法论与术语/</code> — methodology.md / glossary.md
 - <code>01-赛道现状与市场结构/</code> — 4 个子文件 + Excel 全景图 + CSV 数据
@@ -388,7 +387,7 @@
 <li class="toc-h3"><a href="#gemini">异常处理（Gemini 兜底）</a></li>
 <li class="toc-h3"><a href="#_1">后续</a></li>
 <li class=""><a href="#7-1">7. 工具链（全部复用 + 新增 1 个）</a></li>
-<li class="toc-h3"><a href="#_2">从口腔项目完整复用</a></li>
+<li class="toc-h3"><a href="#_2">完整复用既有工具链</a></li>
 <li class="toc-h3"><a href="#_3">新写</a></li>
 <li class=""><a href="#8">8. 安全网设计</a></li>
 <li class=""><a href="#9-regression-check">9. 关键字典（新建，用于 regression check)</a></li>

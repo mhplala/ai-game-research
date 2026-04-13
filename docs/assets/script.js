@@ -37,11 +37,47 @@
   const menuBtn = document.querySelector('.menu-toggle');
   const sidebar = document.querySelector('.sidebar');
   if (menuBtn && sidebar) {
-    menuBtn.addEventListener('click', () => sidebar.classList.toggle('open'));
-    document.addEventListener('click', (e) => {
-      if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
-        sidebar.classList.remove('open');
-      }
+    // 注入遮罩层
+    let backdrop = document.querySelector('.sidebar-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'sidebar-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    const closeSidebar = () => {
+      sidebar.classList.remove('open');
+      backdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    const openSidebar = () => {
+      sidebar.classList.add('open');
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sidebar.classList.contains('open')) closeSidebar();
+      else openSidebar();
+    });
+    backdrop.addEventListener('click', closeSidebar);
+
+    // 点击侧边栏链接后自动关闭
+    sidebar.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 960px)').matches) closeSidebar();
+      });
+    });
+
+    // ESC 关闭
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSidebar();
+    });
+
+    // 窗口变宽时清除 open 状态
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 960) closeSidebar();
     });
   }
 

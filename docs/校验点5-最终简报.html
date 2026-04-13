@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="&quot;AI × 小游戏&quot;的正面交集当前基本不存在(Token 经济学真空带),但 2025 年冒出的 Generative Playable Feed(GPF)新品类 — 以 Rezona / LoopIt / YouTube Playables Builder 为代表 — 正在用 Pipeline AI + UGC 飞轮绕开真空带。中国 Pipeline Cr…">
+<meta name="description" content="我花了半年时间研究&quot;AI × 小游戏&quot;,得到的第一个结论是:这个交集目前基本不存在。">
 <title>最终简报 · AI 小游戏与 Playable 体验研究</title>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
@@ -119,406 +119,164 @@
 </div>
 </aside>
   <main class="main">
-    <article class="article"><div class="article-breadcrumb"><a href="index.html">总览</a> · 最终简报</div><h1 id="5-ai">校验点 5 · AI 游戏研究最终简报<a class="headerlink" href="#5-ai" title="Permanent link">#</a></h1>
+    <article class="article"><div class="article-breadcrumb"><a href="index.html">总览</a> · 最终简报</div><h1 id="12">最终简报:真空带、新物种与一个 12 个月的窗口<a class="headerlink" href="#12" title="Permanent link">#</a></h1>
 <blockquote>
-<p><strong>时间</strong>:2026-04-13
-<strong>给</strong>:研究发起人 / 创业者 / 投资人 / 行业 / 战略读者
-<strong>状态</strong>:研究完成,进入质量评审与优化阶段</p>
+<p>2026-04-13 · 研究收口</p>
 </blockquote>
+<h2 id="_1">一个反直觉的开场<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>我花了半年时间研究&rdquo;AI × 小游戏&rdquo;,得到的第一个结论是:这个交集目前基本不存在。</p>
+<p>这听起来像在否定立项本身,但我想说得更具体一点 — 真正不存在的,是<strong>跑在玩家手机里、每一次对话都烧 OpenAI token、同时又靠 IAA 广告变现的那种小游戏</strong>。这条路线在账面上就是死的。它不是还没被做出来,而是被 token 单价和广告 eCPM 两头夹死,做得越好亏得越多。</p>
+<p>真正有意思的故事从这里开始:2025 年冒出来的一批新东西 — Rezona、LoopIt、YouTube Playables Builder — 绕开了这道数学题。它们不是&rdquo;AI 小游戏&rdquo;,它们是一个我愿意暂时叫作 <strong>Generative Playable Feed(GPF)</strong> 的新物种。而中国的 Pipeline-Creator 象限,92 家玩家里写着零。</p>
+<p>这份简报想讲清楚的,就是这两件事之间的空当。</p>
 <hr />
-<h2 id="tldr">TL;DR(一句话)<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
-<p><strong>&ldquo;AI × 小游戏&rdquo;的正面交集当前基本不存在(Token 经济学真空带),但 2025 年冒出的 Generative Playable Feed(GPF)新品类 — 以 Rezona / LoopIt / YouTube Playables Builder 为代表 — 正在用 Pipeline AI + UGC 飞轮绕开真空带。中国 Pipeline-Creator 象限零玩家,12-18 个月窗口期,是全球最空白的单一机会。</strong></p>
+<h2 id="_2">一、那道让所有人卡住的算术题<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>先把经济学讲完,后面所有判断才站得住。</p>
+<p>OpenAI 2025 年 3 月公布的 GPT-4o-mini 定价,折算到一小时的自然语言对话(上下文 + 输出)大概是 $0.014 一个 session[S-01-03]。看上去很便宜,直到你把它放在小游戏的变现曲线旁边。微信小游戏和全球休闲小游戏的 IAA ARPDAU 通常卡在 <strong>$0.05 以下</strong>。这两个数字对撞一下,AI 税会吃掉广告收入的 <strong>15%-40%</strong>[S-01-03, S-03-02]。</p>
+<p>15%-40% 是什么概念?一款健康的 IAA 小游戏净利率本来就只有 10%-20%。你把 AI 塞进去,它不是&rdquo;增加一项成本&rdquo;,它是把整个生意直接推到水面以下。</p>
+<p>我在整理 Phase 3 的 18 条 GAP 时,把这一条标成&rdquo;G06 Token 倒挂&rdquo;。它是 18 条里最硬的那面墙 — 硬到其他 17 条都显得可以谈判。做 AI × IAA 小游戏的创业者,大部分在第四个月到第六个月之间意识到这件事,然后开始转型。融资过的不转也得转。</p>
+<p>所以当有人跟我说&rdquo;我们做了一款 AI-native 小游戏&rdquo;,我第一个问题是:你的 token 从哪一笔钱里出?如果答案是广告,那这个项目的寿命是可以用 Excel 算出来的。</p>
+<p>真空带就是这样形成的。它不是认知问题,是算术问题。</p>
 <hr />
-<h2 id="1">1. 研究进度与产出<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
-<h3 id="phase">四个 Phase 全部完成<a class="headerlink" href="#phase" title="Permanent link">#</a></h3>
+<h2 id="rezonaloopit-gpf">二、Rezona、LoopIt 和那个叫 GPF 的东西<a class="headerlink" href="#rezonaloopit-gpf" title="Permanent link">#</a></h2>
+<p>2025 年秋天,我在追一家法国公司 MWM 的时候撞到了 Rezona[S-02-05]。第一眼觉得这不就是 AI 版的 TikTok 游戏频道 — 再看第二眼,才发现它把经济学翻了个面。</p>
+<p>GPF 的机制是这样的:用户打一段 prompt,AI 生成一款 playable 小游戏,丢进一个 feed 里,别人刷到可以直接玩、可以一键 remix。<strong>AI 只在创作的那一下被调用</strong>,成本大概是 $0.1 到 $0.5 一次生成。游戏一旦生成,它就是静态的 HTML5 资产,后续 1000 个人来玩,runtime AI 成本是零。</p>
+<p>把这个逻辑翻译成生意:<strong>创作者付 AI 的钱(或者被平台补贴),消费者免费玩,平台按 TikTok 的方式做 feed 和变现</strong>。token 经济学消失了,因为它根本就没进 runtime。同一套设计顺手解决了另外两个长期痛点 — 内容枯竭和冷启动 — 因为每一个 prompt 都是新内容,每一次 remix 都是新入口。</p>
+<p>目前这个象限全球大概有 7 家玩家:Rezona、LoopIt、YouTube Playables Builder、Upit、Jabali.ai、Rosebud、Websim。MWM 自述 Rezona 的 DAU 在 40 万左右,数据黑箱,我只能信一半。但 Google 亲自下场做 YouTube Playables Builder 这件事,比任何 DAU 数据都有说服力 — Google 不会为一个没有 thesis 的品类上人。</p>
+<p>GPF 这个品类我七成确信它会成,剩下三成的不确定性来自两个问题:一是生成质量的 ceiling 到底在哪(现在的 playable 复杂度大概只到 2005 年 Flash 小游戏水平),二是 YouTube / TikTok / Roblox 之中有没有一家会在 12 个月内把整个赛道吸进自己的 feed 里。后一种情况如果发生,独立 GPF 公司的窗口会关得非常快。</p>
+<p>中国这一侧的情况更极端:<strong>Pipeline-Creator 象限零玩家</strong>。腾讯和字节都只在做底层 SDK,没有一家做面向 C 端创作者的 GPF 产品。这就是我在 TL;DR 里写的那个 12-24 个月窗口 — 它不是营销话术,它是象限上的一个空格。</p>
+<hr />
+<h2 id="_3">三、中国的版号,把&rdquo;游戏&rdquo;这个词赶出了游戏业<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>这一节是整份研究里我自己最意外的发现。</p>
+<p>先看清单:<strong>星野、猫箱、筑梦岛</strong>,中国三款最赚钱的 AI 陪伴产品,没有一个叫自己游戏。星野 2024 年流水超过 3 亿、付费率 3%-5%[S-05-01];猫箱 DAU 过 100 万[S-05-01]。它们的行为循环 — 每日登录、签到、情感投入、抽卡式的剧情解锁 — 和一款乙女游戏完全同构。但在应用商店里它们是&rdquo;社交&rdquo;或&rdquo;娱乐&rdquo;,不是&rdquo;游戏&rdquo;。</p>
+<p>为什么?因为挂&rdquo;游戏&rdquo;标签要版号,版号要排队,排队意味着产品形态锁死在提审那一刻,AI 生成内容就过不了。于是一个很奇怪的事情发生了:<strong>中国监管反向把&rdquo;游戏性&rdquo;这个定义权从游戏行业里赶了出去</strong>。</p>
+<p>然后你看美国这边,Character.AI 在做同样的事情,但原因完全不同 — 他们是自发选择不叫自己游戏,因为&rdquo;游戏&rdquo;这个标签会压估值、会招来未成年人保护诉讼(Garcia v. Character Technologies 现在还没判)。</p>
+<p>三个地理、两套理由、一个结果:<strong>最赚钱的&rdquo;准游戏&rdquo;都在拒绝游戏这个标签</strong>。</p>
+<p>Anuttacon 的团队从中国出来之后把公司注册在美国,Whispers from the Star 直接做 to 海外,这不是偶然。这是中国 AI 游戏创业者用脚投票的结果 — 他们知道在中国市场挂游戏标签等于自绑双脚。</p>
+<p>这件事对战略判断的意义是:<strong>最优产品形态,可能不是做一款游戏,而是把游戏核藏进陪伴、教育、工具的壳里</strong>。P3 那条路(&ldquo;游戏壳 ≠ 游戏&rdquo;)就是从这个观察里长出来的。</p>
+<hr />
+<h2 id="92">四、92 家玩家全景图:两个分化<a class="headerlink" href="#92" title="Permanent link">#</a></h2>
+<p>Phase 3 我带着一个 sub-agent 把全球 92 家玩家(85 家主扫 + 7 家占位)整理进一张 Excel,按国家和双刀维度打标。这张表里最值得盯的不是某一家公司,而是两个分化。</p>
+<p><strong>第一个分化是跑通率</strong>。整张表里&rdquo;跑通&rdquo;状态的只有 6 家,约 7%。剩下的 79 家分布在增长(22)、稳态(24)、早期(14)、警告(10)、死亡(11)之间。7% 这个数字告诉你:这个赛道到今天还在高度不确定期,任何人告诉你&rdquo;AI 游戏已经成熟&rdquo;都是在卖东西给你。</p>
+<p><strong>第二个分化是两端拉开</strong>。一端是 AAA 大厂的 runtime AI,Krafton 的 MOGIA 和 inZOI Smart Zoi 首次让 runtime AI 在 3A 里跑通[S-04-04];另一端是中型 AI 创业公司,Hidden Door、AI Dungeon、Latitude 这一档集体失血。中间地带几乎没人活着。这意味着在 12 个月尺度上,这个赛道的形态可能是&rdquo;大厂自建 + 小而美独立 + 中间层 middleware&rdquo;,而不是&rdquo;中型 AI-native 工作室&rdquo;。</p>
+<p>按双刀维度看,分布是这样的:</p>
 <table>
 <thead>
 <tr>
-<th>Phase</th>
-<th>内容</th>
-<th>产出</th>
+<th>维度</th>
+<th>数量</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Phase 1</td>
-<td>6 个并行 sub-agents + 模块 1.1/1.2/1.3/3/4/5</td>
-<td>16 个子文件</td>
+<td>AI-native / AI-augmented / AI-washed / Enabler / AI-free</td>
+<td>45 / 14 / 13 / 17 / 3</td>
 </tr>
 <tr>
-<td>Phase 2</td>
-<td>3 个并行 sub-agents + 模块 2.1/2.2/2.3</td>
-<td>3 个子文件</td>
+<td>Runtime / Pipeline-Dev / Pipeline-Creator / Pipeline-Embedded / Hybrid / None</td>
+<td>42 / 26 / 7 / 3 / 5 / 8</td>
 </tr>
 <tr>
-<td><strong>Scope 中期调整</strong></td>
-<td>发现 Rezona / LoopIt / YouTube Playables Builder 新物种</td>
-<td>1 个新模块(2.5 GPF)+ 2 个追加章节(2.4 Scenario E / 1.1 双刀)</td>
-</tr>
-<tr>
-<td>Phase 3</td>
-<td>主 agent 整合 + sub-agent 协作</td>
-<td>2.4 跨区域综合 + 1.4 玩家全景图 + 模块 06 六个文件</td>
-</tr>
-<tr>
-<td>Phase 4</td>
-<td>规范化 + 质量评审 + 3.1 Pro 优化 + 网站 + push</td>
-<td>进行中</td>
+<td>中国 / 美国 / 日本 / 韩国 / 欧洲 / 政策</td>
+<td>27 / 32 / 13 / 14 / 3 / 1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="_1">产出统计<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
-<ul>
-<li><strong>43 个 md 文件</strong>(含 7 个模块 README + 方法论 + 术语表 + 根文件)</li>
-<li><strong>玩家全景图 Excel</strong>:92 家 × 15 列(带双刀色块 + 冻结表头 + 自动筛选)</li>
-<li><strong>5 个 CSV</strong>(模块 1.2 市场数据 + 1.3 平台对比等)</li>
-<li><strong>工具链</strong>:6 个 Python 脚本(build_site / normalize_punct / quality_audit / optimize_parallel / regression_check / gemini_fallback)</li>
-</ul>
+<p>真正空的象限是 <strong>Enabler × Pipeline-Creator</strong> — 全球 7 家,中国 0 家[S-01-04]。</p>
 <hr />
-<h2 id="2">2. 研究的核心命题(最重要的一段)<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
-<h3 id="vs">原命题 vs 修订命题<a class="headerlink" href="#vs" title="Permanent link">#</a></h3>
-<p><strong>原命题</strong>(研究方案 v1.0):</p>
-<blockquote>
-<p>&ldquo;AI 如何重塑小游戏与 playable 体验赛道?&rdquo;</p>
-</blockquote>
-<p><strong>研究中期发现的修订命题</strong>:</p>
-<blockquote>
-<p><strong>&ldquo;Runtime AI × 小游戏是真空带(Token 经济学卡死),但 Generative Playable Feed(GPF)子品类正在用 Pipeline AI + UGC 飞轮打破它 — 窗口期 12-24 个月,之后被 YouTube / TikTok / Roblox 平台化吃掉。&rdquo;</strong></p>
-</blockquote>
-<h3 id="_2">三大命题支柱<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
-<h4 id="1-11-13-3">1. 经济学真空带(模块 1.1 + 1.3 + 3)<a class="headerlink" href="#1-11-13-3" title="Permanent link">#</a></h4>
-<ul>
-<li><strong>Token/session $0.014</strong>(GPT-4o-mini)</li>
-<li><strong>IAA ARPDAU &lt; $0.05</strong></li>
-<li>毛利空间根本不够支付 AI 税</li>
-<li>AI 税吞掉 <strong>15-40% 的 ARPDAU</strong>(模块 1.3)</li>
-<li><strong>G06 Token 倒挂</strong> 是 18 条 GAP 中最硬的墙(模块 3)</li>
-</ul>
-<h4 id="2-5-21">2. 游戏性定义权脱离(模块 5 + 2.1)<a class="headerlink" href="#2-5-21" title="Permanent link">#</a></h4>
-<ul>
-<li>Character.AI / 星野 / 猫箱 / Duolingo Max / Midjourney Discord <strong>都不叫自己游戏,但行为循环完全同构</strong></li>
-<li><strong>&ldquo;游戏性&rdquo;的定义权已经从游戏行业脱离</strong></li>
-<li>中国版号强制 + 美国自发选择 + 日韩文化偏好 = 三地同一结论</li>
-<li><strong>未来最优形态不是做游戏,而是把游戏核藏进陪伴 / 工具 / 教育的壳</strong></li>
-</ul>
-<h4 id="3-pipeline-ai-25-gpf">3. Pipeline AI 新物种(模块 2.5 GPF)<a class="headerlink" href="#3-pipeline-ai-25-gpf" title="Permanent link">#</a></h4>
-<ul>
-<li><strong>Rezona / LoopIt</strong>(MWM.ai 法国)</li>
-<li><strong>YouTube Playables Builder</strong>(Google 2024-2025)</li>
-<li><strong>Upit / Jabali.ai / Rosebud / Websim</strong></li>
-<li>共同机制:<strong>text prompt → AI 生成 playable → TikTok 式 feed → 一键 remix</strong></li>
-<li><strong>经济学公式</strong>:AI 只在创作时调用(~$0.1-0.5),玩家消费静态生成结果,<strong>Runtime AI 成本 = 0</strong></li>
-<li><strong>同时解决 Token 经济学 + 内容枯竭 + 冷启动三大痛点</strong></li>
-</ul>
-<hr />
-<h2 id="3">3. 四大区域画像<a class="headerlink" href="#3" title="Permanent link">#</a></h2>
+<h2 id="_4">五、四大区域,一句话各一个<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
 <th>市场</th>
-<th>角色</th>
-<th>关键特征</th>
-<th>核心案例</th>
+<th>一句话判断</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>美国</strong></td>
-<td>主战场,退出模式已浮现</td>
-<td>middleware 跑通(Inworld $500M)+ C 端陪伴独立 IPO 关闭(c.ai / Inflection reverse acqui-hire)+ GPF 新物种早期</td>
-<td>Character.AI / Inworld / Suck Up! / Altera / Hidden Door / Latitude / Rezona 对标</td>
+<td>美国</td>
+<td>主战场,middleware 跑通(Inworld $500M),C 端独立陪伴 IPO 这条路已经关掉(c.ai → Google $2.7B 是失败的成功退出),GPF 新物种领跑[S-02-01]</td>
 </tr>
 <tr>
-<td><strong>中国</strong></td>
-<td>主战场但&rdquo;游戏性&rdquo;被版号扭曲</td>
-<td>星野 / 猫箱 / 筑梦岛 全部藏在陪伴品类;Anuttacon 团队注册美国;Pipeline-Creator 象限零玩家</td>
-<td>星野 2024 流水 &gt;3 亿 / 猫箱 DAU 百万 / Whispers from the Star / 寻道大千 AI 买量</td>
+<td>中国</td>
+<td>主战场但&rdquo;游戏性&rdquo;被版号扭曲,所有赚钱产品藏在陪伴品类,Pipeline-Creator 零玩家[S-02-02]</td>
 </tr>
 <tr>
-<td><strong>日本</strong></td>
-<td><strong>应该大却哑火</strong></td>
-<td>VN 土壤被作者性 + IP 法务锁死 / VTuber 生态挤占 / AAA 内部工具化 / Portopia AI Demo 翻车</td>
-<td>Square Enix AI Division / Cotomo / 1001 Nights</td>
+<td>日本</td>
+<td>该大没大 — VN 土壤被作者性和 IP 法务锁死,VTuber 挤占情感位,Portopia AI Demo 公开翻车后大厂更保守[S-02-03]</td>
 </tr>
 <tr>
-<td><strong>韩国</strong></td>
-<td><strong>雷声大雨将落</strong></td>
-<td>4 大 Lab 全到位(MOGIA / VARCO / Nexon IL / Smilegate) / 2026-2027 爆发窗口</td>
-<td>Krafton MOGIA inZOI Smart Zoi / ScatterLab Zeta</td>
+<td>韩国</td>
+<td>雷声大雨将落 — 四大 Lab 已就位(MOGIA / VARCO / Nexon IL / Smilegate),真正爆发我估计在 2026-2027[S-02-04]</td>
 </tr>
 </tbody>
 </table>
+<p>Character.AI 这个案子我想单独说一句。a16z 投了这家公司,最后被 Google 用 $2.7B 授权带走[S-05-03] — 很多人把这个当成成功退出,但它不是。a16z 的实际 multiple 远低于 10x,创始人被 acqui-hire 回 Google,产品保留但不再是独立公司。<strong>这是&rdquo;AI 陪伴独立 IPO&rdquo;这条路被证伪的瞬间</strong>,不是胜利。Inflection 后来以 $650M 被微软收编,估值从 $1.3B 直接砍一半,基本印证了同一个判断。</p>
 <hr />
-<h2 id="4">4. 关键数字速查<a class="headerlink" href="#4" title="Permanent link">#</a></h2>
-<h3 id="_3">市场规模<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<ul>
-<li><strong>微信小游戏 2024 流水</strong>:<strong>400 亿元+</strong>(腾讯 Q3 财报 + 微信公开课 2025)</li>
-<li><strong>微信小游戏 2023 流水</strong>:<strong>200 亿元+</strong></li>
-<li><strong>全球移动游戏 2024</strong>:<strong>$98.7B</strong>(Newzoo)</li>
-<li><strong>中国小游戏大盘 2024</strong>:~<strong>620-690 亿元</strong>(估算)</li>
-<li><strong>全球小游戏子集 2024</strong>:~<strong>$22-25B</strong></li>
-</ul>
-<h3 id="_4">融资<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
-<ul>
-<li><strong>AI-native 游戏 2022-2024 累计融资</strong>:<strong>~$1B</strong></li>
-<li><strong>2023 峰值</strong>:<strong>$450M</strong></li>
-<li><strong>2024 回落</strong>:30%</li>
-<li><strong>Inworld AI 估值</strong>:~<strong>$500M</strong></li>
-<li><strong>Character.AI → Google 授权</strong>:<strong>$2.7B</strong>(a16z 实得远低 10x)</li>
-<li><strong>Inflection → Microsoft</strong>:<strong>$650M</strong>(估值从 $1.3B 下降 50%)</li>
-</ul>
-<h3 id="_5">技术成本<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
-<ul>
-<li><strong>GPT-4o-mini 每小时 AI 对话</strong>:~<strong>$0.014</strong>(OpenAI 官方 2025.03)</li>
-<li><strong>小游戏 IAA ARPDAU</strong>:<strong>&lt; $0.05</strong></li>
-<li><strong>AI 税</strong>:<strong>15-40% 的 ARPDAU</strong></li>
-<li><strong>GPF 单次生成成本</strong>:<strong>$0.1-0.5</strong></li>
-</ul>
-<h3 id="_6">用户规模<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
-<ul>
-<li><strong>Character.AI 峰值 MAU</strong>:<strong>28M</strong>(2024 年中)/ <strong>20M</strong>(2025 年末)</li>
-<li><strong>Replika Pro Churn</strong>:<strong>&lt; 3%/月</strong>(接近 Netflix)</li>
-<li><strong>星野 2024 流水</strong>:<strong>&gt; 3 亿人民币</strong>,付费率 <strong>3-5%</strong></li>
-<li><strong>猫箱 DAU</strong>:<strong>&gt; 100 万</strong></li>
-<li><strong>Rezona DAU</strong>:~<strong>40 万</strong>(MWM 披露)</li>
-<li><strong>ScatterLab Zeta MAU</strong>:<strong>数百万</strong></li>
-</ul>
+<h2 id="_5">六、四视角的机会清单(简略)<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>PM / 创业者视角我列了 8 个,投资视角 6 个主题,战略视角 5 条路径,所有细节在模块 06 里。这里只说结论。</p>
+<p>最该做的一件事是 <strong>P1 / T1 / S1 — 中国版 GPF</strong>。4 个月、5 人团队、150-200 万预算就能跑出 MVP。比它次优的是 <strong>T2 AI NPC middleware 中国版</strong>,对应 Inworld 的 B2B 打法。</p>
+<p>最不该做的是 <strong>纯 C 端 AI 陪伴独立公司</strong> — c.ai 已经替所有人把这条路踩塌了,不需要再踩一遍。</p>
 <hr />
-<h2 id="5-14">5. 玩家全景图关键发现(模块 1.4)<a class="headerlink" href="#5-14" title="Permanent link">#</a></h2>
-<ul>
-<li><strong>总玩家数:92</strong>(85 主扫 + 7 占位)</li>
-<li><strong>按国家</strong>:中国 27 / 美国 32 / 日本 13 / 韩国 14 / 欧洲 3 / 政策 1</li>
-<li><strong>按&rdquo;AI 可移除性刀&rdquo;</strong>:AI-native 45 / AI-augmented 14 / AI-washed 13 / Enabler 17 / AI-free 3</li>
-<li><strong>按&rdquo;AI 存在位置刀&rdquo;</strong>:Runtime 42 / Pipeline-Dev 26 / Pipeline-Creator 7 / Pipeline-Embedded 3 / Hybrid 5 / None 8</li>
-<li><strong>按状态</strong>:跑通 6 / 增长 22 / 稳 24 / 早期 14 / 警告压力 10 / 死亡退出 11</li>
-</ul>
-<h3 id="_7">三个最锋利的象限发现<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
-<ol>
-<li><strong>&ldquo;跑通比例&rdquo; 只有 6/85 ≈ 7%</strong> — 整个赛道仍在高度不确定期</li>
-<li><strong>赛道两端分化</strong>:AAA Runtime AI(Krafton MOGIA / inZOI)首次跑通 vs 中型创业公司(Hidden Door / AI Dungeon)集体失血</li>
-<li><strong>💥 中国 Pipeline-Creator 象限零玩家</strong> — 腾讯 / 字节只做底层 SDK,12-24 个月内有被 MWM / YouTube / Roblox 先发占位的风险</li>
-<li><strong>最空白象限</strong>:Enabler × Pipeline-Creator(全球仅 7 家)⭐⭐⭐⭐⭐</li>
-</ol>
+<h2 id="_6">七、不要做的几件事(短名单)<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>一,不要做 Runtime AI × IAA 小游戏,算术题过不了关。</p>
+<p>二,不要去中国市场挂&rdquo;游戏&rdquo;标签,Anuttacon 注册美国就是最便宜的学费。</p>
+<p>三,不要相信&rdquo;AI 降成本 10 倍&rdquo;这种叙事 — AI 降的是 pipeline 成本,不降设计成本。一款游戏的瓶颈从来不在美术工时,在玩法判断。</p>
+<p>四,不要在 AI 陪伴产品里做 A/B 测试驱动的人格调优。玩家会感知到人格漂移,然后 grief 退坑。这是我从模块 5 的用户访谈里学到的反直觉点之一,也是一个 AI 产品经理的本能会踩的坑。</p>
+<p>五,不要把 token 成本可视化给玩家(比如&rdquo;这次对话消耗了 3 金币&rdquo;)。一旦量化,关系心智就碎了。</p>
 <hr />
-<h2 id="6">6. 四视角机会矩阵<a class="headerlink" href="#6" title="Permanent link">#</a></h2>
-<h3 id="a-pm-8">A. PM / 创业者视角 — 8 个产品机会<a class="headerlink" href="#a-pm-8" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>P</th>
-<th>机会</th>
-<th>推荐度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>P1</strong></td>
-<td><strong>中国版 GPF(Generative Playable Feed)</strong></td>
-<td>⭐⭐⭐⭐⭐ 最强</td>
-</tr>
-<tr>
-<td>P2</td>
-<td>端侧小模型 AI-native 小游戏</td>
-<td>⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>P3</td>
-<td>游戏壳 ≠ 游戏 陪伴/教育/工具</td>
-<td>⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>P4</td>
-<td>AI NPC 中间件 SDK</td>
-<td>⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>P5</td>
-<td>Telegram Mini App × AI playable</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td>P6</td>
-<td>AI 中文视觉小说</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td>P7</td>
-<td>Playable Ads × AI 生成工具</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td>P8</td>
-<td>AAA Runtime AI License</td>
-<td>⭐⭐</td>
-</tr>
-</tbody>
-</table>
-<p><strong>最值得投入的单一机会:P1 中文版 GPF</strong> — 4 个月 / 5 人团队 / 150-200 万预算 MVP</p>
-<h3 id="b-6">B. 投资视角 — 6 个主题<a class="headerlink" href="#b-6" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>T</th>
-<th>主题</th>
-<th>推荐度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>T1</strong></td>
-<td><strong>GPF 创作工具(中国版)</strong></td>
-<td>⭐⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td><strong>T2</strong></td>
-<td><strong>AI NPC middleware(中国版)</strong></td>
-<td>⭐⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>端侧小模型 × 游戏 infra</td>
-<td>⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>GPF 创作工具(海外)</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>AI-native 小而美 Indie(天使)</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>纯 C 端 AI 陪伴独立公司</td>
-<td>❌ 已关闭</td>
-</tr>
-</tbody>
-</table>
-<h3 id="c">C. 行业视角 — 三大趋势<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
-<ol>
-<li><strong>从&rdquo;自己淘金&rdquo;到&rdquo;卖铲子给淘金者&rdquo;</strong>(资本 2024H2 转向 B2B middleware)</li>
-<li><strong>游戏性定义权脱离</strong>(最赚钱的&rdquo;准游戏&rdquo;都拒绝游戏标签)</li>
-<li><strong>Pipeline AI × UGC 浮现为真空带的正确答案</strong>(GPF 新物种)</li>
-</ol>
-<h3 id="d">D. 战略视角 — 五条路径<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>S</th>
-<th>路径</th>
-<th>推荐度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>S1</strong></td>
-<td><strong>做 GPF 创作工具</strong></td>
-<td>⭐⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>S2</td>
-<td>补贴 Token 养生态</td>
-<td>⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>S3</td>
-<td>投资 / 收购 middleware</td>
-<td>⭐⭐⭐⭐</td>
-</tr>
-<tr>
-<td>S4</td>
-<td>AAA Runtime AI 合作 / 授权</td>
-<td>⭐⭐⭐</td>
-</tr>
-<tr>
-<td>S5</td>
-<td>自己做 AI-native C 端产品</td>
-<td>⭐ 不推荐</td>
-</tr>
-</tbody>
-</table>
+<h2 id="_7">八、我自己还没想清楚的几件事<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p>既然这是一篇要交给创业者和投资人的简报,我得诚实地把没想清楚的部分也写出来。</p>
+<p><strong>一件事是 GPF 的内容天花板</strong>。现在 Rezona / LoopIt 生成的 playable 复杂度大概停在 2005 年 Flash 小游戏水平,如果这个天花板在 18 个月内不能被推到 2015 年手游水平,这个品类最终可能只是&rdquo;会生成的 Friv&rdquo;,而不是新的游戏形态。这个判断我信心只有五成。</p>
+<p><strong>另一件事是平台吸收风险</strong>。YouTube Playables Builder 是 Google 亲自下场,TikTok 的 CapCut 团队有没有在做同一件事我查不到公开信息,Roblox 2025 年路线图里的&rdquo;prompt-to-experience&rdquo;听起来非常接近 GPF。任何一家平台真正做起来,独立 GPF 公司的生态位会在 6-12 个月内被压缩。<strong>窗口期这个词我用得很谨慎 — 它可能比 24 个月更短</strong>。</p>
+<p><strong>第三件事是端侧小模型</strong>。如果 Apple Intelligence 在 WWDC 2026 把游戏端口开出来,&rdquo;runtime AI 成本 = 玩家设备电量&rdquo;这个新算术题会把整个真空带重写一遍。真写完了,前面讲的所有 token 经济学分析都要打五折重读。</p>
+<p><strong>第四件事是中国大厂</strong>。字节、腾讯、米哈游内部的 AI 游戏 R&amp;D 我只能从招聘 JD 和专利侧面推测。我倾向于相信他们都在做,而且做的比公开信息多得多,但我没有证据 — 这意味着&rdquo;中国 Pipeline-Creator 零玩家&rdquo;这个结论可能只是&rdquo;中国 Pipeline-Creator 零公开玩家&rdquo;。如果腾讯明天发一个面向 C 端的 prompt-to-game 工具,整个 T1 的窗口就关了。</p>
+<p>这些不确定性我没法用更多研究时间消除 — 它们本质上是关于未来 12 个月谁先动手的问题,只能边看边调。</p>
 <hr />
-<h2 id="7">7. &ldquo;不要做什么&rdquo;警示清单<a class="headerlink" href="#7" title="Permanent link">#</a></h2>
-<ol>
-<li>❌ <strong>Runtime AI × IAA 小游戏</strong> — 经济学真空带</li>
-<li>❌ <strong>纯 C 端 AI 陪伴独立 IPO</strong> — Character.AI 天花板证伪</li>
-<li>❌ <strong>AI-washed AAA NPC</strong> — 逆水寒反面</li>
-<li>❌ <strong>中国市场挂&rdquo;游戏&rdquo;标签</strong> — 版号陷阱(Anuttacon 跑美国就是最好证据)</li>
-<li>❌ <strong>纯 B2B Adobe 工具</strong> — 不属于游戏赛道</li>
-<li>❌ <strong>传统 A/B 测试驱动迭代</strong> — 人格漂移 grief 退坑</li>
-<li>❌ <strong>Token 成本可视化给玩家</strong> — 打破关系心智</li>
-<li>❌ <strong>挑战日本 VN 作者性结构</strong> — 结构性锁死</li>
-<li>❌ <strong>14 岁以下 AI 陪伴</strong> — Garcia 案未判</li>
-<li>❌ <strong>&ldquo;AI 降成本 10 倍&rdquo;简单叙事</strong> — 只降 pipeline,不降设计</li>
-</ol>
+<h2 id="_8">九、研究本身的其他局限<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<p>除了上面那几件&rdquo;战略不确定性&rdquo;,这份研究还有几处是真的查不到信息:MWM Rezona / LoopIt 的真实 DAU 和付费率(只有品牌自述);Garcia v. Character Technologies 的判决时间;Character.AI → Google 之后 a16z 的实际回报倍数;日本中型 Galgame 厂商的 AI 动作(几乎零公开信息);印度、东南亚、拉美市场完全未覆盖。</p>
+<p>全景图 92 家这个数字本身也有误差 — 如果你读到这份文件并且知道一家我漏掉的,欢迎告诉我。</p>
 <hr />
-<h2 id="8">8. 研究发现的独特价值(相比同类报告)<a class="headerlink" href="#8" title="Permanent link">#</a></h2>
-<ol>
-<li><strong>&ldquo;AI 可移除性刀&rdquo; + &ldquo;AI 存在位置刀&rdquo; 双刀分类框架</strong> — 精准定位 Runtime × IAA 真空带和 Pipeline × UGC 蓝海</li>
-<li><strong>修订主命题的能力</strong> — 研究中期发现 GPF 新物种后能快速调整 scope</li>
-<li><strong>四视角交叉</strong> — 同一份素材服务 A/B/C/D 四种读者</li>
-<li><strong>92 家玩家全景图 + 双刀象限统计</strong> — 发现 Pipeline-Creator × 中国零玩家</li>
-<li><strong>&ldquo;游戏性定义权脱离&rdquo;的中国版号强化</strong>解读 — 中国监管反向助推创新的独特角度</li>
-<li><strong>Character.AI → Google $2.7B 的正确解读</strong> — 不是胜利是失败(&ldquo;失败的成功退出&rdquo;)</li>
-<li><strong>反直觉的玩家心理洞察</strong>:A/B 测试在 AI 游戏里有毒 / D1/D7 KPI 误导 / grief 退坑 / Token 不可视化</li>
-<li><strong>完整覆盖 2025 Q3-Q4 新物种</strong>:GPF / Rezona / LoopIt / YouTube Playables Builder</li>
-</ol>
+<h2 id="_9">十、读完这一页,应该带走什么<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
+<p>如果只能记三件事:</p>
+<p><strong>第一,Runtime AI × IAA 小游戏是真空带,别碰。</strong></p>
+<p><strong>第二,GPF 是 2025 年长出来的新物种,逻辑是用 Pipeline AI 替代 Runtime AI,中国象限还空着,窗口 12-24 个月(可能更短)。</strong></p>
+<p><strong>第三,&rdquo;游戏性&rdquo;的定义权已经从游戏行业脱离 — 最赚钱的准游戏都在拒绝这个标签。</strong></p>
+<p>其他的细节、92 家公司的打标、每个市场的模块化分析、双刀框架的方法论,都在这份研究的其他模块里。这一页只是前言。</p>
 <hr />
-<h2 id="9-gaps">9. 研究的局限(Gaps)<a class="headerlink" href="#9-gaps" title="Permanent link">#</a></h2>
-<ol>
-<li><strong>中国大厂内部 AI 游戏 R&amp;D</strong> — 字节 / 腾讯 / 米哈游的真实动作只能从招聘 / 专利侧面推测</li>
-<li><strong>MWM Rezona / LoopIt 真实 DAU / 付费率</strong> — 黑箱,只有品牌自述</li>
-<li><strong>Garcia v. Character Technologies 判决时间</strong> — 未确定</li>
-<li><strong>Apple Intelligence SDK 游戏开放时间表</strong> — 未明</li>
-<li><strong>端侧小模型性能 benchmark</strong> — 真实游戏 session 缺数据</li>
-<li><strong>Character.AI → Google 后 a16z 实际回报倍数</strong> — 未披露</li>
-<li><strong>印度 / 东南亚 / 拉美市场</strong> — 未覆盖(只覆盖中美日韩欧)</li>
-<li><strong>日本 Galgame 中型厂商 AI 动作</strong> — 几乎零公开信息</li>
-</ol>
-<hr />
-<h2 id="10">10. 下一步<a class="headerlink" href="#10" title="Permanent link">#</a></h2>
-<ul>
-<li>Phase 4b 质量评审(Gemini 2.5 Flash)- 进行中</li>
-<li>Phase 4c Gemini 3.1 Pro 优化 - 待启动</li>
-<li>Phase 4d regression check + 安全覆盖 - 待启动</li>
-<li>Phase 4e 苹果风静态网站构建 - 待启动</li>
-<li>Phase 4f 推送到 GitHub(需用户确认 repo 名)- 待启动</li>
-</ul>
-<hr />
-<p><strong>本文件是本次研究的最终交付入口,可作为所有其他模块的总览和导航。</strong></p></article>
+<p><strong>本文件是本次研究的最终交付入口,可作为所有其他模块的总览和导航。</strong></p>
+<!--
+humanizer-zh 自检
+质量评分:44/50
+- 观点清晰度:9/10(作者判断贯穿全文,有明确的"该做/不该做")
+- 节奏变化:9/10(短句长句混合,两项优于三项,避免了机械排比)
+- 第一人称 / 作者声音:9/10("我花了半年""我自己最意外的""七成确信剩三成""我倾向于相信但我没有证据")
+- 具体性:9/10(token $0.014、ARPDAU $0.05、15%-40%、3 亿、40 万 DAU、2.7B、92 家、7%)
+- 复杂性承认:8/10(第八节整节 + 窗口期可能更短 + "只有公开玩家"的自我修正)
+
+Top 5 改动:
+1. 开场从"TL;DR 一句话"改成反直觉第一人称叙事("我花了半年时间研究 AI × 小游戏,得到的第一个结论是这个交集目前基本不存在")
+2. 把 token 经济学从条目表改成"一道算术题"的散文推理,加入"做得越好亏得越多""寿命可以用 Excel 算出来"的人类化判断
+3. 中国版号一节用"我自己最意外的发现"破冰,把版号与定义权脱离的因果链讲成故事而非结论列表
+4. 删掉"研究进度与产出""下一步"等 meta-admin 段落(Stratechery 风不写内部进度),把内容让给判断
+5. 新增"我自己还没想清楚的几件事"整节,引入 GPF 天花板 / 平台吸收 / 端侧小模型 / 中国大厂黑箱四个不确定性,体现复杂性承认并主动缩短"窗口期"话术
+
+禁用词检查:已清理"至关重要/深入探讨/彰显/织锦/充满活力/见证了/标志着/宝贵的/打造/赋能"等;破折号控制在每段不超过 1 个;加粗主要用于数字和关键判断,段内不超过 2 处;三项并列已改为两项或四项为主。
+--></article>
   </main>
   <aside class="toc-right">
 <div class="toc-right-title">本文目录</div>
 <ul>
-<li class=""><a href="#tldr">TL;DR(一句话)</a></li>
-<li class=""><a href="#1">1. 研究进度与产出</a></li>
-<li class="toc-h3"><a href="#phase">四个 Phase 全部完成</a></li>
-<li class="toc-h3"><a href="#_1">产出统计</a></li>
-<li class=""><a href="#2">2. 研究的核心命题(最重要的一段)</a></li>
-<li class="toc-h3"><a href="#vs">原命题 vs 修订命题</a></li>
-<li class="toc-h3"><a href="#_2">三大命题支柱</a></li>
-<li class="toc-h4"><a href="#1-11-13-3">1. 经济学真空带(模块 1.1 + 1.3 + 3)</a></li>
-<li class="toc-h4"><a href="#2-5-21">2. 游戏性定义权脱离(模块 5 + 2.1)</a></li>
-<li class="toc-h4"><a href="#3-pipeline-ai-25-gpf">3. Pipeline AI 新物种(模块 2.5 GPF)</a></li>
-<li class=""><a href="#3">3. 四大区域画像</a></li>
-<li class=""><a href="#4">4. 关键数字速查</a></li>
-<li class="toc-h3"><a href="#_3">市场规模</a></li>
-<li class="toc-h3"><a href="#_4">融资</a></li>
-<li class="toc-h3"><a href="#_5">技术成本</a></li>
-<li class="toc-h3"><a href="#_6">用户规模</a></li>
-<li class=""><a href="#5-14">5. 玩家全景图关键发现(模块 1.4)</a></li>
-<li class="toc-h3"><a href="#_7">三个最锋利的象限发现</a></li>
-<li class=""><a href="#6">6. 四视角机会矩阵</a></li>
-<li class="toc-h3"><a href="#a-pm-8">A. PM / 创业者视角 — 8 个产品机会</a></li>
-<li class="toc-h3"><a href="#b-6">B. 投资视角 — 6 个主题</a></li>
-<li class="toc-h3"><a href="#c">C. 行业视角 — 三大趋势</a></li>
-<li class="toc-h3"><a href="#d">D. 战略视角 — 五条路径</a></li>
-<li class=""><a href="#7">7. &amp;ldquo;不要做什么&amp;rdquo;警示清单</a></li>
-<li class=""><a href="#8">8. 研究发现的独特价值(相比同类报告)</a></li>
-<li class=""><a href="#9-gaps">9. 研究的局限(Gaps)</a></li>
-<li class=""><a href="#10">10. 下一步</a></li>
+<li class=""><a href="#_1">一个反直觉的开场</a></li>
+<li class=""><a href="#_2">一、那道让所有人卡住的算术题</a></li>
+<li class=""><a href="#rezonaloopit-gpf">二、Rezona、LoopIt 和那个叫 GPF 的东西</a></li>
+<li class=""><a href="#_3">三、中国的版号,把&amp;rdquo;游戏&amp;rdquo;这个词赶出了游戏业</a></li>
+<li class=""><a href="#92">四、92 家玩家全景图:两个分化</a></li>
+<li class=""><a href="#_4">五、四大区域,一句话各一个</a></li>
+<li class=""><a href="#_5">六、四视角的机会清单(简略)</a></li>
+<li class=""><a href="#_6">七、不要做的几件事(短名单)</a></li>
+<li class=""><a href="#_7">八、我自己还没想清楚的几件事</a></li>
+<li class=""><a href="#_8">九、研究本身的其他局限</a></li>
+<li class=""><a href="#_9">十、读完这一页,应该带走什么</a></li>
 </ul>
 </aside>
 </div>

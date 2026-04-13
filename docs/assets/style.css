@@ -1,5 +1,5 @@
 /* ============================================================
-   儿童口腔护理研究 — 苹果风 Docs 站点
+   AI 小游戏与 Playable 体验研究 — 苹果风 Docs 站点
    Inspired by apple.com/newsroom + developer.apple.com
    ============================================================ */
 
@@ -723,28 +723,23 @@ a:hover { color: var(--text-link-hover); }
 /* ============================================================
    Responsive
    ============================================================ */
-@media (max-width: 960px) {
-  .sidebar {
-    position: fixed;
-    left: -100%;
-    top: 48px;
-    width: 85%;
-    max-width: 320px;
-    z-index: 9998;
-    transition: left 0.3s;
-    box-shadow: var(--shadow-lg);
-  }
-  .sidebar.open { left: 0; }
-  .main { padding: 40px 24px 80px; }
-  .hero { padding: 60px 0 40px; }
-  .hero h1 { font-size: 48px; }
-  .hero-subtitle { font-size: 19px; }
-  .article h1 { font-size: 34px; }
-  .article h2 { font-size: 26px; }
-  .article h3 { font-size: 21px; }
-  .article table { font-size: 12px; }
-  .article th, .article td { padding: 8px 10px; }
-  .menu-toggle { display: flex !important; }
+
+/* 侧边栏遮罩层(仅移动端显示) */
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9997;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.sidebar-backdrop.open {
+  display: block;
+  opacity: 1;
 }
 
 .menu-toggle {
@@ -754,7 +749,75 @@ a:hover { color: var(--text-link-hover); }
   color: var(--text);
   font-size: 20px;
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+}
+.menu-toggle:hover { background: var(--bg-hover); }
+
+@media (max-width: 960px) {
+  /* 顶栏收紧 */
+  .topnav { padding: 0 12px; }
+  .topnav-inner { gap: 12px; }
+  .topnav-logo { font-size: 15px; }
+  .topnav-links { display: none; }
+  .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    order: -1;           /* 移到最左 */
+    margin-right: 4px;
+  }
+
+  /* 侧边栏改为抽屉 */
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 48px;
+    width: 82%;
+    max-width: 320px;
+    height: calc(100vh - 48px);
+    z-index: 9998;
+    transition: left 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    padding: 20px 0 40px;
+  }
+  .sidebar.open { left: 0; }
+
+  /* 主内容区留白收紧 */
+  .main { padding: 32px 20px 80px; }
+  .hero { padding: 48px 0 32px; }
+  .hero h1 { font-size: 40px; line-height: 1.15; }
+  .hero-subtitle { font-size: 17px; }
+  .article h1 { font-size: 30px; }
+  .article h2 { font-size: 23px; }
+  .article h3 { font-size: 19px; }
+  .article p, .article li { font-size: 15px; }
+
+  /* 表格横向滚动 */
+  .article table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .article th, .article td { padding: 8px 10px; }
+
+  /* 代码块避免撑屏 */
+  .article pre { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .topnav-logo { font-size: 14px; }
+  .theme-toggle { font-size: 13px; padding: 4px 6px; }
+  .main { padding: 24px 16px 64px; }
+  .hero h1 { font-size: 32px; }
+  .hero-subtitle { font-size: 16px; }
+  .article h1 { font-size: 26px; }
+  .article h2 { font-size: 20px; }
+  .article h3 { font-size: 17px; }
+  .sidebar { width: 88%; }
 }
 
 /* ============================================================
