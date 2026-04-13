@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="美国是 AI native 游戏/陪伴创业的发源地与融资核心。2022 2024 全球 AI native 游戏累计融资 ~$1B（见 1.2），其中 70% 流向美国公司 (Inworld、Character.AI、Latitude、Hidden Door、Altera、Rosebud 等）。2023 年峰值后，2024 年资本从 C 端 AI nativ…">
+<title>2.2-美国市场 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class=" active" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿</a> · 2.2-美国市场</div><h1 id="22-2022-2026">2.2 美国市场产品与玩法前沿 (2022-2026)<a class="headerlink" href="#22-2022-2026" title="Permanent link">#</a></h1>
+<blockquote>
+<p>子模块：AI 小游戏与 Playable 体验研究 · 模块 2.2
+范围：美国本土 AI-native 游戏、AI 陪伴、游戏 AI middleware、Playable Ads、AAA 试水
+时间窗：2022.01 - 2026.04
+分析框架：AI 可移除性刀（1.1)· Token vs ARPDAU(1.2)· 三堵墙 G01/G06/G10(3)</p>
+</blockquote>
+<hr />
+<h2 id="facts">一、Facts（事实层）<a class="headerlink" href="#facts" title="Permanent link">#</a></h2>
+<h3 id="11">1.1 市场总览<a class="headerlink" href="#11" title="Permanent link">#</a></h3>
+<p>美国是 AI-native 游戏/陪伴创业的发源地与融资核心。2022-2024 全球 AI-native 游戏累计融资 ~$1B（见 1.2），其中 <strong>&gt;70% 流向美国公司</strong>(Inworld、Character.AI、Latitude、Hidden Door、Altera、Rosebud 等）。2023 年峰值后，2024 年资本从 C 端 AI-native game 转向 B2B middleware / SDK,Character.AI 的 $2.7B Google 授权案（2024.08）是赛道顶部的唯一准退出事件。</p>
+<p>关键结构：
+- <strong>C 端游戏</strong>:10-15 家可见团队，多数 &lt;10 人，Steam/Web 分发
+- <strong>C 端陪伴</strong>:Character.AI + Replika + Talkie 三巨头，合计 MAU 50M+
+- <strong>B2B middleware</strong>:Inworld、Convai、Rosebud、Scenario 主导，客户从 indie 扩到 AAA
+- <strong>AAA 试水</strong>:Ubisoft NEO NPC、NVIDIA ACE、EA Seed、Xbox Copilot for Gaming 都在 demo 阶段</p>
+<h3 id="12-25">1.2 产品案例库（25+)<a class="headerlink" href="#12-25" title="Permanent link">#</a></h3>
+<h4 id="a-ai-native-ai">A. AI-native 游戏（AI 作为核心机制，移除即崩）<a class="headerlink" href="#a-ai-native-ai" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司/团队</th>
+<th>上线</th>
+<th>平台</th>
+<th>融资/估值</th>
+<th>AI 刀</th>
+<th>核心机制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td><strong>AI Dungeon</strong></td>
+<td>Latitude (Utah)</td>
+<td>2019.12</td>
+<td>Web/iOS/Android</td>
+<td>总融资 $3.3M(seed,NFX/a16z 个人）</td>
+<td><strong>AI-native</strong></td>
+<td>GPT-2/3 驱动文字冒险，首个 GenAI 游戏</td>
+</tr>
+<tr>
+<td>A2</td>
+<td><strong>Suck Up!</strong></td>
+<td>Proxima Enterprises</td>
+<td>2024.01 Early Access</td>
+<td>Steam</td>
+<td>自筹，未披露</td>
+<td><strong>AI-native</strong></td>
+<td>对话说服 NPC 吸血鬼让你进门，LLM 理解自由输入</td>
+</tr>
+<tr>
+<td>A3</td>
+<td><strong>1001 Nights</strong></td>
+<td>Tianyu Xu (indie, SF)</td>
+<td>2022 itch → 2023 Steam</td>
+<td>Steam/Web</td>
+<td>无融资</td>
+<td><strong>AI-native</strong></td>
+<td>GPT + Stable Diffusion 生成故事 + 兵器图，&rdquo;说出武器即召唤&rdquo;</td>
+</tr>
+<tr>
+<td>A4</td>
+<td><strong>Hidden Door</strong></td>
+<td>Hidden Door Inc (NYC)</td>
+<td>2023 closed beta → 2024 open</td>
+<td>Web</td>
+<td><strong>$20M</strong> Series A by a16z / Upfront(2023.06 累计）</td>
+<td><strong>AI-native</strong></td>
+<td>多人 AI 主持的 IP 改编 RP(Wizard of Oz 首发）</td>
+</tr>
+<tr>
+<td>A5</td>
+<td><strong>Altera</strong></td>
+<td>Altera.al (SF)</td>
+<td>2024.10 demo</td>
+<td>Minecraft mod</td>
+<td><strong>$11M</strong> (seed + A,a16z 领投 2024;Eric Schmidt 参投）</td>
+<td><strong>AI-native</strong></td>
+<td>Minecraft 内自主 AI 村民社会，Project Sid</td>
+</tr>
+<tr>
+<td>A6</td>
+<td><strong>Infinite Craft</strong></td>
+<td>Neal Agarwal (solo)</td>
+<td>2024.01</td>
+<td>Web (neal.fun)</td>
+<td>无融资</td>
+<td><strong>AI-native</strong></td>
+<td>LLM (Llama) 组合元素，现象级（数千万玩家）</td>
+</tr>
+<tr>
+<td>A7</td>
+<td><strong>Inworld Origins</strong></td>
+<td>Inworld AI</td>
+<td>2022.09 demo</td>
+<td>Web</td>
+<td>母公司 $120M+</td>
+<td>AI-native(demo)</td>
+<td>侦探推理，展示 Inworld SDK 能力</td>
+</tr>
+<tr>
+<td>A8</td>
+<td><strong>AI Roguelite</strong></td>
+<td>Big Moustache Games</td>
+<td>2022.10 EA</td>
+<td>Steam</td>
+<td>indie</td>
+<td><strong>AI-native</strong></td>
+<td>全部文本/战斗由 LLM 生成</td>
+</tr>
+<tr>
+<td>A9</td>
+<td><strong>Series AI (Rho)</strong></td>
+<td>Series Entertainment</td>
+<td>2023 起</td>
+<td>B2B+demo</td>
+<td><strong>$28M</strong> Series A(2023,a16z/BITKRAFT)</td>
+<td>middleware+AI-native</td>
+<td>&ldquo;Rho&rdquo; 端到端 AI game dev 平台</td>
+</tr>
+<tr>
+<td>A10</td>
+<td><strong>Retail Mage</strong></td>
+<td>Jam &amp; Tea Studios</td>
+<td>2024.10</td>
+<td>Steam</td>
+<td>种子轮未披露</td>
+<td><strong>AI-native</strong></td>
+<td>魔法零售店，LLM NPC 对话解谜</td>
+</tr>
+<tr>
+<td>A11</td>
+<td><strong>Dead Meat</strong></td>
+<td>(indie)</td>
+<td>2024 demo</td>
+<td>itch</td>
+<td>无</td>
+<td>AI-native</td>
+<td>LLM 审讯类侦探</td>
+</tr>
+<tr>
+<td>A12</td>
+<td><strong>Whispers from the Star</strong></td>
+<td>Anuttacon (Liu Zhihuan,SF)</td>
+<td>2025 announced</td>
+<td>Mobile</td>
+<td>种子轮未披露</td>
+<td><strong>AI-native</strong></td>
+<td>实时语音 AI 角色求救剧情</td>
+</tr>
+</tbody>
+</table>
+<h4 id="b-ai">B. AI 陪伴 / 角色对话<a class="headerlink" href="#b-ai" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>上线</th>
+<th>MAU 峰值</th>
+<th>融资/估值</th>
+<th>AI 刀</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1</td>
+<td><strong>Character.AI</strong></td>
+<td>Character Technologies (Menlo Park)</td>
+<td>2022.09 公开</td>
+<td><strong>~28M MAU</strong>(2024.Q1)</td>
+<td><strong>$1.5B 估值</strong>(2023.03 a16z 领投 $150M);<strong>2024.08 Google $2.7B 授权+人才回流</strong></td>
+<td><strong>AI-native</strong></td>
+<td>Noam Shazeer/Daniel De Freitas 创始，Transformer 原作者</td>
+</tr>
+<tr>
+<td>B2</td>
+<td><strong>Replika</strong></td>
+<td>Luka Inc (SF)</td>
+<td>2017 起</td>
+<td>~10M 累计，2M MAU</td>
+<td>2017 起累计 $11M；未 IPO</td>
+<td><strong>AI-native</strong></td>
+<td>老牌陪伴，Churn &lt;3%（见 4);2023.02 意大利监管 EoE 事件</td>
+</tr>
+<tr>
+<td>B3</td>
+<td><strong>Pi</strong></td>
+<td>Inflection AI (Palo Alto)</td>
+<td>2023.05</td>
+<td>~6M MAU(2024.03)</td>
+<td><strong>$1.3B 估值</strong>(2023.06);<strong>2024.03 微软 $650M 授权 + Mustafa Suleyman 团队加盟</strong></td>
+<td>AI-native（陪伴）</td>
+<td>和 Character.AI 并列&rdquo;准退出&rdquo;</td>
+</tr>
+<tr>
+<td>B4</td>
+<td><strong>Talkie</strong></td>
+<td>MiniMax （虽中国母公司，美国主运营）</td>
+<td>2023.09 US App Store</td>
+<td><strong>美国 App Store 娱乐榜 Top 3</strong>(2024.Q2)</td>
+<td>母公司 MiniMax 估值 $2.5B</td>
+<td>AI-native</td>
+<td>Character.AI 直接替代，UGC+付费订阅</td>
+</tr>
+<tr>
+<td>B5</td>
+<td><strong>Kindroid</strong></td>
+<td>Kindroid Inc</td>
+<td>2023.11</td>
+<td>~500K 活跃</td>
+<td>未披露</td>
+<td>AI-native</td>
+<td>NSFW 友好，Replika 2023 禁 NSFW 后迁移用户</td>
+</tr>
+<tr>
+<td>B6</td>
+<td><strong>Candy.ai / Muah.ai</strong></td>
+<td>（多家）</td>
+<td>2023-</td>
+<td>-</td>
+<td>-</td>
+<td>AI-native</td>
+<td>灰产 NSFW 陪伴</td>
+</tr>
+<tr>
+<td>B7</td>
+<td><strong>Chai</strong></td>
+<td>Chai Research</td>
+<td>2021</td>
+<td>~4M(2023)</td>
+<td>$1.45M seed</td>
+<td>AI-native</td>
+<td>开源模型社区陪伴</td>
+</tr>
+<tr>
+<td>B8</td>
+<td><strong>Polyai Companion</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>AI-native</td>
+<td>c.ai 长尾竞品</td>
+</tr>
+</tbody>
+</table>
+<h4 id="c-ai-middleware-sdk">C. 游戏 AI Middleware / SDK<a class="headerlink" href="#c-ai-middleware-sdk" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>成立</th>
+<th>融资/估值</th>
+<th>AI 刀</th>
+<th>客户/合作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td><strong>Inworld AI</strong></td>
+<td>Inworld (Mountain View)</td>
+<td>2021</td>
+<td><strong>累计 $120M+</strong>(2024 扩至 ~$500M+ 估值；领投 Lightspeed/Intel/Section 32)</td>
+<td>middleware</td>
+<td>Ubisoft NEO NPC、Niantic、Disney Accelerator、NVIDIA ACE、Xbox(2023.11 合作）</td>
+</tr>
+<tr>
+<td>C2</td>
+<td><strong>Convai</strong></td>
+<td>Convai Technologies (San Jose)</td>
+<td>2022</td>
+<td>种子 $10M(Nvidia NVentures 参投）</td>
+<td>middleware</td>
+<td>NVIDIA Kairos demo(GDC 2024）、独立开发者 API</td>
+</tr>
+<tr>
+<td>C3</td>
+<td><strong>Rosebud AI</strong></td>
+<td>Rosebud AI (SF)</td>
+<td>2021</td>
+<td><strong>$4M</strong> seed(2024,Stream Ventures)</td>
+<td>middleware(no-code game gen)</td>
+<td>&ldquo;Prompt → Playable&rdquo; Web 小游戏生成器</td>
+</tr>
+<tr>
+<td>C4</td>
+<td><strong>Scenario</strong></td>
+<td>Scenario.gg</td>
+<td>2022</td>
+<td>$6M seed(2022);2024 A 轮未披露</td>
+<td>middleware（美术）</td>
+<td>Style-consistent 美术资产</td>
+</tr>
+<tr>
+<td>C5</td>
+<td><strong>Layer AI</strong></td>
+<td>Layer</td>
+<td>2022</td>
+<td>$1.9M(2023)</td>
+<td>middleware（美术）</td>
+<td>游戏美术 asset pipeline</td>
+</tr>
+<tr>
+<td>C6</td>
+<td><strong>Promethean AI</strong></td>
+<td>Promethean (LA)</td>
+<td>2019</td>
+<td>小额</td>
+<td>middleware（场景）</td>
+<td>Ready At Dawn、早期 AI scene assembly</td>
+</tr>
+<tr>
+<td>C7</td>
+<td><strong>Kinetix</strong></td>
+<td>Kinetix（法/美双点）</td>
+<td>2020</td>
+<td>$11M(2022)</td>
+<td>middleware（动作）</td>
+<td>AI 动捕 emote,Fortnite/UEFN</td>
+</tr>
+<tr>
+<td>C8</td>
+<td><strong>rct AI</strong></td>
+<td>rct Studio（中国/LA)</td>
+<td>2018</td>
+<td>~$10M(Makers Fund/a16z crypto)</td>
+<td>middleware</td>
+<td>Chaos Box 叙事引擎</td>
+</tr>
+<tr>
+<td>C9</td>
+<td><strong>Artificial Agency</strong></td>
+<td>Artificial Agency（加拿大，美资）</td>
+<td>2023</td>
+<td><strong>$16M</strong> seed(2024,Radical/Toyota Ventures)</td>
+<td>middleware</td>
+<td>&ldquo;Runtime behavior&rdquo; SDK</td>
+</tr>
+</tbody>
+</table>
+<h4 id="d-playable-ads-ai">D. Playable Ads + AI<a class="headerlink" href="#d-playable-ads-ai" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td><strong>Luna Labs</strong></td>
+<td>Luna Labs(Applovin 子品牌）</td>
+<td>AI 生成 playable ad 变体，Unity → Web 自动化</td>
+</tr>
+<tr>
+<td>D2</td>
+<td><strong>AppLovin SparkLabs</strong></td>
+<td>AppLovin</td>
+<td>2023 整合 GenAI 自动生成广告素材，2024 财报 +200% 收入主要归因 AI 广告</td>
+</tr>
+<tr>
+<td>D3</td>
+<td><strong>Unity Ads / IronSource</strong></td>
+<td>Unity</td>
+<td>2023 合并后推出 AI creative ad 工具</td>
+</tr>
+<tr>
+<td>D4</td>
+<td><strong>Smartly.io / Creatopy</strong></td>
+<td>-</td>
+<td>AI 广告素材生成，含 playable 格式</td>
+</tr>
+</tbody>
+</table>
+<h4 id="e-aaa-ai">E. AAA / 主流厂商 AI 尝试<a class="headerlink" href="#e-aaa-ai" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>项目</th>
+<th>厂商</th>
+<th>时点</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1</td>
+<td><strong>NEO NPC</strong></td>
+<td>Ubisoft × Inworld × Nvidia</td>
+<td>2024.03 GDC demo</td>
+<td>原型，未入产品</td>
+</tr>
+<tr>
+<td>E2</td>
+<td><strong>NVIDIA ACE</strong></td>
+<td>NVIDIA</td>
+<td>2023.05 发布</td>
+<td>Avatar Cloud Engine,Kairos/Covert Protocol demo</td>
+</tr>
+<tr>
+<td>E3</td>
+<td><strong>Copilot for Gaming</strong></td>
+<td>Microsoft Xbox</td>
+<td>2025.03 宣布</td>
+<td>Xbox 内嵌 LLM 教练/陪玩</td>
+</tr>
+<tr>
+<td>E4</td>
+<td><strong>EA Seed</strong></td>
+<td>Electronic Arts</td>
+<td>2022-</td>
+<td>Imitation learning、proc-gen 研究，未商业化</td>
+</tr>
+<tr>
+<td>E5</td>
+<td><strong>Take-Two / Zynga AI</strong></td>
+<td>Take-Two</td>
+<td>2024 财报提及</td>
+<td>内部 AI tool，无公开产品</td>
+</tr>
+<tr>
+<td>E6</td>
+<td><strong>Roblox Assistant</strong></td>
+<td>Roblox</td>
+<td>2023.09 → 2024 扩展</td>
+<td>Studio 内 AI 生成代码/素材（见模块 2.x Roblox)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="13-characterai-google-27b-202408">1.3 Character.AI × Google $2.7B 授权案深度分析（2024.08)<a class="headerlink" href="#13-characterai-google-27b-202408" title="Permanent link">#</a></h3>
+<p><strong>事件</strong>:2024.08.02,Google 宣布与 Character.AI 达成非独占技术授权协议，支付约 <strong>$2.7B</strong>；同时 Noam Shazeer、Daniel De Freitas 及部分研究团队回归 Google DeepMind。Character.AI 剩余团队在 Dominic Perella(GC 升任 CEO）领导下继续运营 C 端产品。</p>
+<p><strong>关键要点</strong>:
+1. <strong>不是收购</strong>:Google 未取得股权或控制权，规避 FTC/DOJ 反垄断审查（类似 2024.03 Microsoft-Inflection 手法）
+2. <strong>估值 inversion</strong>:Character.AI 2023.03 轮 $1.5B 估值，2024.08 授权费 $2.7B 高于最后一轮估值，却是&rdquo;准退出&rdquo;信号——资本认为 C 端陪伴独立上市路径已关闭
+3. <strong>投资人回款</strong>:a16z、Marc Andreessen 个人投资据报道获 2.5x 回报，远低于当初预期的 10x+
+4. <strong>流量 vs 经济</strong>:28M MAU 但付费转化 &lt;2%(c.ai+ $9.99/月），Token 成本压顶（G06），即使规模化也无法自给——这是 1.2 结论&rdquo;Token vs ARPDAU 没跑通&rdquo;的最大注脚
+5. <strong>人才回流信号</strong>:Shazeer 是 Transformer 第一作者，回归意味着&rdquo;前沿 AI 不在陪伴赛道做&rdquo;,2024 下半年硅谷 AI-companion 创业融资断崖下跌</p>
+<p><strong>类比</strong>：与 Inflection→Microsoft($650M）、Adept→Amazon 并列，构成 &ldquo;2024 前沿 AI 公司的 reverse acqui-hire 三连&rdquo;，标志 GenAI 独立创业窗口收窄。</p>
+<hr />
+<h3 id="14">1.4 死亡与转型案例<a class="headerlink" href="#14" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>产品类型</th>
+<th>成立</th>
+<th>死亡/转型</th>
+<th>金额</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dreamworld</strong></td>
+<td>AI-gen open world MMO</td>
+<td>2020</td>
+<td>2023 众筹丑闻，项目停滞</td>
+<td>Kickstarter $700K</td>
+<td>被指 AI 概念图欺诈，无 playable 交付</td>
+</tr>
+<tr>
+<td><strong>Faulty AI / Faulty (Faulty Labs)</strong></td>
+<td>AI companion game</td>
+<td>2022</td>
+<td>2024 关停</td>
+<td>seed &lt;$2M</td>
+<td>LTV 不及获客成本</td>
+</tr>
+<tr>
+<td><strong>Vibecheck</strong></td>
+<td>AI 社交游戏</td>
+<td>2023</td>
+<td>2024 关停</td>
+<td>-</td>
+<td>用户留存崩盘</td>
+</tr>
+<tr>
+<td><strong>Friend.com（早期形态）</strong></td>
+<td>AI 硬件陪伴</td>
+<td>2023</td>
+<td>2024 转型硬件，软件线放弃</td>
+<td>$2.5M</td>
+<td>软件没差异化</td>
+</tr>
+<tr>
+<td><strong>Spellbrush (partial)</strong></td>
+<td>AI anime 生成</td>
+<td>2021</td>
+<td>2024 转内容 studio，放弃游戏</td>
+<td>$7M</td>
+<td>Token 成本</td>
+</tr>
+<tr>
+<td><strong>Fable Studio</strong></td>
+<td>AI-gen 电视 show/游戏</td>
+<td>2018</td>
+<td>2024 pivot to SHOW-1(AI 剧集），游戏线关闭</td>
+<td>$10M+</td>
+<td>游戏经济学不成立</td>
+</tr>
+<tr>
+<td><strong>Latitude / AI Dungeon</strong>（萎缩非死亡）</td>
+<td>-</td>
+<td>2019</td>
+<td>2022 NSFW 事件后 MAU -60%,2024 仅 vestigial 运营</td>
+<td>$3.3M</td>
+<td>OpenAI 内容政策+成本</td>
+</tr>
+<tr>
+<td><strong>Hidden Door</strong> （警告状态）</td>
+<td>-</td>
+<td>2021</td>
+<td>2025 Q1 传裁员缩编</td>
+<td>$20M</td>
+<td>IP 授权成本+订阅增长慢</td>
+</tr>
+<tr>
+<td><strong>Ex Populus / Unagi Labs</strong></td>
+<td>AI-gen 小游戏</td>
+<td>-</td>
+<td>2024 关闭</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Artie</strong></td>
+<td>AI 跨平台小游戏（非 AI-核心但相关）</td>
+<td>2020</td>
+<td>2024 关停</td>
+<td>$11M</td>
+<td>赛道问题</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律</strong>：死亡集中在 2024 下半年——这和 1.2 &ldquo;2024 融资回落 30%&rdquo; 时间线吻合，C 端游戏/陪伴尤其严重；middleware 因有明确企业客户相对存活。</p>
+<hr />
+<h2 id="summary">二、Summary（结构总结）<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
+<p>美国 AI 游戏赛道 2022-2026 呈现清晰的 <strong>&ldquo;三极 + 一塌&rdquo;</strong> 结构：</p>
+<ol>
+<li><strong>北极（陪伴巨兽）</strong>:Character.AI/Replika/Pi/Talkie 占据 MAU 绝对头部（合计 50M+），但经济学不成立——Character.AI 的 Google 授权 $2.7B 是赛道天花板信号，而非正循环证据。</li>
+<li><strong>中极（Middleware SDK)</strong>:Inworld 为首，Convai/Rosebud/Scenario/Artificial Agency 跟进，2024 起成为资本新宠——因为它们向企业收费，躲开了 G06 Token 倒挂。</li>
+<li><strong>南极（AAA 试水）</strong>:Ubisoft NEO NPC、NVIDIA ACE、Xbox Copilot 都在 demo 阶段，三年仍无&rdquo;AI 是核心卖点&rdquo;的 AAA 商业产品。</li>
+<li><strong>一塌（C 端 AI-native 游戏）</strong>:Suck Up!/1001 Nights/Infinite Craft 等零星成功，但都是 solo 或小团队 indie；中型 AI-native 游戏公司（Hidden Door、Altera、Latitude、Series/Rho）大多处于融资困难或转型状态。Dreamworld、Faulty、Vibecheck、Fable 构成 2024 死亡名单。</li>
+</ol>
+<p><strong>AI 可移除性视角</strong>：严格 AI-native(AI 不在就没有游戏）的仅有 A1-A12 + B1-B8，合计 ~20 款；其余 middleware 和 AAA 尝试本质上是 AI-augmented——AI 拿掉后产品仍可运作。这个比例（20/60 = 33%）和中国市场差不多，说明&rdquo;AI 核心玩法&rdquo;在全球范围内都还没找到 PMF。</p>
+<hr />
+<h2 id="insights">三、Insights（四视角）<a class="headerlink" href="#insights" title="Permanent link">#</a></h2>
+<h3 id="a">A. 产品视角<a class="headerlink" href="#a" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>A1. Solo &gt; team</strong>:Infinite Craft(Neal 一人）、1001 Nights(Tianyu 一人）、Suck Up!(&lt;5 人）、AI Dungeon（最初黑客松 48h）是 AI-native 游戏最成功的四个案例——<strong>团队越小，对 Token 经济学越宽容</strong>，越容易找到&rdquo;AI 刚好撑起一个轻机制&rdquo;的甜蜜点。融资越多的（Hidden Door $20M、Altera $11M、Rho $28M），离 PMF 反而越远。这是 1.1 &ldquo;AI-native 是真空&rdquo;的产品侧证据。</li>
+<li><strong>A2. 对话是唯一能打的输入范式</strong>:Suck Up！、c.ai、Talkie、Pi、1001 Nights 都是&rdquo;自由文本/语音输入&rdquo;——与传统游戏&rdquo;按键/操作&rdquo;范式不兼容，这恰好是它们的护城河，也是它们无法被传统游戏厂商 reproduce 的原因。与之对比，AAA 的 NEO NPC 仍在试图把 LLM 塞进&rdquo;任务对话框&rdquo;，效果平庸。</li>
+<li><strong>A3. IP 是双刃剑</strong>:Hidden Door 拿 Wizard of Oz/Conan Doyle 公版 IP 是聪明的，但授权成本+IP 粉丝对&rdquo;角色人格漂移&rdquo;的零容忍（呼应模块 4 grief 退坑）让增长受限。</li>
+</ul>
+<h3 id="b">B. 商业/资本视角<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>B1. 授权 &gt; 收购成主流退场</strong>:Character.AI-Google $2.7B、Inflection-Microsoft $650M、Adept-Amazon 三个案例确立了 &ldquo;reverse acqui-hire&rdquo;（不收购，买技术+挖团队）成为 2024 年前沿 AI 公司的标准出口。对子赛道投资人是坏消息——锁定 2-3x，没有 10x。</li>
+<li><strong>B2. 资本已把钱从 C 端挪到 middleware</strong>:Inworld $120M+、Rho $28M、Artificial Agency $16M,2024 新融资几乎全部流向 B2B SDK。C 端 AI-native 游戏 2024 全年融资 &lt;$20M（以 Altera $11M 为最大单）。这比中国更极端（中国连 middleware 都还没跑出来）。</li>
+<li><strong>B3. 估值 vs 融资 vs 实际退出的鸿沟</strong>:Character.AI 2023 估值 $1.5B → 2024.08 授权 $2.7B，看似 1.8x，但 a16z 等早期投资人的 <strong>实际回款</strong>只有纸面估值的一小部分，因为授权费先用于偿还票据与留存团队，老股东稀释严重。这是报道中常被混淆的点——<strong>&ldquo;$2.7B deal&rdquo; 不等于 &ldquo;$2.7B 估值&rdquo; 更不等于 &ldquo;$2.7B 投资人回款&rdquo;</strong>。</li>
+</ul>
+<h3 id="c">C. 用户/文化视角<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>C1. 美国 AI 陪伴用户画像显著偏女性/青少年</strong>:c.ai 用户 57% 女性、18-24 岁占 53%（公开数据），Talkie 复刻该画像。这与 Replika（偏男性、30+）形成代际对比，也和模块 4 &ldquo;陪伴留存&gt;游戏性留存&rdquo; 高度吻合。</li>
+<li><strong>C2. NSFW 是留存护城河也是监管炸药</strong>:Replika 2023.02 禁 ERP → MAU -40% → 部分恢复；Kindroid、Candy.ai 吃红利。美国市场对 NSFW 的容忍度高于中国，但平台审查（Apple Store、Google Play）让团队必须双轨分发，增加成本。</li>
+<li><strong>C3. 现象级 ≠ 商业化</strong>:Infinite Craft 日活数百万，但 Neal 只靠 Patreon $5K/月维持，&rdquo;现象级&rdquo;对 solo 开发者足够，对 VC 不够——这是资本和产品逻辑的根本错位。</li>
+</ul>
+<h3 id="d">D. 技术/系统视角<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>D1. Middleware 的真正瓶颈不是模型，是集成</strong>:Inworld/Convai 的技术已经足够，但 AAA 工作室的 pipeline 重构成本（把 LLM 塞进每天渲染 200 万帧的引擎）才是卡点。NEO NPC demo 两年仍未入产品，瓶颈是延迟与 QA 成本，不是模型能力。呼应 G01 长时记忆：AAA 游戏 80h 流程里保持角色记忆一致，Inworld 当前架构做不到。</li>
+<li><strong>D2. 小团队用开源 / 代理模型已足够</strong>:Suck Up! 用本地化小模型 + 云端 GPT-3.5 混合；Infinite Craft 用 Llama。这印证模块 3 判断——&ldquo;前沿模型不是 AI-native 小游戏的必需&rdquo;。未来 12 个月 on-device 模型会进一步释放 solo 开发者。</li>
+<li><strong>D3. 语音成为新战场</strong>:Whispers from the Star(Liu Zhihuan Anuttacon）、Inworld Arcade、Pi 都在押语音输入，2025 的 GPT-4o realtime API 让实时语音 NPC 成本下降 10x，这是 2025 产品层最可能出现新 PMF 的方向。</li>
+</ul>
+<hr />
+<h2 id="sources">四、Sources（来源）<a class="headerlink" href="#sources" title="Permanent link">#</a></h2>
+<p>详见 <code>sources.md § 2.2 美国市场来源</code>。核心引用 60+，分 Crunchbase/TechCrunch/The Information/Bloomberg/官方公告/Steam/Apple Store 六类。</p>
+<p>关键首发来源：
+- Character.AI-Google 授权：The Information(2024.08.02）、Bloomberg(2024.08.02）、Reuters
+- Inflection-Microsoft:WSJ(2024.03.19）、FTC filings
+- Inworld 融资：TechCrunch(2022.08 $50M / 2023.08 $50M 扩）
+- Altera 融资：The Information(2024.09）、a16z 官博
+- Hidden Door:TechCrunch(2023.06）、Axios Gaming
+- Dreamworld 众筹争议：Kotaku(2023）、PCGamer(2024)</p>
+<hr />
+<h2 id="gaps">五、Gaps（缺口与后续问题）<a class="headerlink" href="#gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>真实 DAU/留存数据黑箱</strong>：除 c.ai / Replika / Pi 有三方 Similarweb 数据外，AI-native 游戏（Suck Up！、1001 Nights、Hidden Door、Altera）的 DAU/D30 留存几乎无公开披露，Insights 中&rdquo;留存崩盘&rdquo;是推断而非数据。</li>
+<li><strong>Token 真实成本结构</strong>:c.ai 28M MAU 的月度推理账单是多少？$50M/月？$100M/月？这个数据从未官方披露，是评估 G06 倒挂的核心未知。</li>
+<li><strong>Google-Character.AI 授权条款细则</strong>:$2.7B 中分多少是团队 retention package，多少是纯技术许可？投资人优先清算后老股东实得多少？The Information 有部分披露但不完整。</li>
+<li><strong>NEO NPC / ACE 的实际接入项目</strong>:2025 年有没有任何 AAA 产品把 Inworld/Convai 真正塞进出货版？据查 Ubisoft Star Wars Outlaws、Avatar Frontiers 都被传闻但未确认。</li>
+<li><strong>AI-native 游戏在 Steam 的长期存活率</strong>:Steam 2024.01 政策后 8000+ AI 披露游戏中，<strong>商业成功（&gt;$100K 收入）的比例未知</strong>——这个数字是判断赛道活力的核心指标。</li>
+<li><strong>美国 vs 中国差异实证</strong>：需要模块 2.3 中国市场对比（Talkie/星野/筑梦岛 vs c.ai）以及模块 2.4 日本/东南亚补足，才能形成完整 APAC 对比。</li>
+<li><strong>死亡案例的 post-mortem</strong>:Dreamworld、Fable、Faulty 团队成员是否有后续复盘长文？需补充 LinkedIn/Medium 搜索。</li>
+<li><strong>Talkie 归属判定</strong>:MiniMax 是中国母公司但 Talkie 几乎只在美国运营，分类到&rdquo;美国市场&rdquo;是否准确？这影响 2.3 的去重。</li>
+</ol>
+<hr />
+<p><em>模块 2.2 · 完</em></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#facts">一、Facts（事实层）</a></li>
+<li class="toc-h3"><a href="#11">1.1 市场总览</a></li>
+<li class="toc-h3"><a href="#12-25">1.2 产品案例库（25+)</a></li>
+<li class="toc-h4"><a href="#a-ai-native-ai">A. AI-native 游戏（AI 作为核心机制，移除即崩）</a></li>
+<li class="toc-h4"><a href="#b-ai">B. AI 陪伴 / 角色对话</a></li>
+<li class="toc-h4"><a href="#c-ai-middleware-sdk">C. 游戏 AI Middleware / SDK</a></li>
+<li class="toc-h4"><a href="#d-playable-ads-ai">D. Playable Ads + AI</a></li>
+<li class="toc-h4"><a href="#e-aaa-ai">E. AAA / 主流厂商 AI 尝试</a></li>
+<li class="toc-h3"><a href="#13-characterai-google-27b-202408">1.3 Character.AI × Google $2.7B 授权案深度分析（2024.08)</a></li>
+<li class="toc-h3"><a href="#14">1.4 死亡与转型案例</a></li>
+<li class=""><a href="#summary">二、Summary（结构总结）</a></li>
+<li class=""><a href="#insights">三、Insights（四视角）</a></li>
+<li class="toc-h3"><a href="#a">A. 产品视角</a></li>
+<li class="toc-h3"><a href="#b">B. 商业/资本视角</a></li>
+<li class="toc-h3"><a href="#c">C. 用户/文化视角</a></li>
+<li class="toc-h3"><a href="#d">D. 技术/系统视角</a></li>
+<li class=""><a href="#sources">四、Sources（来源）</a></li>
+<li class=""><a href="#gaps">五、Gaps（缺口与后续问题）</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

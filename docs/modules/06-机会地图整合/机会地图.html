@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="核心判断 :Runtime AI × IAA 小游戏是经济学真空带（模块 1.1 + 3 · G06 Token 倒挂），但 Generative Playable Feed(GPF) 子品类用 Pipeline AI + UGC 飞轮 从根本上把 Runtime 成本归零，是 2025 2026 观察到唯一同时解决 Token 经济学、内容枯竭、冷启动三大…">
+<title>机会地图 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class=" active" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/06-机会地图整合/index.html">机会地图整合</a> · 机会地图</div><h1 id="ai-playable-2022-2026">机会地图 — AI × 小游戏与 Playable 体验赛道（2022-2026)<a class="headerlink" href="#ai-playable-2022-2026" title="Permanent link">#</a></h1>
+<blockquote>
+<p><strong>模块 06 · 核心主交付物</strong>
+最终更新：2026-04-13
+本文件是 Phase 1-3 全部研究的最终整合与行动清单，服务四类读者：<strong>A 产品 PM / B 投资人 / C 行业从业者 / D 战略决策者</strong>
+所有断言必须携带模块引用。强判断 / 推测 / 探索性假设分别标签。</p>
+</blockquote>
+<hr />
+<h2 id="0-tldr200">§0. TL;DR(200 字）<a class="headerlink" href="#0-tldr200" title="Permanent link">#</a></h2>
+<p><strong>核心判断</strong>:Runtime AI × IAA 小游戏是经济学真空带（模块 1.1 + 3 · G06 Token 倒挂），但 <strong>Generative Playable Feed(GPF)</strong> 子品类用 <strong>Pipeline AI + UGC 飞轮</strong> 从根本上把 Runtime 成本归零，是 2025-2026 观察到唯一同时解决 Token 经济学、内容枯竭、冷启动三大痛点的形态（模块 2.5）。<strong>最大机会</strong>是&rdquo;中国版 GPF&rdquo;——抖音/微信/小红书生态中的 Pipeline-Creator 象限全球仅 7 家、中国零玩家，12-24 个月后被 YouTube Playables Builder / Roblox / MWM 平台化吃掉（模块 1.4 · 2.5）。<strong>最应规避</strong>的是正面 Runtime AI × IAA 交集、纯 C 端 AI 陪伴独立公司（Character.AI $2.7B 退出是&rdquo;失败的成功退出&rdquo;）、AAA 内嵌 AI NPC（逆水寒反面）与 AI-washed 叙事型公司。</p>
+<p><strong>一句话版</strong>:GPF 是唯一真实的窗口，中国版 Pipeline-Creator 是最大空白，12-24 个月内必须下注。</p>
+<hr />
+<h2 id="1">§1. 主命题（深化）<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<h3 id="11">1.1 修订后的主命题<a class="headerlink" href="#11" title="Permanent link">#</a></h3>
+<blockquote>
+<p><strong>&ldquo;Runtime AI × 小游戏是真空带（Token 经济学卡死），但 Generative Playable Feed(GPF）子品类正在用 Pipeline AI + UGC 飞轮打破它 — 窗口期 12-24 个月，之后被 YouTube/TikTok/Roblox 平台化吃掉。&rdquo;</strong></p>
+</blockquote>
+<h3 id="12-runtime">1.2 为什么 Runtime 真空带成立（三重论证）<a class="headerlink" href="#12-runtime" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>经济学根因</strong>:GPT-4o-mini 单会话 Token 成本 ~$0.014/小时，而小游戏 IAA ARPDAU &lt; $0.05,AI 税直接吃掉 15-40% 毛利【模块 1.1 + 1.3 + 3 · G06】</li>
+<li><strong>退出模式印证</strong>:Character.AI 28M MAU → 被 Google $2.7B &ldquo;失败的成功&rdquo;授权，Inflection → Microsoft $650M reverse acqui-hire,<strong>C 端独立 IPO 路径在 2024 正式关闭</strong>【模块 2.2】</li>
+<li><strong>TOP 榜单零信号</strong>:2024 Q2 微信小游戏 240+ 款季度千万流水榜单中零 AI-native 作品，TOP 1 寻道大千仅用 AI 做买量素材【模块 1.1 · 2.1】</li>
+</ol>
+<h3 id="13-gpf">1.3 为什么 GPF 是唯一可行破局<a class="headerlink" href="#13-gpf" title="Permanent link">#</a></h3>
+<p><strong>Pipeline AI</strong> 的经济学方程式：
+- <strong>AI 只在创作时被调用一次</strong>，消费端零 Token 成本
+- 单次生成 ~$0.1-0.5，靠 <strong>creator : consumer ≥ 1 : 100</strong> 的 UGC 杠杆摊薄
+- 消费端回归传统 IAA / 订阅，<strong>AI 税归零</strong>【模块 2.5】</p>
+<p><strong>一对一映射每个模块的命题</strong>:
+| 模块 | 命题 | GPF 如何解 |
+|&mdash;|&mdash;|&mdash;|
+| 1.1 双刀 | AI-native × Runtime 象限红海 42 家 | GPF 在 <strong>Pipeline-Creator</strong> 象限全球仅 7 家，中国零 |
+| 1.3 平台 | AI 税 15-40% ARPDAU | Pipeline AI 把 AI 税搬到创作端 |
+| 3 · G06 | Token 倒挂 | GPF 唯一不受 G06 影响的形态 |
+| 4 · 情感 MMO | D7-D30 断崖仅服务 5-10% | GPF 服务轻度 95%，反面形态 |
+| 5 · 定义权脱离 | 游戏壳 ≠ 游戏 | GPF = 定义权脱离的终极形态，做 playable 但不叫游戏 |</p>
+<h3 id="14">1.4 双刀分类框架（本文全文复用）<a class="headerlink" href="#14" title="Permanent link">#</a></h3>
+<p><strong>刀 1 · AI 可移除性</strong>:<strong>AI-native</strong>（移除 AI 即死）/ <strong>AI-augmented</strong>(AI 让体验更好）/ <strong>AI-washed</strong>(AI 只是 PR)/ <strong>Enabler</strong>(AI 基础设施 B 端）
+<strong>刀 2 · AI 存在位置</strong>:<strong>Runtime</strong>（在线推理）/ <strong>Pipeline-Dev</strong>（开发工具）/ <strong>Pipeline-Creator</strong>（用户创作）/ <strong>Pipeline-Embedded</strong>（素材预生成）/ <strong>Hybrid</strong></p>
+<hr />
+<h2 id="2">§2. 双刀机会矩阵（核心）<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<h3 id="21-54">2.1 5×4 象限矩阵（玩家密度 + 空白 + 代表 + 机会评级）<a class="headerlink" href="#21-54" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>存在位置 ↓ / 可移除性 →</th>
+<th>AI-native</th>
+<th>AI-augmented</th>
+<th>AI-washed</th>
+<th>Enabler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Runtime</strong></td>
+<td>🔴 <strong>42 家红海</strong>(Character.AI / 星野 / Zeta / Inworld runtime / inZOI Smart Zoi)<br>★★☆☆☆</td>
+<td>🟠 14 家半红（逆水寒 / AI Dungeon)<br>★★☆☆☆</td>
+<td>⚫ 13 家淘汰（Q4 被洗）<br>★☆☆☆☆</td>
+<td>🟡 Inworld / Rho / Convai / Artificial Agency<br>★★★☆☆</td>
+</tr>
+<tr>
+<td><strong>Pipeline-Dev</strong></td>
+<td>🟡 少量（Hidden Door / Series AI)<br>★★★☆☆</td>
+<td>🟢 Unity Muse / Scenario / Ludo.ai<br>★★★☆☆</td>
+<td>⚫ AI washed 美术外包<br>☆☆☆☆☆</td>
+<td>🟢 <strong>26 家</strong>(Rosebud / Replit / Rct.ai / Hunyuan Game SDK)<br>★★★★☆</td>
+</tr>
+<tr>
+<td><strong>Pipeline-Creator</strong></td>
+<td>💎 <strong>⚠️ 7 家全球 + 中国零</strong><br>Rezona / LoopIt / Upit / YouTube Playables Builder<br>★★★★★</td>
+<td>🟢 空白+</td>
+<td>⚫ 无</td>
+<td>💎 <strong>最空白象限</strong><br>★★★★★</td>
+</tr>
+<tr>
+<td><strong>Pipeline-Embedded</strong></td>
+<td>🟢 3 家（Whispers from the Star 预生成）<br>★★★★☆</td>
+<td>🟢 多数 AAA 素材管线<br>★★★☆☆</td>
+<td>⚫ 无</td>
+<td>🟡 可灵 / 即梦 / Midjourney<br>★★★☆☆</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>🟡 5 家（Altera Project Sid)<br>★★★☆☆</td>
+<td>🟠 少量</td>
+<td>⚫ 无</td>
+<td>🟡 少量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解读（模块 1.4 · 92 家玩家统计）</strong>:
+- <strong>最红海</strong>:Runtime × AI-native(42 家，2024-2025 正在被淘汰）
+- <strong>最空白 / 最高机会</strong>:<strong>Pipeline-Creator × AI-native</strong> 与 <strong>Pipeline-Creator × Enabler</strong> 两格 — 这两格是本研究<strong>所有证据指向的金矿</strong>，服务四视角 <strong>A / B / D</strong>
+- <strong>次空白</strong>:Pipeline-Embedded × AI-native(Whispers 范式，服务视角 <strong>A / C</strong>)</p>
+<h3 id="22">2.2 各象限红绿总览（快速索引）<a class="headerlink" href="#22" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>象限代号</th>
+<th>判断</th>
+<th>谁该进</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q-1 Runtime × native</td>
+<td>🔴 红海，除非拿到 AAA 授权不进</td>
+<td>D 战略</td>
+</tr>
+<tr>
+<td>Q-2 Pipeline-Creator × native</td>
+<td>💎 第一空白，窗口 12-24 个月</td>
+<td>A / B / D</td>
+</tr>
+<tr>
+<td>Q-3 Pipeline-Creator × Enabler</td>
+<td>💎 第二空白，SDK 层</td>
+<td>B / D</td>
+</tr>
+<tr>
+<td>Q-4 Pipeline-Dev × Enabler</td>
+<td>🟢 红但可容纳</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Q-5 Runtime × Enabler(middleware)</td>
+<td>🟠 中国版机会</td>
+<td>B / D</td>
+</tr>
+<tr>
+<td>Q-6 Pipeline-Embedded × native</td>
+<td>🟢 AAA 授权路径</td>
+<td>A / D</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-gap-12">§3. 三维交叉机会矩阵（GAP × 心理 × 跨品类 · 12 行）<a class="headerlink" href="#3-gap-12" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>核心概念</th>
+<th>GAP（模块 3)</th>
+<th>心理依据（模块 4)</th>
+<th>跨品类灵感（模块 5)</th>
+<th>市场证据（模块 1/2)</th>
+<th>强度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-01</td>
+<td><strong>中国版 GPF（一键生成 playable + feed)</strong></td>
+<td>G06 Token 倒挂（Pipeline 解）</td>
+<td>轻度 95% 用户（非情感 MMO)</td>
+<td>Midjourney 生成即抽卡 + TikTok feed</td>
+<td>MWM Rezona/LoopIt · YouTube Playables · 1.4 中国零</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-02</td>
+<td><strong>Pipeline-Creator × Enabler SDK（面向 Creator 的游戏 middleware)</strong></td>
+<td>G02 人格一致性 + G06</td>
+<td>—</td>
+<td>Unity / Figma 开发者工具</td>
+<td>Inworld $500M 范本 · 中国仅 Rct.ai</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-03</td>
+<td><strong>端侧小模型 + WebGPU 游戏 infra</strong></td>
+<td>G06 根本破局</td>
+<td>—</td>
+<td>Apple Intelligence · 豆包端侧</td>
+<td>1.3 · T-1 + T-5 交集</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-04</td>
+<td><strong>游戏壳 ≠ 游戏（陪伴/教育/工具包装 playable)</strong></td>
+<td>G10 LTV $20-40</td>
+<td>情感依恋 Churn&lt;3%</td>
+<td>Duolingo streak + Replika 订阅</td>
+<td>星野 3 亿 · 猫箱 DAU 破百万 · 2.1</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-05</td>
+<td><strong>AAA Runtime AI 合作/授权（Krafton 模式）</strong></td>
+<td>G01/G04</td>
+<td>—</td>
+<td>—</td>
+<td>inZOI Smart Zoi 2025.03 · Krafton × Inworld</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-06</td>
+<td><strong>Playable Ads × AI 生成工具链</strong></td>
+<td>G06（创作端）</td>
+<td>损失厌恶</td>
+<td>广告即游戏 · Catizen</td>
+<td>2.4 T8 爆发 · Playtika</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-07</td>
+<td><strong>AI 机制而非 AI 角色（AI 做关卡/对手/裁判）</strong></td>
+<td>绕过 G01/G02/G06</td>
+<td>筛选感 / 对抗感</td>
+<td>Hidden Door / Volley / Series AI</td>
+<td>2.2 Suck Up! 范式</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-08</td>
+<td><strong>小而美 Steam 买断（&lt; 5 人团队）</strong></td>
+<td>G06 不适用（买断）</td>
+<td>—</td>
+<td>独立游戏节范式</td>
+<td>Suck Up! · Infinite Craft</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-09</td>
+<td><strong>Streak + 损失厌恶 + AI 陪伴（零成本高 ROI)</strong></td>
+<td>G10 延长 LTV</td>
+<td>grief 退坑延后</td>
+<td>Duolingo 1 亿 MAU</td>
+<td>空白蓝海 · 模块 5 标注</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-10</td>
+<td><strong>Telegram Mini App × AI(Catizen 路径）</strong></td>
+<td>G06 低</td>
+<td>轻度 compulsion</td>
+<td>广告即游戏</td>
+<td>Catizen / Hamster Kombat</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-11</td>
+<td><strong>韩国 Lab 合作 / 收购窗口</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>4 大 Lab 延后爆发 2026-2027 · 2.3</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>M-12</td>
+<td><strong>人格一致性 / &ldquo;人格金标 eval&rdquo; SaaS</strong></td>
+<td>G02</td>
+<td>人格漂移 grief</td>
+<td>DevOps eval 工具</td>
+<td>4.4 强建议 · Inworld 缺位</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注释</strong>:M-01 / M-02 / M-03 / M-04 / M-05 是第 §4 节的 5 个确定性机会核心，其余 7 条中 M-06 ~ M-10 进入 Top 10 打分表。</p>
+<hr />
+<h2 id="4-5">§4. 确定性机会（5 个强判断）<a class="headerlink" href="#4-5" title="Permanent link">#</a></h2>
+<h3 id="o1-gpfgenerative-playable-feed-p0">O1. 中国版 GPF(Generative Playable Feed)💎 <strong>P0</strong><a class="headerlink" href="#o1-gpfgenerative-playable-feed-p0" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:A 产品 / B 投资 / D 战略</p>
+<p><strong>机会描述（200 字）</strong>：在抖音 / 微信 / 小红书 / B 站任一生态内，做一款&rdquo;用户一句 prompt → AI 生成 playable → feed 消费 → remix 飞轮&rdquo;的独立 App 或小游戏。底层用豆包 / Hunyuan / 通义千问的 pipeline 生成能力，<strong>AI 只在创作时被调用一次</strong>，消费端回到传统 IAA 或虚拟币。对标全球玩家 MWM Rezona / LoopIt / YouTube Playables Builder / Upit。核心差异化：中文 meme / 本土 IP / 抖音式分发。这是 Pipeline-Creator × AI-native 象限全球仅 7 家、中国零玩家的空白位（模块 1.4）。</p>
+<p><strong>多模块佐证</strong>:
+- 模块 2.5 GPF 品类定义：Pipeline AI + UGC feed + creator:consumer ≥1:100 【S-2.5-<em>】
+- 模块 1.4 双刀统计：Pipeline-Creator 全球 7 家 / 中国零 【S-1.4-</em>】
+- 模块 1.3:AI 税 15-40% ARPDAU → GPF 把 AI 税搬到创作端 【S-1.3-*】
+- 模块 3 · G06:Token 倒挂根本解 【S-3-G06】
+- 模块 5：游戏性定义权脱离的终极形态 【S-5-T1】</p>
+<p><strong>为什么&rdquo;确定性&rdquo;(3 论据）</strong>:
+1. <strong>同时解决三大痛点</strong>(Token + 内容 + 冷启动）— 是 Phase 1-3 中<strong>唯一</strong>同时解三大痛点的形态
+2. <strong>全球已经有 6+ 个玩家在跑</strong>(MWM 双品牌 + YouTube 官方 + Rosebud + Upit + Replit + Websim），品类已被验证不是假设
+3. <strong>中国 Pipeline-Creator 象限字节 / 腾讯 / 米哈游都缺席</strong>，招聘与专利侧面验证&rdquo;正在筹备但未出货&rdquo;（模块 2.5 中国 gap)</p>
+<p><strong>TAM 估算</strong>：若能吃到抖音小游戏大盘 10-20%，对应 <strong>¥15-40 亿流水</strong>（基于 1.2 抖音小游戏 150-200 亿估算），上限被创作者群体规模和 feed 时长决定。</p>
+<p><strong>可复用路径（&rdquo;四步曲&rdquo;概念）</strong>:
+1. <strong>第一步：品类占位</strong>(Week 1-8)MVP 上线，只做一类 prompt（如&rdquo;生成一个 idle 放置&rdquo;)
+2. <strong>第二步：Creator 杠杆</strong>(Month 3-6）签约 50-100 个抖音腰部创作者做冷启
+3. <strong>第三步：Remix 飞轮</strong>(Month 6-12）一键 fork + 分成，creator:consumer 拉到 1:100
+4. <strong>第四步：平台化</strong>(Month 12-24）和抖音 / 微信官方合作，变成 SDK 层</p>
+<p><strong>第一步动作（Week 1-4)</strong>:
+- W1：拉齐团队（5 人，1 全栈 + 1 prompt 工程 + 1 游戏策划 + 1 增长 + 1 BD)
+- W2：跑通最小 Pipeline（豆包 / Hunyuan pipeline API + HTML5 canvas 模板 10 个）
+- W3：做 20 个 seed playable，灰度发布在小红书 / B 站
+- W4：测 creator:consumer 初始比，决定下一步模板方向</p>
+<p><strong>时间窗口</strong>:⚠️ <strong>12-18 个月（P0 紧迫）</strong> — 2027 年前被 YouTube Playables / Roblox / 抖音官方吃掉的概率 &gt; 60%</p>
+<hr />
+<h3 id="o2-ai-middleware-p0">O2. 游戏 AI middleware 中国版 🎯 <strong>P0</strong><a class="headerlink" href="#o2-ai-middleware-p0" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:B 投资 / D 战略</p>
+<p><strong>机会描述（200 字）</strong>：对标 Inworld（美国 ~$500M 估值）做中国版游戏 AI middleware，打包 &ldquo;人设 + 长时记忆 + 声音 + 立绘 + 人格金标 eval&rdquo; 的 B2B SDK，同时支持 Runtime 和 Pipeline 两种集成模式。中国几乎空白，仅 Rct.ai 转型，而 Krafton MOGIA / inZOI Smart Zoi 证明东亚大厂愿意付费。升级版是从 &ldquo;for Dev&rdquo; 转向 &ldquo;for Creator&rdquo;，直接吃 Pipeline-Creator 生态位。</p>
+<p><strong>多模块佐证</strong>:
+- 模块 3 · T-1 投资主题：游戏 AI middleware 18-24 个月时间窗 【S-3-T1】
+- 模块 1.4 双刀：中国 Enabler × Pipeline 近乎空白 【S-1.4-<em>】
+- 模块 2.2:Inworld / Rho / Artificial Agency / Convai 四家美国玩家，Inworld 估值 $500M 【S-2.2-</em>】
+- 模块 2.3:Krafton × Inworld 深度绑定证明大厂愿意付费 【S-2.3-<em>】
+- 模块 4：人格金标 eval 作为 Day 1 工程优先级 — middleware 的差异化切入点 【S-4-</em>】</p>
+<p><strong>为什么确定性</strong>:
+1. 中国独苗空缺 + 美国范本已跑通
+2. Bitkraft / a16z 在美国已下注过同一赛道
+3. G01 / G02 / G11 三个 S1 GAP 都是 middleware 的天然切入点</p>
+<p><strong>TAM 估算</strong>：中国游戏 AI middleware 2026-2028 TAM <strong>¥5-15 亿</strong>（参考美国 middleware 总市场 + 中国折扣）</p>
+<p><strong>可复用路径</strong>:
+1. 绑定 1 家大厂首发客户（腾讯 / 网易 / 字节 Ohayoo 任一）
+2. 用首发客户的场景反哺 SDK
+3. 开放社区版（Rosebud 模式）给中小开发者冷启
+4. 再卖给 Krafton / Nexon / 米哈游拓展海外</p>
+<p><strong>Week 1-4</strong>:W1 Talent（从 rct.ai / 腾讯 IEG AI Lab / 米哈游挖核心 3 人）；W2 一个 POC（人设 + 长时记忆 SDK);W3 BD 首发客户；W4 融资材料</p>
+<p><strong>时间窗口</strong>：中期，18-24 个月</p>
+<hr />
+<h3 id="o3-webgpu-infra-p1">O3. 端侧小模型 + WebGPU 游戏 infra 🔧 <strong>P1</strong><a class="headerlink" href="#o3-webgpu-infra-p1" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:B 投资 / C 行业 / D 战略</p>
+<p><strong>机会描述（200 字）</strong>：做一个专门面向小游戏 / Playable Ads / HTML5 的端侧 LLM 运行时 + WebGPU 加速层，让 3B 以下小模型在浏览器 / 微信 JSCore / 抖音 runtime 内推理首 Token &lt; 500ms。这是<strong>从根本上破 G06 Token 倒挂</strong>的基础设施路径，让 Runtime AI 小游戏第一次有可能跑通。对标 Web-LLM 项目 + MLC-AI，但做游戏 SDK 特化。</p>
+<p><strong>多模块佐证</strong>:
+- 模块 3 · G06 Token 倒挂 + T5 端侧模型 【S-3-G06 · T5】
+- 模块 1.3 平台：字节豆包端侧 / Apple Intelligence 2025 时间表模糊 【S-1.3-<em>】
+- 模块 2.3：日韩 AAA 清一色内部工具化验证端侧需求 【S-2.3-</em>】</p>
+<p><strong>为什么确定性</strong>:
+1. G06 是整个 Runtime 真空带的根因，任何能降 5-10 倍 Token 成本的方案都值钱
+2. Apple Intelligence + 豆包端侧 + 华为盘古端侧 = 2025-2027 硬件时间窗打开
+3. 2.4 §9 明确列为 T1 + T5 + G06 三重交集</p>
+<p><strong>TAM 估算</strong>:infra 本身不大（<strong>¥1-5 亿</strong>），但卡位价值远高于直接估值</p>
+<p><strong>可复用路径</strong>:1) 开源框架冷启 → 2) 跑通 3-5 个 showcase 游戏 → 3) 平台授权（字节 / 腾讯）→ 4) 变成行业默认</p>
+<p><strong>Week 1-4</strong>：技术验证（端侧 3B 模型 WebGPU 首 Token 延迟）</p>
+<p><strong>时间窗口</strong>：中长期 24-36 个月，2026 Apple Intelligence 成熟后爆发</p>
+<hr />
+<h3 id="o4-p1">O4. &ldquo;游戏壳 ≠ 游戏&rdquo;陪伴 / 工具产品延伸 🎭 <strong>P1</strong><a class="headerlink" href="#o4-p1" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:A 产品 / B 投资 / D 战略</p>
+<p><strong>机会描述（200 字）</strong>：复用中国星野 / 猫箱 / 筑梦岛模式，但<strong>反向</strong>做 — 把 Duolingo-style Streak / 每日关卡 / AI 玩法核藏进陪伴、工具、教育的壳，同时吃到订阅制 ARPU(3-5 倍 IAP)+ 绕苹果税 + 绕中国版号 + 监管红利。具体切面：AI 口语 + 关卡化、AI 心理咨询 + 任务感、AI 家教 + 剧情、AI 角色扮演 + 成长系统。<strong>关键：把游戏玩家心理学的 Streak + 损失厌恶 + Compulsion loop 装进非游戏品类</strong>。</p>
+<p><strong>多模块佐证</strong>:
+- 模块 2.1：星野 2024 流水 &gt; 3 亿，付费率 3-5%，头部月付 ¥1000+ 【S-2.1-<em>】
+- 模块 5 Top 5 #5 Streak + 损失厌恶</em><em>空白蓝海</em><em> 【S-5-T5】
+- 模块 5：游戏性定义权脱离最锋利洞察 【S-5-</em>】
+- 模块 4:Replika Pro Churn &lt; 3% 证明订阅心智可被情感锁死 【S-4-*】
+- 模块 2.4 T-3:&rdquo;游戏壳 ≠ 游戏&rdquo;陪伴/工具产品</p>
+<p><strong>为什么确定性</strong>:
+1. 中国豆包 / 猫箱 / 星野<strong>已经无意识实践但没有方法论</strong>，先入场者建立心智
+2. 订阅制 ARPU 3-5 倍 IAP + 版号规避三重红利
+3. 2.4 §9 A-3 明确列为确定性机会</p>
+<p><strong>TAM 估算</strong>:AI 陪伴 / AI 教育交集的中国市场 <strong>¥20-50 亿</strong>(2027)</p>
+<p><strong>可复用路径</strong>：垂直场景切入（口语 / 心理 / 二次元）→ 一个玩法内核通吃 → 扩品类</p>
+<p><strong>Week 1-4</strong>：选 1 个垂直（口语最明确），跑最小 MVP，测 D7 留存</p>
+<p><strong>⚠️ 监管风险</strong>:Garcia v. Character Technologies 判决是行业最大监管不确定 【S-4-*】</p>
+<p><strong>时间窗口</strong>：短中期 12-24 个月</p>
+<hr />
+<h3 id="o5-aaa-runtime-ai-krafton-mogia-inworld-p1">O5. AAA Runtime AI 合作 / 授权（Krafton MOGIA × Inworld 模式）🤝 <strong>P1</strong><a class="headerlink" href="#o5-aaa-runtime-ai-krafton-mogia-inworld-p1" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:C 行业 / D 战略</p>
+<p><strong>机会描述（200 字）</strong>：不自己做 C 端，而是做 <strong>AAA 大厂的 AI NPC 技术授权方</strong>。Krafton × Inworld 是东亚大厂第一个把 AI NPC 作为&rdquo;用户可见卖点&rdquo;商业化上线的案例（inZOI 2025.03 EA）。同一逻辑可复制到米哈游、腾讯 IEG、网易、Nexon、米哈游海外工作室。关键动作是做一个&rdquo;看上去像产品但本质是 demo&rdquo;的 showcase，然后技术授权收费。</p>
+<p><strong>多模块佐证</strong>:
+- 模块 2.3:Krafton × Inworld 深度绑定 · inZOI 2025.03 EA 商业化上线 【S-2.3-<em>】
+- 模块 2.1：逆水寒 AI NPC 反面案例（G01 / G04) 【S-2.1-</em>】
+- 模块 3 · T-1:middleware 投资主题 【S-3-T1】</p>
+<p><strong>为什么确定性</strong>:1) 东亚第一个跑通的 Runtime AI 商业案例；2) 大厂内部工具化惯性强，授权比自研快；3) 2026-2027 韩国 Lab 集中爆发时间窗 【S-2.3-*】</p>
+<p><strong>TAM 估算</strong>：全球 AAA 游戏 AI NPC 授权市场 <strong>$200-500M</strong>(2028)</p>
+<p><strong>可复用路径</strong>:1 款 showcase 游戏 → 技术服务收费 → 并购退出给大厂</p>
+<p><strong>Week 1-4</strong>：展示版 demo 立项 + BD 1 家大厂 PoC 意向</p>
+<p><strong>时间窗口</strong>：中期 18-30 个月</p>
+<hr />
+<h2 id="5-4">§5. 探索性机会（4 个弱判断）<a class="headerlink" href="#5-4" title="Permanent link">#</a></h2>
+<blockquote>
+<p><strong>标签</strong>:🧪 探索性假设 — 未被多模块数据完整验证，高回报但高风险</p>
+</blockquote>
+<h3 id="e1-telegram-mini-app-aicatizen">E1. Telegram Mini App × AI(Catizen 路径）🧪<a class="headerlink" href="#e1-telegram-mini-app-aicatizen" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:A / B
+- <strong>假设</strong>:Catizen / Hamster Kombat 证明 Telegram Mini App 的 IAA + Web3 经济学能跑，若叠加 Pipeline AI 生成内容，可复制 Mini App × AI 奇点
+- <strong>缺口</strong>:Catizen 真实 CPM / ARPDAU 未公开（2.4 §8 待补）
+- <strong>第一步</strong>：做 1 个 Mini App MVP 测 3 日留存
+- <strong>为何弱判断</strong>:Telegram 生态是否稳定、中国团队出海是否能吃到 Web3 红利两大未知</p>
+<h3 id="e2-ai">E2. 订阅制 AI 陪伴 × 教育壳 🧪<a class="headerlink" href="#e2-ai" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:A / D
+- <strong>假设</strong>：把 AI 家教 / AI 口语和 Streak 游戏化深度融合，服务 K12 海外市场（避开国内教培监管）
+- <strong>第一步</strong>：选 ESL 口语做 MVP，测订阅价格点
+- <strong>为何弱判断</strong>：教育 K12 监管 + 付费意愿在不同国家差异巨大</p>
+<h3 id="e3-vn-ai">E3. 日本 VN × AI 破局（低概率高回报）🧪<a class="headerlink" href="#e3-vn-ai" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:C / D
+- <strong>假设</strong>：找 1 家日本中型 Galgame 厂（Marvelous / FuRyu / Visual Arts / Key）授权 IP 做 AI 化续作，用&rdquo;粉丝续命&rdquo;叙事破 VN 作者性锁死
+- <strong>缺口</strong>：日本 Galgame 中型厂 AI 动作几乎零公开信息（2.4 §8 gap)
+- <strong>为何弱判断</strong>：日本 VN 作者性 + IP 法务结构锁死<strong>系统性阻止</strong>(2.3 明确判断），成功率 &lt; 10%，但一旦跑通是独门独路</p>
+<h3 id="e4-eval-saas">E4. 人格金标 eval SaaS 🧪<a class="headerlink" href="#e4-eval-saas" title="Permanent link">#</a></h3>
+<p><strong>服务视角</strong>:B
+- <strong>假设</strong>：模块 4 强烈建议 &ldquo;人格金标 eval&rdquo; 作为 Day 1 工程优先级，这是一个尚未出现独立玩家的细分
+- <strong>第一步</strong>：做一个 eval 工具，免费给 3 家 AI 陪伴公司试用
+- <strong>为何弱判断</strong>:Tooling 赛道的客户基数是否足够支撑独立 SaaS 不清楚</p>
+<hr />
+<h2 id="6-6-dont">§6. 风险警示（6 条 Don&rsquo;t)<a class="headerlink" href="#6-6-dont" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>不要做</th>
+<th>反面证据</th>
+<th>模块</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>❌ 不要做正面 &ldquo;Runtime AI × IAA 小游戏&rdquo; 交集</td>
+<td>经济学真空，GPT-4o-mini $0.014/h vs ARPDAU &lt; $0.05</td>
+<td>1.1 · 1.3 · 3-G06</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>❌ 不要做纯 C 端 AI 陪伴独立公司</td>
+<td>Character.AI $2.7B 是失败的成功退出，LTV $20-40 天花板，Inflection $650M reverse acqui-hire</td>
+<td>2.2 · 3-G10</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>❌ 不要给 AAA 做内嵌 AI NPC（非授权合作）</td>
+<td>逆水寒 AI NPC 10 万条对话后玩家发现只会反刍设定</td>
+<td>2.1 · 3-G01/G04</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>❌ 不要做 &ldquo;AI washed&rdquo; 只用 AI 做 PR 的项目</td>
+<td>2024 Q4 死亡潮（Fable / Faulty / Vibecheck / Artie / Dreamworld)</td>
+<td>2.2</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>❌ 不要挑战日本 VN 作者性 + IP 法务</td>
+<td>Portopia AI Demo 翻车，日本 AAA 清一色内部工具化</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>❌ 不要在 AI 游戏里跑传统 A/B 测试</td>
+<td>Prompt 改动 / filter 更新会引发人格漂移 grief 退坑，传统 KPI 系统性误导</td>
+<td>4.4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-top-10">§7. Top 10 机会打分表<a class="headerlink" href="#7-top-10" title="Permanent link">#</a></h2>
+<p><strong>维度</strong>：市场规模 / 时间窗口紧迫 / 执行难度（低难 = 高分）/ 差异化强度 / 多模块佐证数（各 1-5 分，共 25 分）</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>机会</th>
+<th>市场</th>
+<th>窗口紧迫</th>
+<th>执行（低难）</th>
+<th>差异化</th>
+<th>多模块佐证</th>
+<th><strong>总分</strong></th>
+<th><strong>P</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>O1 · 中国版 GPF</strong></td>
+<td>5</td>
+<td>5</td>
+<td>3</td>
+<td>5</td>
+<td>5</td>
+<td><strong>23</strong></td>
+<td>🔥 P0</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>O2 · 中国版游戏 AI middleware</strong></td>
+<td>4</td>
+<td>5</td>
+<td>2</td>
+<td>5</td>
+<td>5</td>
+<td><strong>21</strong></td>
+<td>🔥 P0</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>O4 · 游戏壳 ≠ 游戏</strong></td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+<td><strong>21</strong></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>O5 · AAA Runtime AI 授权</strong></td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>5</td>
+<td>4</td>
+<td><strong>19</strong></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>M-06 · Playable Ads × AI 工具链</strong></td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td><strong>19</strong></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>O3 · 端侧小模型 + WebGPU infra</strong></td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td><strong>17</strong></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>M-07 · AI 机制而非 AI 角色（Steam)</strong></td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td><strong>17</strong></td>
+<td>P2</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>M-12 · 人格金标 eval SaaS</strong></td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td><strong>17</strong></td>
+<td>P2</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>M-10 · Telegram Mini App × AI</strong></td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td><strong>15</strong></td>
+<td>P2</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>M-11 · 韩国 Lab 合作/收购</strong></td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td><strong>14</strong></td>
+<td>P3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8">§8. 给四类读者的战略三选择<a class="headerlink" href="#8" title="Permanent link">#</a></h2>
+<h3 id="a-pm">A · 产品 PM<a class="headerlink" href="#a-pm" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>推荐内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 激进</td>
+<td><strong>All-in 中国版 GPF(O1)</strong>，立刻组 5 人小队，Week 1 启动 MVP,12 个月跑通 creator:consumer 1:100</td>
+</tr>
+<tr>
+<td>⚖️ 平衡</td>
+<td><strong>做 O4 游戏壳 ≠ 游戏产品</strong>（如口语 Streak × AI),24 个月构建用户 + 订阅双引擎，风险可控</td>
+</tr>
+<tr>
+<td>🛡️ 保守</td>
+<td><strong>做 M-07 小而美 Steam 买断 AI 机制游戏</strong>，复用 Suck Up! 范式，1 年内出货，买断制避开 Token 倒挂</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b">B · 投资人<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>推荐内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 激进</td>
+<td><strong>中国版 GPF 先发玩家 A 轮下注</strong>（若能找到），或以 $5-10M 种子启动一个自扶植项目</td>
+</tr>
+<tr>
+<td>⚖️ 平衡</td>
+<td><strong>重仓游戏 AI middleware(O2)</strong>，学 Bitkraft 投 Inworld 的姿势，18-24 个月时间窗</td>
+</tr>
+<tr>
+<td>🛡️ 保守</td>
+<td><strong>投 Enabler × Pipeline-Dev 象限（工具链）</strong>，不赌终端爆款，做&rdquo;卖铲子&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c">C · 行业（游戏公司）<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>推荐内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 激进</td>
+<td><strong>以 AAA IP 授权的方式做 Runtime AI NPC</strong>(O5），复制 Krafton × Inworld 模式，2-3 年落地</td>
+</tr>
+<tr>
+<td>⚖️ 平衡</td>
+<td><strong>内部用 Pipeline-Dev 工具降低美术 / 关卡成本</strong>，不对外营销（日本 AAA 通用路径）</td>
+</tr>
+<tr>
+<td>🛡️ 保守</td>
+<td><strong>不做 Runtime，只做 Pipeline 预生成内容，避免 Token 倒挂</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="d-bat">D · 战略决策者（平台 / BAT / 政策）<a class="headerlink" href="#d-bat" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>推荐内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 激进</td>
+<td><strong>立刻进 Pipeline-Creator 象限</strong>（字节 / 腾讯 / 抖音小游戏必须做中国版 YouTube Playables Builder），否则 12-24 个月后被 YouTube / Roblox / MWM 抢占</td>
+</tr>
+<tr>
+<td>⚖️ 平衡</td>
+<td><strong>补贴 Token 做生态 + 投 middleware</strong>（腾讯 / 字节双线），让生态外包给第三方</td>
+</tr>
+<tr>
+<td>🛡️ 保守</td>
+<td><strong>只做底层 LLM + SDK</strong>，等待第三方验证完再入场（字节目前策略）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-2025q4-2027">§9. 时间路径图（2025Q4 → 2027)<a class="headerlink" href="#9-2025q4-2027" title="Permanent link">#</a></h2>
+<div class="codehilite"><pre><span></span><code>2025 Q4 ─┬─ Whispers from the Star iOS 上线(2025.11)→ 首个中国 AI-native 小团队出货
+         ├─ Character.AI Google 授权后遗症(S1 开始 Token 成本显性化,竞品观望)
+         ├─ YouTube Playables Builder 海外推广(可能首次进入中国开发者视野)
+         └─ 中国大厂招聘信号密集(腾讯/字节/米哈游 Pipeline-Creator 相关 JD)
+            ↓ 【⚠️ GPF 窗口正式开启】
+2026 Q1-Q2 ─┬─ Krafton inZOI Smart Zoi 1.0 正式版商业化验证(首个 Runtime AI 商业样本)
+            ├─ ⭐ 【O1 / O2 最佳入场点】—— 先发 6-12 个月的中国版 GPF / middleware
+            ├─ Apple Intelligence SDK 游戏开发者开放(O3 infra 启动)
+            └─ 韩国 4 Lab(MOGIA / VARCO / Nexon / Smilegate)密集出货
+2026 Q3-Q4 ─┬─ 抖音 / 微信小游戏 AI 工具链官方动作(字节嘘嘘岛 / 微信 AI)
+            ├─ GPF 第一批中国产品出货,creator:consumer 公开数据出现
+            └─ 韩国 Lab 爆款窗口(对应 2.3 的&quot;雷声大雨将落&quot;)
+2027 ─┬─ ⚠️ 【GPF 独立公司窗口收窄】—— YouTube Playables / Roblox / 抖音官方平台化吃单
+      ├─ 端侧小模型硬件成熟,G06 Token 倒挂开始松动
+      └─ Garcia v. Character Technologies 终审判决涟漪(监管线)
+2028+ ── 赛道进入平台主导阶段,独立创业机会退到长尾
+</code></pre></div>
+
+<p><strong>关键时间节点总结</strong>:
+- <strong>GPF 独立公司窗口：2025 Q4 ~ 2027 Q2，约 18 个月</strong>
+- <strong>middleware 中国窗口：2026 全年</strong>
+- <strong>Apple Intelligence 成熟：2026 Q2</strong>
+- <strong>Krafton 商业验证：2026 H1</strong></p>
+<hr />
+<h2 id="10">§10. 来源与引用索引<a class="headerlink" href="#10" title="Permanent link">#</a></h2>
+<p>本文件的所有断言均引自 Phase 1-3 已完成模块。为避免冗长，此处只列模块索引，具体 S-XX-XX 编号见各模块 sources.md:</p>
+<h3 id="_1">直接引用的上游模块<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>代号</th>
+<th>模块</th>
+<th>本文件用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M-1.1</strong></td>
+<td>赛道定义与边界</td>
+<td>双刀分类框架、真空带判断</td>
+</tr>
+<tr>
+<td><strong>M-1.2</strong></td>
+<td>市场规模</td>
+<td>微信 400 亿 / 抖音 150-200 亿 / AI-native 融资 $1B</td>
+</tr>
+<tr>
+<td><strong>M-1.3</strong></td>
+<td>平台格局</td>
+<td>AI 税 15-40%、6 大 AI Lab</td>
+</tr>
+<tr>
+<td><strong>M-1.4</strong></td>
+<td>玩家全景图（92 家）</td>
+<td>双刀矩阵玩家密度 / 红海空白象限</td>
+</tr>
+<tr>
+<td><strong>M-2.1</strong></td>
+<td>中国市场</td>
+<td>星野 3 亿、猫箱破百万、寻道大千 Top 1 零 AI</td>
+</tr>
+<tr>
+<td><strong>M-2.2</strong></td>
+<td>美国市场</td>
+<td>Character.AI $2.7B / Inflection $650M / 2024 H2 死亡潮</td>
+</tr>
+<tr>
+<td><strong>M-2.3</strong></td>
+<td>日韩市场</td>
+<td>Krafton × Inworld / inZOI / 4 Lab 延后爆发</td>
+</tr>
+<tr>
+<td><strong>M-2.4</strong></td>
+<td>跨区域趋势综合</td>
+<td>§9 机会地图直接输入清单 / Scenario A-E 五路径</td>
+</tr>
+<tr>
+<td><strong>M-2.5</strong></td>
+<td>GPF 品类定义</td>
+<td>Pipeline AI 经济学 / 19 产品案例 / 12-24 月窗口</td>
+</tr>
+<tr>
+<td><strong>M-3</strong></td>
+<td>18 条 GAP 清单</td>
+<td>G01 长时记忆 / G02 人格 / G06 Token 倒挂 / G10 LTV / T-1 T-5</td>
+</tr>
+<tr>
+<td><strong>M-4</strong></td>
+<td>玩家心理</td>
+<td>情感 MMO / Churn &lt; 3% / grief 退坑 / 人格金标</td>
+</tr>
+<tr>
+<td><strong>M-5</strong></td>
+<td>跨品类启发</td>
+<td>游戏性定义权脱离 / Top 5 可迁移概念 / Streak 蓝海</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">四视角标签图例<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>A</strong> = 产品 PM · <strong>B</strong> = 投资人 · <strong>C</strong> = 行业从业者 · <strong>D</strong> = 战略决策者</li>
+<li>每个 §2 象限、§3 机会、§4-5 具体机会均已标注主要服务视角</li>
+</ul>
+<h3 id="_3">本文件的独立判断（非直接引用）<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>§2 5×4 象限矩阵</strong> — 主 agent 基于 1.1 双刀 + 1.4 玩家统计的综合构造</li>
+<li><strong>§4 O1 &ldquo;四步曲&rdquo;</strong> — 借鉴口腔项目&rdquo;兔头妈妈&rdquo;方法论</li>
+<li><strong>§7 Top 10 打分</strong> — 主 agent 综合判断，维度定义见表头</li>
+<li><strong>§9 时间路径图</strong> — 基于各模块时间线的整合</li>
+</ul>
+<hr />
+<h2 id="gap">附录 · 本文件 gap（无法从现有模块回答的）<a class="headerlink" href="#gap" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>中国 Pipeline-Creator 实际招聘 / 专利信号</strong>：字节嘘嘘岛 / 腾讯微信 AI / 米哈游 Creator 动作的 confirmed 产品信息缺失（2.5 gap）— <strong>影响 O1 窗口紧迫度判断精度</strong></li>
+<li><strong>Catizen / Hamster Kombat 真实 CPM 与 ARPDAU</strong>：影响 E1 Telegram Mini App 探索性判断（2.4 §8 gap)</li>
+<li><strong>端侧 3B 模型 WebGPU 首 Token 延迟 benchmark</strong>：影响 O3 可行性判断（2.4 §8 gap)</li>
+<li><strong>GPF 品类的创作者留存 / 付费数据</strong>：目前经济学是假设不是结论（2.5 最大 gap)</li>
+</ol>
+<hr />
+<p><strong>本文件为模块 06 核心主交付物，整合 Phase 1-3 全部 8 个模块。</strong>
+<strong>下一步</strong>：作为产品案例库 / 战略简报 / 投资备忘录的母文件被引用。</p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#0-tldr200">§0. TL;DR(200 字）</a></li>
+<li class=""><a href="#1">§1. 主命题（深化）</a></li>
+<li class="toc-h3"><a href="#11">1.1 修订后的主命题</a></li>
+<li class="toc-h3"><a href="#12-runtime">1.2 为什么 Runtime 真空带成立（三重论证）</a></li>
+<li class="toc-h3"><a href="#13-gpf">1.3 为什么 GPF 是唯一可行破局</a></li>
+<li class="toc-h3"><a href="#14">1.4 双刀分类框架（本文全文复用）</a></li>
+<li class=""><a href="#2">§2. 双刀机会矩阵（核心）</a></li>
+<li class="toc-h3"><a href="#21-54">2.1 5×4 象限矩阵（玩家密度 + 空白 + 代表 + 机会评级）</a></li>
+<li class="toc-h3"><a href="#22">2.2 各象限红绿总览（快速索引）</a></li>
+<li class=""><a href="#3-gap-12">§3. 三维交叉机会矩阵（GAP × 心理 × 跨品类 · 12 行）</a></li>
+<li class=""><a href="#4-5">§4. 确定性机会（5 个强判断）</a></li>
+<li class="toc-h3"><a href="#o1-gpfgenerative-playable-feed-p0">O1. 中国版 GPF(Generative Playable Feed)💎 P0</a></li>
+<li class="toc-h3"><a href="#o2-ai-middleware-p0">O2. 游戏 AI middleware 中国版 🎯 P0</a></li>
+<li class="toc-h3"><a href="#o3-webgpu-infra-p1">O3. 端侧小模型 + WebGPU 游戏 infra 🔧 P1</a></li>
+<li class="toc-h3"><a href="#o4-p1">O4. &amp;ldquo;游戏壳 ≠ 游戏&amp;rdquo;陪伴 / 工具产品延伸 🎭 P1</a></li>
+<li class="toc-h3"><a href="#o5-aaa-runtime-ai-krafton-mogia-inworld-p1">O5. AAA Runtime AI 合作 / 授权（Krafton MOGIA × Inworld 模式）🤝 P1</a></li>
+<li class=""><a href="#5-4">§5. 探索性机会（4 个弱判断）</a></li>
+<li class="toc-h3"><a href="#e1-telegram-mini-app-aicatizen">E1. Telegram Mini App × AI(Catizen 路径）🧪</a></li>
+<li class="toc-h3"><a href="#e2-ai">E2. 订阅制 AI 陪伴 × 教育壳 🧪</a></li>
+<li class="toc-h3"><a href="#e3-vn-ai">E3. 日本 VN × AI 破局（低概率高回报）🧪</a></li>
+<li class="toc-h3"><a href="#e4-eval-saas">E4. 人格金标 eval SaaS 🧪</a></li>
+<li class=""><a href="#6-6-dont">§6. 风险警示（6 条 Don&amp;rsquo;t)</a></li>
+<li class=""><a href="#7-top-10">§7. Top 10 机会打分表</a></li>
+<li class=""><a href="#8">§8. 给四类读者的战略三选择</a></li>
+<li class="toc-h3"><a href="#a-pm">A · 产品 PM</a></li>
+<li class="toc-h3"><a href="#b">B · 投资人</a></li>
+<li class="toc-h3"><a href="#c">C · 行业（游戏公司）</a></li>
+<li class="toc-h3"><a href="#d-bat">D · 战略决策者（平台 / BAT / 政策）</a></li>
+<li class=""><a href="#9-2025q4-2027">§9. 时间路径图（2025Q4 → 2027)</a></li>
+<li class=""><a href="#10">§10. 来源与引用索引</a></li>
+<li class="toc-h3"><a href="#_1">直接引用的上游模块</a></li>
+<li class="toc-h3"><a href="#_2">四视角标签图例</a></li>
+<li class="toc-h3"><a href="#_3">本文件的独立判断（非直接引用）</a></li>
+<li class=""><a href="#gap">附录 · 本文件 gap（无法从现有模块回答的）</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

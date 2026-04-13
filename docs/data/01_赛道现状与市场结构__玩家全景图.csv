@@ -1,0 +1,93 @@
+﻿#,产品/品牌,公司,国家,品类,平台,AI 可移除性(刀1),AI 存在位置(刀2),核心机制,融资/估值,规模(MAU/流水/DAU),付费模式,状态,战略位置评分(1-5),备注/来源
+1,猫箱,字节跳动,中国,AI 陪伴/角色,iOS/Android,AI-native,Runtime,UGC 角色 + LLM 实时对话,内部孵化,DAU >100 万,免费+订阅,增长,4,S-2.1-01
+2,星野,MiniMax,中国,AI 陪伴/乙女,iOS/Android,AI-native,Runtime,角色扮演 + 语音 + 剧情,母公司 $600M+,流水 >3 亿,订阅+钻石,跑通,5,S-2.1-02 · 中国头部
+3,筑梦岛,聆心智能,中国,AI 剧情,iOS/Android,AI-native,Runtime,剧情分支 + 角色养成,数千万元,MAU ~200 万,订阅,增长,4,S-2.1-03
+4,豆包,字节跳动,中国,通用助手+游戏壳,iOS/Android/Web,AI-augmented,Runtime,助手 + 角色+小游戏插件,内部,MAU ~1 亿,免费+广告,增长,3,S-2.1-04
+5,Kimi,月之暗面,中国,长文本助手,全端,AI-washed,None,非游戏,$1.3B,MAU ~3600 万,免费,稳,2,S-2.1-05 · 非游戏
+6,彩云小梦,彩云科技,中国,AI 小说,iOS/Android,AI-native,Runtime,续写小说 + 角色,早期,付费 ~50 万,订阅,稳,3,S-2.1-06
+7,Glow,MiniMax 前身,中国,AI 陪伴,iOS/Android,AI-native,Runtime,LLM 角色扮演,-,已下架,-,死,1,S-2.1-07 · 监管下架
+8,X Eva / 微光,小冰,中国,数字人陪伴,iOS/Android,AI-native,Runtime,数字克隆 + 陪聊,独立,订阅 ~30 万,订阅,稳,3,S-2.1-08
+9,逗逗游戏伙伴,逗逗科技,中国,PC 桌面陪玩,Windows,AI-native,Runtime,屏幕识别 + 语音,天使+A,MAU ~150 万,订阅,增长,4,S-2.1-09
+10,猫耳/Aily 等,小厂集合,中国,AI 乙女,iOS/Android,AI-native,Runtime,剧情+养成,十万级,十万级,订阅,碎片,2,S-2.1-10
+11,Whispers from the Star,Anuttacon(蔡浩宇),中国→美国,AI-native 游戏,Mobile/PC,AI-native,Runtime,文字剧情 + LLM NPC,蔡浩宇个人,未发售,未定,测试,4,S-2.1-11 · 蔡浩宇首作
+12,rct AI · Chaos Box,rct AI,中国,B 端 NPC 引擎,SDK,Enabler,Pipeline(Dev),NPC 行为生成 SDK,$10M+,B 端,B2B,转型,2,S-2.1-12
+13,ChattyGame,超参数,中国,文字生成小游戏,Web,AI-native,Runtime,文本→小游戏,母公司 A 轮,Demo,免费,挣扎,2,S-2.1-13
+14,逆水寒手游,网易,中国,MMORPG+AI NPC,iOS/Android,AI-augmented,Runtime,AI NPC 10 万条设定,内部,累计 >80 亿,免费+道具,稳,3,S-2.1-14 · AI NPC 标杆
+15,原神/星穹铁道,米哈游,中国,开放世界 RPG,全端,AI-washed,Pipeline(Dev),内部美术 AI,内部,40 亿美金/年,抽卡,稳,3,S-2.1-15
+16,寻道大千,三七互娱,中国,小游戏放置,微信/抖音小游戏,AI-washed,Pipeline(Dev),放置卡牌 + AI 买量素材,上市公司,流水 Top 1,IAA+IAP,稳,4,S-2.1-16 · 小游戏王者
+17,咸鱼之王,豪腾嘉科,中国,小游戏卡牌,微信/抖音小游戏,AI-washed,Pipeline(Dev),买量 AI 素材,独立,累计 >30 亿,IAA+IAP,稳,3,S-2.1-17
+18,无尽冬日,点点互动,中国→Global,SLG,iOS/Android,AI-washed,Pipeline(Dev),AI 出海买量,世纪华通子,15 亿美金,IAP,增长,4,S-2.1-18 · SLG 出海王
+19,抓大鹅/疯狂梗传,多厂,中国,休闲小游戏,小游戏,AI-washed,Pipeline(Dev),买量+关卡复制,-,月 1-3 亿,IAA,稳,2,S-2.1-19
+20,羊了个羊,简游,中国,休闲 baseline,小游戏,AI-free,None,纯手工休闲,-,已过气,IAA,死,1,S-2.1-20 · 非 AI 对照
+21,微信/混元游戏 SDK,腾讯,中国,平台 enabler,Platform,Enabler,Pipeline(Dev),Token 补贴 + NPC SDK,内部,开发者 N/A,平台分成,早期,3,S-2.1-21
+22,抖音豆包 token 补贴,字节,中国,平台 enabler,Platform,Enabler,Pipeline(Dev),Token 补贴,内部,-,平台分成,早期,3,S-2.1-22
+23,快手 × 可灵,快手,中国,playable ads,Platform,Enabler,Pipeline(Dev),视频→playable,内部,-,广告,早期,3,S-2.1-23
+24,支付宝通义,阿里,中国,非游戏,Platform,AI-free,None,非游戏,内部,-,-,非游戏,1,S-2.1-24
+25,PICO 嘘嘘岛,字节 PICO,中国,VR 沙盒,PICO,AI-augmented,Runtime,VR + 轻 AI,内部,停摆,-,死,1,S-2.1-25
+26,Pantheon Lab,香港,中国香港,B 端数字人,SDK,Enabler,Pipeline(Dev),数字人 SDK,B+ 轮,B 端,B2B,稳,2,S-2.1-26
+27,iKala/Hahow,台湾,中国台湾,AI 教育,Web,AI-washed,Pipeline(Dev),教育课+AI 壳,B 轮,B2C,订阅,稳,2,S-2.1-27
+28,AI Dungeon,Latitude,美国,AI 文字冒险,Web/iOS/Android,AI-native,Runtime,LLM 文字冒险,$3.3M seed,下滑中,订阅,萎缩,3,S-2.2-A1 · GenAI 游戏鼻祖
+29,Suck Up!,Proxima Enterprises,美国,LLM 对话游戏,Steam/Quest,AI-native,Runtime,吸血鬼说服 NPC,自筹,Steam 热销,买断,增长,4,S-2.2-A2 · 小而美范式
+30,1001 Nights,Tianyu Xu (indie),美国/中国,AI 生成故事,PC/itch,AI-native,Runtime+Pipeline Hybrid,AI 生成图/词变武器,无,独立小体量,买断,稳,2,S-2.2-A3 · Pipeline(Embedded)
+31,Hidden Door,Hidden Door Inc,美国,多人 AI RP,Web,AI-native,Runtime,书籍世界 → RPG,$20M Series A,闭测,订阅,警告,2,S-2.2-A4 · 2025 Q1 缩编
+32,Altera(Project Sid),Altera.al,美国,Minecraft AI 村民,Minecraft mod,AI-native,Runtime,多 agent 社会模拟,$11M (a16z),Demo,B2C 未定,早期,2,S-2.2-A5
+33,Infinite Craft,Neal Agarwal,美国,LLM Web 小游戏,Web,AI-native,Runtime+Pipeline Hybrid,元素合成 LLM 推理,无融资,现象级 MAU,免费,现象级,4,S-2.2-A6 · solo 零融资
+34,Inworld Origins,Inworld AI,美国,demo 侦探,PC,AI-native,Runtime,LLM NPC 侦探,母 $120M,Demo,免费,Demo,3,S-2.2-A7
+35,AI Roguelite,Big Moustache,美国,Roguelite,Steam,AI-native,Runtime,AI 生成敌人+任务,indie,稳,买断,稳,2,S-2.2-A8
+36,Series/Rho,Series Entertainment,美国,AI 游戏平台,Web,AI-native,Runtime+Pipeline Hybrid,middleware+native,$28M Series A,早期,SaaS+B2C,早期,3,S-2.2-A9
+37,Retail Mage,Jam & Tea Studios,美国,LLM 解谜,Steam,AI-native,Runtime,店铺对话解谜,未披露,早期,买断,早期,2,S-2.2-A10
+38,Character.AI,Character Technologies,美国,AI 陪伴,Web/iOS/Android,AI-native,Runtime,UGC 角色 + 对话,$1.5B→$2.7B Google,MAU 2000 万+,订阅,准退出,5,S-2.2-B1 · 赛道定义者
+39,Replika,Luka Inc,美国,AI 陪伴,iOS/Android,AI-native,Runtime,个性化伴侣,累计 $11M,MAU 数百万,订阅,稳,3,S-2.2-B2
+40,Pi / Inflection,Inflection AI,美国,AI 助手/陪伴,Web/iOS,AI-native,Runtime,情感型助手,$1.3B→MSFT $650M,人才被挖,免费,准退出,3,S-2.2-B3
+41,Talkie,MiniMax US,美国,AI 陪伴,iOS/Android,AI-native,Runtime,星野海外版,母 $600M+,增长,订阅,增长,4,S-2.2-B4
+42,Kindroid,Kindroid,美国,NSFW 陪伴,iOS/Android,AI-native,Runtime,无审查伴侣,未披露,增长,订阅,增长,3,S-2.2-B5
+43,Inworld AI,Inworld,美国,NPC SDK,SDK,Enabler,Pipeline(Dev),NPC 行为 + 对话 SDK,$120M+/~$500M,行业领跑,B2B,领跑,5,S-2.2-C1 · middleware 领跑
+44,Convai,Convai,美国,NPC API,SDK,Enabler,Pipeline(Dev),NPC API,$10M seed,B 端,B2B,稳,3,S-2.2-C2
+45,Rosebud AI,Rosebud,美国,no-code 游戏生成,Web,Enabler,Pipeline(Creator),text-to-game,$4M seed,增长,SaaS,增长,4,S-2.2-C3 · P-Creator
+46,Scenario,Scenario.gg,美国,AI 美术,Web,Enabler,Pipeline(Dev),风格化贴图生成,$6M+,B 端,SaaS,稳,3,S-2.2-C4
+47,Layer AI,Layer,美国,AI 美术 pipeline,Web,Enabler,Pipeline(Dev),美术管线,$1.9M,B 端,SaaS,稳,2,S-2.2-C5
+48,Promethean AI,Promethean,美国,场景生成,SDK,Enabler,Pipeline(Dev),场景自动搭建,小额,B 端,B2B,老牌,2,S-2.2-C6
+49,Kinetix,Kinetix,美国,AI emote/动作,SDK,Enabler,Pipeline(Dev),动作生成,$11M,B 端,B2B,稳,3,S-2.2-C7
+50,Artificial Agency,Artificial Agency,美国/加拿大,Runtime behavior SDK,SDK,Enabler,Runtime,Runtime AI middleware,$16M seed,B 端,B2B,早期,3,S-2.2-C8
+51,Luna Labs / SparkLabs,AppLovin,美国,AI playable ads,Platform,AI-augmented,Pipeline(Dev),AI 生成 playable ads,商用,营收主力,广告,稳,4,S-2.2-D1
+52,NEO NPC,Ubisoft × Inworld,法国/美国,AAA NPC demo,Demo,AI-native,Runtime,AAA AI NPC demo,demo,未发布,-,停留,3,S-2.2-E1
+53,NVIDIA ACE,NVIDIA,美国,NPC 渲染+LLM,SDK,Enabler,Runtime,本地 NPC 推理,内部,Demo,B2B,Demo,3,S-2.2-E2
+54,Copilot for Gaming,Microsoft Xbox,美国,AI 游戏助手,Xbox/PC,AI-augmented,Runtime,游戏内 copilot,内部,2025 beta,订阅,beta,3,S-2.2-E3
+55,Roblox Assistant,Roblox,美国,UGC AI 工具,Roblox,Enabler,Pipeline(Creator),Studio copilot,内部,公测,平台,公测,4,S-2.2-E6 · P-Creator
+56,Dreamworld,Dreamworld,美国,AI MMO,-,AI-washed,None,KS 诈骗,KS $700K,关停,-,死(欺诈),1,S-2.2-X1 · 警示
+57,Faulty Labs,Faulty,美国,AI 陪伴游戏,-,AI-native,Runtime,-,<$2M,关停,-,死,1,S-2.2-X2
+58,Vibecheck,-,美国,AI 社交游戏,-,AI-native,Runtime,-,-,关停,-,死,1,S-2.2-X3
+59,Fable Studio,Fable,美国,AI 剧集+游戏,Web,AI-native,Runtime+Pipeline Hybrid,AI 剧集 Showrunner,$10M+,转型 B2B,-,转型,2,S-2.2-X4
+60,1001 Nights(日发行),Guanqi Studio,日本/中国,AI 生成 VN,Steam,AI-native,Pipeline(Embedded),关键词→图像,独立,小体量,买断,存活,2,S-2.3-01
+61,NovelAI,Anlatan,美国/日本,日系 AI 插画+文本,Web,AI-native,Runtime,Anime 风格图+文,付费累计数十万,增长,订阅,增长,4,S-2.3-02 · 日系社区霸主
+62,hololive AI 工具,Cover,日本,VTuber 辅助,内部,AI-augmented,Pipeline(Dev),内部辅助,内部,内部,-,稳,2,S-2.3-03
+63,Square Enix AI Division,Square Enix,日本,AAA 内部工具,内部,AI-augmented,Pipeline(Dev),内部管线,内部,扩张,-,扩张,3,S-2.3-04
+64,The Portopia AI Demo,Square Enix,日本,LLM 互动小说 demo,PC,AI-native,Runtime,LLM VN demo,内部,翻车,-,死,1,S-2.3-05
+65,Bandai Namco AI NPC 研究,Bandai Namco,日本,专利+demo,内部,AI-native,Runtime,R&D NPC,内部,R&D,-,研究,2,S-2.3-06
+66,Capcom RE Engine + GenAI,Capcom,日本,美术管线,内部,AI-augmented,Pipeline(Dev),材质/贴图 AI,内部,内部,-,稳,2,S-2.3-07
+67,Konami MGSΔ / SH2 Remake,Konami,日本,贴图 AI 放大,内部,AI-augmented,Pipeline(Dev),贴图 upscale,内部,内部,-,稳,2,S-2.3-08
+68,CyberAgent Extreme AI Studio,CyberAgent,日本,playable ads+素材,Platform,AI-augmented,Pipeline(Dev),广告素材生成,内部,营销规模化,广告,增长,4,S-2.3-09
+69,Cygames 手游产线,CyberAgent 子,日本,手游,iOS/Android,AI-washed,Pipeline(Dev),传统手游,内部,年十亿美金,抽卡,稳,3,S-2.3-10
+70,Rinna,rinna 株式会社,日本,AI 角色陪伴元祖,iOS/Android,AI-native,Runtime,女高中生 AI,微软系,下滑,订阅,稳,2,S-2.3-11 · 元祖案例
+71,Cotomo,Starley,日本,语音 AI 陪伴,iOS,AI-native,Runtime,语音对话,A 轮,DAU ~10 万,免费,下滑,2,S-2.3-12
+72,bambi / tsumug,小团队,日本,VN AI 陪伴,iOS/Android,AI-native,Runtime,VN 陪伴,十万级,十万以下,订阅,碎片,1,S-2.3-13
+73,Krafton MOGIA,Krafton,韩国,GenAI 游戏工作室,内部,AI-native,Runtime,AAA AI 工作室,内部,30+ 人,-,扩张,5,S-2.3-14 · 东亚唯一
+74,inZOI Smart Zoi,Krafton MOGIA,韩国,AI NPC 人生模拟,Steam EA,AI-native,Runtime,本地 LLM NPC,内部,2025.03 EA,买断,验证中,5,S-2.3-15 · AAA Runtime 首秀
+75,PUBG Ally / CPC,Krafton × NVIDIA × Inworld,韩国,AI 队友,PUBG,AI-native,Runtime,AI 队友,R&D,R&D,-,实验,3,S-2.3-16
+76,Nexon Intelligence Labs,Nexon,韩国,AI Lab,内部,AI-augmented,Pipeline(Dev),Lab,内部,百人级,-,稳,2,S-2.3-17
+77,Embark Studios AI TTS,Nexon 子,瑞典/韩国,FPS AI 配音,THE FINALS,AI-native,Pipeline(Embedded),TTS 预烘焙,内部,商业,免费,争议稳,3,S-2.3-18
+78,NCSoft VARCO LLM,NCSoft,韩国,自研 LLM,B2B,Enabler,Pipeline(Dev),自研底座,内部,B2B,B2B,压力,2,S-2.3-19
+79,NCSoft Project G,NCSoft,韩国,AI-native 新项目,未公布,AI-native,Runtime,R&D,内部,未公布,-,R&D,2,S-2.3-20
+80,Smilegate AI / FutureLab,Smilegate,韩国,数字人+研究,内部,AI-augmented,Runtime,数字人 + VR,内部,内部,-,稳,2,S-2.3-21
+81,ScatterLab Luda 1.0/2.0,ScatterLab,韩国,AI 陪伴,iOS/Android,AI-native,Runtime,韩语陪聊,A+,重启后中量,订阅,重启,3,S-2.3-22
+82,Zeta,ScatterLab,韩国,K-drama AI 角色,iOS/Android,AI-native,Runtime,韩剧角色陪聊,A+,MAU 数百万,订阅,增长,5,S-2.3-23 · 韩国头部
+83,Wrtn Technologies,Wrtn,韩国,AI 写作→互动故事,Web/Mobile,AI-native,Runtime,写作 copilot→故事,B 轮,千万 MAU 级,订阅,增长,4,S-2.3-24
+84,Naver HyperCLOVA X,Naver,韩国,底座 LLM,API,Enabler,Pipeline(Dev),底座,国家级,国家级,B2B,稳,3,S-2.3-25
+85,Kakao Brain KoGPT / Karlo,Kakao,韩国,模型+游戏用,API,Enabler,Pipeline(Dev),底座+图,内部,收缩,B2B,压力,1,S-2.3-26
+86,韩国 AI 基本法 + GRAC 分级,政府,韩国,监管,Policy,AI-free,None,监管,-,2025 生效,-,生效,3,S-2.3-27 · 监管
+87,Rezona,MWM SAS,法国,AI playable feed,iOS/Android/Web,Enabler,Pipeline(Creator),prompt → AI 生成 meme 小游戏,母 C 轮 $50M,2025 Q3 上线,免费,增长,4,S-2.5-01 · 见 2.5
+88,LoopIt,MWM SAS,法国,AI 互动玩具,iOS,Enabler,Pipeline(Creator),prompt → fidget playable,母同上,2025 Q4 上线,免费,早期,3,S-2.5-02 · 见 2.5
+89,YouTube Playables Builder,Google,美国,平台 creator,YouTube,Enabler,Pipeline(Creator),creator 用 AI 生成 playable,内部,2025,平台广告,早期,4,S-2.5-04 · 见 2.5
+90,Upit,Upit,美国,AI 3D mini game,Web,Enabler,Pipeline(Creator),prompt → mini game,种子轮,2024,免费,早期,2,S-2.5-06 · 见 2.5
+91,Websim.ai,Websim,美国,AI 世界生成,Web,Enabler,Pipeline(Creator),AI 生成网页/游戏,OpenAI 系,现象级,免费,现象级,3,S-2.5-10 · 见 2.5
+92,Replit AI Game Builder,Replit,美国,Code AI 游戏生成,Web IDE,Enabler,Pipeline(Creator),Replit Agent 游戏生成,$1.2B 估值,增长,订阅,增长,4,S-2.5-11 · 见 2.5

@@ -1,0 +1,5 @@
+scenario,model,tokens_in,tokens_out,cost_per_call_usd,calls_per_hour,cost_per_hour_usd,assumed_arpu_hour_usd,gross_margin_pct,source_id
+轻量NPC对话,GPT-4o-mini,800,200,0.00024,60,0.014,0.10,86,S-1.2-38
+中度RPG对话,Claude-3.5-Haiku,1500,400,0.0026,60,0.156,0.30,48,S-1.2-39
+重度长记忆,Gemini-2.0-Flash,4000,800,0.0008,60,0.048,0.50,90,S-1.2-40
+AI剧情生成,Claude-3.5-Sonnet,3000,1500,0.031,60,1.86,2.00,7,S-1.2-41

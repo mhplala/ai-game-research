@@ -1,0 +1,10 @@
+year,metric,value,unit,source_id
+2022,PlayableAds_MarketSize,2.5,USD_bn,S-1.2-19
+2023,PlayableAds_MarketSize,3.5,USD_bn,S-1.2-19
+2024,PlayableAds_MarketSize,5.0,USD_bn,S-1.2-19
+2022,Casual_iOS_CPI_US,3.5,USD,S-1.2-20
+2023,Casual_iOS_CPI_US,4.2,USD,S-1.2-20
+2024,Casual_iOS_CPI_US,5.0,USD,S-1.2-20
+2024,Playable_CPM_US_low,12,USD,S-1.2-21
+2024,Playable_CPM_US_high,18,USD,S-1.2-21
+2024,Playable_vs_Video_IPM_multiplier,5.5,x,S-1.2-22

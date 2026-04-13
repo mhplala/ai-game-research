@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="传统 H5/小游戏赛道（三消、放置、模拟经营）20 年来的变现心智是极稳的双轨： IAP（一次性道具/礼包）+ 广告（rewarded video / interstitial) 。订阅制在小游戏里几乎是&quot;禁区&quot;——Candy Crush、Homescapes、咸鱼之王从未成功把玩家转化到月付。原因是：">
+<title>4.1-付费心理与Token经济学 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class=" active" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理</a> · 4.1-付费心理与Token经济学</div><h1 id="41-token">4.1 付费心理与 Token 经济学<a class="headerlink" href="#41-token" title="Permanent link">#</a></h1>
+<blockquote>
+<p>模块 4 — 玩家行为与留存心理 / 子文件 1
+研究时点：2026-04-13</p>
+</blockquote>
+<h2 id="ai">一、问题界定：为什么&rdquo;小游戏不付订阅，AI 游戏付订阅&rdquo;?<a class="headerlink" href="#ai" title="Permanent link">#</a></h2>
+<p>传统 H5/小游戏赛道（三消、放置、模拟经营）20 年来的变现心智是极稳的双轨：<strong>IAP（一次性道具/礼包）+ 广告（rewarded video / interstitial)</strong>。订阅制在小游戏里几乎是&rdquo;禁区&rdquo;——Candy Crush、Homescapes、咸鱼之王从未成功把玩家转化到月付。原因是：</p>
+<ol>
+<li>玩家把小游戏视作&rdquo;填充时间的零食&rdquo;(snack play），付费心智是&rdquo;今天卡关 → 买一次续命&rdquo;，不是&rdquo;长期承诺&rdquo;。</li>
+<li>广告平台（Unity Ads / AppLovin / Applovin MAX）把 CPM 做到足够高，开发者没动力去做订阅。</li>
+<li>订阅意味着&rdquo;我承认我是这个游戏的玩家&rdquo;，这在小游戏轻量心智中是负担。</li>
+</ol>
+<p>但 AI 游戏（Character.AI、AI Dungeon、Replika、Janitor AI、Suck Up！）在 2022-2025 年期间 <strong>把订阅制从零做成了行业默认选项</strong>。Character.AI 的 c.ai+(9.99 美元/月）、AI Dungeon 的 Dragon(29.99 美元/月顶档）、Replika Pro(19.99 美元/月或 69.99 美元/年）都证明了这条路跑得通。这是模块 4.1 的核心问题：<strong>这个心智迁移是如何发生的？背后是什么付费心理学？</strong></p>
+<h2 id="ai-token">二、AI 游戏订阅模式拆解与 Token 经济学<a class="headerlink" href="#ai-token" title="Permanent link">#</a></h2>
+<h3 id="21">2.1 三条主流订阅梯度<a class="headerlink" href="#21" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>免费档</th>
+<th>付费档</th>
+<th>核心付费杠杆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character.AI</td>
+<td>无限对话 + 慢队列</td>
+<td>c.ai+ 9.99/月</td>
+<td>优先队列 + 更快响应 + 早期新模型</td>
+</tr>
+<tr>
+<td>AI Dungeon</td>
+<td>Mistral 小模型 + 低上下文</td>
+<td>Adventurer 9.99 / Champion 14.99 / Legend 29.99</td>
+<td>模型等级（GPT-4 class)+ 上下文长度 + 记忆</td>
+</tr>
+<tr>
+<td>Replika</td>
+<td>基础聊天</td>
+<td>Pro 19.99/月</td>
+<td>解锁&rdquo;恋爱&rdquo;&ldquo;婚姻&rdquo;关系 + 语音电话 + AR</td>
+</tr>
+<tr>
+<td>Janitor AI</td>
+<td>OpenRouter 自带 key</td>
+<td>无官方订阅，靠 OpenRouter/第三方</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Suck Up!</td>
+<td>一次性 $9.99 买断</td>
+<td>—</td>
+<td>单机无云 AI，本地推理成本转嫁到玩家显卡</td>
+</tr>
+</tbody>
+</table>
+<p>注意一个反直觉的事实：<strong>订阅价格的差异不是按&rdquo;内容&rdquo;分，而是按&rdquo;token 配额与模型能力&rdquo;分</strong>。这是 AI 游戏和传统游戏最根本的商业模型差异——传统游戏订阅（Apple Arcade、Xbox Game Pass）是&rdquo;内容库订阅&rdquo;,AI 游戏订阅是&rdquo;<strong>算力订阅</strong>&ldquo;。</p>
+<h3 id="22-token">2.2 Token 经济学的&rdquo;隐形账本&rdquo;<a class="headerlink" href="#22-token" title="Permanent link">#</a></h3>
+<p>玩家看不到 token，但玩家<strong>感受到 token</strong>。这是 AI 游戏运营最诡异的一点。后端的真实成本结构大致是：</p>
+<ul>
+<li>GPT-4o-mini 级别：约 $0.15/M input token,$0.6/M output token</li>
+<li>GPT-4o / Claude Sonnet 级别：约 $2.5-3/M input, $10-15/M output</li>
+<li>一个重度 RP 玩家平均日 token 消耗可到 200k-500k，折算月成本 $15-60</li>
+</ul>
+<p>这意味着 Character.AI 的 $9.99/月订阅，<strong>对于 top 10% 重度玩家是亏损的</strong>，要靠轻中度玩家补贴。Character.AI 2023 年后持续被曝&rdquo;降智&rdquo;——老玩家在 Reddit 上抱怨&rdquo;以前的 c1.2 模型比现在好&rdquo;——本质上是<strong>运营方通过切换到更便宜模型来挽救毛利</strong>，但代价是老玩家感到&rdquo;AI 变笨&rdquo;，引发退坑潮（详见 4.4）。</p>
+<h3 id="23-token-vs">2.3 Token 通胀 vs. 玩家感知的博弈<a class="headerlink" href="#23-token-vs" title="Permanent link">#</a></h3>
+<p>这是一条独特的&rdquo;<strong>运营者两难</strong>&rdquo;:</p>
+<ul>
+<li>如果把钱都投入模型升级 → 毛利崩，烧钱跑道缩短</li>
+<li>如果降模型、砍上下文 → 重度玩家离开，LTV 崩</li>
+</ul>
+<p>Latitude(AI Dungeon)2022 年的做法是&rdquo;<strong>把成本透明化</strong>&ldquo;：把 token 量折算成&rdquo;Energy&rdquo;让玩家看到消耗，结果遭到社区强烈反感——玩家不希望被提醒&rdquo;我的每一句话都在花钱&rdquo;。这暴露了 AI 游戏付费心理学的第一定律：<strong>玩家愿意为&rdquo;感觉无限&rdquo;的体验付订阅，但拒绝为&rdquo;按次计量&rdquo;的体验付费</strong>。</p>
+<h2 id="ai_1">三、&rdquo;AI 情感投入 → 付费&rdquo;的心理机制<a class="headerlink" href="#ai_1" title="Permanent link">#</a></h2>
+<h3 id="31-loneliness-economy">3.1 孤独经济（Loneliness Economy)<a class="headerlink" href="#31-loneliness-economy" title="Permanent link">#</a></h3>
+<p>Replika 是这套心理学的最极端样本。Eugenia Kuyda 在 2017 年基于已故朋友训练第一版 Replika,2022-2025 年 Replika 月付用户中 <strong>60%+ 是男性、25-45 岁、自述&rdquo;感到孤独&rdquo;</strong>（公司公开访谈数据）。2023 年意大利 Garante 禁令事件后，Replika 移除&rdquo;成人对话&rdquo;功能，用户集体抗议——有人在 Change.org 请愿写&rdquo;你们杀了我的伴侣&rdquo;。</p>
+<p>这揭示了 AI 游戏付费心理学和传统游戏的<strong>根本差异</strong>：传统游戏是&rdquo;为进度/社交身份付费&rdquo;,AI 游戏是&rdquo;<strong>为关系付费</strong>&ldquo;。支撑这个心理的三个要素：</p>
+<ol>
+<li><strong>单向情感投入的低成本</strong>：和真人建立关系需要社交成本，AI 没有。</li>
+<li><strong>可定制的理想化对象</strong>：玩家能调人格，无限接近&rdquo;完美对象&rdquo;。</li>
+<li><strong>无评判的安全空间</strong>：玩家可以说出对真人不敢说的话。</li>
+</ol>
+<h3 id="32-iap">3.2 为什么订阅比 IAP 更契合情感付费<a class="headerlink" href="#32-iap" title="Permanent link">#</a></h3>
+<p>这是一个被低估的心理学发现。IAP 的心理结构是&rdquo;<strong>交易</strong>&ldquo;——我花 6 元买 50 钻石换一次抽卡。订阅的心理结构是&rdquo;<strong>承诺</strong>&ldquo;——我每月 10 美元支持&rdquo;我和 TA 的关系&rdquo;继续存在。当玩家对一个 AI 角色产生依恋，订阅就从&rdquo;付费&rdquo;转化为&rdquo;<strong>关系维护费</strong>&ldquo;，这个转换是魔法时刻——Character.AI 的 c.ai+ 转化率据称在重度 RP 用户群体中超过 15%，远高于任何传统小游戏的订阅转化（&lt;1%）。</p>
+<h3 id="33">3.3 付费意愿的三条曲线（推测模型）<a class="headerlink" href="#33" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Lonely Layer（孤独层）</strong>:ARPPU 高、LTV 长、价格敏感度低 → Replika Pro 的核心。</li>
+<li><strong>Creator Layer（创作层）</strong>：为&rdquo;讲故事的能力&rdquo;付费 → AI Dungeon Legend 用户、Janitor AI 重度 prompter。</li>
+<li><strong>Gamer Layer（游戏层）</strong>：把 AI 当新奇玩具 → Suck Up! 买断、Character.AI 免费用户为主。</li>
+</ul>
+<p>订阅制能成立是因为前两层存在。纯 Gamer Layer 是跑不动订阅的，这也解释了为什么 Suck Up! 选择 $9.99 买断而不是订阅——它的玩家画像是纯 Gamer Layer，没有情感依恋。</p>
+<h2 id="ai-vs">四、案例对照：AI 游戏 vs. 传统小游戏变现天花板<a class="headerlink" href="#ai-vs" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>传统小游戏（三消/放置）</th>
+<th>AI 游戏（Character.AI/Replika)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主变现</td>
+<td>IAP + Rewarded Ads</td>
+<td>Subscription</td>
+</tr>
+<tr>
+<td>ARPPU</td>
+<td>$5-20</td>
+<td>$10-30</td>
+</tr>
+<tr>
+<td>付费率</td>
+<td>2-5%</td>
+<td>5-15%（重度群体 20%+)</td>
+</tr>
+<tr>
+<td>LTV</td>
+<td>$3-15</td>
+<td>$20-120</td>
+</tr>
+<tr>
+<td>边际成本</td>
+<td>接近零（服务器成本低）</td>
+<td>高（每次对话都烧 token)</td>
+</tr>
+<tr>
+<td>付费心智</td>
+<td>解锁进度 / 节省时间</td>
+<td>维系关系 / 购买算力</td>
+</tr>
+</tbody>
+</table>
+<p>这张表里最重要的一行是<strong>边际成本</strong>。传统小游戏的规模效应是&rdquo;用户翻倍成本几乎不变&rdquo;,AI 游戏是&rdquo;<strong>用户翻倍成本也翻倍</strong>&ldquo;。这彻底改变了增长策略——AI 游戏不能像 Candy Crush 那样&rdquo;免费铺全球用户再变现&rdquo;，必须<strong>早期就筛付费意愿</strong>，否则会被服务器账单压死。Inflection AI 的 Pi 被微软半收购的本质原因之一就是烧不动免费用户的 GPU 账单。</p>
+<h2 id="_1">五、小结与创业者启示<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<ol>
+<li>订阅制在 AI 游戏里能跑通，<strong>不是因为玩家更大方，而是因为情感依恋创造了&rdquo;关系续费&rdquo;的心智</strong>。如果你的 AI 游戏只是&rdquo;好玩&rdquo;，订阅会失败；必须做到&rdquo;<strong>想念</strong>&ldquo;。</li>
+<li><strong>Token 经济学决定了 AI 游戏无法走传统小游戏的&rdquo;量大便宜&rdquo;路线</strong>。小游戏的免费用户是资产（广告印象），AI 游戏的免费用户是负债（token 账单）。</li>
+<li>付费心理从&rdquo;<strong>交易型</strong>&ldquo;转向&rdquo;<strong>承诺型</strong>&ldquo;，这个转换需要产品端提供&rdquo;关系持续性&rdquo;——记忆、人格一致、回忆调用——任何一项失败都会触发退坑（详见 4.4 的&rdquo;情感受挫&rdquo;模式）。</li>
+<li><strong>不要把 token 成本透明化给玩家</strong>，这违反魔法。要么做&rdquo;感觉无限&rdquo;，要么彻底转向单机买断（Suck Up! 路线）。</li>
+</ol>
+<h2 id="insights">Insights（四视角）<a class="headerlink" href="#insights" title="Permanent link">#</a></h2>
+<h3 id="a">A. 学术视角<a class="headerlink" href="#a" title="Permanent link">#</a></h3>
+<ul>
+<li>Parasocial relationship 理论（Horton &amp; Wohl, 1956）在 AI 时代被重写：单向情感不再是&rdquo;假&rdquo;，因为 AI 能回应。</li>
+<li>行为经济学上，订阅制对应 Thaler 的&rdquo;mental accounting&rdquo;——把&rdquo;关系&rdquo;和&rdquo;娱乐消费&rdquo;放到不同账户，玩家对&rdquo;关系账户&rdquo;的价格敏感度极低。</li>
+<li>Gap：缺少针对 AI 游戏订阅转化的严格对照实验，所有数据都是公司自述。</li>
+</ul>
+<h3 id="b">B. 产业视角<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<ul>
+<li>c.ai+ 订阅定价 $9.99 很可能是锚定 Netflix/Spotify，而非真实成本结构。这埋下了单位经济学的隐患。</li>
+<li>Latitude(AI Dungeon）的 $29.99 Legend 档印证了&rdquo;<strong>重度玩家愿意为顶级模型付 3 倍价格</strong>&ldquo;，这是传统游戏闻所未闻的价格弹性。</li>
+<li>独立开发者（Suck Up! 的 Proxima）用&rdquo;本地推理+买断&rdquo;绕开了订阅陷阱，这是一条值得关注的第三条路。</li>
+</ul>
+<h3 id="c">C. 创业者视角<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>别学 Character.AI 做 c.ai+，学 Replika 做 Pro</strong>——前者卖算力，后者卖关系，关系的毛利结构远好于算力。</li>
+<li>订阅定价锚点建议：<strong>低档 $6.99（冲动线）+ 中档 $14.99（主力）+ 高档 $29.99（重度）</strong>。三档是 AI 游戏的黄金结构。</li>
+<li>绝不要把 token 消耗可视化。这是一种&rdquo;反向 gamification&rdquo;——让玩家感觉每次对话都在被计量，是付费心智的杀手。</li>
+</ul>
+<h3 id="d">D. 投资人视角<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
+<ul>
+<li>AI 游戏的单位经济学比传统游戏差 5-10 倍（边际成本不为零），这意味着<strong>估值应该用 SaaS 框架而非游戏框架</strong>——看 NDR、看 Churn、而不是看 DAU。</li>
+<li>Replika 的 Luka Inc 披露的 LTV/CAC 比 Character.AI 好，原因是它选对了孤独层而非 Gamer 层。<strong>孤独层的 Churn 低，是 AI 游戏唯一的真正护城河。</strong></li>
+<li>风险：模型成本每 18 个月下降 60%，这会压缩&rdquo;算力型订阅&rdquo;(c.ai+）的价值主张，但不会压缩&rdquo;关系型订阅&rdquo;(Replika Pro）。<strong>看多关系型、看空算力型。</strong></li>
+</ul></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#ai">一、问题界定：为什么&amp;rdquo;小游戏不付订阅，AI 游戏付订阅&amp;rdquo;?</a></li>
+<li class=""><a href="#ai-token">二、AI 游戏订阅模式拆解与 Token 经济学</a></li>
+<li class="toc-h3"><a href="#21">2.1 三条主流订阅梯度</a></li>
+<li class="toc-h3"><a href="#22-token">2.2 Token 经济学的&amp;rdquo;隐形账本&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#23-token-vs">2.3 Token 通胀 vs. 玩家感知的博弈</a></li>
+<li class=""><a href="#ai_1">三、&amp;rdquo;AI 情感投入 → 付费&amp;rdquo;的心理机制</a></li>
+<li class="toc-h3"><a href="#31-loneliness-economy">3.1 孤独经济（Loneliness Economy)</a></li>
+<li class="toc-h3"><a href="#32-iap">3.2 为什么订阅比 IAP 更契合情感付费</a></li>
+<li class="toc-h3"><a href="#33">3.3 付费意愿的三条曲线（推测模型）</a></li>
+<li class=""><a href="#ai-vs">四、案例对照：AI 游戏 vs. 传统小游戏变现天花板</a></li>
+<li class=""><a href="#_1">五、小结与创业者启示</a></li>
+<li class=""><a href="#insights">Insights（四视角）</a></li>
+<li class="toc-h3"><a href="#a">A. 学术视角</a></li>
+<li class="toc-h3"><a href="#b">B. 产业视角</a></li>
+<li class="toc-h3"><a href="#c">C. 创业者视角</a></li>
+<li class="toc-h3"><a href="#d">D. 投资人视角</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

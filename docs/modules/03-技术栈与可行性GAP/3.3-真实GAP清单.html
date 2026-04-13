@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="方法 ：对 3.1 与 3.2 做双向对照——每一条期待（demand）都问&quot;技术上可得吗 / 商业上可跑吗 / 合规上可过吗&quot;；每一条技术能力（capability）都问&quot;它承诺的场景能否真的兑现&quot;。">
+<title>3.3-真实GAP清单 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class=" active" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP</a> · 3.3-真实GAP清单</div><h1 id="33-gap-vs">3.3 真实 GAP 清单 — 能力 vs 期待之间的裂缝<a class="headerlink" href="#33-gap-vs" title="Permanent link">#</a></h1>
+<blockquote>
+<p>目的：把 3.1（能力）和 3.2（期待）两侧对齐，找出 18 条&rdquo;玩家/开发者/投资人/大厂想要，但当前技术 + 商业跑不通&rdquo;的具体裂缝。为模块 6 机会地图供料。</p>
+</blockquote>
+<h2 id="_1">一、背景与取数口径<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><strong>方法</strong>：对 3.1 与 3.2 做双向对照——每一条期待（demand）都问&rdquo;技术上可得吗 / 商业上可跑吗 / 合规上可过吗&rdquo;；每一条技术能力（capability）都问&rdquo;它承诺的场景能否真的兑现&rdquo;。</p>
+<p><strong>GAP 严重度</strong>：
+- <strong>S1</strong>：阻塞级，不解决则产品不成立
+- <strong>S2</strong>：体验级，解决后能显著提升留存 / 付费
+- <strong>S3</strong>：效率级，解决后能降成本 / 提速</p>
+<p><strong>机会类型</strong>：
+- <strong>P</strong>：产品机会（新玩法 / 新 UX）
+- <strong>T</strong>：技术机会（底层研发 / middleware / 框架）
+- <strong>B</strong>：商业机会（新单位经济 / 新变现方式）</p>
+<h2 id="gap-18">二、核心发现 — GAP 清单（18 条）<a class="headerlink" href="#gap-18" title="Permanent link">#</a></h2>
+<h3 id="_2">记忆与一致性类<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p><strong>G01 · S1 · P+T — &ldquo;真长时记忆&rdquo;的工程墙</strong>
+玩家期待&rdquo;AI 女友记得三个月前的纪念日&rdquo;，但 200K–2M 的上下文只能覆盖几小时对话，长时记忆必须外挂 RAG + vector DB + 摘要层 + 遗忘策略。这一整套 middleware 目前没有开箱方案，小团队要投 3–6 人月搭建。</p>
+<p><strong>G02 · S1 · T — 角色破人设概率不可控</strong>
+开发者期待&rdquo;NPC 永远不出戏&rdquo;，但即使是 Claude 3.5 Sonnet 在长对话中仍有 5–8% 概率回到&rdquo;我是一个 AI 助手&rdquo;。规避方式（guardrails / fine-tune）昂贵，且会降低角色表达力。<strong>没有可量化的&rdquo;角色稳定性&rdquo;SLA</strong>。</p>
+<p><strong>G03 · S1 · T — 多人协作中 AI 一致性难题</strong>
+派对 / 联机小游戏里，两个玩家同时和同一个 NPC 对话，NPC 可能给出矛盾的世界设定。现有 LLM 的&rdquo;单会话&rdquo;范式根本没考虑多客户端一致性。</p>
+<p><strong>G04 · S2 · T — 角色立绘的跨图一致性</strong>
+玩家期待&rdquo;同一个角色在 30 个场景里长得一样&rdquo;，SDXL + LoRA 能做到 70–80% 的一致率，但剩下的 20% 需要美术手工修；做不到&rdquo;无美术团队的 indie 独立 AI 游戏&rdquo;。</p>
+<p><strong>G05 · S2 · T — 动态立绘/角色动画缺失</strong>
+玩家期待 Live2D / VTuber 品质的动态表情，但视频扩散（Runway Gen-3 / Sora / 可灵）无法生成&rdquo;同一角色 10 秒一致表演&rdquo;，且推理成本 &gt; 1 美元/次，无法实时用。<strong>AI 动态形象暂无商业方案</strong>。</p>
+<h3 id="_3">成本与延迟类<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p><strong>G06 · S1 · B — Token 成本比 ARPDAU 高 1.5–3 倍</strong>
+&ldquo;免费 AI 游戏 + 广告变现&rdquo;模型下，GPT-4o-mini 单用户日成本 0.005 美元 vs 休闲游戏 ARPDAU 0.02–0.05 美元——勉强持平；GPT-4o 直接亏损。<strong>token 成本需要再降 5–10 倍</strong>才能开放给全量免费用户。</p>
+<p><strong>G07 · S1 · T — 首 token 延迟对 playable ad 是毒药</strong>
+Playable 广告窗口只有 8–15 秒，首 token &gt; 1.5 s 就会让 CTR 下降 15–25%。小模型（Flash、Haiku）延迟接近上限，大模型完全不可用。</p>
+<p><strong>G08 · S2 · B — 语音交互在中文场景不可兼得</strong>
+ElevenLabs 情感好但英文为主 + 0.15 美元/千字符偏贵；国内火山 / 腾讯便宜但情感表达差；开源 Moshi / Sesame 延迟好但音色单一。<strong>&ldquo;低延迟 + 中文情感 + 低成本&rdquo;三角不可得</strong>。</p>
+<p><strong>G09 · S2 · T — 客户端内 inference 的包体/性能墙</strong>
+开发者想在客户端跑 3B–8B 量化模型避免服务器依赖，但小游戏包体限制 5 MB、WebGPU 上跑 Llama 3.2-1B-Q4 仍需 600 MB 内存，移动端崩。</p>
+<h3 id="_4">单位经济与商业类<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p><strong>G10 · S1 · B — AI-native 游戏 LTV 远不及 100 美元门槛</strong>
+投资人期待 LTV &gt; 100 美元才能支撑&rdquo;AI 游戏公司级&rdquo;估值，但 Suck Up！、AI Dungeon、Character.ai 的付费用户平均生命周期收入约 20–40 美元。<strong>LTV 需要翻 3 倍</strong>。</p>
+<p><strong>G11 · S2 · B — 付费用户上限卡在 Replika 区间</strong>
+玩家对 AI 陪伴的单月付费心理价位 10–30 美元，远低于 OnlyFans（50 美元+）。提价空间有限，只能增厚品类（加入玩法、多角色、联机）。</p>
+<p><strong>G12 · S2 · B — 广告变现归因困难</strong>
+iOS 14.5 之后，playable ad 的真实 ROAS 难以归因，AI-native 游戏的素材更贵（因为要跑 LLM 生成脚本），使单条广告回本周期延长。</p>
+<p><strong>G13 · S3 · B — 研发成本并未真正降低</strong>
+大厂期待&rdquo;AI 把研发周期从 36 月压到 18 月&rdquo;，实际美术产能提升 3–5 倍但叙事 / QA / 平衡 / 合规环节没提速，总体只压缩 20–30%。</p>
+<h3 id="_5">评估与工具链类<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p><strong>G14 · S2 · T — 没有工业化的&rdquo;AI NPC 质量评分&rdquo;</strong>
+开发者期待有像 FPS 的 frame time 那样的硬指标评判 NPC 质量。目前只有&rdquo;人工打分 + A/B 测试&rdquo;，没有自动化评测框架。</p>
+<p><strong>G15 · S2 · T — 开发者 SDK 割裂</strong>
+LLM / TTS / vector DB / 立绘生成 / 动画 / 情感状态机是 5–7 个不同 API，没有统一封装。Inworld/Convai 试图做但贵 + 锁定。<strong>没有&rdquo;Twilio for game AI&rdquo;</strong>。</p>
+<p><strong>G16 · S3 · T — Fine-tune / 角色定制工作流还在&rdquo;手工作坊&rdquo;阶段</strong>
+开发者想&rdquo;传一段剧本就得到一个新角色&rdquo;，实际需要数据清洗 + SFT + DPO + 评测，成本约 1000–3000 美元/角色。</p>
+<h3 id="_6">合规与安全类<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<p><strong>G17 · S1 · B — 国内生成式内容审核延迟</strong>
+国内小游戏平台要求 AI 输出先审再发，这给 LLM 回复增加 200–800 ms 延迟，同时阻挡部分合法表达。<strong>合规层尚无高速通道方案</strong>。</p>
+<p><strong>G18 · S2 · B — 擦边灰区与品牌安全的悖论</strong>
+玩家付费驱动很大一部分来自 NSFW 擦边，但平台 / 广告主 / 大厂完全不碰。造成&rdquo;真正赚钱的 AI 游戏不能上大平台，能上大平台的不赚钱&rdquo;。</p>
+<h2 id="_7">三、汇总表<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>严重度</th>
+<th>类型</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G01</td>
+<td>S1</td>
+<td>P+T</td>
+<td>真长时记忆需要一整套 middleware</td>
+</tr>
+<tr>
+<td>G02</td>
+<td>S1</td>
+<td>T</td>
+<td>角色一致性没有 SLA</td>
+</tr>
+<tr>
+<td>G03</td>
+<td>S1</td>
+<td>T</td>
+<td>多客户端 NPC 状态冲突</td>
+</tr>
+<tr>
+<td>G04</td>
+<td>S2</td>
+<td>T</td>
+<td>立绘跨图一致性仍需美术</td>
+</tr>
+<tr>
+<td>G05</td>
+<td>S2</td>
+<td>T</td>
+<td>动态角色视频无商用方案</td>
+</tr>
+<tr>
+<td>G06</td>
+<td>S1</td>
+<td>B</td>
+<td>Token 成本高于 ARPDAU</td>
+</tr>
+<tr>
+<td>G07</td>
+<td>S1</td>
+<td>T</td>
+<td>首 token 延迟毒害 playable ad</td>
+</tr>
+<tr>
+<td>G08</td>
+<td>S2</td>
+<td>B</td>
+<td>中文低延迟情感语音三角</td>
+</tr>
+<tr>
+<td>G09</td>
+<td>S2</td>
+<td>T</td>
+<td>客户端 inference 包体 / 内存墙</td>
+</tr>
+<tr>
+<td>G10</td>
+<td>S1</td>
+<td>B</td>
+<td>LTV 不到投资人门槛</td>
+</tr>
+<tr>
+<td>G11</td>
+<td>S2</td>
+<td>B</td>
+<td>单月付费上限 30 美元</td>
+</tr>
+<tr>
+<td>G12</td>
+<td>S2</td>
+<td>B</td>
+<td>广告归因困难</td>
+</tr>
+<tr>
+<td>G13</td>
+<td>S3</td>
+<td>B</td>
+<td>研发提速不足 30%</td>
+</tr>
+<tr>
+<td>G14</td>
+<td>S2</td>
+<td>T</td>
+<td>缺 NPC 质量评测</td>
+</tr>
+<tr>
+<td>G15</td>
+<td>S2</td>
+<td>T</td>
+<td>SDK 割裂缺 Twilio</td>
+</tr>
+<tr>
+<td>G16</td>
+<td>S3</td>
+<td>T</td>
+<td>角色定制工坊化</td>
+</tr>
+<tr>
+<td>G17</td>
+<td>S1</td>
+<td>B</td>
+<td>国内审核延迟</td>
+</tr>
+<tr>
+<td>G18</td>
+<td>S2</td>
+<td>B</td>
+<td>擦边悖论</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分布</strong>：S1 = 7；S2 = 9；S3 = 2。</p>
+<h2 id="insights">四、Insights（四视角）<a class="headerlink" href="#insights" title="Permanent link">#</a></h2>
+<p><strong>A. 产品视角</strong>
+S1 里有 4 条是&rdquo;体验承诺做不到&rdquo;（G01、G02、G03、G07），2 条是&rdquo;单位经济做不到&rdquo;（G06、G10），1 条是合规（G17）。这告诉产品团队：应优先选择&rdquo;不靠长时记忆、不靠高一致性、不靠大模型&rdquo;的玩法方向——换句话说，<strong>用 AI 做机制而非做角色</strong>。</p>
+<p><strong>B. 开发者视角</strong>
+G14 + G15 + G16 指向同一个缺失：<strong>&ldquo;游戏 AI 的工程规范&rdquo;还没成熟</strong>。谁先把&rdquo;角色对象 + 评测 + 定制&rdquo;三件套封装成开源或低价 SaaS，就是下一代 Inworld 的位置。</p>
+<p><strong>C. 投资人视角</strong>
+S1 里的商业裂缝（G06 / G10 / G17）才是最致命的——不是&rdquo;技术不行&rdquo;而是&rdquo;跑不通单位经济&rdquo;。VC 在 2024–2025 踩过&rdquo;AI 陪伴&rdquo;坑后应该明白：投中间件 / 工具链（解决 G15 / G14 / G01）比投内容团队 ROI 更高。</p>
+<p><strong>D. 大厂战略视角</strong>
+G13 表明大厂期待的&rdquo;研发周期压缩 50%&rdquo;并未实现——瓶颈在叙事/QA/合规，不是美术。大厂战略应该从&rdquo;AI 降本&rdquo;升级到&rdquo;AI 重塑工作流&rdquo;。谁把 AI 做进制作管线（不只是美术），谁就赢。</p>
+<h2 id="_8">五、待解决问题 / 下一步<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<ul>
+<li>每条 GAP 的时间表：哪些会在 12 个月内自然解决（靠模型降价），哪些需要主动研发？→ 模块 3.4 机会识别</li>
+<li>GAP 之间的因果链：G06（成本）是 G10（LTV）的原因还是结果？→ 3.4 做依赖图</li>
+<li>中国特色的 GAP（G17 / G18）需要单独合规章节 → 交模块 1</li>
+</ul>
+<hr />
+<p>来源详见 <code>sources.md</code> § 3。</p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#_1">一、背景与取数口径</a></li>
+<li class=""><a href="#gap-18">二、核心发现 — GAP 清单（18 条）</a></li>
+<li class="toc-h3"><a href="#_2">记忆与一致性类</a></li>
+<li class="toc-h3"><a href="#_3">成本与延迟类</a></li>
+<li class="toc-h3"><a href="#_4">单位经济与商业类</a></li>
+<li class="toc-h3"><a href="#_5">评估与工具链类</a></li>
+<li class="toc-h3"><a href="#_6">合规与安全类</a></li>
+<li class=""><a href="#_7">三、汇总表</a></li>
+<li class=""><a href="#insights">四、Insights（四视角）</a></li>
+<li class=""><a href="#_8">五、待解决问题 / 下一步</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

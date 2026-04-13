@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="级别 含义 典型来源 高(H) 可直接引用 官方融资公告、Crunchbase / Dealroom、SteamDB 公开数据、Data.ai / Sensor Tower 公开报告、Newzoo、App Annie、Steam 页面直接数据 中(M) 可引用需说明 TechCrunch / Game Developer / Venturebeat / 游戏…">
+<title>methodology · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class=" active" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/00-方法论与术语/index.html">方法论与术语</a> · methodology</div><h1 id="methodologymd">研究方法论 — methodology.md<a class="headerlink" href="#methodologymd" title="Permanent link">#</a></h1>
+<blockquote>
+<p>本文件定义所有模块必须遵守的研究规则。继承自口腔项目方法论,并针对 AI 游戏赛道调整。</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 信息源可信度(三级)<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>含义</th>
+<th>典型来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>高(H)</strong></td>
+<td>可直接引用</td>
+<td>官方融资公告、Crunchbase / Dealroom、SteamDB 公开数据、Data.ai / Sensor Tower 公开报告、Newzoo、App Annie、Steam 页面直接数据</td>
+</tr>
+<tr>
+<td><strong>中(M)</strong></td>
+<td>可引用需说明</td>
+<td>TechCrunch / Game Developer / Venturebeat / 游戏陀螺 / GameLook / 手游那点事 / 36Kr / 品玩 · 开发者 X/Twitter 公开发言 · 品牌官方 blog</td>
+</tr>
+<tr>
+<td><strong>低(L)</strong></td>
+<td>仅作趋势佐证</td>
+<td>YouTube gameplay / Reddit 讨论 / 小红书笔记 / 知乎回答 / Twitter anon</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">2. 事实引用格式<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<p><strong>行内</strong>:<code>某数据/事实 [S-模块-序号]</code>,如 <code>[S-01.2-05]</code></p>
+<p><strong>sources.md 条目</strong>:</p>
+<div class="codehilite"><pre><span></span><code>[S-01.2-05] 标题 | URL | 访问日期(2026-04-13) | 类型(OFF/VC/MEDIA/STEAM/INSIGHT) | 可信度(高/中/低)
+</code></pre></div>
+
+<p>类型缩写:
+- <strong>OFF</strong> = 品牌官网 / 官方公告
+- <strong>VC</strong> = 融资数据库 / VC 报告
+- <strong>MEDIA</strong> = 行业媒体
+- <strong>STEAM</strong> = Steam / App Store / Google Play 公开页面
+- <strong>INSIGHT</strong> = 咨询公司报告(Newzoo / Data.ai)
+- <strong>DEV</strong> = 开发者 blog / Twitter
+- <strong>ACAD</strong> = 学术论文(本赛道稀缺,但有也算高可信)</p>
+<hr />
+<h2 id="3">3. 数字类事实的交叉验证规则<a class="headerlink" href="#3" title="Permanent link">#</a></h2>
+<p><strong>必须交叉验证</strong>(≥ 2 个独立高可信源):
+- 市场规模(¥亿 / $亿)
+- 融资金额与估值
+- 日活 / 月活 / 留存率
+- Token 成本(OpenAI / Anthropic / Google 公开 pricing)
+- 下载量 / 收入(Data.ai / Sensor Tower)</p>
+<p><strong>可单源引用</strong>:
+- 品牌的产品描述(官网为准)
+- 游戏的玩法机制(Steam 页面 + 官方 trailer)</p>
+<p><strong>冲突处理</strong>:
+- 两个高可信源冲突 → 全部列出、标注差异原因(口径 / 时间窗 / 样本源)
+- 估算或推算数据 → 加 <code>[估算]</code> 标记
+- 自说自话(品牌 PR 的数据) → 标&rdquo;品牌披露,未独立核实&rdquo;</p>
+<hr />
+<h2 id="4">4. 时效性<a class="headerlink" href="#4" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>优先</strong>:<strong>2024-2026</strong> 数据(本赛道最热两年)</li>
+<li><strong>允许</strong>:2022-2023 作为&rdquo;赛道起点&rdquo;或历史对比</li>
+<li><strong>警惕</strong>:2022 年前的 AI 游戏数据基本无意义(GenAI 时代之前)</li>
+<li><strong>特别规则</strong>:<strong>超过 6 个月未更新的融资/估值</strong> 加 &ldquo;截至 YYYY-MM&rdquo; 标注</li>
+</ul>
+<hr />
+<h2 id="5">5. 四视角输出原则<a class="headerlink" href="#5" title="Permanent link">#</a></h2>
+<p>每个模块的 &ldquo;Insights&rdquo; 章节必须分四个小节:</p>
+<h3 id="a-pm">A. 产品视角(PM / 创业者)<a class="headerlink" href="#a-pm" title="Permanent link">#</a></h3>
+<ul>
+<li>&ldquo;这说明我应该做什么产品?&rdquo;</li>
+<li>具体到 SKU / 玩法 / 目标用户</li>
+</ul>
+<h3 id="b">B. 投资视角<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<ul>
+<li>&ldquo;这说明哪些公司值得关注?&rdquo;</li>
+<li>哪些赛道估值高 / 低 / 刚起来</li>
+</ul>
+<h3 id="c">C. 行业视角<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<ul>
+<li>&ldquo;这说明行业在发生什么?&rdquo;</li>
+<li>趋势判断 + 为什么</li>
+</ul>
+<h3 id="d">D. 战略视角<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
+<ul>
+<li>&ldquo;这说明大厂 / 平台应该怎么布局?&rdquo;</li>
+<li>组织能力匹配 / 进入路径 / 防御策略</li>
+</ul>
+<hr />
+<h2 id="6-regression-check">6. 关键词库(用于 regression check)<a class="headerlink" href="#6-regression-check" title="Permanent link">#</a></h2>
+<p>本赛道的&rdquo;关键概念/品牌&rdquo;,优化版丢失即视为风险:</p>
+<p><strong>关键品牌</strong>:
+- 美国:Inworld / Hidden Door / Latitude / Altera / AI Dungeon / Character.AI / Replika / Suck Up! / Kinetix / Sidekick.io / Couchbase / Convai
+- 中国:量子绘梦 / Whispers from the Star / rct AI / 彩云小梦 / 筑梦岛 / 羊了个羊 / 咸鱼之王 / 寻道大千 / 热力小镇 / 疯狂动物园
+- 日韩:1001 Nights / Krafton MOGIA / Nexon AI Lab / CyberAgent
+- 欧洲:Poki / CrazyGames / King / Supercell / Suck Up!
+- 平台:微信小游戏 / 抖音小游戏 / Meta Horizon / Steam / Poki / Facebook Instant Games</p>
+<p><strong>关键概念</strong>:
+- GenAI NPC / LLM Agent / Agentic gameplay / Procedural Content Generation / Character Consistency / RAG / Fine-tuning / Token Economics / WebGPU / Canvas 2D / Unity / Godot / PWA / Instant Games / Playable Ads / IAP / Gacha / Live Ops / D1 / D7 / D30 / CAC / LTV / ARPPU / ARPDAU</p>
+<hr />
+<h2 id="7">7. 禁止事项<a class="headerlink" href="#7" title="Permanent link">#</a></h2>
+<ul>
+<li>禁止编造融资数字 / 公司名 / 游戏名</li>
+<li>禁止引用不可访问的 URL</li>
+<li>禁止不标年份的数据(尤其市场规模)</li>
+<li>禁止用&rdquo;近期&rdquo;、&rdquo;大幅&rdquo;、&rdquo;显著&rdquo;替代具体数字</li>
+<li>禁止把 &ldquo;AI 辅助开发的游戏&rdquo; 归为 &ldquo;AI 游戏&rdquo;(界限必须明确)</li>
+</ul>
+<hr />
+<h2 id="8">8. 中文标点规范<a class="headerlink" href="#8" title="Permanent link">#</a></h2>
+<ul>
+<li>正文中文 + 品牌名 / 术语保留原文(Inworld / AI Dungeon / Character.AI)</li>
+<li>中文之间使用全角标点(,。:;?!())</li>
+<li>英文术语之间和数字之间使用半角</li>
+<li><strong>最终由 <code>normalize_punct.py</code> 脚本统一规范化</strong></li>
+</ul></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#1">1. 信息源可信度(三级)</a></li>
+<li class=""><a href="#2">2. 事实引用格式</a></li>
+<li class=""><a href="#3">3. 数字类事实的交叉验证规则</a></li>
+<li class=""><a href="#4">4. 时效性</a></li>
+<li class=""><a href="#5">5. 四视角输出原则</a></li>
+<li class="toc-h3"><a href="#a-pm">A. 产品视角(PM / 创业者)</a></li>
+<li class="toc-h3"><a href="#b">B. 投资视角</a></li>
+<li class="toc-h3"><a href="#c">C. 行业视角</a></li>
+<li class="toc-h3"><a href="#d">D. 战略视角</a></li>
+<li class=""><a href="#6-regression-check">6. 关键词库(用于 regression check)</a></li>
+<li class=""><a href="#7">7. 禁止事项</a></li>
+<li class=""><a href="#8">8. 中文标点规范</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

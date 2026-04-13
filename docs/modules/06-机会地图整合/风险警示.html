@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="一句话 :">
+<title>风险警示 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class=" active" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/06-机会地图整合/index.html">机会地图整合</a> · 风险警示</div><h1 id="06e-10">06E. 风险警示 — 10 个&rdquo;不要做什么&rdquo;清单<a class="headerlink" href="#06e-10" title="Permanent link">#</a></h1>
+<blockquote>
+<p><strong>视角</strong>：所有读者通用（创业者 / 投资人 / 行业 / 战略）
+<strong>核心问题</strong>:&rdquo;基于 Phase 1-3 的所有研究，赛道里明确错的方向是什么？&rdquo;
+<strong>最后更新</strong>:2026-04-13</p>
+</blockquote>
+<hr />
+<h2 id="0-tldr">0. TL;DR<a class="headerlink" href="#0-tldr" title="Permanent link">#</a></h2>
+<p><strong>一句话</strong>:</p>
+<blockquote>
+<p><strong>&ldquo;不要做 Runtime AI × IAA 小游戏（经济学真空带）/ 不要做纯 C 端独立 AI 陪伴公司（天花板已封顶）/ 不要做&rsquo;AI-washed&rsquo; PR 式 AAA NPC（逆水寒反面）/ 不要在中国市场挂&rsquo;游戏&rsquo;标签做 AI-native（版号陷阱）/ 不要做只服务专业开发者的 B2B 工具（这是 Adobe 话题，不是游戏赛道）。&rdquo;</strong></p>
+</blockquote>
+<hr />
+<h2 id="1">1. 十条&rdquo;不要做&rdquo;清单 + 反面证据<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<h3 id="1-runtime-ai-iaa">❌ 1. 不要正面攻击 &ldquo;Runtime AI × IAA 小游戏&rdquo; 交集<a class="headerlink" href="#1-runtime-ai-iaa" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- Token/session $0.014(GPT-4o-mini)vs IAA ARPDAU &lt; $0.05（模块 3 G06)
+- 毛利空间根本不够（模块 1.1 &ldquo;AI 可移除性&rdquo;分析）
+- <strong>整个微信小游戏 TOP 200 榜单零 AI-native 作品</strong>（模块 1.2)
+- 寻道大千 / 咸鱼之王 等头部小游戏的 AI 用法全部是 pipeline 侧（买量素材）</p>
+<p><strong>例外情况</strong>：如果你用 Pipeline AI（见 Scenario E）或端侧小模型（见 Scenario B）或平台 Token 补贴（Scenario A），可以尝试。</p>
+<hr />
+<h3 id="2-c-ai-ipo">❌ 2. 不要做纯 C 端独立 AI 陪伴公司追求 IPO<a class="headerlink" href="#2-c-ai-ipo" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- <strong>Character.AI $2.7B 技术授权</strong>(2024.08),a16z 实得远低 10x,<strong>是失败的&rdquo;成功退出&rdquo;</strong>
+- <strong>Inflection $650M Microsoft acqui-hire</strong>，估值从 $1.3B 下降 50%
+- LTV 天花板 <strong>$20-40</strong>（模块 4)
+- 情感 MMO 只服务 <strong>5-10% 付费用户</strong>，总 TAM 有限（模块 4)</p>
+<p><strong>例外</strong>:
+- <strong>米哈游 Anuttacon 式分拆模式</strong>（小团队 + 海外注册 + 独立品牌 + 大厂补血）可以考虑
+- <strong>大厂内部陪伴产品</strong>（猫箱 / 豆包）不算&rdquo;独立公司&rdquo;，是战略布局</p>
+<hr />
+<h3 id="3-ai-npc-aaa-pr">❌ 3. 不要做&rdquo;AI NPC 作为 AAA 游戏卖点&rdquo;的 PR 式项目<a class="headerlink" href="#3-ai-npc-aaa-pr" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- <strong>网易逆水寒 AI NPC</strong>：玩家 10 万条对话后发现 <strong>NPC 只会反刍设定</strong>,G01/G04 的反面印证
+- <strong>Ubisoft NEO NPC × Inworld 合作</strong>:2024 年 CES demo 惊艳，但<strong>没有出货版</strong>确认 AI NPC 是 gameplay 核心
+- <strong>Square Enix AI Division / Capcom CEDEC</strong>：清一色内部工具化，<strong>无对外产品</strong>
+- <strong>Portopia AI Demo</strong> 翻车让日本业界对日式 LLM 游戏信心受挫</p>
+<p><strong>为什么不行</strong>:
+- AAA 游戏开发周期 3-5 年，AI 技术迭代周期 6-12 个月，<strong>技术上线时已落后</strong>
+- 玩家对 AAA 游戏期望极高，AI NPC 的&rdquo;上下文遗忘 / 人格漂移 / 反刍设定&rdquo;在高期望下被放大
+- AAA 开发预算里 AI 是 &lt; 1% 的小头，<strong>没有战略资源保障</strong></p>
+<p><strong>例外</strong>:<strong>Krafton MOGIA + inZOI Smart Zoi</strong> 是唯一跑通案例，但需要<strong>专门的 AI 游戏 studio 模式</strong>，不是现有 AAA 团队兼职能做到的。</p>
+<hr />
+<h3 id="4-ai-native">❌ 4. 不要在中国市场挂&rdquo;游戏&rdquo;标签做 AI-native<a class="headerlink" href="#4-ai-native" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- <strong>量子绘梦 Anuttacon（蔡浩宇）</strong>:<strong>团队注册美国规避版号</strong> — 中国首个 AI-native 游戏工作室的创始人都知道要跑
+- <strong>星野 / 猫箱 / 筑梦岛</strong>：全部藏在&rdquo;陪伴 / 对话 / 剧情&rdquo; 品类，<strong>不挂游戏</strong>
+- <strong>AI 备案制度</strong> 从 2024 年开始严格执行，AI 生成内容的审核流程新增
+- <strong>版号收紧</strong>:AI 游戏版号目前没有先例</p>
+<p><strong>正确做法</strong>:
+- 定位在<strong>&ldquo;AI 创作工具&rdquo;</strong> / <strong>&ldquo;AI 互动 meme 平台&rdquo;</strong> / <strong>&ldquo;AI 陪伴 / 剧情 / 工具&rdquo;</strong> — 绕开游戏监管
+- <strong>产品名字和分类都不要带&rdquo;游戏&rdquo;</strong>
+- <strong>先做海外版（TikTok / App Store US)</strong>，跑通 PMF 后再考虑中国合规版
+- 或<strong>分拆独立公司 + 海外注册</strong>(Anuttacon 模式）</p>
+<hr />
+<h3 id="5-b2b-ai">❌ 5. 不要做只服务专业开发者的纯 B2B AI 工具<a class="headerlink" href="#5-b2b-ai" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- <strong>Scenario / Leonardo / Kinetix / Layer AI</strong> 等&rdquo;AI 美术 for Game Dev&rdquo;工具是<strong>Adobe 话题不是游戏话题</strong>
+- B2B 专业工具<strong>不进入本研究范围</strong>（模块 1.1 边界修订）
+- <strong>真正属于游戏赛道的是 &ldquo;Pipeline AI × Creator&rdquo;</strong> — 面向普通用户 / 创作者 / 玩家的工具（Rezona / LoopIt / YouTube Playables Builder)</p>
+<p><strong>例外</strong>:<strong>AI NPC middleware</strong>(Inworld / Convai）是 B2B 但进入了游戏的<strong>核心机制</strong>，属于游戏赛道。</p>
+<hr />
+<h3 id="6-ab-ai">❌ 6. 不要做大数据 / 算法 / A/B 测试驱动的 AI 游戏产品迭代<a class="headerlink" href="#6-ab-ai" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- 模块 4 的反直觉洞察：<strong>AI 游戏的留存曲线不是传统三消曲线</strong>,D1/D7 高但 D7-D30 断崖，D30 之后反而高于传统小游戏
+- <strong>用传统 D1/D7 做 KPI 会系统性误导产品决策</strong>
+- <strong>A/B 测试在 AI 游戏里是有毒的</strong> — filter 更新 / 上下文截断 / prompt 改动都会触发 &ldquo;<strong>人格漂移</strong>&ldquo;，玩家产生类似<strong>丧亲的 grief 反应</strong>，导致不可逆退坑</p>
+<p><strong>正确做法</strong>:
+- 用 <strong>D30 / D90</strong> 作为主 KPI 而非 D1 / D7
+- 不做高频 A/B 实验
+- 建立&rdquo;<strong>人格金标 eval</strong>&rdquo; 流程持续监控漂移
+- 玩家沟通必须考虑情感连续性</p>
+<hr />
+<h3 id="7-token">❌ 7. 不要把 Token 成本可视化给玩家<a class="headerlink" href="#7-token" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- 模块 4 玩家心理学洞察：<strong>玩家看不到后端 Token 消耗</strong>，但感受到&rdquo;AI 变笨 / 变慢&rdquo;会退坑
+- Replika Pro Churn &lt; 3% 的原因是<strong>情感依恋把订阅心智从&rdquo;交易&rdquo;转为&rdquo;关系续费&rdquo;</strong>，价格敏感度接近零
+- 一旦让玩家意识到&rdquo;这次对话花了我 $0.01&rdquo;，心智从&rdquo;关系&rdquo;变回&rdquo;交易&rdquo;，定价力崩塌</p>
+<p><strong>反例案例</strong>:GPT-4 早期版本让订阅用户看到&rdquo;本月剩余 tokens&rdquo;，导致用户焦虑和退坑。</p>
+<hr />
+<h3 id="8-vn-ip">❌ 8. 不要挑战日本 VN 市场的&rdquo;作者性 + IP 法务&rdquo;结构<a class="headerlink" href="#8-vn-ip" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- <strong>日本 VN 市场由少数老牌作者主导</strong>(Key / Nitroplus / Visual Arts)
+- 对 AI 生成内容有<strong>严重的&rdquo;作者性&rdquo;抵触</strong>
+- <strong>IP 法务保守</strong>:Key 等老厂对 IP 保护极严
+- <strong>Portopia AI Demo 翻车</strong> 让业界对日式 LLM 游戏信心受挫
+- <strong>VTuber 生态</strong>(hololive / にじさんじ）已经占据了&rdquo;虚拟角色 × 情感投入&rdquo;的位置
+- <strong>日本 AI 陪伴 Cotomo / Rinna 半年下滑 DAU ~10 万</strong></p>
+<p><strong>例外</strong>：韩国或中国团队可以<strong>做&rdquo;日式风格&rdquo; AI VN 卖给日本用户</strong>（绕过日本本土厂商的作者性抵触），但这是小众生意。</p>
+<hr />
+<h3 id="9-characterai-14-ai">❌ 9. 不要在 Character.AI 案判决前做 14 岁以下用户的 AI 陪伴<a class="headerlink" href="#9-characterai-14-ai" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- <strong>Garcia v. Character Technologies</strong>(2024 年 14 岁少年自杀案）正在美国法院审理
+- 模块 4 标记这是&rdquo;<strong>最大的监管未知数</strong>&rdquo;
+- 后续判决将<strong>改写整个 AI 陪伴行业的责任边界</strong>
+- 欧盟 AI Act 对 AI 陪伴类产品的&rdquo;未成年人使用&rdquo;有严格限制
+- 中国未成年人保护法对游戏有 &ldquo;防沉迷&rdquo; 系统，未来可能扩展到 AI 陪伴</p>
+<p><strong>正确做法</strong>:
+- <strong>明确限定 18+ 用户</strong>（像 Replika 做的）
+- <strong>做 14-17 岁产品需要极度谨慎的合规设计</strong>（家长同意 / 内容过滤 / 禁止谈论自残 / 危机响应机制）
+- <strong>先观望判决</strong> 再决定是否进入这个细分</p>
+<hr />
+<h3 id="10-ai-10">❌ 10. 不要相信&rdquo;AI 会让游戏开发成本降 10 倍&rdquo;的简单叙事<a class="headerlink" href="#10-ai-10" title="Permanent link">#</a></h3>
+<p><strong>反面证据</strong>:
+- AI 降的是<strong>美术素材 / 对话脚本 / 买量创意</strong>(Pipeline-Dev 工具）
+- 但游戏开发的<strong>设计 / 代码 / 运营</strong> 成本没降
+- 顶级游戏（原神 / GTA / RDR2）的 AI 含量仍然极低
+- <strong>Scenario / Kinetix / Leonardo</strong> 等 AI 美术工具真实降成本，<strong>但还不足以颠覆 AAA 开发成本结构</strong>
+- &ldquo;<strong>AI 取代游戏开发者</strong>&rdquo; 更多是 Twitter hype</p>
+<p><strong>正确认知</strong>:
+- AI 是<strong>新工具 + 成本结构优化</strong>，不是<strong>颠覆性替代</strong>
+- 游戏开发的瓶颈是<strong>创意 / 设计 / 迭代 / 品味</strong>,AI 目前解决不了这些
+- &ldquo;游戏开发白菜价&rdquo;叙事是<strong>为融资服务的 pitch</strong>，不是真相</p>
+<hr />
+<h2 id="2-3">2. 3 个&rdquo;反直觉的坑&rdquo;（容易踩的错）<a class="headerlink" href="#2-3" title="Permanent link">#</a></h2>
+<h3 id="1-characterai-characterai">坑 1:<strong>&ldquo;我要做一个比 Character.AI 更好的中国 Character.AI&rdquo;</strong><a class="headerlink" href="#1-characterai-characterai" title="Permanent link">#</a></h3>
+<p><strong>为什么是坑</strong>:
+- Character.AI 已经证明<strong>天花板在哪</strong>($2.7B 技术授权，a16z 亏）
+- 做&rdquo;更好的&rdquo;只是在天花板下做<strong>更好的墓碑</strong>
+- 中国市场已经有星野 / 猫箱 / 筑梦岛 三家头部，<strong>规模战已经打完</strong>
+- 正确的做法是<strong>做一个不同的东西</strong>(GPF / 游戏壳陪伴 / 教育壳等）</p>
+<h3 id="2ai-npc-mmo">坑 2:<strong>&ldquo;AI NPC 会让 MMO 复活&rdquo;</strong><a class="headerlink" href="#2ai-npc-mmo" title="Permanent link">#</a></h3>
+<p><strong>为什么是坑</strong>:
+- MMO 衰退的根本原因<strong>不是 NPC 不够智能</strong>，是玩家社交模式变了（短视频 / 抖音 / 同质化社交）
+- 逆水寒 AI NPC 花了大力气，但<strong>没有挽回玩家</strong>
+- AI NPC 能做到&rdquo;更自然的对话&rdquo;，但<strong>不能解决 MMO 的核心问题</strong></p>
+<h3 id="3-ai">坑 3:<strong>&ldquo;中国大厂会给我开门，因为我有 AI 技术&rdquo;</strong><a class="headerlink" href="#3-ai" title="Permanent link">#</a></h3>
+<p><strong>为什么是坑</strong>:
+- 中国大厂自己在做（腾讯 Hunyuan Game / 字节豆包 / 快手可灵 / 米哈游内部 AI)
+- 大厂的战投部也在投美国中间层（Inworld / Convai)
+- <strong>&ldquo;我有 AI 技术&rdquo;不是差异化</strong>,<strong>&ldquo;我有在中国市场跑通的 AI 游戏案例&rdquo;</strong> 才是
+- 正确做法：<strong>先做一个小爆款证明 PMF，再谈合作</strong></p>
+<hr />
+<h2 id="3-3">3. 3 个&rdquo;时间敏感&rdquo;风险（现在不做就来不及）<a class="headerlink" href="#3-3" title="Permanent link">#</a></h2>
+<h3 id="1gpf-12-18">时间风险 1:<strong>GPF 窗口期 12-18 个月</strong><a class="headerlink" href="#1gpf-12-18" title="Permanent link">#</a></h3>
+<p>过了这个窗口：
+- MWM.ai Rezona / LoopIt 全球化
+- YouTube Playables Builder 下沉到中国（如果 Google 愿意）
+- Roblox AI 化进一步成熟
+- <strong>中国市场的 Pipeline-Creator 象限被国际玩家抢走</strong></p>
+<p><strong>现在的具体窗口</strong>:2025 Q4 立项，2026 Q2 MVP,2026 Q4 有明显 traction。</p>
+<h3 id="2characterai-garcia">时间风险 2:<strong>Character.AI 判决（Garcia 案）</strong><a class="headerlink" href="#2characterai-garcia" title="Permanent link">#</a></h3>
+<p>如果 2026 年判决确认 Character.AI 对未成年人自杀有责任：
+- 整个 AI 陪伴行业会被重塑
+- 家长群体信任崩塌
+- 所有在进行的 AI 陪伴产品需要大幅合规整改
+- <strong>早做好合规和限流的产品</strong> 会从这个事件中受益</p>
+<h3 id="3-ai_1">时间风险 3:<strong>苹果 / 谷歌的自家 AI 游戏能力推出</strong><a class="headerlink" href="#3-ai_1" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Apple Intelligence</strong> 已经开放部分 SDK,2026 可能推出官方 Playable API</li>
+<li><strong>Google Gemini Nano</strong> 已在 Android 部分机型</li>
+<li>一旦系统级 AI 能力开放，<strong>独立的&rdquo;AI 游戏创业公司&rdquo;的技术护城河会被抹平</strong></li>
+<li>现在的窗口是&rdquo;在系统级 AI 开放前，用独立技术栈建立生态和用户心智&rdquo;</li>
+</ul>
+<hr />
+<h2 id="4-3">4. 3 个&rdquo;监管风险&rdquo;清单<a class="headerlink" href="#4-3" title="Permanent link">#</a></h2>
+<h3 id="1-ai-ai">监管 1：中国 AI 备案与 AI 游戏版号<a class="headerlink" href="#1-ai-ai" title="Permanent link">#</a></h3>
+<ul>
+<li>2024 年 AI 生成内容备案制度开始严格执行</li>
+<li>&ldquo;AI 游戏&rdquo;是<strong>新品类</strong>，版号审批无先例</li>
+<li>任何&rdquo;AI 生成剧情 / 对话 / 画面&rdquo;的游戏都需要明确的备案或豁免</li>
+<li><strong>建议</strong>：定位&rdquo;创作工具&rdquo;而非&rdquo;游戏&rdquo;，避免触发游戏监管</li>
+</ul>
+<h3 id="2-ai-act-llm">监管 2：欧盟 AI Act 对游戏 LLM 的界定<a class="headerlink" href="#2-ai-act-llm" title="Permanent link">#</a></h3>
+<ul>
+<li>欧盟 AI Act 从 2024 年逐步生效</li>
+<li>&ldquo;<strong>high-risk AI</strong>&rdquo; 定义包含某些陪伴 / 情感类 AI</li>
+<li>游戏中的 AI NPC 可能被归入&rdquo;low-risk&rdquo; 或&rdquo;minimal risk&rdquo;，但陪伴类产品可能是&rdquo;limited risk&rdquo;</li>
+<li><strong>建议</strong>：欧洲市场产品上线前需要法律合规审查</li>
+</ul>
+<h3 id="3characterai">监管 3:Character.AI 未成年人案后续判决<a class="headerlink" href="#3characterai" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Garcia v. Character Technologies</strong>(2024)</li>
+<li>后续判决可能改写 AI 陪伴行业责任边界</li>
+<li><strong>建议</strong>：未成年人类 AI 产品要有内容过滤、年龄门控、危机响应机制、家长同意等合规设计</li>
+</ul>
+<hr />
+<h2 id="5">5. 总结 — &ldquo;不要做什么&rdquo; 对应&rdquo;应该做什么&rdquo;<a class="headerlink" href="#5" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>不要做（本文件）</th>
+<th>应该做（A/B/C/D 四视角机会）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❌ Runtime AI × IAA 小游戏</td>
+<td>✅ Pipeline AI × GPF（模块 06A P1)</td>
+</tr>
+<tr>
+<td>❌ 纯 C 端 AI 陪伴独立 IPO</td>
+<td>✅ middleware（模块 06B T2）或游戏壳产品（模块 06A P3)</td>
+</tr>
+<tr>
+<td>❌ AI-washed AAA NPC</td>
+<td>✅ 学 Krafton MOGIA 的 AAA × middleware 合作（模块 06D S4)</td>
+</tr>
+<tr>
+<td>❌ 中国市场挂&rdquo;游戏&rdquo;标签</td>
+<td>✅ 挂&rdquo;创作工具 / 陪伴 / 教育&rdquo;标签（模块 06A P3)</td>
+</tr>
+<tr>
+<td>❌ 纯 B2B Adobe 工具</td>
+<td>✅ Pipeline-Creator 用户工具（模块 06A P1)</td>
+</tr>
+<tr>
+<td>❌ 传统 A/B 测试驱动迭代</td>
+<td>✅ D30/D90 KPI + 人格金标 eval（模块 4 洞察）</td>
+</tr>
+<tr>
+<td>❌ Token 成本可视化</td>
+<td>✅ 订阅制包月 / 买断 / 广告覆盖（模块 4)</td>
+</tr>
+<tr>
+<td>❌ 挑战日本 VN 结构</td>
+<td>✅ 韩国 2026-2027 爆发窗口 / 美国 Steam Indie（模块 06B T5)</td>
+</tr>
+<tr>
+<td>❌ 14 岁以下 AI 陪伴</td>
+<td>✅ 18+ 成人 / 合规的 14+ 教育类（模块 06A P3)</td>
+</tr>
+<tr>
+<td>❌ &ldquo;AI 降成本 10 倍&rdquo;叙事</td>
+<td>✅ 承认 AI 是<strong>新工具</strong>，做<strong>新类型</strong>产品（GPF 模式）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6">6. 来源与引用<a class="headerlink" href="#6" title="Permanent link">#</a></h2>
+<p>本文件综合全研究的反面证据，特别引用：
+- 模块 1.1 AI 可移除性刀 + 真空带判断
+- 模块 1.2 AI-native 融资 2024 回落 30%
+- 模块 1.4 玩家全景图 92 家 / 死亡案例 11 家
+- 模块 2.1 中国版号扭曲 / 量子绘梦注册美国
+- 模块 2.2 美国退出模式 / Character.AI / Inflection
+- 模块 2.3 日本结构性锁死 / Portopia 翻车
+- 模块 3 G01 / G02 / G06 / G10 四大硬墙
+- 模块 4 玩家心理学反直觉洞察 + 人格漂移 grief 退坑
+- 模块 5 游戏性定义权脱离 / Roblox 潜在玩家
+- 模块 06D 战略分拆模式（Anuttacon)</p>
+<hr />
+<h2 id="7-gaps">7. Gaps<a class="headerlink" href="#7-gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>Garcia v. Character Technologies 具体判决时间</strong> 未知</li>
+<li><strong>中国 AI 备案对&rdquo;AI 游戏&rdquo;的具体界定标准</strong> 未明</li>
+<li><strong>欧盟 AI Act 对游戏 LLM 的判例</strong> 尚无</li>
+<li><strong>苹果 / 谷歌系统级 AI 游戏 SDK</strong> 的开放时间表未确认</li>
+<li><strong>中国 AAA AI NPC 尝试的真实用户反馈数据</strong> 除逆水寒外稀缺</li>
+</ol>
+<hr />
+<p><strong>本文件与 A 产品机会 / B 投资机会 / C 行业趋势 / D 战略进入路径 互补，共同构成模块 06 的四视角整合。</strong></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#0-tldr">0. TL;DR</a></li>
+<li class=""><a href="#1">1. 十条&amp;rdquo;不要做&amp;rdquo;清单 + 反面证据</a></li>
+<li class="toc-h3"><a href="#1-runtime-ai-iaa">❌ 1. 不要正面攻击 &amp;ldquo;Runtime AI × IAA 小游戏&amp;rdquo; 交集</a></li>
+<li class="toc-h3"><a href="#2-c-ai-ipo">❌ 2. 不要做纯 C 端独立 AI 陪伴公司追求 IPO</a></li>
+<li class="toc-h3"><a href="#3-ai-npc-aaa-pr">❌ 3. 不要做&amp;rdquo;AI NPC 作为 AAA 游戏卖点&amp;rdquo;的 PR 式项目</a></li>
+<li class="toc-h3"><a href="#4-ai-native">❌ 4. 不要在中国市场挂&amp;rdquo;游戏&amp;rdquo;标签做 AI-native</a></li>
+<li class="toc-h3"><a href="#5-b2b-ai">❌ 5. 不要做只服务专业开发者的纯 B2B AI 工具</a></li>
+<li class="toc-h3"><a href="#6-ab-ai">❌ 6. 不要做大数据 / 算法 / A/B 测试驱动的 AI 游戏产品迭代</a></li>
+<li class="toc-h3"><a href="#7-token">❌ 7. 不要把 Token 成本可视化给玩家</a></li>
+<li class="toc-h3"><a href="#8-vn-ip">❌ 8. 不要挑战日本 VN 市场的&amp;rdquo;作者性 + IP 法务&amp;rdquo;结构</a></li>
+<li class="toc-h3"><a href="#9-characterai-14-ai">❌ 9. 不要在 Character.AI 案判决前做 14 岁以下用户的 AI 陪伴</a></li>
+<li class="toc-h3"><a href="#10-ai-10">❌ 10. 不要相信&amp;rdquo;AI 会让游戏开发成本降 10 倍&amp;rdquo;的简单叙事</a></li>
+<li class=""><a href="#2-3">2. 3 个&amp;rdquo;反直觉的坑&amp;rdquo;（容易踩的错）</a></li>
+<li class="toc-h3"><a href="#1-characterai-characterai">坑 1:&amp;ldquo;我要做一个比 Character.AI 更好的中国 Character.AI&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#2ai-npc-mmo">坑 2:&amp;ldquo;AI NPC 会让 MMO 复活&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#3-ai">坑 3:&amp;ldquo;中国大厂会给我开门，因为我有 AI 技术&amp;rdquo;</a></li>
+<li class=""><a href="#3-3">3. 3 个&amp;rdquo;时间敏感&amp;rdquo;风险（现在不做就来不及）</a></li>
+<li class="toc-h3"><a href="#1gpf-12-18">时间风险 1:GPF 窗口期 12-18 个月</a></li>
+<li class="toc-h3"><a href="#2characterai-garcia">时间风险 2:Character.AI 判决（Garcia 案）</a></li>
+<li class="toc-h3"><a href="#3-ai_1">时间风险 3:苹果 / 谷歌的自家 AI 游戏能力推出</a></li>
+<li class=""><a href="#4-3">4. 3 个&amp;rdquo;监管风险&amp;rdquo;清单</a></li>
+<li class="toc-h3"><a href="#1-ai-ai">监管 1：中国 AI 备案与 AI 游戏版号</a></li>
+<li class="toc-h3"><a href="#2-ai-act-llm">监管 2：欧盟 AI Act 对游戏 LLM 的界定</a></li>
+<li class="toc-h3"><a href="#3characterai">监管 3:Character.AI 未成年人案后续判决</a></li>
+<li class=""><a href="#5">5. 总结 — &amp;ldquo;不要做什么&amp;rdquo; 对应&amp;rdquo;应该做什么&amp;rdquo;</a></li>
+<li class=""><a href="#6">6. 来源与引用</a></li>
+<li class=""><a href="#7-gaps">7. Gaps</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

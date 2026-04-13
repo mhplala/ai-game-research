@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="视觉小说（VN / ADV / Galgame）是日本最接近&quot;AI native 叙事&quot;的本土类型：文本驱动、立绘 + 对话框、分支剧情、角色 IP 强黏性 —— 理论上正是 LLM + 图像生成模型最适合重塑的赛道。但 2022–2026 四年间，日本 VN 行业对 AI 的采纳速度明显落后中美，原因见 1.4。">
+<title>2.3-日韩市场 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class=" active" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿</a> · 2.3-日韩市场</div><h1 id="23-20222026">2.3 日韩市场产品与玩法前沿（2022–2026)<a class="headerlink" href="#23-20222026" title="Permanent link">#</a></h1>
+<blockquote>
+<p>模块定位：Tier 2 市场扫描。日本与韩国在 AI 游戏/playable 赛道呈现截然不同的两种姿态 —— 日本是&rdquo;AAA 大厂内部工具化 + 独立 VN 零星探索&rdquo;，韩国是&rdquo;大厂 AI Lab 密集成立但尚无爆款出品&rdquo;。本模块横向比较两国路径，并与模块 2.1（中国）/ 2.2（北美）形成三角参照。
+研究截止：2026-04-13</p>
+</blockquote>
+<hr />
+<h2 id="aaa-ai">一、日本：视觉小说土壤 × AAA 大厂 AI 工具化<a class="headerlink" href="#aaa-ai" title="Permanent link">#</a></h2>
+<h3 id="11-vn-ai">1.1 应该领先却没领先的 VN × AI 叙事<a class="headerlink" href="#11-vn-ai" title="Permanent link">#</a></h3>
+<p>视觉小说（VN / ADV / Galgame）是日本最接近&rdquo;AI-native 叙事&rdquo;的本土类型：文本驱动、立绘 + 对话框、分支剧情、角色 IP 强黏性 —— 理论上正是 LLM + 图像生成模型最适合重塑的赛道。但 2022–2026 四年间，日本 VN 行业对 AI 的采纳速度明显落后中美，原因见 1.4。</p>
+<p><strong>独立与半独立 VN × AI 案例：</strong></p>
+<ul>
+<li><strong>1001 Nights(Story Game)</strong> —— 由旅居日本的华人独立开发者 Peng Guanqi(Guanqi Studio）于 2022–2023 推出的 AI 叙事游戏，玩家扮演 Scheherazade，输入关键词让 AI 生成故事与场景插画，实时改变剧情走向。是 GDC / IndieCade 被频繁引用的&rdquo;AI 生成故事 + 图像&rdquo;典型案例。严格来说开发者是华人，但主要发行与宣发在日本完成，也被日本独立游戏圈视作本土生态的一部分。</li>
+<li><strong>AI Dungeon 日本社区</strong> —— 2022 年前后在 Pixiv / Twitter 上形成了大量 AI Dungeon + NovelAI 组合的二次创作生态，NovelAI 本身虽由美国 Anlatan 运营，但其核心用户与美术风格完全锁定日系二次元，并于 2023–2024 成为日本二次元圈最主流的 AI 插画/文本生成工具之一。</li>
+<li><strong>bambi / tsumug / RECOTOMO 等 VN-style AI 陪伴 App</strong> —— 一批 2023–2025 推出的小团队产品，尝试用&rdquo;立绘 + LLM 对话 + 简易剧情分支&rdquo;组合复刻 Galgame 体验。规模均小（MAU 十万级以下），未出现跨出日本市场的爆款。</li>
+<li><strong>hololive × AI vtuber 实验</strong> —— Cover 公司 2024 起公开多个面向社内的 AI 辅助工具（直播切片自动生成、台词辅助、二语翻译字幕），但明确拒绝&rdquo;AI vtuber 代替真人&rdquo;的路线。2025 年 hololive EN 相关衍生短视频产品中出现了部分 AI TTS 与自动剪辑应用，仍定位为&rdquo;辅助真人&rdquo;。</li>
+</ul>
+<h3 id="12-aaa-ai">1.2 AAA 大厂：AI 作为&rdquo;内部工具&rdquo;而非&rdquo;产品形态&rdquo;<a class="headerlink" href="#12-aaa-ai" title="Permanent link">#</a></h3>
+<p>日本 AAA 大厂对 AI 的态度高度一致 —— <strong>对内是生产力工具，对外几乎不作为卖点</strong>，与北美 EA / Ubisoft 更接近，与中国鸣潮 / 元梦之星等&rdquo;AI 作为用户可见特性&rdquo;的方向明显不同。</p>
+<ul>
+<li><strong>Square Enix · AI &amp; Tech Preview Lab / AI Division</strong> —— 社长桐生拓马 2024 年新年致辞明确提出&rdquo;要把生成式 AI 与区块链作为内容生产主轴&rdquo;，并在 2024 Q4 财报披露正在开发&rdquo;内部 AI Toolkit for content creation&rdquo;，主要用于 Final Fantasy 系列与《圣剑传说 Visions of Mana》等项目的美术、Level Design、NPC 台词草稿生成。2023 年 4 月推出的互动小说 Demo《The Portopia Serial Murder Case AI 版》被外界普遍嘲讽（NLP 识别率低），但公司将其定位为&rdquo;对外公开的 LLM 能力试水&rdquo;，而非商业产品。2025 年 SE 加入 Microsoft Research Asia 的 Game AI 联合研究计划。</li>
+<li><strong>Bandai Namco · AI × Tales of / Gundam</strong> —— Bandai Namco Research 持续披露&rdquo;AI NPC 对话&rdquo;与&rdquo;程序化剧情&rdquo;相关专利（2023–2025），《Tales of》系列被提及在内部使用 LLM 做台词本地化初稿与分支剧情的草稿生成。2024 年 Gundam Metaverse 项目接入 AI 角色对话 demo（与 NTT docomo 合作）。</li>
+<li><strong>Capcom · RE Engine + AI</strong> —— Capcom 在 GDC 2024 / CEDEC 2024 公开了利用扩散模型辅助生成环境贴图与 rough concept 的工作流，主要服务于《怪物猎人 Wilds》《龙之信条 2》。同时 Capcom 首席执行官辻本宪三在 2024 股东大会回应&rdquo;AI 不会替代创作者，但会扩大我们的产能&rdquo;。</li>
+<li><strong>Konami</strong> —— 2024 年重启《合金装备 Δ》与《寂静岭 2 Remake》过程中，低调披露使用 Houdini + AI 辅助纹理与场景放大（Upscaling）。AI 未作为营销点。</li>
+<li><strong>Sega / Atlus</strong> —— Sega 在 2023 年提出&rdquo;Super Game&rdquo;战略中短暂提及 AI 作为支柱之一，但 2024–2025 实际动作以收购 Rovio、强化 Sonic IP 为主，AI 仅用于 QA 自动化。Atlus 《女神异闻录》系列无公开 AI 动作。</li>
+<li><strong>Koei Tecmo · Gust Studio</strong> —— 2025 年被报道内部评估使用 LLM 辅助《莱莎的炼金工房》衍生衍生小游戏的任务文本，未落地商业产品。</li>
+</ul>
+<h3 id="13-cyberagentai">1.3 CyberAgent：日本最激进的&rdquo;互联网系&rdquo;AI 游戏玩家<a class="headerlink" href="#13-cyberagentai" title="Permanent link">#</a></h3>
+<p>日本 AAA 之外，最值得单列的是 <strong>CyberAgent</strong>（日本最大互联网广告公司，旗下 Cygames 运营《赛马娘》《公主连结》《影之诗》）。</p>
+<ul>
+<li><strong>CyberAgent AI Lab</strong> —— 成立于 2016，近年聚焦广告创意自动生成（Extreme AI / 極 AI お台場スタジオ,2023 年启用）、游戏剧情/角色台词生成、生成式 3D 资产。2024 年公开 &ldquo;AI 搭配 Unity 的剧情关卡 rapid prototyping&rdquo; 内部流程，已被用于旗下手游营销素材与部分关卡草稿。</li>
+<li><strong>Cygames · AI 动作</strong> —— Cygames 一方面在《赛马娘》《Granblue Fantasy Relink》产线严格控制 AI 使用（强调&rdquo;手工作画&rdquo;品牌），另一方面在广告与 playable ads 侧全面拥抱 CyberAgent Extreme。这种&rdquo;核心产品保手工，营销链路放 AI&rdquo;的分工，是 2025 年日本大厂的普遍姿态。</li>
+<li><strong>KLab / DeNA / GREE</strong> —— 2023–2025 期间 DeNA 重点投资生成式 AI 广告中台，GREE 尝试过 VTuber × LLM 结合的 AI 直播间，KLab 相对保守。</li>
+</ul>
+<h3 id="14-ai">1.4 日本 AI 陪伴：为什么&rdquo;月之物&rdquo;起不来<a class="headerlink" href="#14-ai" title="Permanent link">#</a></h3>
+<p>日本是全球最早拥有 AI 角色陪伴产品的市场之一，但 2022–2026 用户渗透率明显低于中美。</p>
+<ul>
+<li><strong>Rinna（微软日本 → 2020 拆分）</strong> —— 2015 年即在 LINE 上线&rdquo;女高中生 AI りんな&rdquo;，一度拥有数百万用户。2020 年从微软独立为 rinna 株式会社，2023 推出日语 LLM&rdquo;rinna-3.6B&rdquo;,2024 接入 Character-style 产品 &ldquo;Cotomo&rdquo; 合作。算是&rdquo;日本 AI 陪伴元祖&rdquo;。</li>
+<li><strong>Cotomo(Starley 株式会社，2024.02)</strong> —— 定位&rdquo;像好朋友一样的语音 AI&rdquo;，主打 iPhone 上的语音对话，2024 年上线后迅速冲到日本 App Store 社交榜前列，但半年后活跃下滑，2025 年底 DAU 约 10 万量级，远不及中美同类产品。</li>
+<li><strong>Character.AI 日本用户</strong> —— 占全球流量的个位数百分比，远低于日本二次元用户在其他海外社区（如 Pixiv、Twitter）的占比，说明&rdquo;英语 + 非本土角色库&rdquo;是硬门槛。</li>
+<li><strong>NovelAI 日本社区</strong> —— 相反，NovelAI 因专注日系画风的 Stable Diffusion fine-tune，在日本二次元圈取得了全球最密集的付费用户，2024 年估计付费用户中日本占 30%+。</li>
+</ul>
+<p><strong>为什么 AI 陪伴在日本遇冷（四点归因）</strong>:
+1. <strong>真人 VTuber / Galgame 生态过于强势</strong> —— hololive、にじさんじ、Galgame 行业提供的&rdquo;类 AI&rdquo;情感连接已高度成熟，真人（或经纪公司包装的角色）情感浓度远高于 LLM 陪伴。
+2. <strong>二次元用户偏好&rdquo;作者性&rdquo;叙事</strong> —— 日本核心用户对&rdquo;作者赋予角色灵魂&rdquo;有强执念，LLM 生成的对话被批评为&rdquo;无魂/崩角色&rdquo;。
+3. <strong>隐私与&rdquo;角色 IP&rdquo;法务雷区</strong> —— 二次创作虽然繁荣，但一旦变成商业产品，IP 方维权极快，创业公司不敢大规模训练知名角色语料。
+4. <strong>中老年市场 + 智能手机普及率</strong> —— 日本人口结构使得 AI 陪伴的&rdquo;潜在孤独用户&rdquo;集中在中老年，而这一群体对聊天机器人的接受度远低于 Z 世代。</p>
+<h3 id="15">1.5 日本：小结<a class="headerlink" href="#15" title="Permanent link">#</a></h3>
+<p>日本是&rdquo;应该领先但实际滞后&rdquo;的典型 —— VN、AI 陪伴、IP 世界观三大本应成为 AI 叙事土壤的生态，都因&rdquo;作者性偏好、IP 法务、真人 VTuber 生态挤占&rdquo;，把 AI-native 创业的空间挤压到了独立与广告营销两个边缘带。AAA 大厂则全面走&rdquo;内部工具化&rdquo;路线，与北美趋同。</p>
+<hr />
+<h2 id="ai-lab-20232026">二、韩国：大厂 AI Lab 密集期（2023–2026)<a class="headerlink" href="#ai-lab-20232026" title="Permanent link">#</a></h2>
+<h3 id="21-krafton-mogia">2.1 Krafton · MOGIA（深度展开）<a class="headerlink" href="#21-krafton-mogia" title="Permanent link">#</a></h3>
+<p><strong>MOGIA</strong> 是 Krafton 于 <strong>2024 年 6 月</strong>宣布成立的 Generative AI Game Studio，是韩国大厂中最公开、最激进的 AI-native 游戏尝试。</p>
+<ul>
+<li><strong>命名与归属</strong> —— MOGIA 取自韩语&rdquo;모이다&rdquo;（聚集）的变体，定位为 Krafton 内部独立工作室，直属 CEO 金昌汉（Kim Chang-han）办公室，首批约 30 人团队，带头人为原 PUBG Studios 的 AI 研发负责人。</li>
+<li><strong>已披露项目</strong>:</li>
+<li><strong>inZOI × Smart Zoi</strong> —— 2024 GDC Krafton 公开了人生模拟游戏《inZOI》中的&rdquo;Smart Zoi&rdquo;系统，NPC 使用 LLM 生成日常对话与行为决策，2025 年 3 月 inZOI 以 Early Access 上市后，Smart Zoi 作为核心卖点之一被验证。这是 Krafton 首个将 AI NPC 作为&rdquo;对用户可见的 feature&rdquo;进行营销的项目。</li>
+<li><strong>Project ARC / CPC(Co-Playable Character)</strong> —— 2023 GDC Krafton + NVIDIA 公开的 PUBG AI 队友 demo，玩家可用语音与 AI 队友协作。2024 Q4 宣布升级为 MOGIA 牵头的&rdquo;持续在线 CPC&rdquo;研发方向。</li>
+<li><strong>与 Inworld AI 合作</strong> —— 2023 年 Krafton 参投 Inworld 的 $50M C 轮，是其在韩国市场最重要的战略投资者之一。MOGIA 部分 NPC 对话模块直接复用 Inworld 的 Character Engine API，但声称长期将切换至自研模型。</li>
+<li><strong>PUBG: Ally</strong> —— 2025 Q1 宣布的实验项目，将 AI 队友技术外溢至 PUBG 主线。</li>
+<li><strong>目标</strong> —— 金昌汉在 2024 年股东信中提出&rdquo;以生成式 AI 为核心的 Scale-out production&rdquo;，预计到 2027 年前要让至少 30% 的新项目 prototype 由 AI 辅助完成。MOGIA 是这一战略的执行臂。</li>
+</ul>
+<h3 id="22-nexon-intelligence-labs">2.2 Nexon · Intelligence Labs<a class="headerlink" href="#22-nexon-intelligence-labs" title="Permanent link">#</a></h3>
+<p><strong>Nexon Intelligence Labs</strong>(intelligencelabs.nexon.com）成立于 2017，是韩国大厂中<strong>历史最久</strong>的游戏 AI 研究机构，早期以数据科学、反作弊、玩家行为分析为主，2023 起向生成式 AI 与 LLM NPC 扩展。</p>
+<ul>
+<li><strong>Embark Studios 协同</strong> —— Nexon 全资子公司 Embark（斯德哥尔摩）凭《THE FINALS》《ARC Raiders》在 2023–2024 大量使用 AI TTS 生成 NPC/解说台词，引发配音工会争议，但也成为全球最早在商业 FPS 中大规模部署 AI 语音的案例。</li>
+<li><strong>MapleStory × AI NPC</strong> —— 2024 年 MapleStory Universe（基于区块链的 IP 扩展）公开过 AI NPC 对话 demo。</li>
+<li><strong>内部工具</strong> —— Nexon Intelligence Labs 2025 年开源了&rdquo;Maple-X&rdquo; 游戏数据标注框架，并持续发表 AI GM(Game Master）、行为预测相关论文。</li>
+<li><strong>定位差异</strong> —— 相对 MOGIA 偏&rdquo;新工作室 + 新项目&rdquo;,Intelligence Labs 更偏&rdquo;赋能既有产品 + 学术研究&rdquo;，两者在韩国形成明显分工。</li>
+</ul>
+<h3 id="23-ncsoft-varco-llm-project-g">2.3 NCSoft · VARCO LLM + Project G<a class="headerlink" href="#23-ncsoft-varco-llm-project-g" title="Permanent link">#</a></h3>
+<p><strong>VARCO LLM</strong> —— NCSoft 于 <strong>2023 年 8 月</strong>发布的自研韩语大模型，是韩国游戏公司里首个自建底座 LLM 的。包含 13B / 52B / 100B 三档（未全部发布），主打韩语质量与游戏场景微调。</p>
+<ul>
+<li><strong>VARCO Studio</strong> —— 2023 Q4 发布的一整套 AI 创作工具，包含 VARCO Text（文本）/ Image（图像）/ Human（数字人）/ Art（概念图）四个子产品，定位&rdquo;游戏美术与剧情的 AI 内容生产线&rdquo;。2024 年 NCSoft 把 VARCO 对外商业化，通过 VARCO Solution 向其他游戏/出版公司输出。</li>
+<li><strong>Project G / Project M</strong> —— NCSoft 2024 Q2 财报提到&rdquo;下一代 AI-native 项目代号 Project G&rdquo;，尚未公开内容。被业内解读为&rdquo;VARCO 技术栈支撑的新 MMO / 互动叙事产品&rdquo;，预计 2026–2027 面世。</li>
+<li><strong>困境</strong> —— NCSoft 2023–2025 股价和《TL》《Throne and Liberty》海外表现成为其 AI 战略的最大阻力：当主线 MMO 收入承压时，AI Lab 首当其冲被质疑&rdquo;研发投入回报&rdquo;。</li>
+<li><strong>副产品</strong> —— NCSoft 的数字人技术溢出到《TL》NPC 面部动画以及 2024 年上海 ChinaJoy 发布的&rdquo;AI TA Agent&rdquo;（面向美术外包的生产力工具）。</li>
+</ul>
+<h3 id="24-smilegate-smilegate-ai-futurelab">2.4 Smilegate · Smilegate AI / FutureLab<a class="headerlink" href="#24-smilegate-smilegate-ai-futurelab" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Smilegate AI（成立于 2020)</strong> —— 旗舰产品为&rdquo;Hyper Real&rdquo;数字人、LLM 角色对话引擎 &ldquo;HumanF&rdquo;。2024 年在《Epic Seven》《Lost Ark》中部分采用 AI 剧情分支草稿工具。</li>
+<li><strong>FutureLab</strong> —— Smilegate 面向未来形态的研究机构，定位更偏 VR / 元宇宙与 AI 角色互动结合，2025 年与 KAIST 合作发布 &ldquo;EmotionBench for Korean NPC&rdquo;。</li>
+</ul>
+<h3 id="25-ai-luda-character-korea">2.5 韩国 AI 陪伴：从 Luda 丑闻到 Character-Korea 竞争<a class="headerlink" href="#25-ai-luda-character-korea" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Luda / ScatterLab</strong> —— 2020 年底上线的&rdquo;20 岁韩国女大学生 AI 聊天机器人&rdquo;，一度冲上韩国 AI 现象级，但因个人信息泄露、仇恨言论事件被 PIPC 开出 1 亿韩元罚款并下架。2022 年以 &ldquo;Luda 2.0&rdquo; 重启，增加了情绪风控与韩国本地语料清洗。2024 年 ScatterLab 接受软银与 Krafton 投资，2025 年推出面向海外的 Zeta 产品（Character-like，主打 K-drama / K-pop 角色对话），在日本、东南亚取得一定声量。</li>
+<li><strong>Zeta(ScatterLab, 2024)</strong> —— 2025 年 MAU 数百万，韩国本土最大的 AI 角色对话产品，被视作韩国版 Character.AI，但底层更接近&rdquo;剧情化 chat + IP 合作&rdquo;。</li>
+<li><strong>Wrtn / SKT A.</strong> —— Wrtn 是韩国最大的 AI 写作工具，2024 起切入&rdquo;AI 互动故事&rdquo;领域；SKT（通信运营商）的 &ldquo;A.&rdquo; 对话助手也实验性接入了游戏/娱乐角色模块。</li>
+<li><strong>Character.AI 在韩</strong> —— 韩国是 Character.AI 全球 Top 5 流量国之一，远超日本。说明<strong>韩国用户对 AI 陪伴的文化接受度显著高于日本</strong>，这是日韩最大的结构性差异之一。</li>
+</ul>
+<h3 id="26-kakao-naver">2.6 平台与政策：Kakao / Naver / 政府<a class="headerlink" href="#26-kakao-naver" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Kakao Games</strong> —— 2023 年起将 Kakao Brain 的 &ldquo;KoGPT / Karlo&rdquo; 模型对内输出给游戏团队，用于 NPC 对话、客服、素材生成。2024 年 Kakao 因集团治理事件收缩 AI 投入。</li>
+<li><strong>Naver · HyperCLOVA X</strong> —— Naver 自研 LLM HyperCLOVA X(2023.08）被授权给多个游戏公司做本地化，Naver Webtoon 侧则探索&rdquo;AI 分镜 + playable 漫画&rdquo;，是 playable 侧最接近中国小游戏的路径。</li>
+<li><strong>政策</strong> —— 韩国 2024 年通过 AI 基本法（2025 年生效），对生成式 AI 训练数据、版权、儿童保护提出规范，游戏产业被列为重点监管对象。韩国游戏物管理委员会（GRAC)2025 年发布了 AI 生成内容的分级指引，是东亚最早的。</li>
+</ul>
+<h3 id="27">2.7 韩国：小结<a class="headerlink" href="#27" title="Permanent link">#</a></h3>
+<p>韩国呈现&rdquo;大厂 AI Lab 密集 + AI 陪伴接受度高 + 尚无爆款游戏出品&rdquo;的组合：技术储备、Lab 投入、LLM 自研都很到位，但真正跑通的消费级 AI 游戏产品只有 inZOI(Smart Zoi）与 Zeta(AI 陪伴）两个。韩国是&rdquo;雷声大、雨将落&rdquo;的状态，2026–2027 是验证期。</p>
+<hr />
+<h2 id="vs">三、横向比较：日韩 vs 中美的核心差异<a class="headerlink" href="#vs" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>日本</th>
+<th>韩国</th>
+<th>中国（模块 2.1)</th>
+<th>北美（模块 2.2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大厂 AI Lab 数量</td>
+<td>分散、不透明</td>
+<td>密集、公开（MOGIA / Intelligence Labs / VARCO / Smilegate AI)</td>
+<td>中，偏应用（网易伏羲、腾讯 AI Lab)</td>
+<td>分散，偏工具层（EA SEED, Ubisoft La Forge)</td>
+</tr>
+<tr>
+<td>AI-native 创业潮</td>
+<td>几乎无</td>
+<td>弱（ScatterLab 是唯一代表）</td>
+<td>强（AI 陪伴 + 小游戏）</td>
+<td>强（Inworld, Convai, Rosebud)</td>
+</tr>
+<tr>
+<td>AAA 对 AI 的姿态</td>
+<td>内部工具，不作营销</td>
+<td>可见 feature(Smart Zoi)</td>
+<td>作为运营卖点（鸣潮 AI NPC)</td>
+<td>内部工具为主</td>
+</tr>
+<tr>
+<td>AI 陪伴用户接受度</td>
+<td>低（被真人 VTuber 挤压）</td>
+<td>高（Zeta / Character.AI 高渗透）</td>
+<td>极高（星野、猫箱）</td>
+<td>高（C.AI, Replika)</td>
+</tr>
+<tr>
+<td>底座 LLM 自研</td>
+<td>分散（Rinna / PFN / 各大学）</td>
+<td>集中（VARCO / HyperCLOVA X / KoGPT)</td>
+<td>多（百模大战）</td>
+<td>全球头部（GPT / Claude / Gemini)</td>
+</tr>
+<tr>
+<td>VN / 叙事本土优势</td>
+<td>极强但未转化</td>
+<td>中，靠 K-drama 间接</td>
+<td>弱，靠仙侠/乙女补</td>
+<td>中</td>
+</tr>
+<tr>
+<td>政策风险</td>
+<td>低，但 IP 法务高</td>
+<td>中（2024 AI 基本法 + GRAC 分级）</td>
+<td>高（版号 + 算法备案）</td>
+<td>中（FTC / EU AI Act)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三个核心差异判断</strong>:</p>
+<ol>
+<li><strong>日本是&rdquo;内部工具派&rdquo;的极端，韩国是&rdquo;大厂 Lab 派&rdquo;的极端</strong> —— 日本几乎不让 AI 出现在用户可见层，韩国反而主动拿 Smart Zoi 之类作为营销卖点，这与两国产业生态（日本手游运营 vs 韩国买断/MMO）直接相关。</li>
+<li><strong>日本 AI 陪伴的冷，本质是&rdquo;真人 VTuber / Galgame 生态已经占位&rdquo;</strong>；韩国 AI 陪伴的热，本质是&rdquo;K-content IP + 语言封闭市场&rdquo;提供了内容护城河 —— 这是模块 2.2（北美）分析 Character.AI 时没有覆盖到的东亚特殊性。</li>
+<li><strong>韩国大厂的 AI 战略与公司财务高度绑定</strong> —— NCSoft 股价承压时 AI Lab 被质疑、Kakao 治理事件后 AI 收缩、Krafton 因 PUBG 现金流稳定反而敢 all-in MOGIA。这与北美&rdquo;VC 融资驱动的 AI 创业潮&rdquo;形成鲜明对比。</li>
+</ol>
+<hr />
+<h2 id="insights">四、Insights（四视角）<a class="headerlink" href="#insights" title="Permanent link">#</a></h2>
+<h3 id="41">4.1 投资人视角<a class="headerlink" href="#41" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>日本 AI 游戏创业投资标的极度稀缺</strong> —— 独立 VN × AI 的 TAM 太小（全球 VN 付费用户 &lt; 千万级），AAA 大厂不对外融资，AI 陪伴被 Cotomo / Rinna 垄断尾声市场。日本几乎只剩&rdquo;IP 授权 × AI 技术乙方&rdquo;的外包式机会，不适合高成长型 VC。</li>
+<li><strong>韩国的 MOGIA / ScatterLab / Wrtn 构成唯一投资三角</strong> —— Krafton 自带现金流不接受外部投资，ScatterLab 与 Wrtn 是韩国 AI 游戏/陪伴领域罕见可投标的，但两者都已进入 B 轮以后，早期红利已过。</li>
+<li><strong>更值得关注的是&rdquo;韩国底座 LLM 给东南亚 AI 游戏赋能&rdquo;</strong> —— HyperCLOVA X 与 VARCO 都在寻找韩语外的第二市场，东南亚（印尼/越南）与日本是其潜在落地，这给了中立 B2B AI-for-Games 公司机会。</li>
+<li><strong>日本 playable ads × AI 是被低估的现金牛</strong> —— CyberAgent Extreme 模式已验证，ROI 清晰，适合有广告中台能力的买量公司而非传统游戏投资人。</li>
+</ul>
+<h3 id="42">4.2 游戏公司视角<a class="headerlink" href="#42" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>日本 AAA 模式（&rdquo;内部工具 + 守住品牌手工感&rdquo;）可被中国二次元厂商直接复制</strong> —— 米哈游、鹰角已经在做，但需警惕&rdquo;月之物&rdquo;现象：日本核心二次元用户对 AI 生成内容警觉度极高，营销时慎用&rdquo;AI&rdquo;作为卖点。</li>
+<li><strong>MOGIA 的 Smart Zoi 是一次重要的商业验证</strong> —— 证明了&rdquo;AI NPC 可以成为主流游戏的可见 feature&rdquo;，这对全球发行商都是信号，预计 2026 会看到更多 AAA 跟进（参考模块 2.2 中 EA / Ubisoft 的观望态度）。</li>
+<li><strong>韩国 VARCO + 中国底座模型存在&rdquo;同质竞争&rdquo;风险</strong> —— 中韩在 LLM × 游戏场景微调的路径过于接近，日本则走了&rdquo;依赖 OpenAI / Anthropic + 本土美术模型 NovelAI&rdquo;的差异化路线，反而可能更轻资产。</li>
+<li><strong>Embark Studios 的 AI TTS 争议提醒</strong>:AI 生产力的边界不是技术而是劳资关系，日韩工会压力远低于北美，是全球最适合&rdquo;先跑起来再谈规范&rdquo;的测试场。</li>
+</ul>
+<h3 id="43">4.3 用户 / 创作者视角<a class="headerlink" href="#43" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>日本用户期望的 AI</strong>：辅助作者创作、提升手工作画产能、翻译本地化 —— &ldquo;作者性&rdquo;是核心诉求。AI 直接与用户对话的场景（Cotomo、Rinna）会被持续边缘化。</li>
+<li><strong>韩国用户期望的 AI</strong>：陪伴 + 剧情互动 + K-pop/K-drama IP 延伸 —— Zeta 的成功证明&rdquo;剧情化对话 + IP&rdquo;比&rdquo;通用聊天&rdquo;更适合东亚市场。</li>
+<li><strong>两国共通痛点</strong>：本地语言的 LLM 质量仍落后于英语 1–2 年，是一切 AI 产品本地化的硬天花板。VARCO / HyperCLOVA X / rinna-3.6B 都在努力但都未到 GPT-4 级。</li>
+<li><strong>创作者侧</strong>：日本同人圈对 NovelAI 的依赖程度远超外界估计，一旦 NovelAI 因 IP 诉讼被迫调整训练集，日本二次创作生态会受到比中美更大的冲击。</li>
+</ul>
+<h3 id="44">4.4 战略/监管视角<a class="headerlink" href="#44" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>日本经产省（METI)2024 年度&rdquo;Cool Japan&rdquo;白皮书首次单列 AI × 游戏章节</strong> —— 但政策基调是&rdquo;鼓励内部工具，慎用 AI 陪伴&rdquo;，与模块 1 总结的&rdquo;东亚监管对 AI 陪伴普遍谨慎&rdquo;一致。</li>
+<li><strong>韩国 2024 AI 基本法 + GRAC 分级指引</strong> —— 对 AI 生成内容要求&rdquo;可识别标记&rdquo;，对 12 岁以下游戏严格限制 AI NPC 情感互动，是全球最具体的游戏侧 AI 监管。MOGIA 的 Smart Zoi 上线时特意强调&rdquo;仅 15+&rdquo;。</li>
+<li><strong>两国都对&rdquo;AI 导致的 IP 侵权&rdquo;高度敏感</strong> —— 日本侧的 Galgame / 声优工会、韩国侧的 K-pop 经纪公司，都是 AI 陪伴与 AI 游戏合规必过的关。</li>
+<li><strong>地缘角度</strong>：韩国 LLM 希望向东南亚扩张，日本 AI 游戏希望反向借中美模型补齐能力，两国在&rdquo;技术 sovereignty&rdquo;问题上姿态截然相反 —— 韩国是主动建底座，日本是公开承认依赖外部。</li>
+</ul>
+<hr />
+<h2 id="_1">五、结论与下一步<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><strong>一句话总结</strong>：日韩都是&rdquo;雷声大、雨点小&rdquo;的 Tier 2 市场，但雷声来源不同 —— 日本是 AAA 大厂的内部工具化与 VN 土壤的错位，韩国是大厂 AI Lab 密集成立但商业化验证尚未完成。2026–2027 是韩国（尤其 MOGIA / NCSoft Project G）从&rdquo;Lab 密集期&rdquo;走向&rdquo;爆款验证期&rdquo;的关键窗口，日本则继续维持&rdquo;作者性 × 手工感 + AI 作为幕后工具&rdquo;的两元结构。</p>
+<p><strong>与模块 1/2.1/2.2 的呼应</strong>:
+- 呼应模块 1 的&rdquo;AI 陪伴在东亚监管风险高&rdquo;：日韩共同印证。
+- 呼应模块 2.1（中国）：中国 AI 小游戏买量 vs 日本 CyberAgent Extreme 几乎是同一条路径，差异在投放媒介。
+- 呼应模块 2.2（北美）：Inworld ↔ Krafton MOGIA 是全球最紧密的&rdquo;北美 AI-native 底座 + 亚洲大厂接入&rdquo;合作案例。
+- 呼应模块 3/4(playable ads / 生态）：日本的 playable ads × AI 是被低估的现金牛，值得回补。</p>
+<p><strong>Gap 与下一步</strong>:
+1. <strong>Krafton MOGIA 团队真实人数与财务贡献数据缺失</strong> —— 现有信息全部来自官方新闻稿，需要通过韩国证券监督院 DART 公告或 Krafton 半年报补齐，预计能把 MOGIA 的投入和项目数量量化到&rdquo;可比&rdquo;程度。
+2. <strong>日本中型发行商（Marvelous / FuRyu / Idea Factory)AI 动作几乎零公开信息</strong> —— 模块内仅覆盖大厂与独立两端，中间带应补一次针对性扫描，尤其 Galgame 主力厂（Visual Arts / Key 等）对 AI 的态度。</p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#aaa-ai">一、日本：视觉小说土壤 × AAA 大厂 AI 工具化</a></li>
+<li class="toc-h3"><a href="#11-vn-ai">1.1 应该领先却没领先的 VN × AI 叙事</a></li>
+<li class="toc-h3"><a href="#12-aaa-ai">1.2 AAA 大厂：AI 作为&amp;rdquo;内部工具&amp;rdquo;而非&amp;rdquo;产品形态&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#13-cyberagentai">1.3 CyberAgent：日本最激进的&amp;rdquo;互联网系&amp;rdquo;AI 游戏玩家</a></li>
+<li class="toc-h3"><a href="#14-ai">1.4 日本 AI 陪伴：为什么&amp;rdquo;月之物&amp;rdquo;起不来</a></li>
+<li class="toc-h3"><a href="#15">1.5 日本：小结</a></li>
+<li class=""><a href="#ai-lab-20232026">二、韩国：大厂 AI Lab 密集期（2023–2026)</a></li>
+<li class="toc-h3"><a href="#21-krafton-mogia">2.1 Krafton · MOGIA（深度展开）</a></li>
+<li class="toc-h3"><a href="#22-nexon-intelligence-labs">2.2 Nexon · Intelligence Labs</a></li>
+<li class="toc-h3"><a href="#23-ncsoft-varco-llm-project-g">2.3 NCSoft · VARCO LLM + Project G</a></li>
+<li class="toc-h3"><a href="#24-smilegate-smilegate-ai-futurelab">2.4 Smilegate · Smilegate AI / FutureLab</a></li>
+<li class="toc-h3"><a href="#25-ai-luda-character-korea">2.5 韩国 AI 陪伴：从 Luda 丑闻到 Character-Korea 竞争</a></li>
+<li class="toc-h3"><a href="#26-kakao-naver">2.6 平台与政策：Kakao / Naver / 政府</a></li>
+<li class="toc-h3"><a href="#27">2.7 韩国：小结</a></li>
+<li class=""><a href="#vs">三、横向比较：日韩 vs 中美的核心差异</a></li>
+<li class=""><a href="#insights">四、Insights（四视角）</a></li>
+<li class="toc-h3"><a href="#41">4.1 投资人视角</a></li>
+<li class="toc-h3"><a href="#42">4.2 游戏公司视角</a></li>
+<li class="toc-h3"><a href="#43">4.3 用户 / 创作者视角</a></li>
+<li class="toc-h3"><a href="#44">4.4 战略/监管视角</a></li>
+<li class=""><a href="#_1">五、结论与下一步</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

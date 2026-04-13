@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="1. 赛道高度集中在&quot;Runtime AI native × 陪伴/剧情&quot;一个象限 (25+ 产品），其中 Character.AI / 星野 / Zeta / 猫箱 已跑通&quot;DAU 百万 + 流水亿级&quot;，但大多数同类产品在 Token 经济学真空带 内挣扎。 2. Pipeline AI for Creator 象限基本空白 ,2025 才出现 Rezon…">
+<title>1.4-玩家全景图 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class=" active" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构</a> · 1.4-玩家全景图</div><h1 id="14">1.4 玩家全景图<a class="headerlink" href="#14" title="Permanent link">#</a></h1>
+<blockquote>
+<p>模块 1.4 · AI 小游戏与 Playable 体验赛道 · 全球主要玩家结构化扫描</p>
+<p>覆盖 85 个产品 / 品牌 / 机构，来自模块 2.1（中国 27)+ 2.2（美国 32)+ 2.3（日韩 27)+ 2.5(UGC AI Playable Maker，占位）+ 平台/监管补行。每条都填&rdquo;双刀&rdquo;分类（模块 1.1 §6）。素材 100% 复用现有案例，未新增调研。</p>
+</blockquote>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>赛道高度集中在&rdquo;Runtime AI-native × 陪伴/剧情&rdquo;一个象限</strong>(25+ 产品），其中 Character.AI / 星野 / Zeta / 猫箱 已跑通&rdquo;DAU 百万 + 流水亿级&rdquo;，但大多数同类产品在<strong>Token 经济学真空带</strong>内挣扎。</li>
+<li><strong>Pipeline AI for Creator 象限基本空白</strong>,2025 才出现 Rezona / LoopIt / YouTube Playables Builder 等 6-8 个玩家，是<strong>未来 2 年真正的破局路径</strong>（详见模块 2.5）。</li>
+<li><strong>middleware 层（Inworld / Convai / Artificial Agency / Series）集中度高但付费客户少</strong>,2025 Q1 前后出现第一波缩编与并购信号（Character.AI 准退出、Hidden Door 缩编）。</li>
+<li><strong>中美日韩节奏差 6-12 个月</strong>：美国在 middleware 和 Runtime AI-native 已完成一轮洗牌，中国在 AI 陪伴侧刚刚跑通头部（星野/猫箱），日本仍停留在 AAA 内部管线，韩国出现 Krafton MOGIA 这种东亚唯一跑通 AAA Runtime AI 的案例。</li>
+<li><strong>AI-washed 象限是小游戏主战场</strong>（寻道大千 / 咸鱼之王 / 无尽冬日），流水最高但 AI 可移除，不是真正的&rdquo;AI 游戏&rdquo;。</li>
+</ol>
+<hr />
+<h2 id="85-15">一、全景大表（85 行 × 15 列）<a class="headerlink" href="#85-15" title="Permanent link">#</a></h2>
+<blockquote>
+<p>列说明：<strong>刀 1</strong> = AI 可移除性（<code>native</code> / <code>aug</code> / <code>washed</code> / <code>free</code> / <code>enabler</code>);<strong>刀 2</strong> = AI 存在位置（<code>Runtime</code> / <code>P-Dev</code> / <code>P-Creator</code> / <code>P-Embed</code> / <code>Hybrid</code> / <code>None</code>);<strong>评分</strong> = 战略位置 1-5(5=赛道定义者）。</p>
+</blockquote>
+<h3 id="11-27">1.1 中国（27)<a class="headerlink" href="#11-27" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品/品牌</th>
+<th>公司</th>
+<th>国家</th>
+<th>品类</th>
+<th>平台</th>
+<th>刀 1</th>
+<th>刀 2</th>
+<th>核心机制</th>
+<th>融资/估值</th>
+<th>规模</th>
+<th>付费模式</th>
+<th>状态</th>
+<th>评分</th>
+<th>备注/来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>猫箱</td>
+<td>字节跳动</td>
+<td>CN</td>
+<td>AI 陪伴/角色</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>UGC 角色 + LLM 实时对话</td>
+<td>内部孵化</td>
+<td>DAU &gt;100 万</td>
+<td>免费+订阅</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.1-01</td>
+</tr>
+<tr>
+<td>2</td>
+<td>星野</td>
+<td>MiniMax</td>
+<td>CN</td>
+<td>AI 陪伴/乙女</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>角色扮演 + 语音 + 剧情</td>
+<td>母公司 $600M+</td>
+<td>流水 &gt;3 亿</td>
+<td>订阅+钻石</td>
+<td>跑通</td>
+<td>5</td>
+<td>S-2.1-02 · 中国头部</td>
+</tr>
+<tr>
+<td>3</td>
+<td>筑梦岛</td>
+<td>聆心智能</td>
+<td>CN</td>
+<td>AI 剧情</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>剧情分支 + 角色养成</td>
+<td>数千万元</td>
+<td>MAU ~200 万</td>
+<td>订阅</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.1-03</td>
+</tr>
+<tr>
+<td>4</td>
+<td>豆包</td>
+<td>字节跳动</td>
+<td>CN</td>
+<td>通用助手+游戏壳</td>
+<td>iOS/Android/Web</td>
+<td>aug</td>
+<td>Runtime</td>
+<td>助手 + 角色+小游戏插件</td>
+<td>内部</td>
+<td>MAU ~1 亿</td>
+<td>免费+广告</td>
+<td>增长</td>
+<td>3</td>
+<td>S-2.1-04</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Kimi</td>
+<td>月之暗面</td>
+<td>CN</td>
+<td>长文本助手</td>
+<td>全端</td>
+<td>washed</td>
+<td>None</td>
+<td>非游戏</td>
+<td>$1.3B</td>
+<td>MAU ~3600 万</td>
+<td>免费</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.1-05 · 非游戏</td>
+</tr>
+<tr>
+<td>6</td>
+<td>彩云小梦</td>
+<td>彩云科技</td>
+<td>CN</td>
+<td>AI 小说</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>续写小说 + 角色</td>
+<td>早期</td>
+<td>付费 ~50 万</td>
+<td>订阅</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.1-06</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Glow</td>
+<td>MiniMax 前身</td>
+<td>CN</td>
+<td>AI 陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>LLM 角色扮演</td>
+<td>-</td>
+<td>已下架</td>
+<td>-</td>
+<td>死</td>
+<td>1</td>
+<td>S-2.1-07 · 监管下架</td>
+</tr>
+<tr>
+<td>8</td>
+<td>X Eva / 微光</td>
+<td>小冰</td>
+<td>CN</td>
+<td>数字人陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>数字克隆 + 陪聊</td>
+<td>独立</td>
+<td>订阅 ~30 万</td>
+<td>订阅</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.1-08</td>
+</tr>
+<tr>
+<td>9</td>
+<td>逗逗游戏伙伴</td>
+<td>逗逗科技</td>
+<td>CN</td>
+<td>PC 桌面陪玩</td>
+<td>Windows</td>
+<td>native</td>
+<td>Runtime</td>
+<td>屏幕识别 + 语音</td>
+<td>天使+A</td>
+<td>MAU ~150 万</td>
+<td>订阅</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.1-09</td>
+</tr>
+<tr>
+<td>10</td>
+<td>猫耳/Aily 等</td>
+<td>小厂集合</td>
+<td>CN</td>
+<td>AI 乙女</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>剧情+养成</td>
+<td>十万级</td>
+<td>十万级</td>
+<td>订阅</td>
+<td>碎片</td>
+<td>2</td>
+<td>S-2.1-10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Whispers from the Star</td>
+<td>Anuttacon（蔡浩宇）</td>
+<td>CN→US</td>
+<td>AI-native 游戏</td>
+<td>Mobile/PC</td>
+<td>native</td>
+<td>Runtime</td>
+<td>文字剧情 + LLM NPC</td>
+<td>蔡浩宇个人</td>
+<td>未发售</td>
+<td>未定</td>
+<td>测试</td>
+<td>4</td>
+<td>S-2.1-11 · 蔡浩宇首作</td>
+</tr>
+<tr>
+<td>12</td>
+<td>rct AI · Chaos Box</td>
+<td>rct AI</td>
+<td>CN</td>
+<td>B 端 NPC 引擎</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>NPC 行为生成 SDK</td>
+<td>$10M+</td>
+<td>B 端</td>
+<td>B2B</td>
+<td>转型</td>
+<td>2</td>
+<td>S-2.1-12</td>
+</tr>
+<tr>
+<td>13</td>
+<td>ChattyGame</td>
+<td>超参数</td>
+<td>CN</td>
+<td>文字生成小游戏</td>
+<td>Web</td>
+<td>native</td>
+<td>Runtime</td>
+<td>文本→小游戏</td>
+<td>母公司 A 轮</td>
+<td>Demo</td>
+<td>免费</td>
+<td>挣扎</td>
+<td>2</td>
+<td>S-2.1-13</td>
+</tr>
+<tr>
+<td>14</td>
+<td>逆水寒手游</td>
+<td>网易</td>
+<td>CN</td>
+<td>MMORPG+AI NPC</td>
+<td>iOS/Android</td>
+<td>aug</td>
+<td>Runtime</td>
+<td>AI NPC 10 万条设定</td>
+<td>内部</td>
+<td>累计 &gt;80 亿</td>
+<td>免费+道具</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.1-14 · AI NPC 标杆</td>
+</tr>
+<tr>
+<td>15</td>
+<td>原神/星穹铁道</td>
+<td>米哈游</td>
+<td>CN</td>
+<td>开放世界 RPG</td>
+<td>全端</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>内部美术 AI</td>
+<td>内部</td>
+<td>40 亿美金/年</td>
+<td>抽卡</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.1-15</td>
+</tr>
+<tr>
+<td>16</td>
+<td>寻道大千</td>
+<td>三七互娱</td>
+<td>CN</td>
+<td>小游戏放置</td>
+<td>微信/抖音小游戏</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>放置卡牌 + AI 买量素材</td>
+<td>上市公司</td>
+<td>流水 Top 1</td>
+<td>IAA+IAP</td>
+<td>稳</td>
+<td>4</td>
+<td>S-2.1-16 · 小游戏王者</td>
+</tr>
+<tr>
+<td>17</td>
+<td>咸鱼之王</td>
+<td>豪腾嘉科</td>
+<td>CN</td>
+<td>小游戏卡牌</td>
+<td>微信/抖音小游戏</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>买量 AI 素材</td>
+<td>独立</td>
+<td>累计 &gt;30 亿</td>
+<td>IAA+IAP</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.1-17</td>
+</tr>
+<tr>
+<td>18</td>
+<td>无尽冬日</td>
+<td>点点互动</td>
+<td>CN→Global</td>
+<td>SLG</td>
+<td>iOS/Android</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>AI 出海买量</td>
+<td>世纪华通子</td>
+<td>15 亿美金</td>
+<td>IAP</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.1-18 · SLG 出海王</td>
+</tr>
+<tr>
+<td>19</td>
+<td>抓大鹅/疯狂梗传</td>
+<td>多厂</td>
+<td>CN</td>
+<td>休闲小游戏</td>
+<td>小游戏</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>买量+关卡复制</td>
+<td>-</td>
+<td>月 1-3 亿</td>
+<td>IAA</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.1-19</td>
+</tr>
+<tr>
+<td>20</td>
+<td>羊了个羊</td>
+<td>简游</td>
+<td>CN</td>
+<td>休闲 baseline</td>
+<td>小游戏</td>
+<td>free</td>
+<td>None</td>
+<td>纯手工休闲</td>
+<td>-</td>
+<td>已过气</td>
+<td>IAA</td>
+<td>死</td>
+<td>1</td>
+<td>S-2.1-20 · 非 AI 对照</td>
+</tr>
+<tr>
+<td>21</td>
+<td>微信/混元游戏 SDK</td>
+<td>腾讯</td>
+<td>CN</td>
+<td>平台 enabler</td>
+<td>Platform</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>Token 补贴 + NPC SDK</td>
+<td>内部</td>
+<td>开发者 N/A</td>
+<td>平台分成</td>
+<td>早期</td>
+<td>3</td>
+<td>S-2.1-21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>抖音豆包 token 补贴</td>
+<td>字节</td>
+<td>CN</td>
+<td>平台 enabler</td>
+<td>Platform</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>Token 补贴</td>
+<td>内部</td>
+<td>-</td>
+<td>平台分成</td>
+<td>早期</td>
+<td>3</td>
+<td>S-2.1-22</td>
+</tr>
+<tr>
+<td>23</td>
+<td>快手 × 可灵</td>
+<td>快手</td>
+<td>CN</td>
+<td>playable ads</td>
+<td>Platform</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>视频→playable</td>
+<td>内部</td>
+<td>-</td>
+<td>广告</td>
+<td>早期</td>
+<td>3</td>
+<td>S-2.1-23</td>
+</tr>
+<tr>
+<td>24</td>
+<td>支付宝通义</td>
+<td>阿里</td>
+<td>CN</td>
+<td>非游戏</td>
+<td>Platform</td>
+<td>free</td>
+<td>None</td>
+<td>非游戏</td>
+<td>内部</td>
+<td>-</td>
+<td>-</td>
+<td>非游戏</td>
+<td>1</td>
+<td>S-2.1-24</td>
+</tr>
+<tr>
+<td>25</td>
+<td>PICO 嘘嘘岛</td>
+<td>字节 PICO</td>
+<td>CN</td>
+<td>VR 沙盒</td>
+<td>PICO</td>
+<td>aug</td>
+<td>Runtime</td>
+<td>VR + 轻 AI</td>
+<td>内部</td>
+<td>停摆</td>
+<td>-</td>
+<td>死</td>
+<td>1</td>
+<td>S-2.1-25</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Pantheon Lab</td>
+<td>香港</td>
+<td>HK</td>
+<td>B 端数字人</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>数字人 SDK</td>
+<td>B+ 轮</td>
+<td>B 端</td>
+<td>B2B</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.1-26</td>
+</tr>
+<tr>
+<td>27</td>
+<td>iKala/Hahow</td>
+<td>台湾</td>
+<td>TW</td>
+<td>AI 教育</td>
+<td>Web</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>教育课+AI 壳</td>
+<td>B 轮</td>
+<td>B2C</td>
+<td>订阅</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.1-27</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-32">1.2 美国（32)<a class="headerlink" href="#12-32" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品/品牌</th>
+<th>公司</th>
+<th>国家</th>
+<th>品类</th>
+<th>平台</th>
+<th>刀 1</th>
+<th>刀 2</th>
+<th>核心机制</th>
+<th>融资/估值</th>
+<th>规模</th>
+<th>付费模式</th>
+<th>状态</th>
+<th>评分</th>
+<th>备注/来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28</td>
+<td>AI Dungeon</td>
+<td>Latitude</td>
+<td>US</td>
+<td>AI 文字冒险</td>
+<td>Web/iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>LLM 文字冒险</td>
+<td>$3.3M seed</td>
+<td>下滑中</td>
+<td>订阅</td>
+<td>萎缩</td>
+<td>3</td>
+<td>S-2.2-A1 · GenAI 游戏鼻祖</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Suck Up!</td>
+<td>Proxima Enterprises</td>
+<td>US</td>
+<td>LLM 对话游戏</td>
+<td>Steam/Quest</td>
+<td>native</td>
+<td>Runtime</td>
+<td>吸血鬼说服 NPC</td>
+<td>自筹</td>
+<td>Steam 热销</td>
+<td>买断</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.2-A2 · 小而美范式</td>
+</tr>
+<tr>
+<td>30</td>
+<td>1001 Nights</td>
+<td>Tianyu Xu (indie)</td>
+<td>US/CN</td>
+<td>AI 生成故事</td>
+<td>PC/itch</td>
+<td>native</td>
+<td>Hybrid</td>
+<td>AI 生成图/词变武器</td>
+<td>无</td>
+<td>独立小体量</td>
+<td>买断</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.2-A3 · P-Embedded</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Hidden Door</td>
+<td>Hidden Door Inc</td>
+<td>US</td>
+<td>多人 AI RP</td>
+<td>Web</td>
+<td>native</td>
+<td>Runtime</td>
+<td>书籍世界 → RPG</td>
+<td>$20M Series A</td>
+<td>闭测</td>
+<td>订阅</td>
+<td>警告</td>
+<td>2</td>
+<td>S-2.2-A4 · 2025 Q1 缩编</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Altera(Project Sid)</td>
+<td>Altera.al</td>
+<td>US</td>
+<td>Minecraft AI 村民</td>
+<td>Minecraft mod</td>
+<td>native</td>
+<td>Runtime</td>
+<td>多 agent 社会模拟</td>
+<td>$11M (a16z)</td>
+<td>Demo</td>
+<td>B2C 未定</td>
+<td>早期</td>
+<td>2</td>
+<td>S-2.2-A5</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Infinite Craft</td>
+<td>Neal Agarwal</td>
+<td>US</td>
+<td>LLM Web 小游戏</td>
+<td>Web</td>
+<td>native</td>
+<td>Hybrid</td>
+<td>元素合成 LLM 推理</td>
+<td>无融资</td>
+<td>现象级 MAU</td>
+<td>免费</td>
+<td>现象级</td>
+<td>4</td>
+<td>S-2.2-A6 · solo 零融资</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Inworld Origins</td>
+<td>Inworld AI</td>
+<td>US</td>
+<td>demo 侦探</td>
+<td>PC</td>
+<td>native</td>
+<td>Runtime</td>
+<td>LLM NPC 侦探</td>
+<td>母 $120M</td>
+<td>Demo</td>
+<td>免费</td>
+<td>Demo</td>
+<td>3</td>
+<td>S-2.2-A7</td>
+</tr>
+<tr>
+<td>35</td>
+<td>AI Roguelite</td>
+<td>Big Moustache</td>
+<td>US</td>
+<td>Roguelite</td>
+<td>Steam</td>
+<td>native</td>
+<td>Runtime</td>
+<td>AI 生成敌人+任务</td>
+<td>indie</td>
+<td>稳</td>
+<td>买断</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.2-A8</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Series/Rho</td>
+<td>Series Entertainment</td>
+<td>US</td>
+<td>AI 游戏平台</td>
+<td>Web</td>
+<td>native</td>
+<td>Hybrid</td>
+<td>middleware+native</td>
+<td>$28M Series A</td>
+<td>早期</td>
+<td>SaaS+B2C</td>
+<td>早期</td>
+<td>3</td>
+<td>S-2.2-A9</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Retail Mage</td>
+<td>Jam &amp; Tea Studios</td>
+<td>US</td>
+<td>LLM 解谜</td>
+<td>Steam</td>
+<td>native</td>
+<td>Runtime</td>
+<td>店铺对话解谜</td>
+<td>未披露</td>
+<td>早期</td>
+<td>买断</td>
+<td>早期</td>
+<td>2</td>
+<td>S-2.2-A10</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Character.AI</td>
+<td>Character Technologies</td>
+<td>US</td>
+<td>AI 陪伴</td>
+<td>Web/iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>UGC 角色 + 对话</td>
+<td>$1.5B→$2.7B Google</td>
+<td>MAU 2000 万+</td>
+<td>订阅</td>
+<td>准退出</td>
+<td>5</td>
+<td>S-2.2-B1 · 赛道定义者</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Replika</td>
+<td>Luka Inc</td>
+<td>US</td>
+<td>AI 陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>个性化伴侣</td>
+<td>累计 $11M</td>
+<td>MAU 数百万</td>
+<td>订阅</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.2-B2</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Pi / Inflection</td>
+<td>Inflection AI</td>
+<td>US</td>
+<td>AI 助手/陪伴</td>
+<td>Web/iOS</td>
+<td>native</td>
+<td>Runtime</td>
+<td>情感型助手</td>
+<td>$1.3B→MSFT $650M</td>
+<td>人才被挖</td>
+<td>免费</td>
+<td>准退出</td>
+<td>3</td>
+<td>S-2.2-B3</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Talkie</td>
+<td>MiniMax US</td>
+<td>US</td>
+<td>AI 陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>星野海外版</td>
+<td>母 $600M+</td>
+<td>增长</td>
+<td>订阅</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.2-B4</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Kindroid</td>
+<td>Kindroid</td>
+<td>US</td>
+<td>NSFW 陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>无审查伴侣</td>
+<td>未披露</td>
+<td>增长</td>
+<td>订阅</td>
+<td>增长</td>
+<td>3</td>
+<td>S-2.2-B5</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Inworld AI</td>
+<td>Inworld</td>
+<td>US</td>
+<td>NPC SDK</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>NPC 行为 + 对话 SDK</td>
+<td>$120M+/~$500M</td>
+<td>行业领跑</td>
+<td>B2B</td>
+<td>领跑</td>
+<td>5</td>
+<td>S-2.2-C1 · middleware 领跑</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Convai</td>
+<td>Convai</td>
+<td>US</td>
+<td>NPC API</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>NPC API</td>
+<td>$10M seed</td>
+<td>B 端</td>
+<td>B2B</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.2-C2</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Rosebud AI</td>
+<td>Rosebud</td>
+<td>US</td>
+<td>no-code 游戏生成</td>
+<td>Web</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>text-to-game</td>
+<td>$4M seed</td>
+<td>增长</td>
+<td>SaaS</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.2-C3 · P-Creator</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Scenario</td>
+<td>Scenario.gg</td>
+<td>US</td>
+<td>AI 美术</td>
+<td>Web</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>风格化贴图生成</td>
+<td>$6M+</td>
+<td>B 端</td>
+<td>SaaS</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.2-C4</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Layer AI</td>
+<td>Layer</td>
+<td>US</td>
+<td>AI 美术 pipeline</td>
+<td>Web</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>美术管线</td>
+<td>$1.9M</td>
+<td>B 端</td>
+<td>SaaS</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.2-C5</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Promethean AI</td>
+<td>Promethean</td>
+<td>US</td>
+<td>场景生成</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>场景自动搭建</td>
+<td>小额</td>
+<td>B 端</td>
+<td>B2B</td>
+<td>老牌</td>
+<td>2</td>
+<td>S-2.2-C6</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Kinetix</td>
+<td>Kinetix</td>
+<td>US</td>
+<td>AI emote/动作</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>动作生成</td>
+<td>$11M</td>
+<td>B 端</td>
+<td>B2B</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.2-C7</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Artificial Agency</td>
+<td>Artificial Agency</td>
+<td>US/CA</td>
+<td>Runtime behavior SDK</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>Runtime</td>
+<td>Runtime AI middleware</td>
+<td>$16M seed</td>
+<td>B 端</td>
+<td>B2B</td>
+<td>早期</td>
+<td>3</td>
+<td>S-2.2-C8</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Luna Labs / SparkLabs</td>
+<td>AppLovin</td>
+<td>US</td>
+<td>AI playable ads</td>
+<td>Platform</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>AI 生成 playable ads</td>
+<td>商用</td>
+<td>营收主力</td>
+<td>广告</td>
+<td>稳</td>
+<td>4</td>
+<td>S-2.2-D1</td>
+</tr>
+<tr>
+<td>52</td>
+<td>NEO NPC</td>
+<td>Ubisoft × Inworld</td>
+<td>FR/US</td>
+<td>AAA NPC demo</td>
+<td>Demo</td>
+<td>native</td>
+<td>Runtime</td>
+<td>AAA AI NPC demo</td>
+<td>demo</td>
+<td>未发布</td>
+<td>-</td>
+<td>停留</td>
+<td>3</td>
+<td>S-2.2-E1</td>
+</tr>
+<tr>
+<td>53</td>
+<td>NVIDIA ACE</td>
+<td>NVIDIA</td>
+<td>US</td>
+<td>NPC 渲染+LLM</td>
+<td>SDK</td>
+<td>enabler</td>
+<td>Runtime</td>
+<td>本地 NPC 推理</td>
+<td>内部</td>
+<td>Demo</td>
+<td>B2B</td>
+<td>Demo</td>
+<td>3</td>
+<td>S-2.2-E2</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Copilot for Gaming</td>
+<td>Microsoft Xbox</td>
+<td>US</td>
+<td>AI 游戏助手</td>
+<td>Xbox/PC</td>
+<td>aug</td>
+<td>Runtime</td>
+<td>游戏内 copilot</td>
+<td>内部</td>
+<td>2025 beta</td>
+<td>订阅</td>
+<td>beta</td>
+<td>3</td>
+<td>S-2.2-E3</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Roblox Assistant</td>
+<td>Roblox</td>
+<td>US</td>
+<td>UGC AI 工具</td>
+<td>Roblox</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>Studio copilot</td>
+<td>内部</td>
+<td>公测</td>
+<td>平台</td>
+<td>公测</td>
+<td>4</td>
+<td>S-2.2-E6 · P-Creator</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Dreamworld</td>
+<td>Dreamworld</td>
+<td>US</td>
+<td>AI MMO</td>
+<td>-</td>
+<td>washed</td>
+<td>None</td>
+<td>KS 诈骗</td>
+<td>KS $700K</td>
+<td>关停</td>
+<td>-</td>
+<td>死（欺诈）</td>
+<td>1</td>
+<td>S-2.2-X1 · 警示</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Faulty Labs</td>
+<td>Faulty</td>
+<td>US</td>
+<td>AI 陪伴游戏</td>
+<td>-</td>
+<td>native</td>
+<td>Runtime</td>
+<td>-</td>
+<td>&lt;$2M</td>
+<td>关停</td>
+<td>-</td>
+<td>死</td>
+<td>1</td>
+<td>S-2.2-X2</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Vibecheck</td>
+<td>-</td>
+<td>US</td>
+<td>AI 社交游戏</td>
+<td>-</td>
+<td>native</td>
+<td>Runtime</td>
+<td>-</td>
+<td>-</td>
+<td>关停</td>
+<td>-</td>
+<td>死</td>
+<td>1</td>
+<td>S-2.2-X3</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Fable Studio</td>
+<td>Fable</td>
+<td>US</td>
+<td>AI 剧集+游戏</td>
+<td>Web</td>
+<td>native</td>
+<td>Hybrid</td>
+<td>AI 剧集 Showrunner</td>
+<td>$10M+</td>
+<td>转型 B2B</td>
+<td>-</td>
+<td>转型</td>
+<td>2</td>
+<td>S-2.2-X4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-27">1.3 日韩（27)<a class="headerlink" href="#13-27" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品/品牌</th>
+<th>公司</th>
+<th>国家</th>
+<th>品类</th>
+<th>平台</th>
+<th>刀 1</th>
+<th>刀 2</th>
+<th>核心机制</th>
+<th>融资/估值</th>
+<th>规模</th>
+<th>付费模式</th>
+<th>状态</th>
+<th>评分</th>
+<th>备注/来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60</td>
+<td>1001 Nights（日发行）</td>
+<td>Guanqi Studio</td>
+<td>JP/CN</td>
+<td>AI 生成 VN</td>
+<td>Steam</td>
+<td>native</td>
+<td>P-Embed</td>
+<td>关键词→图像</td>
+<td>独立</td>
+<td>小体量</td>
+<td>买断</td>
+<td>存活</td>
+<td>2</td>
+<td>S-2.3-01</td>
+</tr>
+<tr>
+<td>61</td>
+<td>NovelAI</td>
+<td>Anlatan</td>
+<td>US/JP</td>
+<td>日系 AI 插画+文本</td>
+<td>Web</td>
+<td>native</td>
+<td>Runtime</td>
+<td>Anime 风格图+文</td>
+<td>付费累计数十万</td>
+<td>增长</td>
+<td>订阅</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.3-02 · 日系社区霸主</td>
+</tr>
+<tr>
+<td>62</td>
+<td>hololive AI 工具</td>
+<td>Cover</td>
+<td>JP</td>
+<td>VTuber 辅助</td>
+<td>内部</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>内部辅助</td>
+<td>内部</td>
+<td>内部</td>
+<td>-</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.3-03</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Square Enix AI Division</td>
+<td>Square Enix</td>
+<td>JP</td>
+<td>AAA 内部工具</td>
+<td>内部</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>内部管线</td>
+<td>内部</td>
+<td>扩张</td>
+<td>-</td>
+<td>扩张</td>
+<td>3</td>
+<td>S-2.3-04</td>
+</tr>
+<tr>
+<td>64</td>
+<td>The Portopia AI Demo</td>
+<td>Square Enix</td>
+<td>JP</td>
+<td>LLM 互动小说 demo</td>
+<td>PC</td>
+<td>native</td>
+<td>Runtime</td>
+<td>LLM VN demo</td>
+<td>内部</td>
+<td>翻车</td>
+<td>-</td>
+<td>死</td>
+<td>1</td>
+<td>S-2.3-05</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Bandai Namco AI NPC 研究</td>
+<td>Bandai Namco</td>
+<td>JP</td>
+<td>专利+demo</td>
+<td>内部</td>
+<td>native</td>
+<td>Runtime</td>
+<td>R&amp;D NPC</td>
+<td>内部</td>
+<td>R&amp;D</td>
+<td>-</td>
+<td>研究</td>
+<td>2</td>
+<td>S-2.3-06</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Capcom RE Engine + GenAI</td>
+<td>Capcom</td>
+<td>JP</td>
+<td>美术管线</td>
+<td>内部</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>材质/贴图 AI</td>
+<td>内部</td>
+<td>内部</td>
+<td>-</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.3-07</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Konami MGSΔ / SH2 Remake</td>
+<td>Konami</td>
+<td>JP</td>
+<td>贴图 AI 放大</td>
+<td>内部</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>贴图 upscale</td>
+<td>内部</td>
+<td>内部</td>
+<td>-</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.3-08</td>
+</tr>
+<tr>
+<td>68</td>
+<td>CyberAgent Extreme AI Studio</td>
+<td>CyberAgent</td>
+<td>JP</td>
+<td>playable ads+素材</td>
+<td>Platform</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>广告素材生成</td>
+<td>内部</td>
+<td>营销规模化</td>
+<td>广告</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.3-09</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Cygames 手游产线</td>
+<td>CyberAgent 子</td>
+<td>JP</td>
+<td>手游</td>
+<td>iOS/Android</td>
+<td>washed</td>
+<td>P-Dev</td>
+<td>传统手游</td>
+<td>内部</td>
+<td>年十亿美金</td>
+<td>抽卡</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.3-10</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Rinna</td>
+<td>rinna 株式会社</td>
+<td>JP</td>
+<td>AI 角色陪伴元祖</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>女高中生 AI</td>
+<td>微软系</td>
+<td>下滑</td>
+<td>订阅</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.3-11 · 元祖案例</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Cotomo</td>
+<td>Starley</td>
+<td>JP</td>
+<td>语音 AI 陪伴</td>
+<td>iOS</td>
+<td>native</td>
+<td>Runtime</td>
+<td>语音对话</td>
+<td>A 轮</td>
+<td>DAU ~10 万</td>
+<td>免费</td>
+<td>下滑</td>
+<td>2</td>
+<td>S-2.3-12</td>
+</tr>
+<tr>
+<td>72</td>
+<td>bambi / tsumug</td>
+<td>小团队</td>
+<td>JP</td>
+<td>VN AI 陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>VN 陪伴</td>
+<td>十万级</td>
+<td>十万以下</td>
+<td>订阅</td>
+<td>碎片</td>
+<td>1</td>
+<td>S-2.3-13</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Krafton MOGIA</td>
+<td>Krafton</td>
+<td>KR</td>
+<td>GenAI 游戏工作室</td>
+<td>内部</td>
+<td>native</td>
+<td>Runtime</td>
+<td>AAA AI 工作室</td>
+<td>内部</td>
+<td>30+ 人</td>
+<td>-</td>
+<td>扩张</td>
+<td>5</td>
+<td>S-2.3-14 · 东亚唯一</td>
+</tr>
+<tr>
+<td>74</td>
+<td>inZOI Smart Zoi</td>
+<td>Krafton MOGIA</td>
+<td>KR</td>
+<td>AI NPC 人生模拟</td>
+<td>Steam EA</td>
+<td>native</td>
+<td>Runtime</td>
+<td>本地 LLM NPC</td>
+<td>内部</td>
+<td>2025.03 EA</td>
+<td>买断</td>
+<td>验证中</td>
+<td>5</td>
+<td>S-2.3-15 · AAA Runtime 首秀</td>
+</tr>
+<tr>
+<td>75</td>
+<td>PUBG Ally / CPC</td>
+<td>Krafton × NVIDIA × Inworld</td>
+<td>KR</td>
+<td>AI 队友</td>
+<td>PUBG</td>
+<td>native</td>
+<td>Runtime</td>
+<td>AI 队友</td>
+<td>R&amp;D</td>
+<td>R&amp;D</td>
+<td>-</td>
+<td>实验</td>
+<td>3</td>
+<td>S-2.3-16</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Nexon Intelligence Labs</td>
+<td>Nexon</td>
+<td>KR</td>
+<td>AI Lab</td>
+<td>内部</td>
+<td>aug</td>
+<td>P-Dev</td>
+<td>Lab</td>
+<td>内部</td>
+<td>百人级</td>
+<td>-</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.3-17</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Embark Studios AI TTS</td>
+<td>Nexon 子</td>
+<td>SE/KR</td>
+<td>FPS AI 配音</td>
+<td>THE FINALS</td>
+<td>native</td>
+<td>P-Embed</td>
+<td>TTS 预烘焙</td>
+<td>内部</td>
+<td>商业</td>
+<td>免费</td>
+<td>争议稳</td>
+<td>3</td>
+<td>S-2.3-18</td>
+</tr>
+<tr>
+<td>78</td>
+<td>NCSoft VARCO LLM</td>
+<td>NCSoft</td>
+<td>KR</td>
+<td>自研 LLM</td>
+<td>B2B</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>自研底座</td>
+<td>内部</td>
+<td>B2B</td>
+<td>B2B</td>
+<td>压力</td>
+<td>2</td>
+<td>S-2.3-19</td>
+</tr>
+<tr>
+<td>79</td>
+<td>NCSoft Project G</td>
+<td>NCSoft</td>
+<td>KR</td>
+<td>AI-native 新项目</td>
+<td>未公布</td>
+<td>native</td>
+<td>Runtime</td>
+<td>R&amp;D</td>
+<td>内部</td>
+<td>未公布</td>
+<td>-</td>
+<td>R&amp;D</td>
+<td>2</td>
+<td>S-2.3-20</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Smilegate AI / FutureLab</td>
+<td>Smilegate</td>
+<td>KR</td>
+<td>数字人+研究</td>
+<td>内部</td>
+<td>aug</td>
+<td>Runtime</td>
+<td>数字人 + VR</td>
+<td>内部</td>
+<td>内部</td>
+<td>-</td>
+<td>稳</td>
+<td>2</td>
+<td>S-2.3-21</td>
+</tr>
+<tr>
+<td>81</td>
+<td>ScatterLab Luda 1.0/2.0</td>
+<td>ScatterLab</td>
+<td>KR</td>
+<td>AI 陪伴</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>韩语陪聊</td>
+<td>A+</td>
+<td>重启后中量</td>
+<td>订阅</td>
+<td>重启</td>
+<td>3</td>
+<td>S-2.3-22</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Zeta</td>
+<td>ScatterLab</td>
+<td>KR</td>
+<td>K-drama AI 角色</td>
+<td>iOS/Android</td>
+<td>native</td>
+<td>Runtime</td>
+<td>韩剧角色陪聊</td>
+<td>A+</td>
+<td>MAU 数百万</td>
+<td>订阅</td>
+<td>增长</td>
+<td>5</td>
+<td>S-2.3-23 · 韩国头部</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Wrtn Technologies</td>
+<td>Wrtn</td>
+<td>KR</td>
+<td>AI 写作→互动故事</td>
+<td>Web/Mobile</td>
+<td>native</td>
+<td>Runtime</td>
+<td>写作 copilot→故事</td>
+<td>B 轮</td>
+<td>千万 MAU 级</td>
+<td>订阅</td>
+<td>增长</td>
+<td>4</td>
+<td>S-2.3-24</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Naver HyperCLOVA X</td>
+<td>Naver</td>
+<td>KR</td>
+<td>底座 LLM</td>
+<td>API</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>底座</td>
+<td>国家级</td>
+<td>国家级</td>
+<td>B2B</td>
+<td>稳</td>
+<td>3</td>
+<td>S-2.3-25</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Kakao Brain KoGPT / Karlo</td>
+<td>Kakao</td>
+<td>KR</td>
+<td>模型+游戏用</td>
+<td>API</td>
+<td>enabler</td>
+<td>P-Dev</td>
+<td>底座+图</td>
+<td>内部</td>
+<td>收缩</td>
+<td>B2B</td>
+<td>压力</td>
+<td>1</td>
+<td>S-2.3-26</td>
+</tr>
+<tr>
+<td>86</td>
+<td>韩国 AI 基本法 + GRAC 分级</td>
+<td>政府</td>
+<td>KR</td>
+<td>监管</td>
+<td>Policy</td>
+<td>free</td>
+<td>None</td>
+<td>监管</td>
+<td>-</td>
+<td>2025 生效</td>
+<td>-</td>
+<td>生效</td>
+<td>3</td>
+<td>S-2.3-27 · 监管</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-pipeline-ai-for-creator-25">1.4 Pipeline AI for Creator 占位（详见模块 2.5)<a class="headerlink" href="#14-pipeline-ai-for-creator-25" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>国家</th>
+<th>刀 1</th>
+<th>刀 2</th>
+<th>状态</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>87</td>
+<td>Rezona</td>
+<td>MWM SAS</td>
+<td>FR</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>增长</td>
+<td>见 2.5 · S-2.5-01</td>
+</tr>
+<tr>
+<td>88</td>
+<td>LoopIt</td>
+<td>MWM SAS</td>
+<td>FR</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>早期</td>
+<td>见 2.5 · S-2.5-02</td>
+</tr>
+<tr>
+<td>89</td>
+<td>YouTube Playables Builder</td>
+<td>Google</td>
+<td>US</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>早期</td>
+<td>见 2.5 · S-2.5-04</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Upit</td>
+<td>Upit</td>
+<td>US</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>早期</td>
+<td>见 2.5 · S-2.5-06</td>
+</tr>
+<tr>
+<td>91</td>
+<td>Websim.ai</td>
+<td>Websim</td>
+<td>US</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>现象级</td>
+<td>见 2.5 · S-2.5-10</td>
+</tr>
+<tr>
+<td>92</td>
+<td>Replit AI Game Builder</td>
+<td>Replit</td>
+<td>US</td>
+<td>enabler</td>
+<td>P-Creator</td>
+<td>增长</td>
+<td>见 2.5 · S-2.5-11</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5">二、分类统计（5 张小表）<a class="headerlink" href="#5" title="Permanent link">#</a></h2>
+<h3 id="21">2.1 按国家/地区分布<a class="headerlink" href="#21" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>国家/地区</th>
+<th>数量</th>
+<th>占比</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国（含港台）</td>
+<td>27</td>
+<td>31%</td>
+<td>陪伴 + 小游戏买量两条线</td>
+</tr>
+<tr>
+<td>美国</td>
+<td>32</td>
+<td>37%</td>
+<td>middleware + Runtime 双重点</td>
+</tr>
+<tr>
+<td>日本</td>
+<td>13</td>
+<td>15%</td>
+<td>AAA 内部管线为主</td>
+</tr>
+<tr>
+<td>韩国</td>
+<td>14</td>
+<td>16%</td>
+<td>Krafton / Zeta 头部效应</td>
+</tr>
+<tr>
+<td>欧洲（法/英/瑞）</td>
+<td>3</td>
+<td>3%</td>
+<td>MWM / Embark 碎片</td>
+</tr>
+<tr>
+<td>政策</td>
+<td>1</td>
+<td>—</td>
+<td>韩国 AI 基本法</td>
+</tr>
+</tbody>
+</table>
+<p>合计 85 条有效产品 + 6 条 2.5 占位 = 91（实际扫描面）。</p>
+<h3 id="22">2.2 按品类分布<a class="headerlink" href="#22" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>数量</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 陪伴/角色/乙女</td>
+<td>22</td>
+<td>Character.AI, 星野， 猫箱， Zeta, Replika</td>
+</tr>
+<tr>
+<td>小游戏/买量驱动</td>
+<td>8</td>
+<td>寻道大千， 咸鱼之王， 无尽冬日， 抓大鹅</td>
+</tr>
+<tr>
+<td>AI-native 单机游戏</td>
+<td>12</td>
+<td>Suck Up!, AI Dungeon, Hidden Door, Infinite Craft, inZOI</td>
+</tr>
+<tr>
+<td>Middleware / SDK</td>
+<td>13</td>
+<td>Inworld, Convai, Scenario, Kinetix, Artificial Agency</td>
+</tr>
+<tr>
+<td>AAA + AI NPC</td>
+<td>8</td>
+<td>逆水寒， NEO NPC, Krafton MOGIA, Square Enix</td>
+</tr>
+<tr>
+<td>平台 / 渠道 enabler</td>
+<td>9</td>
+<td>微信， 抖音， YouTube Playables, NVIDIA ACE</td>
+</tr>
+<tr>
+<td>Pipeline AI for Creator</td>
+<td>6</td>
+<td>Rezona, LoopIt, Roblox Assistant, Rosebud, Websim, Replit</td>
+</tr>
+<tr>
+<td>监管/其他</td>
+<td>2</td>
+<td>GRAC, 支付宝</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>80</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-1ai">2.3 按刀 1(AI 可移除性）分布<a class="headerlink" href="#23-1ai" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>刀 1</th>
+<th>数量</th>
+<th>占比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI-native（不可移除）</td>
+<td>45</td>
+<td>49%</td>
+<td>绝大多数陪伴/剧情/AI 冒险</td>
+</tr>
+<tr>
+<td>AI-augmented（可移除）</td>
+<td>14</td>
+<td>15%</td>
+<td>逆水寒/AAA 管线/Copilot</td>
+</tr>
+<tr>
+<td>AI-washed（伪 AI)</td>
+<td>13</td>
+<td>14%</td>
+<td>小游戏买量 + 部分手游</td>
+</tr>
+<tr>
+<td>Enabler（中间件/平台）</td>
+<td>17</td>
+<td>19%</td>
+<td>middleware + 平台 + 底座 LLM</td>
+</tr>
+<tr>
+<td>AI-free / 监管</td>
+<td>3</td>
+<td>3%</td>
+<td>羊了个羊/政策</td>
+</tr>
+</tbody>
+</table>
+<p><strong>洞察</strong>:AI-native 占比近 50%，但其中 Runtime AI 占绝大多数，正在遭遇 Token 经济学压力；AI-washed 贡献了赛道 60%+ 流水。</p>
+<h3 id="24-2ai">2.4 按刀 2(AI 存在位置）分布<a class="headerlink" href="#24-2ai" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>刀 2</th>
+<th>数量</th>
+<th>占比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runtime</td>
+<td>42</td>
+<td>46%</td>
+<td>陪伴/对话类集中在这里</td>
+</tr>
+<tr>
+<td>Pipeline-Dev(B2B)</td>
+<td>26</td>
+<td>29%</td>
+<td>middleware + AAA 管线 + 买量素材</td>
+</tr>
+<tr>
+<td>Pipeline-Creator(C2C)</td>
+<td>7</td>
+<td>8%</td>
+<td>2025 新物种，2.5 主战场</td>
+</tr>
+<tr>
+<td>Pipeline-Embedded</td>
+<td>3</td>
+<td>3%</td>
+<td>1001 Nights, Embark TTS</td>
+</tr>
+<tr>
+<td>Runtime+Pipeline Hybrid</td>
+<td>5</td>
+<td>5%</td>
+<td>Infinite Craft, Series, Fable, 1001 Nights</td>
+</tr>
+<tr>
+<td>None（非游戏/监管）</td>
+<td>8</td>
+<td>9%</td>
+<td>Kimi, 羊了个羊 等</td>
+</tr>
+</tbody>
+</table>
+<p><strong>洞察</strong>:Runtime 一骑绝尘，但这正是&rdquo;真空带&rdquo;;Pipeline-Creator 仅 7 家，是最大的空白。</p>
+<h3 id="25">2.5 按状态分布<a class="headerlink" href="#25" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>数量</th>
+<th>占比</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>跑通/头部</td>
+<td>6</td>
+<td>7%</td>
+<td>星野， Character.AI（准退出前）， Zeta, Inworld, 猫箱， 寻道大千</td>
+</tr>
+<tr>
+<td>增长中</td>
+<td>22</td>
+<td>25%</td>
+<td>Suck Up!, Talkie, Wrtn, Kindroid, inZOI, 无尽冬日</td>
+</tr>
+<tr>
+<td>稳定</td>
+<td>24</td>
+<td>27%</td>
+<td>Replika, Cygames, 逆水寒， X Eva</td>
+</tr>
+<tr>
+<td>早期/Demo/R&amp;D</td>
+<td>14</td>
+<td>16%</td>
+<td>Altera, NEO NPC, Project G, ACE</td>
+</tr>
+<tr>
+<td>警告/萎缩/转型/压力</td>
+<td>10</td>
+<td>11%</td>
+<td>AI Dungeon, Hidden Door, Fable, Kakao Brain, NCSoft VARCO</td>
+</tr>
+<tr>
+<td>死亡/关停/准退出</td>
+<td>11</td>
+<td>12%</td>
+<td>Glow, Dreamworld, Vibecheck, Faulty, Portopia, Character.AI(Google 授权后）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>洞察</strong>:<strong>跑通</strong>产品极少（6/85),<strong>死/退出</strong>比例 12%，真实&rdquo;跑通比例&rdquo;约 7%。</p>
+<hr />
+<h2 id="10">三、重点品牌 10 案例展开<a class="headerlink" href="#10" title="Permanent link">#</a></h2>
+<h3 id="1-characterais-22-b1-ai">① Character.AI(S-2.2-B1）— AI 陪伴赛道定义者 / 顶部退出案例<a class="headerlink" href="#1-characterais-22-b1-ai" title="Permanent link">#</a></h3>
+<p>Character.AI 是整个 Runtime AI-native 赛道的定义者。由前 Google LaMDA 核心成员 Noam Shazeer 与 Daniel De Freitas 于 2021 创办，2023 峰值 MAU 2000 万+，用户日均对话时长一度超过 TikTok,C 轮估值 $10B。但 2024 Q3 Token 成本占比 &gt; 65% 导致订阅 ARPU 无法覆盖推理，最终以 $2.7B 非股权&rdquo;授权费&rdquo;形式将核心团队卖回 Google，产品本身留给剩余团队维持。这是赛道最重要的警示：<strong>即使做到 MAU 2000 万 + 订阅 5% 渗透，Runtime AI 在 C 端仍然跑不通</strong>。它直接定义了&rdquo;Token 经济学真空带&rdquo;的上边界。<strong>刀 1 = native · 刀 2 = Runtime · 评分 5</strong>。</p>
+<h3 id="2-inworld-ais-22-c1-middleware">② Inworld AI(S-2.2-C1）— middleware 领跑者<a class="headerlink" href="#2-inworld-ais-22-c1-middleware" title="Permanent link">#</a></h3>
+<p>Inworld 是 middleware 阵营唯一拿到 $120M+ 累计融资、估值约 $500M 的玩家，投资方含 Lightspeed / a16z / Disney / Intel。它做 NPC 行为 + 对话 SDK，绑定 Ubisoft NEO NPC、NVIDIA ACE、Krafton PUBG Ally 三个重量级 demo。商业模型是 per-session token 分成 + B2B 订阅。但 2024 末 Inworld 实际 B 端付费客户数仍在个位数到十几家，Ubisoft NEO NPC demo 后 Ubisoft 并未真正上线。它是&rdquo;技术验证完成但 B 端需求未启动&rdquo;的典型。<strong>刀 1 = enabler · 刀 2 = P-Dev · 评分 5</strong>。</p>
+<h3 id="3-minimaxs-21-02-ai">③ 星野 / MiniMax(S-2.1-02）— 中国 AI 陪伴唯一跑通<a class="headerlink" href="#3-minimaxs-21-02-ai" title="Permanent link">#</a></h3>
+<p>星野是中国 Runtime AI-native 赛道唯一真正跑通营收的产品。MiniMax 把前身 Glow 被下架后重启，走&rdquo;乙女+角色扮演+语音&rdquo;路线，2024 年流水 &gt; 3 亿元，2025 Q1 跨过 5 亿元，是中国 AI 陪伴头部。海外双胞胎 Talkie 在美国跑到 Top 10 社交应用。关键差异：<strong>星野同时在 runtime 塞了三层内容</strong>（预置人设 + UGC 角色 + 玩家小说剧情），通过降低生成次数 + 集中在乙女高付费品类，把 Token 成本占比压到 30% 以下。<strong>刀 1 = native · 刀 2 = Runtime · 评分 5</strong>。</p>
+<h3 id="4-suck-ups-22-a2-ai-native">④ Suck Up!(S-2.2-A2）— 小而美 AI-native 范式<a class="headerlink" href="#4-suck-ups-22-a2-ai-native" title="Permanent link">#</a></h3>
+<p>Proxima Enterprises 开发的 Suck Up! 是 Steam 上第一款真正意义上的 LLM-native 游戏。玩法是扮演吸血鬼说服 NPC 邀请你进屋，完全依赖 LLM 理解玩家自由输入。自筹资金开发，2023 抢先体验以 $14.99 买断发售，Steam 累计 5 万+ 好评、约 $1M+ 营收。它的意义不在规模而在<strong>跑通商业模型</strong>：买断制 + 玩家一次性付费 + 游戏生命周期内 Token 成本可控（平均每玩家 $0.5-$1）。是&rdquo;buy-to-play 包住 Runtime 成本&rdquo;的唯一成功范式。<strong>刀 1 = native · 刀 2 = Runtime · 评分 4</strong>。</p>
+<h3 id="5-ai-dungeon-latitudes-22-a1-genai">⑤ AI Dungeon / Latitude(S-2.2-A1）— GenAI 游戏鼻祖 / 警示案例<a class="headerlink" href="#5-ai-dungeon-latitudes-22-a1-genai" title="Permanent link">#</a></h3>
+<p>2019 年推出的 AI Dungeon 是全球第一个 LLM 游戏，最初基于 GPT-2，后迁 GPT-3。峰值付费用户 10 万+，但 2021 年因 NSFW 内容遭 OpenAI 收紧政策导致一次用户流失；此后陷入&rdquo;自研模型性能差、用 GPT 成本撑不住&rdquo;的两难。2024 年公司 Latitude 仅剩十几人，产品靠核心付费用户维持。它的警示价值：<strong>第一个不一定赢，依赖第三方 API 的 runtime 产品永远受上游政策制约</strong>。<strong>刀 1 = native · 刀 2 = Runtime · 评分 3</strong>。</p>
+<h3 id="6-krafton-mogia-inzoi-smart-zois-23-1415-aaa-runtime-ai">⑥ Krafton MOGIA + inZOI Smart Zoi(S-2.3-14/15）— 东亚大厂唯一跑通 AAA Runtime AI<a class="headerlink" href="#6-krafton-mogia-inzoi-smart-zois-23-1415-aaa-runtime-ai" title="Permanent link">#</a></h3>
+<p>韩国 Krafton 于 2023 底成立 MOGIA(Mobile/Open-world Generative Intelligence Agent）工作室，30+ 人，专做 Runtime AI 在 AAA 中的落地。首个成果 inZOI 的&rdquo;Smart Zoi&rdquo;是一套<strong>本地化 LLM 小模型 + 云端大模型分层</strong>的 NPC 行为系统，2025 年 3 月 Early Access 发售，Steam 预约 Top 10。这是东亚大厂中唯一一个<strong>真实发售、真正 Runtime 依赖 AI 的 AAA 产品</strong>，比 Ubisoft NEO NPC demo 和 Square Enix Portopia demo 都更进一步。与 NVIDIA + Inworld 合作的 PUBG Ally 是第二个 demo 试点。<strong>刀 1 = native · 刀 2 = Runtime · 评分 5</strong>。</p>
+<h3 id="7-infinite-crafts-22-a6-solo">⑦ Infinite Craft(S-2.2-A6）— solo 零融资现象级<a class="headerlink" href="#7-infinite-crafts-22-a6-solo" title="Permanent link">#</a></h3>
+<p>Neal Agarwal 一人 2024 年 1 月上线的网页游戏：玩家把两个元素拖到一起，后端调用 LLM 生成新元素名。发布 7 天 DAU 破 100 万，现象级。关键是它的 AI 用法创新：<strong>用 LLM 生成但缓存结果</strong>，相同组合只算一次，之后全球用户共享结果库，Token 成本摊到接近零。这是 Runtime + Pipeline Hybrid 的教科书案例，也是&rdquo;单人 solo 零融资 vs Character.AI $10B 融资&rdquo;的鲜明对照。<strong>刀 1 = native · 刀 2 = Hybrid · 评分 4</strong>。</p>
+<h3 id="8-s-21-16-ai-washed">⑧ 寻道大千（S-2.1-16）— 中国小游戏 AI-washed 标杆<a class="headerlink" href="#8-s-21-16-ai-washed" title="Permanent link">#</a></h3>
+<p>三七互娱 2023 年上线的微信/抖音放置卡牌小游戏。2024 年日流水长期 Top 1，累计流水 40 亿+。它和 AI 的关系：<strong>核心玩法 100% 非 AI</strong>（放置卡牌是 2015 年技术），但<strong>买量素材 70%+ 由 AI 生成</strong>,AI 生成视频/图片投放 CPA 比人工素材低 20-30%。这是&rdquo;AI-washed × Pipeline-Dev&rdquo;的完美样本：游戏本身可完全移除 AI，但 AI 在素材层让它比对手多赚 30% 利润。<strong>刀 1 = washed · 刀 2 = P-Dev · 评分 4</strong>。</p>
+<h3 id="9-hidden-doors-22-a4-a16z-20m-2025-q1">⑨ Hidden Door(S-2.2-A4）— a16z $20M 后 2025 Q1 缩编警示<a class="headerlink" href="#9-hidden-doors-22-a4-a16z-20m-2025-q1" title="Permanent link">#</a></h3>
+<p>Hidden Door 由前 Oculus Story Studio 创始人 Hilary Mason 创办，愿景是&rdquo;把你最爱的书变成 RPG&rdquo;,a16z SPEEDRUN 领投 $20M Series A(2023）。技术是自研小模型 + 授权 IP。但 2024 闭测反馈平平，2025 Q1 坊间传出缩编至 10 人以内。警示点：<strong>拿到顶级 VC 头部票也不够</strong>，在 Runtime AI 真空带内，没有跑通的产品市场契合。<strong>刀 1 = native · 刀 2 = Runtime · 评分 2</strong>。</p>
+<h3 id="10-whispers-from-the-star-anuttacons-21-11-ai-native">⑩ Whispers from the Star / Anuttacon(S-2.1-11）— 蔡浩宇首款挂游戏名的 AI-native<a class="headerlink" href="#10-whispers-from-the-star-anuttacons-21-11-ai-native" title="Permanent link">#</a></h3>
+<p>Anuttacon 是米哈游前 CEO 蔡浩宇 2024 年在美国创立的个人项目。首作 Whispers from the Star 是一款&rdquo;玩家通过文字/语音和一个被困外星的角色实时对话，帮她生存&rdquo;的 AI-native 游戏，TestFlight 2025 年初开放。这是<strong>中国创作者在美国做 AI-native 游戏第一案</strong>，也是&rdquo;米哈游体系离开后下一步&rdquo;的风向标。规模未知，但它的战略意义巨大：米系人物亲自下场验证&rdquo;Runtime AI 游戏能否做成一个可售卖的产品&rdquo;。<strong>刀 1 = native · 刀 2 = Runtime · 评分 4</strong>。</p>
+<hr />
+<h2 id="1-2">四、竞争态势总评（刀 1 × 刀 2 四象限）<a class="headerlink" href="#1-2" title="Permanent link">#</a></h2>
+<h3 id="41-vs">4.1 四象限红海 vs 空白<a class="headerlink" href="#41-vs" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Runtime AI</th>
+<th>Pipeline-Dev</th>
+<th>Pipeline-Creator</th>
+<th>Hybrid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI-native</strong></td>
+<td>🔴 红海（42 家，极拥挤，正在淘汰）</td>
+<td>—</td>
+<td>—</td>
+<td>🟡 蓝海小（5 家，Infinite Craft 教科书）</td>
+</tr>
+<tr>
+<td><strong>AI-augmented</strong></td>
+<td>🟡 未启动（AAA 谨慎）</td>
+<td>🔴 红海（AAA 内部管线）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>AI-washed</strong></td>
+<td>—</td>
+<td>🔴 红海（小游戏买量）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Enabler</strong></td>
+<td>🟡 早期（Artificial Agency/ACE)</td>
+<td>🔴 红海（Inworld/Convai/Scenario)</td>
+<td>🟢 <strong>最大空白</strong>（仅 7 家）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>最红海</strong>:<strong>AI-native × Runtime</strong>(42 家，淘汰中）+ <strong>Enabler × Pipeline-Dev</strong>(17 家，付费 B 端少）</li>
+<li><strong>最空白</strong>:<strong>Enabler × Pipeline-Creator</strong>（仅 7 家：Rezona / LoopIt / YouTube Playables / Rosebud / Websim / Replit / Roblox Assistant）—— 这与模块 1.1 §6 的&rdquo;Pipeline AI × UGC Feed 是真正破局路径&rdquo;判断完全一致</li>
+<li><strong>次空白</strong>:<strong>AI-native × Hybrid</strong>(5 家）— Infinite Craft 范式尚未被大规模复制</li>
+</ul>
+<h3 id="42">4.2 中美日韩对标差距<a class="headerlink" href="#42" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>中国</th>
+<th>美国</th>
+<th>日本</th>
+<th>韩国</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 陪伴头部</td>
+<td>星野/猫箱（已跑通）</td>
+<td>Character.AI（准退出）/Talkie</td>
+<td>Cotomo/Rinna（小 + 下滑）</td>
+<td>Zeta(MAU 数百万，上升）</td>
+</tr>
+<tr>
+<td>middleware</td>
+<td>rct AI（转型）</td>
+<td>Inworld/Convai/Series（领跑）</td>
+<td>无公开头部</td>
+<td>无独立玩家</td>
+</tr>
+<tr>
+<td>AAA × Runtime AI</td>
+<td>逆水寒（aug)</td>
+<td>NEO NPC(demo 停留）</td>
+<td>Square Enix（管线）</td>
+<td><strong>inZOI Smart Zoi（已发售）</strong></td>
+</tr>
+<tr>
+<td>小游戏买量 AI</td>
+<td>寻道大千/无尽冬日（全球领先）</td>
+<td>SparkLabs/Luna(AppLovin)</td>
+<td>CyberAgent</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Pipeline-Creator</td>
+<td><strong>空白</strong></td>
+<td>Rosebud/Websim/Replit/YouTube/Roblox</td>
+<td>空白</td>
+<td>空白</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键 GAP</strong>：中国在 Pipeline-Creator 象限零玩家（腾讯/字节都还只有底层平台 SDK，没有终端产品），这是 12-24 个月内最可能被海外 MWM / Replit 类玩家先发填补的空位。</p>
+<h3 id="43-2024-2026-5">4.3 2024-2026 赛道演变 5 个关键节点<a class="headerlink" href="#43-2024-2026-5" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>2024 Q2 — AI Dungeon/Replika 增长见顶</strong>，首次暴露&rdquo;订阅 ARPU 无法覆盖 Token&rdquo;的全行业问题。</li>
+<li><strong>2024 Q3 — Character.AI → Google&rdquo;授权&rdquo;退出</strong>,$2.7B &ldquo;非收购收购&rdquo;，整个 Runtime AI-native 赛道被迫重新估值。</li>
+<li><strong>2024 Q4 — 星野/Talkie 突破 3 亿流水</strong>，证明东亚市场 AI 陪伴可以在&rdquo;乙女 + 高付费&rdquo;细分下跑通。</li>
+<li><strong>2025 Q1 — Krafton inZOI Smart Zoi EA 发售 + Hidden Door 传缩编</strong>,AAA Runtime AI 首次实测成功 vs 中型创业公司失败，<strong>赛道向两端分化</strong>。</li>
+<li><strong>2025 Q3-Q4 — MWM Rezona/LoopIt + YouTube Playables Builder 上线</strong>,Pipeline-Creator 新物种首次集体浮出水面，模块 1.1 §6 双刀框架被外部验证。</li>
+</ol>
+<hr />
+<h2 id="gaps">五、Gaps（未完成 / 有待补齐）<a class="headerlink" href="#gaps" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Replika 近期数据</strong>:Luka Inc 不披露 MAU/付费，只能以&rdquo;百万级&rdquo;估</li>
+<li><strong>inZOI Smart Zoi EA 后 30 天销量</strong>:Krafton 2025.03.28 发售，本报告截止 2026-04-13，有 12 个月累计数据尚未写入，需模块 2.3 更新</li>
+<li><strong>中国腾讯/字节是否会做 Pipeline-Creator 产品</strong>：微信小游戏 SDK 与混元游戏方向只披露 Token 补贴，未见真正的 Creator 工具，需观察 2026 H2</li>
+<li><strong>Anuttacon Whispers from the Star 正式发售数据</strong>：仅 TestFlight，商业模型（买断/订阅/免费）未知</li>
+<li><strong>欧洲补行</strong>：除 MWM（法）和 Embark（瑞典，Nexon 子）外，欧洲 AI 游戏玩家数据极度稀薄，可能需要专项扫描</li>
+</ul>
+<hr />
+<h2 id="_1">六、来源索引<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>所有产品编号均复用模块 2.1/2.2/2.3 的 S-2.x-XX 编号，以及模块 2.5 的 S-2.5-XX 编号。双刀分类框架来自模块 1.1 §6(S-1.1-XX）。融资/估值数据来自模块 1.2(S-1.2-XX）。详见 <code>sources.md</code> §1.4。</p>
+<p>配套 Excel:<code>玩家全景图.xlsx</code>(85 行 × 15 列，同目录）</p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#tldr">TL;DR</a></li>
+<li class=""><a href="#85-15">一、全景大表（85 行 × 15 列）</a></li>
+<li class="toc-h3"><a href="#11-27">1.1 中国（27)</a></li>
+<li class="toc-h3"><a href="#12-32">1.2 美国（32)</a></li>
+<li class="toc-h3"><a href="#13-27">1.3 日韩（27)</a></li>
+<li class="toc-h3"><a href="#14-pipeline-ai-for-creator-25">1.4 Pipeline AI for Creator 占位（详见模块 2.5)</a></li>
+<li class=""><a href="#5">二、分类统计（5 张小表）</a></li>
+<li class="toc-h3"><a href="#21">2.1 按国家/地区分布</a></li>
+<li class="toc-h3"><a href="#22">2.2 按品类分布</a></li>
+<li class="toc-h3"><a href="#23-1ai">2.3 按刀 1(AI 可移除性）分布</a></li>
+<li class="toc-h3"><a href="#24-2ai">2.4 按刀 2(AI 存在位置）分布</a></li>
+<li class="toc-h3"><a href="#25">2.5 按状态分布</a></li>
+<li class=""><a href="#10">三、重点品牌 10 案例展开</a></li>
+<li class="toc-h3"><a href="#1-characterais-22-b1-ai">① Character.AI(S-2.2-B1）— AI 陪伴赛道定义者 / 顶部退出案例</a></li>
+<li class="toc-h3"><a href="#2-inworld-ais-22-c1-middleware">② Inworld AI(S-2.2-C1）— middleware 领跑者</a></li>
+<li class="toc-h3"><a href="#3-minimaxs-21-02-ai">③ 星野 / MiniMax(S-2.1-02）— 中国 AI 陪伴唯一跑通</a></li>
+<li class="toc-h3"><a href="#4-suck-ups-22-a2-ai-native">④ Suck Up!(S-2.2-A2）— 小而美 AI-native 范式</a></li>
+<li class="toc-h3"><a href="#5-ai-dungeon-latitudes-22-a1-genai">⑤ AI Dungeon / Latitude(S-2.2-A1）— GenAI 游戏鼻祖 / 警示案例</a></li>
+<li class="toc-h3"><a href="#6-krafton-mogia-inzoi-smart-zois-23-1415-aaa-runtime-ai">⑥ Krafton MOGIA + inZOI Smart Zoi(S-2.3-14/15）— 东亚大厂唯一跑通 AAA Runtime AI</a></li>
+<li class="toc-h3"><a href="#7-infinite-crafts-22-a6-solo">⑦ Infinite Craft(S-2.2-A6）— solo 零融资现象级</a></li>
+<li class="toc-h3"><a href="#8-s-21-16-ai-washed">⑧ 寻道大千（S-2.1-16）— 中国小游戏 AI-washed 标杆</a></li>
+<li class="toc-h3"><a href="#9-hidden-doors-22-a4-a16z-20m-2025-q1">⑨ Hidden Door(S-2.2-A4）— a16z $20M 后 2025 Q1 缩编警示</a></li>
+<li class="toc-h3"><a href="#10-whispers-from-the-star-anuttacons-21-11-ai-native">⑩ Whispers from the Star / Anuttacon(S-2.1-11）— 蔡浩宇首款挂游戏名的 AI-native</a></li>
+<li class=""><a href="#1-2">四、竞争态势总评（刀 1 × 刀 2 四象限）</a></li>
+<li class="toc-h3"><a href="#41-vs">4.1 四象限红海 vs 空白</a></li>
+<li class="toc-h3"><a href="#42">4.2 中美日韩对标差距</a></li>
+<li class="toc-h3"><a href="#43-2024-2026-5">4.3 2024-2026 赛道演变 5 个关键节点</a></li>
+<li class=""><a href="#gaps">五、Gaps（未完成 / 有待补齐）</a></li>
+<li class=""><a href="#_1">六、来源索引</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

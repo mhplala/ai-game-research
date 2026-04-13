@@ -1,0 +1,13 @@
+平台,所属公司,地区,月活MAU,2024流水估算,平台抽成,AI策略,官方AI SDK,LLM调用限制,自有AI游戏Lab,代表游戏,AI游戏友好度(1-5)
+微信小游戏,腾讯,中国,500M+,400亿元(55亿美元),IAP 5-50%/广告 30-50%,封闭+补贴,微信小游戏AIGC(混元),仅限已备案国内模型,Hunyuan Game,羊了个羊/咸鱼之王/无尽冬日,3
+抖音小游戏,字节跳动,中国,300M+,150亿元(20亿美元),IAP 50/50+广告 30-40%,封闭+补贴,豆包开放平台(免费额度),强制豆包/火山引擎,元梦之星AI/嘘嘘岛Studio,抓大鹅/疯狂梗传,4
+快手小游戏,快手,中国,150M,40亿元,广告 40%/IAP 50%,中间路线,可灵KLING+自研,国内合规模型,可灵游戏化,这城有良田,2
+QQ小游戏,腾讯,中国,80M,15亿元,同微信,依赖混元,共享混元SDK,同微信,(复用腾讯),火柴人大乱斗,2
+支付宝小游戏,蚂蚁集团,中国,50M,8亿元,广告 30%(开发者70%),通义千问+百灵,支付宝AI助手,国内合规模型,蚂蚁百灵,蚂蚁庄园/神奇海洋,3
+小红书(测试),小红书,中国,300M(无正式小游戏),N/A,N/A,点点大模型(自研),无,极严,互动内容实验室,(品牌playable),1
+Meta Instant Games,Meta,全球,250M(衰退中),~,IAP 30%/Meta Ads,中间路线,Llama 3免费商用,开发者自选,Horizon Worlds AI,EverWing/Basketball FRVR,3
+Poki,Poki BV(荷兰),欧美拉美,100M,1.5亿美元(广告),广告 50/50,开放+自由,无(有Playables Grant),完全自由,Poki Labs(2024),Infinite Craft/Subway Surfers Web,5
+CrazyGames,CrazyGames(比利时),欧美,40M,6000万美元,广告 50/50(最高70%),开放+自由,无(有AI Games分类),完全自由,无(与Rosebud合作),Shell Shockers/AI Roguelite,5
+itch.io,itch.io(美),全球独立,15M,~,默认 10%(开发者可设0%),完全开放,无,完全自由,无(社区jam驱动),Suck Up! demo/AI Dungeon前身,5
+Steam,Valve,全球PC,132M,~110亿美元,20-30%,开放+披露,AI Content Disclosure API,需披露Pre/Live Generated,无(仅审核),Suck Up!/AI Roguelite/Inworld Origins,5
+Epic Games Store,Epic Games,全球PC,65M,~,12%,中间路线,Unreal 5.4 Generative AI(工具),无明确限制,MetaHuman/Unreal AI,(无代表AI-native),4

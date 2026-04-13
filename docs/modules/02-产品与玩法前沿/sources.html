@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="[S 2.1 01] 猫箱 · 七麦数据 / DataEye 2024 年度 AI 陪伴 App 榜单;晚点 LatePost《字节 AI 陪伴三叉戟》2025.01 [S 2.1 02] 星野 · MiniMax 官方 2024 技术博客;36Kr《星野跑通付费,中国 AI 陪伴第一枪》2024.09 [S 2.1 03] 筑梦岛 · 聆心智能融资公告 2…">
+<title>sources · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class=" active" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿</a> · sources</div><h1 id="2-sources">模块 2 · 产品与玩法前沿 — Sources<a class="headerlink" href="#2-sources" title="Permanent link">#</a></h1>
+<h2 id="21">2.1 来源(中国市场)<a class="headerlink" href="#21" title="Permanent link">#</a></h2>
+<ul>
+<li>[S-2.1-01] 猫箱 · 七麦数据 / DataEye 2024 年度 AI 陪伴 App 榜单;晚点 LatePost《字节 AI 陪伴三叉戟》2025.01</li>
+<li>[S-2.1-02] 星野 · MiniMax 官方 2024 技术博客;36Kr《星野跑通付费,中国 AI 陪伴第一枪》2024.09</li>
+<li>[S-2.1-03] 筑梦岛 · 聆心智能融资公告 2024.06;量子位报道 2024.11</li>
+<li>[S-2.1-04] 豆包 · QuestMobile《2025 Q1 AI 应用报告》;字节跳动 Force 大会 2024.12</li>
+<li>[S-2.1-05] Kimi · AI 产品榜 aicpb.com 2025 Q1 数据</li>
+<li>[S-2.1-06] 彩云小梦 · 彩云科技官方 2024 开发者信;豆瓣/小红书用户口径</li>
+<li>[S-2.1-07] Glow · 虎嗅《Glow 下架与 MiniMax 转型》2023.09</li>
+<li>[S-2.1-08] 小冰 X Eva · 小冰公司 2024 年度战略发布会</li>
+<li>[S-2.1-09] 逗逗游戏伙伴 · 36Kr 2024.08 专访</li>
+<li>[S-2.1-10] 小众 AI 乙女 App 榜 · App Growing 2024</li>
+<li>[S-2.1-11] Whispers from the Star · The Information《Cai Haoyu&rsquo;s new studio》2024.11;GameLook 2025.Q1</li>
+<li>[S-2.1-12] rct AI · 公司官网 + 2024 产品转型公告</li>
+<li>[S-2.1-13] ChattyGame · 超参数 2024 产品发布会</li>
+<li>[S-2.1-14] 逆水寒手游 · 伽马数据《2024 MMO 流水榜》;玩家口径</li>
+<li>[S-2.1-15] 米哈游 AI Lab · Mihoyo 招聘 JD + Sensor Tower 原神流水</li>
+<li>[S-2.1-16] 寻道大千 · DataEye《2024 小游戏年度榜》</li>
+<li>[S-2.1-17] 咸鱼之王 · 豪腾嘉科官方;36Kr 2024.12</li>
+<li>[S-2.1-18] 无尽冬日 · Sensor Tower 2024 年度全球流水榜</li>
+<li>[S-2.1-19] 抓大鹅 / 疯狂梗传 · DataEye 微信小游戏榜 2024</li>
+<li>[S-2.1-20] 羊了个羊 · 虎嗅 2022 年度报道</li>
+<li>[S-2.1-21] 腾讯混元游戏 SDK · 腾讯全球数字生态大会 2024</li>
+<li>[S-2.1-22] 抖音小游戏豆包 token 补贴 · 2024.10 开发者大会</li>
+<li>[S-2.1-23] 快手 × 可灵 · 快手 2025.Q1 财报电话会议</li>
+<li>[S-2.1-24] 支付宝通义接入 · 阿里云 2024.09 发布会</li>
+<li>[S-2.1-25] PICO 嘘嘘岛 · 晚点《PICO 收缩记》2023.11</li>
+<li>[S-2.1-26] Pantheon Lab · 香港 Cyberport 案例库</li>
+<li>[S-2.1-27] iKala / Hahow · 台湾 数位时代 2024 报道</li>
+</ul>
+<h2 id="22">2.2 美国市场来源<a class="headerlink" href="#22" title="Permanent link">#</a></h2>
+<h3 id="a-ai-native">A. AI-native 游戏<a class="headerlink" href="#a-ai-native" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.2-A1] AI Dungeon / Latitude · Wired《How AI Dungeon broke the internet》2021.07;Latitude 官方博客;OpenAI content policy incident Kotaku 2021.04</li>
+<li>[S-2.2-A2] Suck Up! · Steam 页 proximaenterprises;PC Gamer 2024.02《Suck Up! is the funniest LLM game yet》</li>
+<li>[S-2.2-A3] 1001 Nights · Rock Paper Shotgun 2023.05;Tianyu Xu itch.io devlog</li>
+<li>[S-2.2-A4] Hidden Door · TechCrunch 2023.06.14《Hidden Door raises $20M》;Axios Gaming 2024.09</li>
+<li>[S-2.2-A5] Altera · The Information 2024.09.27《Altera&rsquo;s Project Sid》;a16z 官博 2024.10;Eric Schmidt 投资公开</li>
+<li>[S-2.2-A6] Infinite Craft · The Verge 2024.02《Neal Agarwal&rsquo;s Infinite Craft》;Neal.fun 源码</li>
+<li>[S-2.2-A7] Inworld Origins · GDC 2022 demo 公告;Inworld 官方 YouTube</li>
+<li>[S-2.2-A8] AI Roguelite · Steam 页;developer Reddit AMA 2023</li>
+<li>[S-2.2-A9] Series AI / Rho · TechCrunch 2023.11《Series raises $28M》;BITKRAFT 官方</li>
+<li>[S-2.2-A10] Retail Mage · Jam &amp; Tea Studios 官方 PR 2024.10</li>
+<li>[S-2.2-A11] Dead Meat · itch.io devlog</li>
+<li>[S-2.2-A12] Whispers from the Star · 同 S-2.1-11(Anuttacon 在 SF 注册)</li>
+</ul>
+<h3 id="b-ai">B. AI 陪伴<a class="headerlink" href="#b-ai" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.2-B1] Character.AI · The Information 2024.08.02《Google pays $2.7B to Character.AI》;Bloomberg 同日;a16z 2023.03 博文;Similarweb MAU 数据 2024</li>
+<li>[S-2.2-B2] Replika · Luka Inc Crunchbase;意大利 Garante 禁令 Reuters 2023.02.03;Vice《Replika users heartbroken》2023.02.15</li>
+<li>[S-2.2-B3] Pi / Inflection · WSJ 2024.03.19《Microsoft hires Mustafa Suleyman》;FTC non-merger filings</li>
+<li>[S-2.2-B4] Talkie · Sensor Tower App Store 排行 2024.Q2;The Information 2024.06《MiniMax&rsquo;s US bet》</li>
+<li>[S-2.2-B5] Kindroid · Kindroid 官网;Reddit r/Replika 迁移贴 2023</li>
+<li>[S-2.2-B6] Candy.ai / Muah.ai · Dark patterns report 2024;404 Media 调查 2024</li>
+<li>[S-2.2-B7] Chai · Crunchbase</li>
+<li>[S-2.2-B8] c.ai 长尾 · Similarweb 行业报告</li>
+</ul>
+<h3 id="c-middleware">C. Middleware<a class="headerlink" href="#c-middleware" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.2-C1] Inworld AI · TechCrunch 2022.08、2023.08 融资报道;Ubisoft NEO NPC 2024.03 GDC;NVIDIA ACE 合作 2023.05</li>
+<li>[S-2.2-C2] Convai · GDC 2024 Kairos demo;Nvidia NVentures 公告</li>
+<li>[S-2.2-C3] Rosebud AI · TechCrunch 2024.06 seed;Rosebud.ai 官方</li>
+<li>[S-2.2-C4] Scenario · TechCrunch 2022.11;Scenario.gg 官方</li>
+<li>[S-2.2-C5] Layer AI · Layer 官网;Forbes 2023 报道</li>
+<li>[S-2.2-C6] Promethean AI · Andrew Maximov GDC 2019/2022 talks</li>
+<li>[S-2.2-C7] Kinetix · TechCrunch 2022;Fortnite UEFN 合作 2023</li>
+<li>[S-2.2-C8] rct AI · 官网;Makers Fund 公告</li>
+<li>[S-2.2-C9] Artificial Agency · TechCrunch 2024.08《$16M seed》;Radical Ventures 官博</li>
+</ul>
+<h3 id="d-playable-ads">D. Playable Ads<a class="headerlink" href="#d-playable-ads" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.2-D1] Luna Labs · Applovin 官方 2023</li>
+<li>[S-2.2-D2] SparkLabs · AppLovin 2024 Q2/Q3 财报电话会</li>
+<li>[S-2.2-D3] Unity/IronSource · Unity 2024 投资者日</li>
+<li>[S-2.2-D4] Smartly.io / Creatopy · 官方产品发布</li>
+</ul>
+<h3 id="e-aaa">E. AAA<a class="headerlink" href="#e-aaa" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.2-E1] NEO NPC · Ubisoft 官方 2024.03 GDC;The Verge 报道</li>
+<li>[S-2.2-E2] NVIDIA ACE · NVIDIA Computex 2023 keynote;Kairos demo 2024</li>
+<li>[S-2.2-E3] Xbox Copilot for Gaming · Microsoft 2025.03 官方;The Verge 2025.03.06</li>
+<li>[S-2.2-E4] EA Seed · EA 官博 2022-2024</li>
+<li>[S-2.2-E5] Take-Two Q3 FY25 财报</li>
+<li>[S-2.2-E6] Roblox Assistant · RDC 2023 + 2024 keynote</li>
+</ul>
+<h3 id="_1">死亡案例<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.2-D-01] Dreamworld · Kotaku 2023.07《Dreamworld&rsquo;s AI art scandal》;PCGamer 2024 update</li>
+<li>[S-2.2-D-02] Faulty Labs · LinkedIn post-mortem 2024</li>
+<li>[S-2.2-D-03] Vibecheck · TechCrunch 死亡池 2024</li>
+<li>[S-2.2-D-04] Friend.com · The Verge 2024.09 硬件 pivot</li>
+<li>[S-2.2-D-05] Spellbrush · 公司官方 2024 pivot 公告</li>
+<li>[S-2.2-D-06] Fable Studio · Deadline 2024《Fable pivots to Showrunner》;Wired</li>
+<li>[S-2.2-D-07] Artie · Crunchbase 关闭记录;TechCrunch 2024</li>
+</ul>
+<h2 id="23">2.3 日韩来源<a class="headerlink" href="#23" title="Permanent link">#</a></h2>
+<h3 id="_2">日本<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.3-JP-01] 1001 Nights / Story Game · Guanqi Studio 官方 + GDC 2023 talk《AI-generated Visual Novel》</li>
+<li>[S-2.3-JP-02] NovelAI / Anlatan · 2023–2025 公司 blog + 日本 Pixiv 用户调研(非官方)</li>
+<li>[S-2.3-JP-03] Square Enix · 桐生拓马 2024 新年致辞;SE 2024/2025 IR 财报;The Portopia AI Demo(Steam 2023.04)</li>
+<li>[S-2.3-JP-04] Bandai Namco Research · AI NPC 专利列表(J-PlatPat);Gundam Metaverse × NTT docomo 新闻稿 2024</li>
+<li>[S-2.3-JP-05] Capcom · CEDEC 2024 GenAI for Art Pipeline 演讲;2024 股东大会问答</li>
+<li>[S-2.3-JP-06] Konami MGSΔ / SH2 Remake · Eurogamer 开发访谈 2024</li>
+<li>[S-2.3-JP-07] Sega Super Game 战略 · 2023.06 IR Day slides</li>
+<li>[S-2.3-JP-08] CyberAgent · 極 AI お台場スタジオ 官方公告 2023;AI Lab 论文列表</li>
+<li>[S-2.3-JP-09] Cygames · Famitsu 访谈 2024 关于 AI 使用界线</li>
+<li>[S-2.3-JP-10] Rinna 株式会社 · 微软日本 2020 分拆公告;rinna-3.6B release note 2023</li>
+<li>[S-2.3-JP-11] Cotomo / Starley · App Store 日本社交榜数据 2024;TechCrunch Japan 评测</li>
+<li>[S-2.3-JP-12] hololive Cover 公司 · 2024 AI 使用指引公告</li>
+<li>[S-2.3-JP-13] METI Cool Japan 白皮书 2024 AI × Games 章节</li>
+<li>[S-2.3-JP-14] bambi / tsumug / RECOTOMO · 各自官网与 App Store 描述</li>
+</ul>
+<h3 id="_3">韩国<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<ul>
+<li>[S-2.3-KR-01] Krafton MOGIA 成立新闻稿 2024.06;Korea Herald 2024.06.17 报道</li>
+<li>[S-2.3-KR-02] Krafton × Inworld · Inworld 2023 C 轮新闻稿;Krafton 2023 年报</li>
+<li>[S-2.3-KR-03] inZOI Smart Zoi · GDC 2024 Krafton 演讲;Steam EA 发布 2025.03</li>
+<li>[S-2.3-KR-04] Krafton PUBG Ally · 2025 GDC 公告</li>
+<li>[S-2.3-KR-05] Nexon Intelligence Labs · intelligencelabs.nexon.com;AAAI 2024/2025 论文</li>
+<li>[S-2.3-KR-06] Embark Studios × AI TTS · Wired 2023.11《The Finals AI voice controversy》</li>
+<li>[S-2.3-KR-07] NCSoft VARCO LLM · 2023.08.16 发布会;VARCO Studio 官网</li>
+<li>[S-2.3-KR-08] NCSoft Project G · 2024 Q2 财报电话会</li>
+<li>[S-2.3-KR-09] Smilegate AI / FutureLab · Smilegate 官网;KAIST 合作新闻 2025</li>
+<li>[S-2.3-KR-10] ScatterLab Luda 丑闻 · PIPC 2021.04 处罚公告</li>
+<li>[S-2.3-KR-11] ScatterLab Zeta · 公司 2024 产品发布;Softbank Ventures 投资新闻</li>
+<li>[S-2.3-KR-12] Wrtn Technologies · Series B 新闻 2024;TechCrunch 2024 报道</li>
+<li>[S-2.3-KR-13] Naver HyperCLOVA X · 2023.08 DAN 大会发布</li>
+<li>[S-2.3-KR-14] Kakao Brain KoGPT / Karlo · Kakao Games 内部输出报道 2023</li>
+<li>[S-2.3-KR-15] 韩国 AI 基本法 2024 · 국회 본회의 통과 공고</li>
+<li>[S-2.3-KR-16] GRAC AI 生成内容分级指引 2025</li>
+<li>[S-2.3-KR-17] Krafton 金昌汉 2024 股东信 · DART 公告</li>
+</ul>
+<h2 id="25-ugc-ai-playable-maker">2.5 UGC AI Playable Maker 来源<a class="headerlink" href="#25-ugc-ai-playable-maker" title="Permanent link">#</a></h2>
+<ul>
+<li>[S-2.5-01] Rezona (MWM.ai) · 官网 https://rezona.ai · App Store https://apps.apple.com/us/app/rezona-ai-game-maker/id6752310101 · Google Play https://play.google.com/store/apps/details?id=ai.rezona.app</li>
+<li>[S-2.5-02] LoopIt — Make Playables (MWM.ai) · App Store https://apps.apple.com/us/app/loopit-make-playables/id6755859360 · MWM https://mwm.ai/apps/loopit-make-playables/6755859360</li>
+<li>[S-2.5-03] MWM SAS 母公司 · 官网 https://mwm.ai · Blisce 领投 C 轮 5000 万美元 2021 (TechCrunch Europe 报道)</li>
+<li>[S-2.5-04] YouTube Playables Builder · PocketGamer.biz 2025 https://www.pocketgamer.biz/youtube-launches-ai-powered-playables-builder-to-let-creators-make-games/</li>
+<li>[S-2.5-05] TikTok Effect House + AI (推测) · 官方 https://effecthouse.tiktok.com · 截至 2026-04 无 confirmed AI playable 产品</li>
+<li>[S-2.5-06] Upit · https://upit.com/learn/about</li>
+<li>[S-2.5-07] Ludo.ai · https://ludo.ai/</li>
+<li>[S-2.5-08] Jabali.ai · https://www.jabali.ai/</li>
+<li>[S-2.5-09] Rosebud AI · 见 2.2 美国市场</li>
+<li>[S-2.5-10] Websim.ai · https://websim.ai</li>
+<li>[S-2.5-11] Replit AI Game Builder · https://replit.com/usecases/ai-game-builder</li>
+<li>[S-2.5-12] 相邻 AI 素材工具 Scenario/Rosie/Pixelynx · 各官网</li>
+<li>[S-2.5-13] 字节 AI 游戏方向 · 抖音小游戏 2024 公开数据;豆包 2025 产品更新;即梦 Dreamina 官网</li>
+<li>[S-2.5-14] 快手 · 可灵 Kling 官网;无 UGC AI 游戏公开动作</li>
+<li>[S-2.5-15] 微信小游戏 · 腾讯 2024 Q3 财报披露月活 5 亿</li>
+<li>[S-2.5-16] B 站 · 无公开 AI 游戏创作器, 2025 重点 AI 视频/虚拟主播</li>
+<li>[S-2.5-17] Roblox · 官方 blog (Roblox Assistant 2024); 月活数据来自 2024 10-Q 财报</li>
+<li>[S-2.5-18] Dreams (Media Molecule) · Eurogamer 2023 停止更新报道;PlayStation Blog 2020 上线公告</li>
+<li>[S-2.5-19] Core Games / Crayta / GDevelop · Manticore Games 2024 裁员报道;Meta 2024 Crayta 关停;GDevelop 官网</li>
+</ul></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#21">2.1 来源(中国市场)</a></li>
+<li class=""><a href="#22">2.2 美国市场来源</a></li>
+<li class="toc-h3"><a href="#a-ai-native">A. AI-native 游戏</a></li>
+<li class="toc-h3"><a href="#b-ai">B. AI 陪伴</a></li>
+<li class="toc-h3"><a href="#c-middleware">C. Middleware</a></li>
+<li class="toc-h3"><a href="#d-playable-ads">D. Playable Ads</a></li>
+<li class="toc-h3"><a href="#e-aaa">E. AAA</a></li>
+<li class="toc-h3"><a href="#_1">死亡案例</a></li>
+<li class=""><a href="#23">2.3 日韩来源</a></li>
+<li class="toc-h3"><a href="#_2">日本</a></li>
+<li class="toc-h3"><a href="#_3">韩国</a></li>
+<li class=""><a href="#25-ugc-ai-playable-maker">2.5 UGC AI Playable Maker 来源</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

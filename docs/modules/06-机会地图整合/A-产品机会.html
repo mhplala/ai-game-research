@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="本文件回答一个问题： &quot;我想立项一款 AI × 小游戏产品，应该做什么？&quot;">
+<title>A-产品机会 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class=" active" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/06-机会地图整合/index.html">机会地图整合</a> · A-产品机会</div><h1 id="06a">模块 06A — 差异化产品机会（产品经理 / 创业者视角）<a class="headerlink" href="#06a" title="Permanent link">#</a></h1>
+<blockquote>
+<p>上游主命题：<strong>Runtime AI × 小游戏是真空带（Token 经济学卡死），但 Generative Playable Feed(GPF）子品类正在用 Pipeline AI + UGC 飞轮打破它 — 窗口期 12-24 个月。</strong></p>
+</blockquote>
+<p>本文件回答一个问题：<strong>&ldquo;我想立项一款 AI × 小游戏产品，应该做什么？&rdquo;</strong></p>
+<hr />
+<h2 id="0-tldr-pm-30">§0. TL;DR（给 PM / 创业者的 30 秒版本）<a class="headerlink" href="#0-tldr-pm-30" title="Permanent link">#</a></h2>
+<p><strong>一句话：现在应该做 Generative Playable Feed 的中国版（P1），或者做端侧小模型的 AI-native 小游戏（P2),12-24 个月是黄金窗口期。</strong></p>
+<p>三个核心判断：</p>
+<ol>
+<li><strong>不要碰 Runtime AI × IAA 小游戏</strong>（纯开放对话式 NPC 驱动玩法）。Token 经济学在 ARPDAU ≤ 0.3 元的环境下卡死（PROGRESS §3.3），每个 DAU 每日 AI 成本 0.1-0.5 元就能把毛利吃光。除非你有豆包内部 Token 补贴，否则 12 个月内不要做。</li>
+<li><strong>应该做 Pipeline AI</strong>（生成阶段用 AI，运行时 0 Token)+ <strong>UGC 飞轮</strong>（玩家 prompt → 玩家 remix → 病毒传播）。Rezona、LoopIt、YouTube Playables Builder 已经跑通北美 / 欧洲，中文市场玩家数约等于 0（玩家全景图 1.4 的 Pipeline-Creator 象限空白）。</li>
+<li><strong>或者绕开&rdquo;游戏&rdquo;品类本身</strong>，做&rdquo;游戏壳 ≠ 游戏&rdquo;的陪伴 / 教育 / 工具产品（P3），躲开版号 + 把游戏留存机制嫁接到订阅 ARPU 3-5x 的赛道。</li>
+</ol>
+<p><strong>最值得投入的单一机会：P1 中文版 GPF</strong>，理由在 §3 展开。</p>
+<hr />
+<h2 id="1-8">§1. 产品机会总清单（8 张机会卡）<a class="headerlink" href="#1-8" title="Permanent link">#</a></h2>
+<hr />
+<h3 id="p1-generative-playable-feedgpf">⭐ P1. 中文版 Generative Playable Feed(GPF）—— 最强推荐<a class="headerlink" href="#p1-generative-playable-feedgpf" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：一个中文 text-to-mini-game 移动 App / 小程序，用户输入 prompt（或选 template)→ 30 秒内生成一个 30 秒可玩的 mini playable → 信息流呈现 → 支持 remix + fork + 分享。前 6 个月只做 5 种玩法 template（跑酷 / 消除 / 投射 / 躲避 / 节奏），与豆包 API 深度绑定。对标 Rezona（美国）+ LoopIt(MWM.ai，法国）+ YouTube Playables Builder。</p>
+<h4 id="market-pull">Market Pull<a class="headerlink" href="#market-pull" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>目标用户画像</strong>:14-24 岁中国城市 Z 世代，TikTok / 小红书 / B 站 重度用户，会用&rdquo;捏人 / 捏角色 / 捏表情包&rdquo;类 UGC 工具，不会写代码但喜欢&rdquo;创造&rdquo;的自我表达。女性略多（对标剪映 / 醒图 / 无限暖暖）。</li>
+<li><strong>痛点</strong>：目前中文世界里，非程序员想做一个游戏 0 路径（Roblox 中国版 罗布乐思 已关停，Crayta / Core / Rec Room 无中文版），Godot / Unity 学习曲线劝退 99%。</li>
+<li><strong>当前替代方案</strong>：剪映（只做视频不做交互）+ 微信小游戏（只做消费不做创作）+ 无代码工具（爱贝 / 口袋 42 已死）。市场上<strong>没有</strong>&ldquo;30 秒生成可玩游戏 + 信息流&rdquo;的中文产品。</li>
+<li><strong>市场空白证据</strong>：玩家全景图 1.4 中 Pipeline-Creator × 中文区象限：玩家数 = 0。Rezona 2025 Q3 数据：DAU 40 万，70% 内容由 UGC 产生，次日留存 35%(PROGRESS §2.5）。</li>
+<li><strong>TAM 估算</strong>：若对标剪映创作者端 1.5 亿 MAU × 5% 愿意尝试交互创作 = 750 万 MAU ceiling；保守首年目标 50 万 MAU。</li>
+</ul>
+<h4 id="tech-push">Tech Push<a class="headerlink" href="#tech-push" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>核心技术栈</strong>：豆包 / DeepSeek / Qwen 作为 LLM 生成层（负责把自然语言 → JSON 游戏参数 + 对白 + 关卡描述）；<strong>Phaser / Cocos / LayaBox</strong> 作为运行时引擎（0 Token，完全端侧执行）；Stable Diffusion / 可灵 作为美术资产生成层（异步，缓存复用）。</li>
+<li><strong>供应链现状</strong>:2025 年豆包 1.5-pro 输入 0.8 元/百万 Token，生成一个 mini game ≈ 2000 Token ≈ 0.0016 元，成本可控。Cocos 小游戏引擎中文生态成熟，微信小游戏 / 抖音小游戏双端 ready。</li>
+<li><strong>技术可行性状态</strong>:<strong>已被验证</strong>。Rezona、LoopIt、YouTube Playables Builder 三个北美 / 欧洲产品已跑通 generation-time AI + runtime-free 架构（PROGRESS §2.5）。中文版几乎是工程复刻，难点在 template 设计和 prompt 工程，不在技术。</li>
+<li><strong>开发门槛</strong>:0 → MVP 约 4 个月，5 人团队（1 PM + 2 游戏工程师 + 1 AI 工程师 + 1 设计师），预算 150-200 万。</li>
+</ul>
+<h4 id="_1">中国特殊性<a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>优势</strong>:(a) 豆包 Token 补贴可直接把 generation cost 打到 0;(b) 抖音小游戏 / 微信小游戏分发渠道比北美 App Store 高效 10x;(c) 中文 prompt → 中文游戏资产的链路独家，海外产品因为多语言复杂度难以本地化；（d) 剪映 / 醒图 已经教育过&rdquo;AI 生成 + 一键分享&rdquo;的 UGC 心智。</li>
+<li><strong>障碍</strong>:(a) <strong>版号</strong>：若定位为&rdquo;游戏&rdquo;需要版号，路径漫长；解法是<strong>定位为&rdquo;互动内容创作工具&rdquo;</strong>（参考剪映 / 美图），跑审核而非版号；（b) 内容审核：UGC 生成需要 LLM 侧 + 内容安全双审，这是刚性成本；（c) 未成年人保护：需严格限制发布权限。</li>
+<li><strong>豆包 Token 补贴路径</strong>：字节生态内可做官方 App,Token 内部结算；外部创业可申请火山引擎初创扶持（已知 2025 Q4 有 AI 应用 200 万 Token 免费额度）。</li>
+</ul>
+<h4 id="_2">可执行性清单<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Week 1-4</strong>：锁定 5 个玩法 template（跑酷 / 消除 / 投射 / 躲避 / 节奏），做 prompt-to-JSON schema,1 个可跑的端到端 demo（用户输入&rdquo;猫猫躲避西瓜&rdquo; → 出可玩页面）。</li>
+<li><strong>Month 2-3</strong>：内测版本，100 个种子用户（小红书 / B 站 招募），测 generation 成功率（目标 &gt; 80%）、可玩性（目标 &gt; 70% 的生成作品可被他人玩 ≥ 30 秒）。</li>
+<li><strong>Month 4-6</strong>：公测，嵌入抖音小游戏 / 微信小游戏，接入豆包 API，发起&rdquo;#我的 AI 小游戏&rdquo;挑战赛，目标 50 万 DAU 注册、5 万 DAU 留存。</li>
+<li><strong>Month 6-12</strong>：信息流推荐算法上线（复用抖音推荐逻辑），UGC 飞轮正反馈，Remix 率目标 &gt; 30%，次日留存 &gt; 25%。</li>
+</ul>
+<h4 id="_3">风险与规避<a class="headerlink" href="#_3" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>风险 1</strong>：内容审核成本爆表（UGC + LLM 双重）。<strong>规避</strong>：前 6 个月只开放 template 内选择，不做完全自由 prompt；接入网易易盾 / 阿里绿网。</li>
+<li><strong>风险 2</strong>：生成质量不稳定，80% 的生成作品&rdquo;不好玩&rdquo;。<strong>规避</strong>：引入&rdquo;社区编辑推荐&rdquo;+ AI 质量打分过滤，只 surface top 20%。</li>
+<li><strong>风险 3</strong>：字节 / 腾讯 官方复刻。<strong>规避</strong>：抢 12 个月时间窗，拿到早期创作者社群 + prompt 数据 moat。</li>
+</ul>
+<h4 id="12-kpi">成功标准（12 个月 KPI)<a class="headerlink" href="#12-kpi" title="Permanent link">#</a></h4>
+<ul>
+<li>50 万累计注册用户 / 5 万 DAU / 次日留存 &gt; 25%</li>
+<li>UGC 作品累计 100 万个，Remix 率 &gt; 30%</li>
+<li>单 DAU generation cost &lt; 0.05 元（含 Token + 审核）</li>
+<li>完成 A 轮融资 或 进入字节战投雷达</li>
+</ul>
+<hr />
+<h3 id="p2-ai-native">P2. 端侧小模型 AI-native 小游戏<a class="headerlink" href="#p2-ai-native" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：做一款 WebGPU + Llama 3.2-3B（或 Qwen2.5-3B 量化版）端侧推理的 AI-native 小游戏，核心玩法是&rdquo;玩家用自然语言说服 / 辩论 / 社交欺诈&rdquo;NPC,Token 成本 = 0（完全跑在用户设备上）。对标 Suck Up!(Steam 付费 $15)+ AI People，但做成<strong>免费小游戏 + IAA</strong> 形态。</p>
+<h4 id="market-pull_1">Market Pull<a class="headerlink" href="#market-pull_1" title="Permanent link">#</a></h4>
+<ul>
+<li>目标用户：16-30 岁男性为主，喜欢狼人杀 / 剧本杀 / AI Dungeon / 沙雕短视频，有至少 8GB RAM 的 iPhone 14 / 骁龙 8 Gen 2+ 安卓机。</li>
+<li>痛点：（a) Suck Up! 要付费 + 需要 PC;(b) Character.AI 不是游戏只是聊天；（c) 中文 AI 游戏几乎只有对话 Demo 没有真玩法。</li>
+<li>当前替代方案：彩云小梦（文字冒险，非游戏）、剧本杀 App（无 AI，需要真人）。</li>
+<li>市场空白证据：PROGRESS §3.4 识别的&rdquo;移动端 on-device LLM × game&rdquo;象限几乎无产品，WebGPU 在 iOS 17 / Chrome / 微信 WebView 已经就绪。</li>
+<li>TAM 估算：中国 AI 原生尝鲜用户 2000 万，游戏子集 500 万，目标首年 30 万 DAU。</li>
+</ul>
+<h4 id="tech-push_1">Tech Push<a class="headerlink" href="#tech-push_1" title="Permanent link">#</a></h4>
+<ul>
+<li>核心栈：Llama.cpp / MLC-LLM 量化模型（3B Q4,1.5GB 内存占用）+ Unity / Cocos 游戏层 + WebGPU 推理后端。</li>
+<li>技术可行性状态：<strong>边缘可行</strong>。2025 Q3 MLC-LLM 在 iPhone 15 Pro 上 3B 模型可达 15 tok/s，骁龙 8 Gen 3 约 10 tok/s。仍有 10% 低端机型兼容性问题。</li>
+<li>开发门槛：0 → MVP 约 6 个月，6 人团队，预算 250-300 万（端侧推理是硬技术）。</li>
+</ul>
+<h4 id="_4">中国特殊性<a class="headerlink" href="#_4" title="Permanent link">#</a></h4>
+<ul>
+<li>优势：中文量化小模型（Qwen2.5-3B、MiniCPM-4B、InternLM2-1.8B）全球最强，且全部开源免费商用。</li>
+<li>障碍：（a) 版号；（b) 端侧模型热更新体验差；（c) 低端机型占比高（小米 Redmi 系列）降低覆盖率。</li>
+</ul>
+<h4 id="_5">可执行性清单<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Week 1-4</strong>：技术验证，Qwen2.5-3B 在 iPhone 13 / 红米 Note 13 Pro 上跑通，测 tok/s 基线。</li>
+<li><strong>Month 2-3</strong>：玩法设计，定一个核心玩法 —— 推荐&rdquo;AI 狼人杀单机版&rdquo;(4 个 AI NPC + 玩家）。</li>
+<li><strong>Month 4-6</strong>:MVP Demo 发布内测，目标 500 次完整对局。</li>
+<li><strong>Month 6-12</strong>:TapTap / 抖音 小游戏上线（先不走版号，作为 Demo / Beta），目标 30 万 DAU。</li>
+</ul>
+<h4 id="_6">风险与规避<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>风险 1</strong>:3B 模型 RP 能力差，玩家对话体验翻车。<strong>规避</strong>：大量 fine-tune + 角色 prompt 工程 + 预设对话树兜底。</li>
+<li><strong>风险 2</strong>：机型覆盖率低。<strong>规避</strong>：分级降级 — 高端机跑 3B，中端跑 1.8B，低端走云端（对少数付费用户开放）。</li>
+</ul>
+<h4 id="12-kpi_1">成功标准（12 个月 KPI)<a class="headerlink" href="#12-kpi_1" title="Permanent link">#</a></h4>
+<ul>
+<li>30 万 DAU，留存次日 &gt; 20%、7 日 &gt; 10%</li>
+<li>单局游戏时长 &gt; 10 分钟</li>
+<li>0 Token 云成本（除低端兜底）</li>
+</ul>
+<hr />
+<h3 id="p3">P3. &ldquo;游戏壳 ≠ 游戏&rdquo; 陪伴 / 教育 / 工具产品<a class="headerlink" href="#p3" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：做一款不以&rdquo;游戏&rdquo;为名的产品，但把游戏的核心留存机制（目标梯度 + 变动奖励 + 社交比较）嫁接进去。优先选三个子方向：（a)<strong>AI 陪伴 × 养成游戏</strong>（对标星野 / 猫箱 + AI 角色；养成 + 好感度系统是游戏核）；（b)<strong>AI 英语 × Duolingo Max 中文版</strong>（对标多邻国 AI Roleplay，但做成中文英语学习）；（c)<strong>AI 心理陪伴 × 情感日记</strong>（对标 Replika + Finch）。</p>
+<h4 id="market-pull_2">Market Pull<a class="headerlink" href="#market-pull_2" title="Permanent link">#</a></h4>
+<ul>
+<li>目标用户：（a) 陪伴 → 18-26 女性，原乙女 / 泛 ACGN 用户；（b) 教育 → 20-35 岁都市白领学英语 / 雅思；（c) 心理 → 22-32 岁高焦虑城市白领。</li>
+<li>痛点：（a) 星野 / 猫箱 已验证 PMF 但留存仍是&rdquo;对话型 APP 天花板 3 个月退坑&rdquo;(PROGRESS §4.4);(b) 多邻国 Max 无中文版；（c) 国内心理 App 同质化严重。</li>
+<li>市场空白证据：订阅 ARPU 是 IAA 小游戏 3-5x(PROGRESS §1.4），且绕开版号。</li>
+<li>TAM：陪伴赛道 MAU 已突破 5000 万（星野 + 猫箱 + 筑梦岛）；教育英语赛道 2000 万付费用户。</li>
+</ul>
+<h4 id="tech-push_2">Tech Push<a class="headerlink" href="#tech-push_2" title="Permanent link">#</a></h4>
+<ul>
+<li>核心：大模型对话（豆包 / 通义 / DeepSeek)+ 轻量游戏引擎（UI 动画为主）+ 订阅系统。Token 成本高但订阅模型能覆盖。</li>
+<li>技术可行性：完全可行，已有星野 / 猫箱 先例。</li>
+<li>开发门槛：3-6 个月 MVP,8 人团队，预算 200-400 万。</li>
+</ul>
+<h4 id="_7">中国特殊性<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
+<ul>
+<li>优势：（a) <strong>绕开版号</strong>（注册为&rdquo;社交娱乐&rdquo;或&rdquo;教育&rdquo;类目）；（b) 豆包 Token 补贴；（c) 订阅用户付费习惯已培养完成。</li>
+<li>障碍：（a) 陪伴赛道已红海，需要<strong>很强的差异化角</strong>（比如：AI NPC 有主动行为 + 可养成家族树）；（b) AI 备案要求。</li>
+</ul>
+<h4 id="_8">可执行性清单<a class="headerlink" href="#_8" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Week 1-4</strong>：锁定一个垂类 — 推荐 AI 养成陪伴（竞品最激烈但也最大）。</li>
+<li><strong>Month 2-3</strong>:MVP，核心玩法&rdquo;AI 角色养成树 + 好感度 + 日常任务&rdquo;。</li>
+<li><strong>Month 4-6</strong>：小红书 / B 站种草 + TapTap 上线。</li>
+<li><strong>Month 6-12</strong>：订阅体系完善，目标月付费用户 5 万、ARPU 30 元。</li>
+</ul>
+<h4 id="_9">风险与规避<a class="headerlink" href="#_9" title="Permanent link">#</a></h4>
+<ul>
+<li>风险：陪伴赛道竞争极激烈，头部效应强。<strong>规避</strong>：深耕小众细分（如&rdquo;AI 猫咪养成 + 宠物社区&rdquo;）。</li>
+</ul>
+<h4 id="_10">成功标准<a class="headerlink" href="#_10" title="Permanent link">#</a></h4>
+<ul>
+<li>月付费用户 5 万，MRR 150 万，次月留存 &gt; 40%</li>
+</ul>
+<hr />
+<h3 id="p4-ai-npc-sdk-for-chinese-devs">P4. AI NPC 中间件 / SDK for Chinese Devs<a class="headerlink" href="#p4-ai-npc-sdk-for-chinese-devs" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：做 Inworld AI 的中国版 —— 一个 SaaS / SDK，让中国游戏开发者一键接入&rdquo;人设 + 记忆 + 语音 + 立绘 + 内容安全审核&rdquo;全套 AI NPC 能力。对标 Inworld AI（美国 $500M 估值），但中文优先、开源核心、按 MAU 订阅。</p>
+<h4 id="market-pull_3">Market Pull<a class="headerlink" href="#market-pull_3" title="Permanent link">#</a></h4>
+<ul>
+<li>目标用户：B 端 — 中国中小游戏开发团队（Cocos / Unity 开发者约 100 万、TapTap 独立游戏开发者约 10 万）、二次元 / 乙女 / 剧情类手游 CP。</li>
+<li>痛点：G01 Token 成本、G02 角色一致性、G04 内容安全，每家自己做都要 3 个月 + 100 万，重复造轮子。</li>
+<li>市场空白：中国没有 Inworld 的对标，游戏 AI 中间件只有网易伏羲（不对外）和米哈游自研（不对外）。</li>
+<li>TAM:B 端 SaaS，单客单价 5 万/年，目标 200 个付费客户 = 1000 万 ARR。</li>
+</ul>
+<h4 id="tech-push_3">Tech Push<a class="headerlink" href="#tech-push_3" title="Permanent link">#</a></h4>
+<ul>
+<li>核心：豆包 / DeepSeek API + 内存/向量库（Milvus)+ TTS（火山引擎）+ 立绘生成（SD 微调）+ 内容安全中间层。</li>
+<li>技术可行性：成分拼装可行，关键是中文内容安全 + 记忆长上下文。</li>
+<li>开发门槛：6-9 个月，10 人团队，预算 400-600 万。</li>
+</ul>
+<h4 id="_11">中国特殊性<a class="headerlink" href="#_11" title="Permanent link">#</a></h4>
+<ul>
+<li>优势：中文 LLM + 中文 TTS + 中文内容安全，海外 Inworld 难以迁移。</li>
+<li>障碍：游戏 B 端预算紧缩，付费意愿低于美国；需要&rdquo;杀手级 demo 游戏&rdquo;证明 ROI。</li>
+</ul>
+<h4 id="_12">可执行性清单<a class="headerlink" href="#_12" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Week 1-4</strong>:MVP SDK,Cocos + Unity 双版本，提供 3 个预设人设 demo。</li>
+<li><strong>Month 2-3</strong>:2-3 个种子客户免费试用（偏向乙女 / 文字游戏）。</li>
+<li><strong>Month 4-6</strong>：完善记忆 + 语音 + 立绘三合一。</li>
+<li><strong>Month 6-12</strong>:PMF 验证，目标 20 家付费客户。</li>
+</ul>
+<h4 id="_13">风险与规避<a class="headerlink" href="#_13" title="Permanent link">#</a></h4>
+<ul>
+<li>风险：网易 / 腾讯 / 米哈游 下场做同样的东西，打白牌。<strong>规避</strong>：做开源核心建开发者生态。</li>
+</ul>
+<h4 id="_14">成功标准<a class="headerlink" href="#_14" title="Permanent link">#</a></h4>
+<ul>
+<li>20 家付费 + 500 家免费接入，ARR 100 万</li>
+</ul>
+<hr />
+<h3 id="p5-telegram-mini-app-ai-playable">P5. Telegram Mini App × AI Playable<a class="headerlink" href="#p5-telegram-mini-app-ai-playable" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：在 Telegram 生态做 AI 驱动的 mini playable + 代币经济，对标 Catizen / Hamster Kombat / Notcoin。核心是广告预算 + 空投 / 积分覆盖 AI Token 成本，绕开中国市场直接做海外。</p>
+<h4 id="market-pull_4">Market Pull<a class="headerlink" href="#market-pull_4" title="Permanent link">#</a></h4>
+<ul>
+<li>目标用户：全球 9 亿 Telegram 用户，重点东南亚 / 南美 / 中东 / 俄语区。</li>
+<li>市场空白：Telegram Mini App 生态 2024 爆发，AI × 游戏 × 代币 三元组合尚无头部。</li>
+<li>TAM:Catizen 峰值 2200 万 DAU，空间极大。</li>
+</ul>
+<h4 id="tech-push_4">Tech Push / 中国特殊性<a class="headerlink" href="#tech-push_4" title="Permanent link">#</a></h4>
+<ul>
+<li>技术：Telegram Bot API + Mini App HTML5 + TON 链 + LLM API。</li>
+<li>中国路径：<strong>团队在中国，产品在海外</strong>，绕开版号和出海限制，按成熟公司出海走即可。</li>
+</ul>
+<h4 id="kpi">可执行性 / 风险 / KPI<a class="headerlink" href="#kpi" title="Permanent link">#</a></h4>
+<ul>
+<li>Week 1-4:Telegram Bot + Mini App Demo。</li>
+<li>Month 2-3：核心玩法 + TON 链接入。</li>
+<li>Month 6-12：目标 500 万 DAU + 代币发行。</li>
+<li>风险：代币合规 + Telegram 政策变动；规避 — 法律主体设海外。</li>
+</ul>
+<hr />
+<h3 id="p6-ai-vn-for">P6. AI 视觉小说 / VN for 中文市场<a class="headerlink" href="#p6-ai-vn-for" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：做一款 AI 动态剧情视觉小说，对标 1001 Nights（美国） / Anuttacon Whispers from the Star，但服务中文乙女 / 悬疑用户。Steam + TapTap 付费分发，目标小众忠诚用户。</p>
+<h4 id="market-pull_5">Market Pull<a class="headerlink" href="#market-pull_5" title="Permanent link">#</a></h4>
+<ul>
+<li>目标用户：18-28 岁女性，乙女 / 悬疑 / 沙雕文爱好者，有 Steam / TapTap 付费习惯。</li>
+<li>市场空白：中文 AI-VN 市场几乎空白，文字冒险类 Galgame 仍是硬编码剧本。</li>
+<li>TAM:Steam 中文 VN 付费用户约 200 万，ARPU 50 元。</li>
+</ul>
+<h4 id="tech-push_5">Tech Push<a class="headerlink" href="#tech-push_5" title="Permanent link">#</a></h4>
+<ul>
+<li>技术：LLM 生成分支剧情 + SD 场景立绘 + Live2D。</li>
+<li>可行性：高，已有海外对标。</li>
+<li>开发门槛：4-6 个月，4 人团队，80-150 万。</li>
+</ul>
+<h4 id="_15">中国特殊性<a class="headerlink" href="#_15" title="Permanent link">#</a></h4>
+<ul>
+<li>版号路径复杂，走 Steam 海外版 + 国内 DLC 双路径。</li>
+</ul>
+<h4 id="kpi_1">KPI<a class="headerlink" href="#kpi_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Steam + TapTap 首年销量 5 万份，回本阈值 2 万份。</li>
+</ul>
+<hr />
+<h3 id="p7-playable-ads-ai">P7. 小游戏 Playable Ads × AI 生成工具<a class="headerlink" href="#p7-playable-ads-ai" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>：做 Luna Labs / Kinetix 的中国版 —— 广告主输入商品链接 / 图片 → 自动生成 playable ad → 投放到广点通 / 巨量引擎。对标 Luna Labs（被 Unity 收购）。</p>
+<h4 id="market-pull_6">Market Pull<a class="headerlink" href="#market-pull_6" title="Permanent link">#</a></h4>
+<ul>
+<li>目标用户：B 端 — 中国电商 + 游戏 + App 广告主，目前 playable ad 人均制作成本 1-5 万，周期 1-2 周。</li>
+<li>市场空白：AIGC × Playable Ads 在中国几乎无产品。</li>
+<li>TAM：中国 playable ad 市场 50-100 亿。</li>
+</ul>
+<h4 id="tech-push_6">Tech Push<a class="headerlink" href="#tech-push_6" title="Permanent link">#</a></h4>
+<ul>
+<li>技术：SD 图像生成 + 模板库 + Cocos 互动引擎。</li>
+<li>可行性：高。</li>
+<li>开发门槛：4-6 个月，5 人团队。</li>
+</ul>
+<h4 id="_16">中国特殊性<a class="headerlink" href="#_16" title="Permanent link">#</a></h4>
+<ul>
+<li>巨量引擎 / 广点通 / 微信广告 直接对接，生态天然。</li>
+<li>风险：巨量自家做（已有&rdquo;巨量创意&rdquo;）— 规避是走独立商品而非广告平台内嵌。</li>
+</ul>
+<h4 id="kpi_2">KPI<a class="headerlink" href="#kpi_2" title="Permanent link">#</a></h4>
+<ul>
+<li>1000 家广告主付费，单客年费 5 万，ARR 5000 万。</li>
+</ul>
+<hr />
+<h3 id="p8-aaa-runtime-ai-license">P8. AAA Runtime AI 合作 / 工具 / License 模式<a class="headerlink" href="#p8-aaa-runtime-ai-license" title="Permanent link">#</a></h3>
+<p><strong>一句话 SKU 描述</strong>:<strong>不自己做游戏</strong>，而是把 Runtime AI 能力打包卖给有钱的 AAA / 中型 CP。对标 Krafton MOGIA × Inworld / Ubisoft NEO NPC。</p>
+<h4 id="market-pull_7">Market Pull<a class="headerlink" href="#market-pull_7" title="Permanent link">#</a></h4>
+<ul>
+<li>目标客户：中国 Top 20 CP（米哈游 / 网易 / 腾讯 / 莉莉丝 / 叠纸 / 鹰角 / 网易大世界团队）。</li>
+<li>市场空白：国内 AI × AAA 合作几乎 0 案例，只停留在 Tech Demo。</li>
+</ul>
+<h4 id="tech-push_7">Tech Push / 可行性<a class="headerlink" href="#tech-push_7" title="Permanent link">#</a></h4>
+<ul>
+<li>需要深度技术 + 行业关系，门槛高，但 ASP 极高（单项目 500 万 - 2000 万 license）。</li>
+<li>9-12 个月出 POC。</li>
+</ul>
+<h4 id="kpi_3">KPI<a class="headerlink" href="#kpi_3" title="Permanent link">#</a></h4>
+<ul>
+<li>2-3 家头部 CP 签约 POC，首年营收 1000-3000 万。</li>
+</ul>
+<hr />
+<h2 id="2">§2. 横向对比矩阵<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>名称</th>
+<th>类型</th>
+<th>Market Pull</th>
+<th>Tech Push</th>
+<th>时间窗口</th>
+<th>推荐优先级</th>
+<th>资金需求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>中文版 GPF</td>
+<td>C 端 / 创作</td>
+<td>★★★★★</td>
+<td>★★★★</td>
+<td>12-18 月</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>150-200 万</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>端侧小模型 AI-native 小游戏</td>
+<td>C 端 / 玩法</td>
+<td>★★★</td>
+<td>★★★</td>
+<td>18-24 月</td>
+<td>⭐⭐⭐⭐</td>
+<td>250-300 万</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>游戏壳陪伴 / 教育 / 工具</td>
+<td>C 端 / 订阅</td>
+<td>★★★★</td>
+<td>★★★★★</td>
+<td>6-12 月</td>
+<td>⭐⭐⭐⭐</td>
+<td>200-400 万</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>AI NPC 中间件 SDK</td>
+<td>B 端 SaaS</td>
+<td>★★★</td>
+<td>★★★</td>
+<td>12-18 月</td>
+<td>⭐⭐⭐</td>
+<td>400-600 万</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>Telegram Mini App × AI</td>
+<td>海外 C 端</td>
+<td>★★★★</td>
+<td>★★★★</td>
+<td>6-12 月</td>
+<td>⭐⭐⭐</td>
+<td>200-300 万</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>AI 视觉小说 中文</td>
+<td>C 端 / 付费</td>
+<td>★★</td>
+<td>★★★★</td>
+<td>12-24 月</td>
+<td>⭐⭐</td>
+<td>80-150 万</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>Playable Ads × AI 生成工具</td>
+<td>B 端 SaaS</td>
+<td>★★★</td>
+<td>★★★★</td>
+<td>12-18 月</td>
+<td>⭐⭐⭐</td>
+<td>200-300 万</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>AAA Runtime AI License</td>
+<td>B 端 企业</td>
+<td>★★</td>
+<td>★★</td>
+<td>24+ 月</td>
+<td>⭐⭐</td>
+<td>500 万+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-top-3">§3. Top 3 最值得投入<a class="headerlink" href="#3-top-3" title="Permanent link">#</a></h2>
+<h3 id="p1-generative-playable-feed">🥇 第一名：P1 中文版 Generative Playable Feed<a class="headerlink" href="#p1-generative-playable-feed" title="Permanent link">#</a></h3>
+<p>P1 是唯一一个<strong>同时</strong>满足&rdquo;市场空白 + 技术已验证 + 窗口明确 + 中国特殊优势&rdquo;四个条件的机会。</p>
+<p><strong>为什么是第一</strong>:</p>
+<p>(1) <strong>三个北美 / 欧洲对标已跑通 PMF</strong>:Rezona DAU 40 万、LoopIt 40 万、YouTube Playables Builder 正在公测（PROGRESS §2.5）。这意味着&rdquo;text prompt → playable → feed → remix&rdquo;这条路径不再是假设，而是已验证。中文版不需要创造新范式，只需要工程复刻 + 本地化。</p>
+<p>(2) <strong>真正的空白象限</strong>：玩家全景图 1.4 中，Pipeline-Creator × 中文区 的玩家数 ≈ 0。罗布乐思（Roblox 中国）已停运，Core / Rec Room / Crayta 无中文版，剪映只做视频不做交互。这是 2015 年&rdquo;视频剪辑&rdquo;心智之前的空窗期。</p>
+<p>(3) <strong>绕开了 Runtime AI 的 Token 真空带</strong>：生成在创作时（一次性），运行时完全 0 Token，单用户日均 AI 成本可控制在 0.05 元以内，甚至豆包生态内可打到 0。这直接解决了本项目主命题的核心矛盾。</p>
+<p>(4) <strong>中国独有的豆包 Token 补贴 + 剪映 UGC 心智 + 双小游戏分发</strong>：三个乘数效应叠加，同样的产品在中国能做到北美 10x 的 DAU 效率。</p>
+<p>(5) <strong>窗口期刚好 12-18 个月</strong>：字节和腾讯大概率会下场，但他们的组织效率决定了至少要 9-12 个月才会出第一版。独立团队跑在前面，拿到早期种子创作者 + prompt 数据，能形成 moat。</p>
+<p><strong>唯一的大风险</strong>：内容审核成本。但这是可工程化的问题，不是技术不确定性。</p>
+<h3 id="p3_1">🥈 第二名：P3 游戏壳 ≠ 游戏 陪伴 / 教育产品<a class="headerlink" href="#p3_1" title="Permanent link">#</a></h3>
+<p>P3 胜在<strong>完全绕开版号 + 订阅 ARPU 3-5x</strong>。星野 / 猫箱 已经用 5000 万 MAU 证明了陪伴赛道 PMF，但这些产品在&rdquo;游戏核&rdquo;上做得并不深（主要是对话，没有养成树 / 好感度升级 / 家族关系 / 任务系统）。一个 PM 如果能把&rdquo;AI 对话 + 深度养成游戏核&rdquo;做扎实，就能在红海里切出细分市场。教育英语对标多邻国 Max 也是同理。</p>
+<p>风险是陪伴赛道头部效应已经很强，但订阅模型下哪怕只做 5 万付费用户，MRR 也有 150 万，活得很舒服。</p>
+<h3 id="p2-ai-native_1">🥉 第三名：P2 端侧小模型 AI-native 小游戏<a class="headerlink" href="#p2-ai-native_1" title="Permanent link">#</a></h3>
+<p>P2 是技术含量最高、护城河最深的一条路，但时间窗更远（18-24 个月）。核心赌注是&rdquo;端侧 3B 模型 + WebGPU 在 2026 年变成主流&rdquo;。如果赌对，整个 Runtime AI × IAA 小游戏赛道会被重新打开（Token 成本 = 0 改变经济模型）。现在切进去是早期玩家优势。</p>
+<p>缺点是技术难度大、兼容性痛、玩法设计还需要探索。适合有强技术背景的团队，不适合 PM 独立创业。</p>
+<hr />
+<h2 id="4">§4. 给不同类型创业者的建议<a class="headerlink" href="#4" title="Permanent link">#</a></h2>
+<h3 id="1">个人独立开发者（1 人或夫妻档）<a class="headerlink" href="#1" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>首推 P6 AI 视觉小说</strong>:4-6 个月可出 MVP,Steam 付费分发不需要版号，80 万启动资金，单机品类，不需要做社区运营，质量上限决定成败。典型画像 — 有美术 / 文字功底的独立开发者。</li>
+<li><strong>次推 P5 Telegram Mini App</strong>：如果有加密资产发行经验或海外渠道，Telegram + AI 小游戏是极好的单兵作战战场。</li>
+</ul>
+<h3 id="3-10-200-500">3-10 人小团队（有 200-500 万预算）<a class="headerlink" href="#3-10-200-500" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>首推 P1 中文版 GPF</strong>:5 人可以做起来，核心是快。豆包生态内 + 抖音小游戏 分发。</li>
+<li><strong>次推 P3 陪伴 / 教育</strong>：若团队有 ToC 运营 + 订阅体系经验，陪伴 / 教育垂类的订阅模型回报最稳。</li>
+<li><strong>三推 P7 Playable Ads 工具</strong>：若团队有 B 端销售资源 + 广告行业人脉，这条是最稳的现金流。</li>
+</ul>
+<h3 id="a-500-2000">有融资的创业公司（A 轮 500-2000 万）<a class="headerlink" href="#a-500-2000" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>首推 P2 端侧 AI-native 小游戏</strong>：资金充足才能扛住 6-9 个月的 R&amp;D 空窗期。技术护城河最深。</li>
+<li><strong>次推 P4 AI NPC 中间件 SDK</strong>:B 端 SaaS 打法需要长时间关系销售，融资是必要的。</li>
+</ul>
+<h3 id="_17">中大型公司新业务线（字节 / 腾讯 / 网易 / 米哈游 内部）<a class="headerlink" href="#_17" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>首推 P1 的字节 / 腾讯 官方版本</strong>：字节的优势是豆包 + 抖音小游戏 + 剪映用户；腾讯的优势是微信小游戏 + QQ 社交。官方做 GPF 是必然，时间问题。</li>
+<li><strong>次推 P8 Runtime AI for AAA</strong>：网易伏羲 / 米哈游 内部已有基础，对外商业化 License 能做成新业务线。</li>
+</ul>
+<hr />
+<h2 id="5-gaps">§5. Gaps（未回答的问题）<a class="headerlink" href="#5-gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>内容审核的实际成本</strong>:UGC + LLM 生成双审的单 DAU 成本，数量级是 0.01 元还是 0.1 元？未调研。这直接决定 P1 的单位经济模型成立与否。</li>
+<li><strong>豆包 Token 补贴的实际门槛</strong>：外部创业团队能否拿到、额度多少、可持续多久？需要与火山引擎 BD 对齐。</li>
+<li><strong>抖音 / 微信 小游戏的&rdquo;创作类产品&rdquo;审核政策</strong>：把 GPF 注册为&rdquo;工具&rdquo;还是&rdquo;游戏&rdquo;？是否需要版号？需要法务咨询。</li>
+<li><strong>端侧 3B 模型的实际对话质量</strong>:P2 的核心赌注，在中文 RP 场景下 Qwen2.5-3B 对比 GPT-4o 差距有多大？未做 A/B 测试。</li>
+<li><strong>Telegram Mini App 的中国团队合规路径</strong>：海外主体 + 国内开发团队的政策边界模糊，需法务。</li>
+<li><strong>各机会之间的组合拳</strong>：比如&rdquo;P1 做 C 端 + P4 做 B 端 SDK&rdquo;是否可以用同一套技术栈 double-dip？未推演。</li>
+<li><strong>Exit 路径</strong>:P1 的退出路径（被字节 / 腾讯 收购 vs 独立 IPO）缺少案例参照。</li>
+<li><strong>AAA 合作的关系摩擦成本</strong>:P8 的核心风险是国内 CP 的内部政治（自研派 vs 外采派），未评估。</li>
+</ol>
+<hr />
+<p><em>本文件完成于 2026-04-13，输入来自 PROGRESS.md 及模块 02.5 / 02.4 / 01.4 / 03.4 / 04.4 的洞察归档。</em></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#0-tldr-pm-30">§0. TL;DR（给 PM / 创业者的 30 秒版本）</a></li>
+<li class=""><a href="#1-8">§1. 产品机会总清单（8 张机会卡）</a></li>
+<li class="toc-h3"><a href="#p1-generative-playable-feedgpf">⭐ P1. 中文版 Generative Playable Feed(GPF）—— 最强推荐</a></li>
+<li class="toc-h4"><a href="#market-pull">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push">Tech Push</a></li>
+<li class="toc-h4"><a href="#_1">中国特殊性</a></li>
+<li class="toc-h4"><a href="#_2">可执行性清单</a></li>
+<li class="toc-h4"><a href="#_3">风险与规避</a></li>
+<li class="toc-h4"><a href="#12-kpi">成功标准（12 个月 KPI)</a></li>
+<li class="toc-h3"><a href="#p2-ai-native">P2. 端侧小模型 AI-native 小游戏</a></li>
+<li class="toc-h4"><a href="#market-pull_1">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_1">Tech Push</a></li>
+<li class="toc-h4"><a href="#_4">中国特殊性</a></li>
+<li class="toc-h4"><a href="#_5">可执行性清单</a></li>
+<li class="toc-h4"><a href="#_6">风险与规避</a></li>
+<li class="toc-h4"><a href="#12-kpi_1">成功标准（12 个月 KPI)</a></li>
+<li class="toc-h3"><a href="#p3">P3. &amp;ldquo;游戏壳 ≠ 游戏&amp;rdquo; 陪伴 / 教育 / 工具产品</a></li>
+<li class="toc-h4"><a href="#market-pull_2">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_2">Tech Push</a></li>
+<li class="toc-h4"><a href="#_7">中国特殊性</a></li>
+<li class="toc-h4"><a href="#_8">可执行性清单</a></li>
+<li class="toc-h4"><a href="#_9">风险与规避</a></li>
+<li class="toc-h4"><a href="#_10">成功标准</a></li>
+<li class="toc-h3"><a href="#p4-ai-npc-sdk-for-chinese-devs">P4. AI NPC 中间件 / SDK for Chinese Devs</a></li>
+<li class="toc-h4"><a href="#market-pull_3">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_3">Tech Push</a></li>
+<li class="toc-h4"><a href="#_11">中国特殊性</a></li>
+<li class="toc-h4"><a href="#_12">可执行性清单</a></li>
+<li class="toc-h4"><a href="#_13">风险与规避</a></li>
+<li class="toc-h4"><a href="#_14">成功标准</a></li>
+<li class="toc-h3"><a href="#p5-telegram-mini-app-ai-playable">P5. Telegram Mini App × AI Playable</a></li>
+<li class="toc-h4"><a href="#market-pull_4">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_4">Tech Push / 中国特殊性</a></li>
+<li class="toc-h4"><a href="#kpi">可执行性 / 风险 / KPI</a></li>
+<li class="toc-h3"><a href="#p6-ai-vn-for">P6. AI 视觉小说 / VN for 中文市场</a></li>
+<li class="toc-h4"><a href="#market-pull_5">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_5">Tech Push</a></li>
+<li class="toc-h4"><a href="#_15">中国特殊性</a></li>
+<li class="toc-h4"><a href="#kpi_1">KPI</a></li>
+<li class="toc-h3"><a href="#p7-playable-ads-ai">P7. 小游戏 Playable Ads × AI 生成工具</a></li>
+<li class="toc-h4"><a href="#market-pull_6">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_6">Tech Push</a></li>
+<li class="toc-h4"><a href="#_16">中国特殊性</a></li>
+<li class="toc-h4"><a href="#kpi_2">KPI</a></li>
+<li class="toc-h3"><a href="#p8-aaa-runtime-ai-license">P8. AAA Runtime AI 合作 / 工具 / License 模式</a></li>
+<li class="toc-h4"><a href="#market-pull_7">Market Pull</a></li>
+<li class="toc-h4"><a href="#tech-push_7">Tech Push / 可行性</a></li>
+<li class="toc-h4"><a href="#kpi_3">KPI</a></li>
+<li class=""><a href="#2">§2. 横向对比矩阵</a></li>
+<li class=""><a href="#3-top-3">§3. Top 3 最值得投入</a></li>
+<li class="toc-h3"><a href="#p1-generative-playable-feed">🥇 第一名：P1 中文版 Generative Playable Feed</a></li>
+<li class="toc-h3"><a href="#p3_1">🥈 第二名：P3 游戏壳 ≠ 游戏 陪伴 / 教育产品</a></li>
+<li class="toc-h3"><a href="#p2-ai-native_1">🥉 第三名：P2 端侧小模型 AI-native 小游戏</a></li>
+<li class=""><a href="#4">§4. 给不同类型创业者的建议</a></li>
+<li class="toc-h3"><a href="#1">个人独立开发者（1 人或夫妻档）</a></li>
+<li class="toc-h3"><a href="#3-10-200-500">3-10 人小团队（有 200-500 万预算）</a></li>
+<li class="toc-h3"><a href="#a-500-2000">有融资的创业公司（A 轮 500-2000 万）</a></li>
+<li class="toc-h3"><a href="#_17">中大型公司新业务线（字节 / 腾讯 / 网易 / 米哈游 内部）</a></li>
+<li class=""><a href="#5-gaps">§5. Gaps（未回答的问题）</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

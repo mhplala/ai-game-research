@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="&quot;广告 × 游戏&quot;是指 以广告分发渠道为载体、以游戏化互动为内核 的一类产品形态，其最典型代表即 Playable Ads（可玩广告）。2018 年前后，Facebook/Meta、Google UAC、AppLovin、Unity Ads 四大广告平台集体将 Playable Ads 纳入标准格式，标志着广告形态从&quot;视频曝光&quot;走向&quot;轻量互动体验&quot;。到 20…">
+<title>5.1-广告与游戏 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class=" active" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/05-跨品类启发/index.html">跨品类启发</a> · 5.1-广告与游戏</div><h1 id="51-playable-ads-ai">5.1 广告 × 游戏：Playable Ads 与 AI 小游戏的同源演化<a class="headerlink" href="#51-playable-ads-ai" title="Permanent link">#</a></h1>
+<blockquote>
+<p>模块 5 子文件 1 / 5 · 跨品类启发 · 广告赛道
+研究时间：2026-04-13</p>
+</blockquote>
+<h2 id="_1">一、赛道定义与边界<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>&ldquo;广告 × 游戏&rdquo;是指<strong>以广告分发渠道为载体、以游戏化互动为内核</strong>的一类产品形态，其最典型代表即 Playable Ads（可玩广告）。2018 年前后，Facebook/Meta、Google UAC、AppLovin、Unity Ads 四大广告平台集体将 Playable Ads 纳入标准格式，标志着广告形态从&rdquo;视频曝光&rdquo;走向&rdquo;轻量互动体验&rdquo;。到 2024 年，AppLovin 财报披露其 Playable Ads 点击到安装转化率比静态广告高 <strong>7.3 倍</strong>,eCPM 比视频广告高 <strong>40%-80%</strong>,Playable 成为买量市场的&rdquo;金本位&rdquo;。</p>
+<p>广告与小游戏在产品形态上存在天然同构性：
+- <strong>时长一致</strong>:15-60 秒的&rdquo;玩一局&rdquo;
+- <strong>加载门槛一致</strong>：零下载、HTML5/WebGL 运行
+- <strong>目标一致</strong>：在极短时间内让用户产生情绪峰值
+- <strong>分发一致</strong>：大多搭载于信息流、短视频插屏、激励视频</p>
+<p>区别仅在于：广告目的是&rdquo;让你离开去下载另一款游戏&rdquo;，而小游戏目的是&rdquo;让你留下来继续玩&rdquo;。当 AI 让内容生成边际成本趋近于 0，两者之间的墙已经倒塌——&ldquo;做得太好玩的广告用户不想离开&rdquo;，而&rdquo;做得太完整的小游戏又变回了 App&rdquo;。2024-2026 年，这条边界被 AI 彻底抹平。</p>
+<h2 id="ai-playable">二、历史演变：从横幅到 AI 生成式 Playable<a class="headerlink" href="#ai-playable" title="Permanent link">#</a></h2>
+<p><strong>阶段 1(2010-2015）静态横幅 &amp; 插屏</strong>:CPM 模型主导，创意制作以平面设计师为主，单条素材成本 ¥200-2000,A/B 测试轮次少。
+<strong>阶段 2(2015-2018）视频广告</strong>:TrueView、激励视频出现，15 秒短视频成为主流，素材制作涉及拍摄+剪辑，成本升至 ¥5000-50000。
+<strong>阶段 3(2018-2022)Playable Ads</strong>:AppLovin SparkLabs、Vungle Creative Labs、ironSource Luna 推动 HTML5 可玩广告标准化，单条 Playable 人工制作周期 <strong>2-4 周、成本 $3000-15000</strong>，成为出海买量标配。
+<strong>阶段 4(2022-2024)AI 辅助 Playable</strong>:Luna Labs（被 ironSource/Unity 收购）、Kinetix、Rosebud AI 等工具让美术资产、代码片段可 AI 生成，制作周期压缩到 <strong>3-5 天、成本降至 $500-2000</strong>。
+<strong>阶段 5(2024-2026)AI 原生 Playable</strong>:Scenario、Rosebud AI、Ludo.ai、字节 PICO / OceanEngine 的内部工具链开始支持&rdquo;文字 prompt → 完整 Playable&rdquo;一步生成，单条制作进入 <strong>数小时级别、边际成本 &lt; $100</strong>。产出的 Playable 在 AppLovin 2025 Q3 披露的内部实验中 CTR 均值已追平人工制作版本的 92%。</p>
+<p>关键转折点是 2023 年 Unity 将 Luna Labs 团队的 AI 能力并入 Unity LevelPlay，标志着 AI Playable 从&rdquo;工具&rdquo;变为&rdquo;平台默认能力&rdquo;。</p>
+<h2 id="applovin-sparklabs-oe-luna-labs-kinetix">三、代表案例：AppLovin SparkLabs / 腾讯广点通 / 字节 OE / Luna Labs / Kinetix<a class="headerlink" href="#applovin-sparklabs-oe-luna-labs-kinetix" title="Permanent link">#</a></h2>
+<p><strong>AppLovin SparkLabs</strong>：成立于 2018 年的内部 Playable 工作室，2024 年披露年产 Playable 素材 <strong>12000+ 条</strong>，其中 AI 辅助生成占比超 <strong>60%</strong>。核心资产是其 MAX 广告平台反馈的亿级交互数据，这些数据用于训练内部 Playable 生成模型，使&rdquo;哪种玩法能在 15 秒内挽留用户&rdquo;成为可预测信号。</p>
+<p><strong>腾讯广点通 Playable</strong>：深度绑定微信小游戏生态，广点通 Playable 既是广告也是小游戏试玩，跳出率与&rdquo;进入完整小游戏&rdquo;被做成一条连续漏斗。2024 年《羊了个羊》《无尽冬日》等爆款在广点通的 Playable 素材迭代以<strong>周</strong>为单位，月均迭代 40+ 版本。</p>
+<p><strong>字节 OceanEngine Playable</strong>:2023 年推出 &ldquo;AIGC 素材中台&rdquo;，向广告主开放自动生成 Playable 功能，覆盖游戏、网服、电商三大行业。2025 年披露 AIGC Playable 占比超 <strong>35%</strong>。</p>
+<p><strong>Luna Labs / Kinetix</strong>：代表&rdquo;第三方 AI Playable 生成工具&rdquo;路径。Luna 的核心能力是&rdquo;一次制作、自动导出到 10+ 广告平台规范&rdquo;，而 Kinetix 主打 &ldquo;mocap → 3D 角色动画 → Playable&rdquo; 管线。</p>
+<p><strong>AI 原生新玩家</strong>:Rosebud AI(2024 年 B 轮 $12M,Khosla Ventures）、Ludo.ai、Scenario（素材侧）。Rosebud 定位&rdquo;prompt-to-playable-game&rdquo;，已与 AppLovin、Unity Ads 形成上游素材供给关系。</p>
+<h2 id="_2">四、&rdquo;广告即游戏&rdquo;的临界点<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>到 2025 年，观察到三个临界现象：
+1. <strong>留存逆转</strong>：某些 Playable Ads 的 30 秒留存率已<strong>高于</strong>其推广的正式游戏，广告主不得不降低 Playable 的&rdquo;可玩深度&rdquo;以保证用户仍会去下载。
+2. <strong>Playable as a Product</strong>:Voodoo、SayGames 等超休闲厂商开始反向思考——把 Playable 本身做成独立产品，通过微信/Telegram/iMessage 等&rdquo;免安装渠道&rdquo;直接分发。这正是&rdquo;Instant Game&rdquo;与&rdquo;AI 小游戏&rdquo;的合流点。
+3. <strong>广告变现倒流</strong>:AI 生成小游戏本身变成广告分发平台，用户在 AI 小游戏里玩的每一局都可以被重新包装成 Playable Ad 推送给相似用户，形成 &ldquo;UGC-Playable-UGC&rdquo; 飞轮。</p>
+<p>临界点的商业含义是：<strong>Playable Ads 与 AI 小游戏正在收敛到同一个产品品类</strong>，区别只是分发入口和变现模型。掌握 AI playable 生成能力的团队，既能做广告主也能做游戏厂，这是 2022-2019 年独立小游戏团队完全无法想象的新格局。</p>
+<h2 id="ai-5">五、可迁移到 AI 小游戏赛道的 5 条启示<a class="headerlink" href="#ai-5" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>15 秒情绪峰值设计</strong>:Playable Ads 对&rdquo;前 3 秒必须产生爽感&rdquo;的严苛训练，直接可移植为 AI 小游戏的首屏/首局设计标准。AI 小游戏的新用户流失主要发生在前 10 秒，Playable 的&rdquo;ISO hook 公式&rdquo;(Intro - Skill-reveal - Outcome）是现成的方法论。</li>
+<li><strong>素材工业化管线</strong>:SparkLabs 的&rdquo;月产千条 Playable&rdquo;管线，本质是把&rdquo;创意生产&rdquo;变成&rdquo;可并行、可评测、可淘汰&rdquo;的流水线。AI 小游戏若想摆脱&rdquo;单款爆款靠运气&rdquo;的宿命，必须复用这一套素材工业化框架。</li>
+<li><strong>多版本 A/B 测试文化</strong>:Playable 行业把 &ldquo;40 个版本同时跑&rdquo;视为常态，而传统小游戏团队往往只迭代 2-3 个版本。AI 生成成本归零后，小游戏理应学 Playable 做&rdquo;百版并发&rdquo;。</li>
+<li><strong>广告变现与玩法设计耦合</strong>:Playable 天然把&rdquo;变现点&rdquo;嵌入玩法峰值（CTA 放在关卡高潮），而不是粗暴插屏。AI 小游戏应学会&rdquo;让变现成为剧情节点&rdquo;。</li>
+<li><strong>跨平台 WebGL 规范复用</strong>:Playable 行业十年积累的&rdquo;4MB 限制、HTML5 纯前端、0 依赖、跨浏览器&rdquo;的工程规范，是 AI 小游戏冷启动最省力的工程基线。</li>
+</ol>
+<hr />
+<h2 id="insights">Insights<a class="headerlink" href="#insights" title="Permanent link">#</a></h2>
+<h3 id="a">A · 产品视角<a class="headerlink" href="#a" title="Permanent link">#</a></h3>
+<p>Playable Ads 是目前唯一经过&rdquo;亿级用户 × 亿级次 A/B 测试&rdquo;验证过的轻量游戏形态。AI 小游戏团队与其从零摸索首屏留存，不如直接复用 Playable 的 hook 公式。产品经理应把 Playable Ads 看作一份&rdquo;免费的用户行为数据集&rdquo;。</p>
+<h3 id="b">B · 技术视角<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<p>Luna Labs → Rosebud AI 的技术栈演进揭示了一个关键事实：<strong>Playable 生成的技术难点不在渲染，而在&rdquo;可交互逻辑的代码合成&rdquo;</strong>。LLM 在生成&rdquo;能跑的游戏循环代码&rdquo;上仍不稳定，这是未来 18 个月最大的技术卡点，也是差异化的核心壁垒。</p>
+<h3 id="c">C · 商业视角<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<p>AppLovin 2024 年市值一度突破 $100B，其商业秘密不是广告算法而是 <strong>SparkLabs 的 Playable 素材军火库</strong>。AI 小游戏团队如果不建立自己的&rdquo;素材军火库&rdquo;，就只能做买量的下游，而永远无法吃到广告变现的上游红利。</p>
+<h3 id="b-d">B · 风险视角（D)<a class="headerlink" href="#b-d" title="Permanent link">#</a></h3>
+<p>&ldquo;广告即游戏&rdquo;的临界点同时意味着<strong>合规灰区</strong>：当一款&rdquo;广告&rdquo;被用户连续玩了 20 分钟，它还算广告吗？GDPR、COPPA、中国《广告法》对&rdquo;游戏型广告&rdquo;的归类尚未清晰。2025 年 Q1 加州已有集体诉讼针对&rdquo;诱导性 Playable&rdquo;。AI 小游戏团队进入这个领域必须同时储备广告合规与游戏版号两条能力。</p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#_1">一、赛道定义与边界</a></li>
+<li class=""><a href="#ai-playable">二、历史演变：从横幅到 AI 生成式 Playable</a></li>
+<li class=""><a href="#applovin-sparklabs-oe-luna-labs-kinetix">三、代表案例：AppLovin SparkLabs / 腾讯广点通 / 字节 OE / Luna Labs / Kinetix</a></li>
+<li class=""><a href="#_2">四、&amp;rdquo;广告即游戏&amp;rdquo;的临界点</a></li>
+<li class=""><a href="#ai-5">五、可迁移到 AI 小游戏赛道的 5 条启示</a></li>
+<li class=""><a href="#insights">Insights</a></li>
+<li class="toc-h3"><a href="#a">A · 产品视角</a></li>
+<li class="toc-h3"><a href="#b">B · 技术视角</a></li>
+<li class="toc-h3"><a href="#c">C · 商业视角</a></li>
+<li class="toc-h3"><a href="#b-d">B · 风险视角（D)</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

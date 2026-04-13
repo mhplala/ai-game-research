@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="一句话判断 :">
+<title>B-投资机会 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class=" active" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/06-机会地图整合/index.html">机会地图整合</a> · B-投资机会</div><h1 id="06b-vc">06B. 投资机会 — 给一级市场 VC / 战投 / 二级研究员的赛道地图<a class="headerlink" href="#06b-vc" title="Permanent link">#</a></h1>
+<blockquote>
+<p><strong>视角</strong>:VC / 战略投资部 / 产业投资基金 / 二级市场研究员
+<strong>核心问题</strong>:&rdquo;这个赛道我该投什么？估值多少？退出路径怎么走？&rdquo;
+<strong>最后更新</strong>:2026-04-13</p>
+</blockquote>
+<hr />
+<h2 id="0-tldr-30">0. TL;DR（给投资人的 30 秒版本）<a class="headerlink" href="#0-tldr-30" title="Permanent link">#</a></h2>
+<p><strong>一句话判断</strong>:</p>
+<blockquote>
+<p><strong>&ldquo;2022-2023 的 C 端 AI-native 已过峰值，2024H2 起资本全面转向 B2B middleware 和 GPF 新物种 — 2025-2027 的三大主题是 GPF 创作工具 / AI NPC middleware / 端侧小模型 infra。</strong></p>
+<p><strong>关键警示：Character.AI $2.7B 技术授权是&rdquo;失败的成功退出&rdquo;，老股东实得远低 10x。纯 C 端 AI 陪伴独立 IPO 路径已关闭。</strong>&ldquo;</p>
+</blockquote>
+<p><strong>三大投资主题</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>时间窗</th>
+<th>阶段</th>
+<th>估值区间（典型）</th>
+<th>核心风险</th>
+<th>推荐度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T1. GPF 创作工具（中国版）</strong></td>
+<td>12-18 个月</td>
+<td>Seed-A</td>
+<td>$5-30M</td>
+<td>平台先发占位</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>T2. AI NPC middleware（中国版）</strong></td>
+<td>2 年</td>
+<td>Seed-B</td>
+<td>$10-50M</td>
+<td>海外 Inworld 先发</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>T3. 端侧小模型 × 游戏 infra</strong></td>
+<td>2-3 年</td>
+<td>Seed-A</td>
+<td>$5-20M</td>
+<td>时机早</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>T4. GPF 创作工具（海外）</strong></td>
+<td>已进行</td>
+<td>A-B</td>
+<td>$20-200M</td>
+<td>MWM / YouTube 抢</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>T5. AI-native 小而美 Indie</strong></td>
+<td>持续</td>
+<td>天使</td>
+<td>$1-5M</td>
+<td>筛选困难</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>T6. 纯 C 端 AI 陪伴独立公司</strong></td>
+<td><strong>已关闭</strong></td>
+<td>—</td>
+<td>—</td>
+<td>天花板 $20-40 LTV</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-2024h2">1. 赛道温度图：2024H2 分化<a class="headerlink" href="#1-2024h2" title="Permanent link">#</a></h2>
+<h3 id="2022-2026">资本流向（2022-2026)<a class="headerlink" href="#2022-2026" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>年</th>
+<th>AI-native 融资</th>
+<th>主要去向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2022</strong></td>
+<td>$200M+</td>
+<td>Character.AI / Inflection / Latitude / Replika</td>
+</tr>
+<tr>
+<td><strong>2023</strong></td>
+<td><strong>$450M 峰值</strong></td>
+<td>Inworld / Hidden Door / Altera / Rho / a16z Games 密集下注</td>
+</tr>
+<tr>
+<td><strong>2024 H1</strong></td>
+<td>~$250M</td>
+<td>主题仍在 C 端游戏，但开始看 middleware</td>
+</tr>
+<tr>
+<td><strong>2024 H2</strong></td>
+<td>~$150M（回落 30%)</td>
+<td><strong>全面转向 B2B middleware</strong></td>
+</tr>
+<tr>
+<td><strong>2025</strong></td>
+<td>预计 ~$300M</td>
+<td>middleware + GPF + 端侧 infra</td>
+</tr>
+</tbody>
+</table>
+<p><strong>资本逻辑</strong>：从&rdquo;我要做下一个 Blizzard&rdquo; → &ldquo;我要做下一个 Unity / Inworld / Adobe for Games&rdquo;</p>
+<h3 id="2024h2">2024H2 两大转折事件（投资人必读）<a class="headerlink" href="#2024h2" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p><strong>Character.AI → Google $2.7B 技术授权</strong>(2024.08)
+   - Shazeer + De Freitas 回流 Google
+   - 28M MAU 但 Token vs ARPDAU 跑不通
+   - <strong>a16z 实得远低 10x，这是一个失败的&rdquo;成功退出&rdquo;</strong>
+   - <strong>意义</strong>：定义了纯 C 端陪伴独立 IPO 路径关闭</p>
+</li>
+<li>
+<p><strong>Inflection → Microsoft $650M</strong>(2024.03)
+   - Suleyman 带队加入 MS
+   - <strong>同构 reverse acqui-hire</strong>
+   - <strong>意义</strong>:reverse acqui-hire 成为 AI 陪伴创业的唯一顶部出口</p>
+</li>
+</ol>
+<hr />
+<h2 id="2">2. 三大投资主题详细拆解<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<h3 id="t1-gpf">T1. GPF 创作工具（中国版）⭐⭐⭐⭐⭐ 最强推荐<a class="headerlink" href="#t1-gpf" title="Permanent link">#</a></h3>
+<p><strong>核心逻辑</strong>:
+- <strong>Pipeline-Creator 象限全球仅 7 家</strong>（模块 1.4 数据）
+- <strong>中国市场完全空白</strong>，只有字节 / 腾讯 / 快手在底层 SDK 层面有动作，<strong>没有终端 Creator 工具</strong>
+- <strong>12-18 个月窗口期</strong>，之后被 MWM / YouTube Playables Builder / Roblox 抢走
+- <strong>Pipeline AI 绕开 Token 经济学真空带</strong> → 唯一能在&rdquo;AI × 小游戏&rdquo;交集里真实赚钱的形态</p>
+<p><strong>海外对标</strong>:
+- <strong>Rezona / LoopIt</strong>(MWM.ai，法国 C 轮 $50M / ~200 员工）
+- <strong>YouTube Playables Builder</strong>(Google，平台级）
+- <strong>Upit / Jabali / Rosebud / Websim</strong>（小而多）</p>
+<p><strong>典型项目画像</strong>:
+- 团队：3-8 人（1-2 产品 + 2-3 LLM 工程 + 2-3 游戏引擎 + 1 社区运营）
+- 启动资金：<strong>¥500 万 - ¥1500 万</strong>(Seed)
+- 6-12 个月 MVP（抖音小游戏 / 微信小游戏 / H5)
+- 1-2 年冲 500 万 MAU
+- <strong>A 轮估值区间 $10-30M</strong></p>
+<p><strong>退出路径</strong>:
+- <strong>被字节 / 腾讯 / 快手收购</strong>（最可能，新业务缺口）
+- 海外 Series B 融资（Rezona 级别）
+- <strong>Google Playables Builder 海外上市后的联动并购</strong></p>
+<p><strong>风险与规避</strong>:
+- <strong>最大风险：字节 / 腾讯自己下场做同类产品</strong> → 规避：和豆包 / Hunyuan 深度绑定做生态位玩家，而非竞争者
+- 次大风险：平台政策变化（如微信小游戏禁止 UGC)→ 规避：多平台分发</p>
+<p><strong>投资推荐阶段</strong>:Seed 到 A 轮</p>
+<p><strong>值得关注的信号</strong>:
+- <strong>MWM.ai Rezona DAU 40 万</strong>（来自模块 06A agent 的发现）— 用这个作为中国版 GPF 的 PMF 参照</p>
+<h3 id="t2-ai-npc-middleware">T2. AI NPC Middleware（中国版）⭐⭐⭐⭐⭐<a class="headerlink" href="#t2-ai-npc-middleware" title="Permanent link">#</a></h3>
+<p><strong>核心逻辑</strong>:
+- 美国 Inworld AI <strong>估值 $500M+</strong> / 客户包括 Krafton / NetEase Miaozi / Niantic
+- 中国 Pipeline-Dev 象限<strong>除 rct AI 外几乎空白</strong>
+- 模块 3 G01（长时记忆）+ G02（人格一致性）+ G04(Token 成本）是<strong>所有 AI 游戏开发者的共同痛点</strong>
+- 中国 AAA 大厂（腾讯 / 网易 / 米哈游）需要 middleware 但买不到中文版</p>
+<p><strong>对标</strong>:
+- <strong>Inworld AI</strong>（美国，$500M,AAA 客户）
+- <strong>Convai</strong>（美国 $10M seed)
+- <strong>Series AI / Rho</strong>（美国 $28M Series A)
+- <strong>Kinetix</strong>（法国 AI 动作生成）
+- <strong>rct AI / Chaos Box</strong>（中国，转型中）</p>
+<p><strong>典型项目画像</strong>:
+- 团队：10-30 人（5-10 LLM 工程 + 3-5 游戏引擎 + 3-5 MLOps + BD + 医学&hellip; 啊不对 + 开发者关系）
+- 启动资金：<strong>¥1500 万 - ¥5000 万</strong>(Seed 到 A)
+- 核心产品：打包&rdquo;<strong>人设 + 记忆 + 声音 + 立绘 + 审核</strong>&ldquo;一站式 SDK
+- 18-24 个月拿到第一个 AAA 客户（腾讯光子 / 米哈游 / 网易）</p>
+<p><strong>退出路径</strong>:
+- 中国大厂收购（腾讯 / 字节 / 米哈游战投）
+- Series B 估值区间 <strong>$50-200M</strong>
+- 长期做到&rdquo;<strong>中国 Inworld</strong>&rdquo; 状态，$500M 估值</p>
+<p><strong>最值得投的角度</strong>:
+- 已有 rct AI 在转型，但<strong>尚未形成壁垒</strong>
+- 腾讯 Hunyuan Game 目前是 Lab 状态，<strong>没有产品化</strong>
+- <strong>3 年内 2-3 家中国 middleware 有机会跑出</strong> — 现在投的性价比最高</p>
+<h3 id="t3-infra">T3. 端侧小模型 × 游戏 infra ⭐⭐⭐⭐<a class="headerlink" href="#t3-infra" title="Permanent link">#</a></h3>
+<p><strong>核心逻辑</strong>:
+- Token 真空带的<strong>根本破法</strong> — 把 LLM 推理从云端搬到端侧，成本归零
+- Llama 3.2-3B / Qwen 2.5-3B / Phi-4-mini 已经能在手机端跑
+- WebGPU + Web LLM 已经能在浏览器里跑 ~100 tokens/sec
+- 2026 H2 是 Apple Intelligence SDK 广泛开放的关键节点</p>
+<p><strong>对标</strong>:
+- <strong>Web LLM</strong>(Chromium 生态）
+- <strong>Apple Core ML + MLX</strong>(Apple 生态）
+- <strong>Qualcomm AI Hub</strong>(Android 生态）
+- <strong>MLC LLM / llama.cpp WebGPU port</strong></p>
+<p><strong>典型项目</strong>:
+- <strong>&ldquo;Web LLM for Games&rdquo; infra 公司</strong>：为 Unity / Godot / Phaser / PixiJS 提供端侧 LLM SDK
+- <strong>&ldquo;Apple Intelligence for Game Dev&rdquo;</strong> 工具链
+- <strong>&ldquo;WebGPU Playable Engine&rdquo;</strong>：专门为 GPF / 小游戏优化的 WebGPU 游戏引擎</p>
+<p><strong>风险</strong>:
+- <strong>时机可能早 6-12 个月</strong>（端侧 3B 模型能力仍有限）
+- 平台（Apple / Google）可能自己做，把创业公司挤死</p>
+<p><strong>投资推荐</strong>：天使到 Seed，赌未来 24 个月</p>
+<h3 id="t4-gpf">T4. GPF 创作工具（海外）⭐⭐⭐<a class="headerlink" href="#t4-gpf" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Rezona / LoopIt</strong>(MWM.ai 已到 C 轮）</li>
+<li><strong>Upit</strong>（早期阶段）</li>
+<li><strong>Jabali.ai</strong>(Africa 团队，早期）</li>
+<li><strong>Rosebud AI</strong>(~$4M seed)</li>
+</ul>
+<p><strong>投资建议</strong>:MWM 已到后期，估值不便宜；Upit / Jabali / Rosebud 仍是 Seed 阶段值得小投。</p>
+<h3 id="t5-ai-native-indie">T5. AI-native 小而美 Indie（天使）⭐⭐⭐<a class="headerlink" href="#t5-ai-native-indie" title="Permanent link">#</a></h3>
+<p><strong>核心逻辑</strong>:<strong>Suck Up!</strong> &lt; 5 人团队 / Steam 爆款 / $9.99 买断证明&rdquo;<strong>小而美</strong>&ldquo;可跑通。<strong>Infinite Craft</strong> solo 零融资 Poki 现象级证明&rdquo;<strong>极简玩法 + 低频 LLM 调用 + 广告变现</strong>&ldquo;可跑通。</p>
+<p><strong>投资策略</strong>:
+- 单笔小额（$50-500K）天使投 10-20 个 team
+- 接受 80% 失败率，10% 回本，10% 翻 10 倍以上（一个 Suck Up! 级爆款就 cover 了）
+- <strong>筛选指标</strong>:team 背景（Steam 上架经验 / 独立开发者社区声誉）、Demo 可玩性</p>
+<h3 id="t6-c-ai">T6. 纯 C 端 AI 陪伴独立公司 ❌ 已关闭<a class="headerlink" href="#t6-c-ai" title="Permanent link">#</a></h3>
+<p><strong>为什么不投</strong>:
+- Character.AI $2.7B 技术授权 = a16z 实得远低 10x
+- Inflection $650M = 同构的失败退出
+- <strong>LTV 天花板 $20-40</strong>（被模块 4 数据证实）
+- <strong>情感 MMO 5-10% 付费率</strong>（模块 4）决定了总 TAM 不够大</p>
+<p><strong>例外</strong>：大厂内部项目 / 分拆（米哈游 Anuttacon 模式）可以考虑。</p>
+<hr />
+<h2 id="3">3. 区域投资地图<a class="headerlink" href="#3" title="Permanent link">#</a></h2>
+<h3 id="_1">美国<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>middleware 已是红海</strong>(Inworld 领跑，Convai / Rho 次席）— 晚期估值泡沫</li>
+<li><strong>新物种：GPF 创作工具</strong> 早期估值合理（Upit / Jabali / Rosebud)</li>
+<li><strong>端侧小模型 infra</strong> 早期</li>
+<li><strong>AI-native Indie</strong> 天使阶段</li>
+</ul>
+<p><strong>推荐</strong>：以 middleware 晚期收购 / Indie 天使为主</p>
+<h3 id="_2">中国<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>middleware 几乎空白</strong> — <strong>黄金赛道</strong>,2 年内 2-3 家跑出</li>
+<li><strong>GPF 创作工具 零玩家</strong> — <strong>金矿</strong>,12-18 个月窗口</li>
+<li><strong>AI 陪伴已有头部</strong>（星野 / 猫箱 / 筑梦岛）— 拼场景细分</li>
+<li><strong>AI-native Indie 生态弱</strong> — 相对难投</li>
+</ul>
+<p><strong>推荐</strong>：以 middleware 孵化 / GPF 创作工具 Seed 为主</p>
+<h3 id="_3">日本<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>AAA 内部工具化</strong>，不对外 — <strong>没有独立投资标的</strong></li>
+<li><strong>VN 土壤结构性锁死</strong> — 作者性和 IP 法务阻碍</li>
+<li>建议：<strong>不建议单独投日本</strong>，可作为美国项目的亚洲扩张节点</li>
+</ul>
+<h3 id="_4">韩国<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>4 大 Lab(MOGIA / VARCO / Nexon IL / Smilegate)</strong>都是大厂内部，不对外</li>
+<li><strong>ScatterLab Zeta / Luda</strong> 有独立投资可能</li>
+<li><strong>2026-2027 爆发窗口</strong> — 现在投可能早</li>
+</ul>
+<p><strong>推荐</strong>：关注 Zeta 等独立公司，或通过 Krafton 战投部合作</p>
+<hr />
+<h2 id="4-2025-q4">4. 融资轮次估值参考（2025 Q4)<a class="headerlink" href="#4-2025-q4" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>GPF 创作工具</th>
+<th>AI NPC middleware</th>
+<th>端侧 infra</th>
+<th>AI-native Indie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>种子（Seed)</strong></td>
+<td>$1-5M</td>
+<td>$3-10M</td>
+<td>$1-5M</td>
+<td>$0.5-2M</td>
+</tr>
+<tr>
+<td><strong>A 轮（Series A)</strong></td>
+<td>$10-30M</td>
+<td>$15-50M</td>
+<td>$10-30M</td>
+<td>$5-15M</td>
+</tr>
+<tr>
+<td><strong>B 轮（Series B)</strong></td>
+<td>$30-100M</td>
+<td>$50-200M</td>
+<td>$30-100M</td>
+<td>$20-50M</td>
+</tr>
+<tr>
+<td><strong>C 轮 / 退出</strong></td>
+<td>$100-500M(MWM 水平）</td>
+<td>$200-500M(Inworld 水平）</td>
+<td>较少案例</td>
+<td>$50-200M(Suck Up! 买断型）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>美元兑换人民币参考</strong>：以 7.3 估算。</p>
+<hr />
+<h2 id="5">5. 退出路径分析<a class="headerlink" href="#5" title="Permanent link">#</a></h2>
+<h3 id="_5">美国（模式成熟）<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>Acqui-hire</strong>(Character.AI / Inflection 模式）— 大厂买技术 + 人才</li>
+<li><strong>Strategic 并购</strong>（未来可能 Meta / Google / Microsoft 收 middleware)</li>
+<li><strong>Series B/C 大额融资后继续独立经营</strong>(Inworld 路径）</li>
+<li><strong>Steam 买断爆款</strong>(Suck Up! 这类不融资的纯现金流 model)</li>
+</ol>
+<h3 id="_6">中国（模式分化）<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>巨头收购</strong>（猫箱 → 字节、星野 → MiniMax）— 但被巨头内部合并，不是独立退出</li>
+<li><strong>IPO</strong> — <strong>基本不现实</strong>(AI 游戏 IPO 还没先例）</li>
+<li><strong>A 股借壳</strong> — 理论可行但实际罕见</li>
+<li><strong>卖给 A 股游戏公司</strong>（三七 / 巨人 / 完美 / 吉比特）— 可能性低</li>
+</ol>
+<h3 id="_7">警示：中国市场退出路径结构性缺失<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>美国有 reverse acqui-hire 顶部出口</strong>，中国没有</li>
+<li><strong>美国有 middleware $500M 估值先例</strong>(Inworld），中国无</li>
+<li><strong>中国头部 AI 产品（星野/猫箱）绑定巨头内生，没有独立上市</strong></li>
+<li>→ <strong>对中国 VC 而言，退出路径靠&rdquo;大厂收购&rdquo; 一条，流动性风险高</strong></li>
+</ul>
+<hr />
+<h2 id="6-2022-2025">6. 关键融资事件回顾（2022-2025)<a class="headerlink" href="#6-2022-2025" title="Permanent link">#</a></h2>
+<h3 id="2024">高价值退出（2024)<a class="headerlink" href="#2024" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>退出价</th>
+<th>投资人回报</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character.AI → Google</td>
+<td>$2.7B 技术授权</td>
+<td>a16z 远低 10x</td>
+<td><strong>失败的成功退出</strong></td>
+</tr>
+<tr>
+<td>Inflection → Microsoft</td>
+<td>$650M</td>
+<td>估值下降 50%</td>
+<td><strong>reverse acqui-hire 第一例</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2022-2024">中大额融资（2022-2024)<a class="headerlink" href="#2022-2024" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>融资</th>
+<th>领投</th>
+<th>当前状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character.AI</td>
+<td>~$1.5B</td>
+<td>a16z / Andreessen</td>
+<td>已退出（Google 授权）</td>
+</tr>
+<tr>
+<td>Inflection</td>
+<td>~$1.3B</td>
+<td>Microsoft / Nvidia</td>
+<td>已退出（Microsoft)</td>
+</tr>
+<tr>
+<td>Inworld AI</td>
+<td>~$120M+</td>
+<td>估值 $500M+</td>
+<td>领跑 middleware</td>
+</tr>
+<tr>
+<td>Series AI / Rho</td>
+<td>$28M Series A</td>
+<td>Bitkraft</td>
+<td>早期</td>
+</tr>
+<tr>
+<td>Hidden Door</td>
+<td>$20M Series A</td>
+<td>a16z</td>
+<td>2025 Q1 警告</td>
+</tr>
+<tr>
+<td>Altera</td>
+<td>$11M</td>
+<td>a16z + Eric Schmidt</td>
+<td>早期</td>
+</tr>
+<tr>
+<td>AI Dungeon / Latitude</td>
+<td>$3.3M Seed</td>
+<td>—</td>
+<td>萎缩</td>
+</tr>
+<tr>
+<td>MWM.ai</td>
+<td>$50M C 轮（2021)</td>
+<td>Blisce</td>
+<td>Rezona/LoopIt 推出</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2024h2_1">死亡名单（2024H2)<a class="headerlink" href="#2024h2_1" title="Permanent link">#</a></h3>
+<ul>
+<li>Fable → pivot SHOW-1</li>
+<li>Faulty → 关停</li>
+<li>Vibecheck → 关停</li>
+<li>Artie → 关停</li>
+<li>Dreamworld → 丑闻坐实</li>
+<li>Latitude / AI Dungeon → 萎缩</li>
+</ul>
+<hr />
+<h2 id="7-lp">7. 给 LP / 基金管理人的配置建议<a class="headerlink" href="#7-lp" title="Permanent link">#</a></h2>
+<h3 id="1-60">1 年内立刻配（60% 仓位）<a class="headerlink" href="#1-60" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>T1 GPF 中国版</strong> 1-2 个标的，共 2000-5000 万</li>
+<li><strong>T2 AI NPC middleware 中国版</strong> 1-2 个标的，共 3000-8000 万</li>
+<li><strong>T5 AI-native Indie</strong> 5-10 个天使，共 2000-5000 万</li>
+</ul>
+<h3 id="2-3-30">2-3 年布局（30% 仓位）<a class="headerlink" href="#2-3-30" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>T3 端侧小模型 infra</strong> 1-2 个标的</li>
+<li><strong>T4 GPF 海外</strong> 1-2 个标的（Upit / Jabali / Rosebud 等 Seed)</li>
+<li><strong>Krafton MOGIA 模式跨境合作</strong> 1 个</li>
+</ul>
+<h3 id="10">观察不投（10%)<a class="headerlink" href="#10" title="Permanent link">#</a></h3>
+<ul>
+<li>纯 C 端 AI 陪伴</li>
+<li>AAA AI NPC 工具（等 Inworld 格局明朗）</li>
+<li>日本 Galgame × AI（结构性锁死）</li>
+</ul>
+<hr />
+<h2 id="8">8. 风险清单<a class="headerlink" href="#8" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>影响</th>
+<th>规避</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPF 窗口期 12-18 个月被大厂抢</strong></td>
+<td>T1 主题失效</td>
+<td>投 Seed 阶段，让团队快速打造护城河（社区 / 创作者关系）</td>
+</tr>
+<tr>
+<td><strong>中国 middleware 被海外 Inworld 中国代理挤压</strong></td>
+<td>T2 主题竞争加剧</td>
+<td>中文优先 + 深度定制 + 本地服务</td>
+</tr>
+<tr>
+<td><strong>端侧小模型成熟晚</strong></td>
+<td>T3 早 6-12 个月</td>
+<td>小额天使，可接受 1 年等待</td>
+</tr>
+<tr>
+<td><strong>Character.AI 式退出成为主流</strong></td>
+<td>整体倍数下降</td>
+<td>接受 3-5x 作为基准，抛弃 10x+ 预期</td>
+</tr>
+<tr>
+<td><strong>中国退出路径一条（&rdquo;大厂收购&rdquo;)</strong></td>
+<td>流动性风险</td>
+<td>提前和字节 / 腾讯 / 米哈游战投建立关系</td>
+</tr>
+<tr>
+<td><strong>监管突变</strong>（欧盟 AI Act / 中国 AI 备案收紧）</td>
+<td>特定子赛道冲击</td>
+<td>投资合规优先的公司</td>
+</tr>
+<tr>
+<td><strong>Character.AI 未成年人案判决</strong>(Garcia v. Character Technologies)</td>
+<td>AI 陪伴监管重塑</td>
+<td>避开 14 岁以下用户类产品</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9">9. 给二级市场研究员的相关上市公司<a class="headerlink" href="#9" title="Permanent link">#</a></h2>
+<h3 id="a">A 股（中国）<a class="headerlink" href="#a" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>三七互娱</strong>(002555）— 寻道大千案例，AI 买量已应用</li>
+<li><strong>恺英网络</strong>(002517）— 小游戏买量</li>
+<li><strong>完美世界</strong>(002624）— 传统 MMO AI NPC 尝试</li>
+<li><strong>吉比特</strong>(603444）— 放置游戏为主</li>
+<li><strong>世纪华通</strong>(002602）— 点点互动母公司，无尽冬日</li>
+</ul>
+<h3 id="_8">港股<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>腾讯控股</strong>(0700）— Hunyuan Game / 微信小游戏</li>
+<li><strong>网易</strong>(9999）— 逆水寒 AI NPC / Miaozi × Inworld</li>
+<li><strong>心动公司</strong>(2400）— TapTap / 独立游戏</li>
+</ul>
+<h3 id="_9">美股<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Microsoft</strong>(MSFT）— Inflection 收购</li>
+<li><strong>Alphabet</strong>(GOOGL）— Character.AI 技术授权 + YouTube Playables Builder</li>
+<li><strong>Meta</strong>(META）— Horizon AI / Facebook Instant Games</li>
+<li><strong>Roblox</strong>(RBLX）— 潜在 GPF 平台化玩家 + 2024 Roblox Assistant</li>
+<li><strong>Unity</strong>(U）— 游戏引擎 AI 工具</li>
+<li><strong>AppLovin</strong>(APP）— Playable Ads + AI 生成</li>
+</ul>
+<h3 id="_10">韩股<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Krafton</strong>(259960.KS）— MOGIA</li>
+<li><strong>Nexon</strong>(3659.T）— Intelligence Labs</li>
+<li><strong>NCSoft</strong>(036570.KS）— VARCO LLM / Project G</li>
+</ul>
+<hr />
+<h2 id="10_1">10. 来源与引用<a class="headerlink" href="#10_1" title="Permanent link">#</a></h2>
+<p>本文件主要引用自：
+- 修订后主命题（PROGRESS.md 全局命题更新）
+- 模块 1.2 市场规模与增速（融资曲线数据）
+- 模块 1.4 玩家全景图（92 家 + 双刀象限 + Pipeline-Creator 中国零玩家）
+- 模块 2.2 美国市场（Character.AI / Inflection 退出 + 死亡潮）
+- 模块 2.4 跨区域综合（退出模式分化）
+- 模块 2.5 GPF 品类定义 + Rezona/LoopIt/YouTube PB
+- 模块 3 G06 Token 倒挂 / G10 LTV $100 天花板
+- 模块 4 Replika Churn / 情感 MMO 5-10% 付费</p>
+<hr />
+<h2 id="11-gaps">11. Gaps<a class="headerlink" href="#11-gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>Inworld AI 最新估值和收入数据</strong>(2025 Q4)</li>
+<li><strong>MWM Rezona / LoopIt 真实 DAU / 月活 / 付费率</strong>（黑箱）</li>
+<li><strong>Krafton 投资 Inworld 的具体金额和条款</strong>（两者合作细节未公开）</li>
+<li><strong>中国战投部对 AI 游戏赛道的实际出手频次</strong>（字节战投 / 腾讯投资部 / 米哈游战投等）</li>
+<li><strong>端侧小模型 infra 创业公司的量化指标</strong>（当前都在早期）</li>
+</ol>
+<hr />
+<p><strong>本文件与 A 产品机会 / C 行业趋势 / D 战略进入路径 互补，共同构成模块 06 的四视角整合。</strong></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#0-tldr-30">0. TL;DR（给投资人的 30 秒版本）</a></li>
+<li class=""><a href="#1-2024h2">1. 赛道温度图：2024H2 分化</a></li>
+<li class="toc-h3"><a href="#2022-2026">资本流向（2022-2026)</a></li>
+<li class="toc-h3"><a href="#2024h2">2024H2 两大转折事件（投资人必读）</a></li>
+<li class=""><a href="#2">2. 三大投资主题详细拆解</a></li>
+<li class="toc-h3"><a href="#t1-gpf">T1. GPF 创作工具（中国版）⭐⭐⭐⭐⭐ 最强推荐</a></li>
+<li class="toc-h3"><a href="#t2-ai-npc-middleware">T2. AI NPC Middleware（中国版）⭐⭐⭐⭐⭐</a></li>
+<li class="toc-h3"><a href="#t3-infra">T3. 端侧小模型 × 游戏 infra ⭐⭐⭐⭐</a></li>
+<li class="toc-h3"><a href="#t4-gpf">T4. GPF 创作工具（海外）⭐⭐⭐</a></li>
+<li class="toc-h3"><a href="#t5-ai-native-indie">T5. AI-native 小而美 Indie（天使）⭐⭐⭐</a></li>
+<li class="toc-h3"><a href="#t6-c-ai">T6. 纯 C 端 AI 陪伴独立公司 ❌ 已关闭</a></li>
+<li class=""><a href="#3">3. 区域投资地图</a></li>
+<li class="toc-h3"><a href="#_1">美国</a></li>
+<li class="toc-h3"><a href="#_2">中国</a></li>
+<li class="toc-h3"><a href="#_3">日本</a></li>
+<li class="toc-h3"><a href="#_4">韩国</a></li>
+<li class=""><a href="#4-2025-q4">4. 融资轮次估值参考（2025 Q4)</a></li>
+<li class=""><a href="#5">5. 退出路径分析</a></li>
+<li class="toc-h3"><a href="#_5">美国（模式成熟）</a></li>
+<li class="toc-h3"><a href="#_6">中国（模式分化）</a></li>
+<li class="toc-h3"><a href="#_7">警示：中国市场退出路径结构性缺失</a></li>
+<li class=""><a href="#6-2022-2025">6. 关键融资事件回顾（2022-2025)</a></li>
+<li class="toc-h3"><a href="#2024">高价值退出（2024)</a></li>
+<li class="toc-h3"><a href="#2022-2024">中大额融资（2022-2024)</a></li>
+<li class="toc-h3"><a href="#2024h2_1">死亡名单（2024H2)</a></li>
+<li class=""><a href="#7-lp">7. 给 LP / 基金管理人的配置建议</a></li>
+<li class="toc-h3"><a href="#1-60">1 年内立刻配（60% 仓位）</a></li>
+<li class="toc-h3"><a href="#2-3-30">2-3 年布局（30% 仓位）</a></li>
+<li class="toc-h3"><a href="#10">观察不投（10%)</a></li>
+<li class=""><a href="#8">8. 风险清单</a></li>
+<li class=""><a href="#9">9. 给二级市场研究员的相关上市公司</a></li>
+<li class="toc-h3"><a href="#a">A 股（中国）</a></li>
+<li class="toc-h3"><a href="#_8">港股</a></li>
+<li class="toc-h3"><a href="#_9">美股</a></li>
+<li class="toc-h3"><a href="#_10">韩股</a></li>
+<li class=""><a href="#10_1">10. 来源与引用</a></li>
+<li class=""><a href="#11-gaps">11. Gaps</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

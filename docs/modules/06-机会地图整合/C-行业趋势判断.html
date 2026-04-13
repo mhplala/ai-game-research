@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="一句话判断 :">
+<title>C-行业趋势判断 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class=" active" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/06-机会地图整合/index.html">机会地图整合</a> · C-行业趋势判断</div><h1 id="06c">06C. 行业趋势判断 — 给行业从业者 / 观察者 / 媒体人的深度观察<a class="headerlink" href="#06c" title="Permanent link">#</a></h1>
+<blockquote>
+<p><strong>视角</strong>：游戏公司中层 / 市场营销人 / 媒体人 / 研究员 / 独立观察者
+<strong>核心问题</strong>:&rdquo;这个赛道到底在发生什么？我怎么跟上？&rdquo;
+<strong>最后更新</strong>:2026-04-13</p>
+</blockquote>
+<hr />
+<h2 id="0-tldr-30">0. TL;DR（给行业从业者的 30 秒版本）<a class="headerlink" href="#0-tldr-30" title="Permanent link">#</a></h2>
+<p><strong>一句话判断</strong>:</p>
+<blockquote>
+<p><strong>&ldquo;2022-2024 是 AI 游戏的第一次泡沫 + 破灭，2024H2 资本集体从 C 端 AI-native 转向 B2B middleware 和 GPF 新物种。未来 24 个月的主线不是&rsquo;更好的 AI 陪伴&rsquo;，而是&rsquo;Pipeline AI + UGC Feed&rsquo; 破 Token 经济学真空带。&rdquo;</strong></p>
+</blockquote>
+<hr />
+<h2 id="1-2022-2026">1. 赛道演变时间线（2022-2026)<a class="headerlink" href="#1-2022-2026" title="Permanent link">#</a></h2>
+<div class="codehilite"><pre><span></span><code>2022 春   ChatGPT 3.5 发布 → AI 游戏 &quot;首次觉醒&quot;
+          AI Dungeon (2019) 从 GPT-2 升级到 GPT-3.5
+
+2022 秋   Character.AI 上线(Shazeer + De Freitas 从 Google 出走)
+          AI 陪伴品类正式成立
+
+2023 春   Inflection / Character.AI 大额融资
+          a16z / Bitkraft 密集下注
+
+2023 夏   Inworld AI $50M+ → 估值 $500M+,AAA 合作起来
+          Hidden Door $20M Series A(a16z)
+          Altera $11M(a16z + Eric Schmidt)
+
+2023 秋   VC AI-native 游戏年累计融资 ~$450M(峰值)
+
+2024 初   AI Dungeon 萎缩 / Suck Up! 独立爆款 / 1001 Nights / Infinite Craft
+          独立开发者模式浮现,与 VC 模式分化
+
+2024.03   ⭐ Inflection → Microsoft $650M(reverse acqui-hire 第一例)
+          Suleyman 带队加入 MS
+
+2024.08   ⭐ Character.AI → Google $2.7B 技术授权
+          Shazeer + De Freitas 回流 Google
+          a16z 实得远低 10x(赛道顶部退出信号)
+
+2024 Q3-Q4  死亡潮:Fable / Faulty / Vibecheck / Artie / Dreamworld / Latitude 萎缩
+          VC 全面转向 B2B middleware
+
+2024 H2   Krafton MOGIA 成立(2024.06)
+          NCSoft VARCO / Nexon Intelligence Labs 加码
+
+2025.01   Steam AI 内容披露政策发布
+          AI 披露游戏从 1000 款涨到 8000+
+
+2025.03   ⭐ Krafton inZOI Smart Zoi EA 发布(东亚首个 AAA Runtime AI)
+
+2025.08   ⭐ Anuttacon Whispers from the Star Steam 发布
+          中国首个挂&quot;游戏&quot;名的 AI-native(团队注册美国)
+
+2025 Q3-Q4  ⭐ Rezona(MWM.ai)/ LoopIt 发布 / YouTube Playables Builder
+          GPF(Generative Playable Feed)新物种浮现
+
+2025.11   Whispers from the Star iOS 上线
+
+2026 ?     GPF 第一波洗牌?中国版 GPF 能否出现?
+          Apple Intelligence SDK 进一步开放?
+          YouTube Playables Builder 平台化?
+</code></pre></div>
+
+<hr />
+<h2 id="2">2. 三大行业级趋势<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<h3 id="t1">T1. 从 &ldquo;自己淘金&rdquo; 到 &ldquo;卖铲子给淘金者&rdquo;<a class="headerlink" href="#t1" title="Permanent link">#</a></h3>
+<p><strong>2022-2023</strong>：大家都下场做 AI-native C 端游戏（AI Dungeon / Character.AI / Hidden Door / Fable / Altera / Latitude)</p>
+<p><strong>2024 H2 拐点</strong>:C 端陪伴天花板被 Character.AI $2.7B 定义（a16z 远低 10x 回报）+ C 端游戏死亡潮（Fable / Faulty / Vibecheck / Artie / Dreamworld)</p>
+<p><strong>2025</strong>：资本集体转向 <strong>B2B middleware</strong>(Inworld / Convai / Rho Series AI / Rosebud / Kinetix / Scenario)</p>
+<p><strong>意义</strong>：这是一个典型的 &ldquo;<strong>淘金热 → 卖铲子</strong>&rdquo; 周期。中国市场还没完成这个转向（Pipeline-Dev 象限除了 rct AI 几乎空白），<strong>有 1-2 年窗口做中国版 Inworld</strong>。</p>
+<h3 id="t2">T2. &ldquo;游戏性定义权脱离&rdquo;<a class="headerlink" href="#t2" title="Permanent link">#</a></h3>
+<p><strong>现象</strong>:Character.AI / Replika / 猫箱 / 星野 / Duolingo Max / Midjourney Discord — 这些产品都<strong>不把自己叫游戏</strong>，但用户行为（日均时长 / 付费心理 / compulsion loop）与游戏完全同构。</p>
+<p><strong>原因</strong>:
+- <strong>绕苹果税</strong>：非游戏类目分成 15% vs 游戏类目 30%
+- <strong>绕中国版号</strong>：游戏需要版号，陪伴/工具不需要（虽然 AI 备案变严）
+- <strong>订阅制 ARPU 高</strong>：订阅比 IAP 高 3-5 倍（Replika Pro Churn &lt; 3%)
+- <strong>规避游戏监管风险</strong>：欧盟 AI Act / 中国未成年人保护法等对游戏更严</p>
+<p><strong>意义</strong>:&rdquo;<strong>游戏性的定义权已经从游戏行业脱离</strong>&ldquo;（模块 5 的锋利判断）。未来 2-3 年，很多最赚钱的&rdquo;准游戏&rdquo;产品将正式拒绝&rdquo;游戏&rdquo; 标签。</p>
+<h3 id="t3-pipeline-ai-ugc">T3. Pipeline AI × UGC 浮现为 &ldquo;真空带&rdquo; 的正确答案<a class="headerlink" href="#t3-pipeline-ai-ugc" title="Permanent link">#</a></h3>
+<p><strong>现象</strong>(2025 年）：
+- <strong>Rezona</strong> / <strong>LoopIt</strong>(MWM.ai)/ <strong>YouTube Playables Builder</strong>(Google)/ <strong>Upit</strong> / <strong>Jabali.ai</strong> / <strong>Rosebud AI</strong> / <strong>Websim</strong> — 一整批产品<strong>在同一个时间点</strong>出现
+- 它们都是 &ldquo;<strong>用户用 AI 生成 playable → TikTok 式 feed 消费 → 一键 remix</strong>&rdquo; 的同构模型</p>
+<p><strong>精确命名</strong>（来自模块 2.5):<strong>Generative Playable Feed(GPF)</strong>
+- <strong>Generative</strong>（创作端 AI)
+- <strong>Playable</strong>（可互动产物）
+- <strong>Feed</strong>(TikTok 式消费端）</p>
+<p><strong>经济学机制</strong>:
+- AI 只在创作时调用一次（~$0.1-0.5），静态化
+- 玩家玩 100 次不用再调 AI(Runtime 成本 = 0)
+- TikTok 式 feed 让 CAC 趋零（UGC 飞轮）
+- <strong>根本性绕过 Token 经济学真空带</strong></p>
+<p><strong>意义</strong>：这可能是 <strong>&ldquo;AI × 小游戏&rdquo; 真空带的唯一正确答案</strong>。</p>
+<hr />
+<h2 id="3-vs">3. 行业&rdquo;炒概念&rdquo; vs &ldquo;真趋势&rdquo; 辨别清单<a class="headerlink" href="#3-vs" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>判定</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&ldquo;AI 驱动的 NPC 革命 AAA&rdquo;</strong></td>
+<td>炒作</td>
+<td>逆水寒 AI NPC 反面案例：10 万条对话后发现反刍设定；除 inZOI 外没有明星产品</td>
+</tr>
+<tr>
+<td><strong>&ldquo;AI 女友会取代真人&rdquo;</strong></td>
+<td>炒作</td>
+<td>Character.AI 天花板 $2.7B = a16z 远低 10x，纯 C 端陪伴已证伪</td>
+</tr>
+<tr>
+<td><strong>&ldquo;AI 生成内容会让游戏开发白菜价&rdquo;</strong></td>
+<td>半炒半真</td>
+<td>Pipeline-Dev 工具真实降成本，但还不足以颠覆 AAA 开发成本结构</td>
+</tr>
+<tr>
+<td><strong>&ldquo;Token 成本明年会降 10 倍&rdquo;</strong></td>
+<td><strong>有据</strong></td>
+<td>GPT-4o → GPT-4o mini 一年降了 10 倍，仍在继续</td>
+</tr>
+<tr>
+<td><strong>&ldquo;端侧小模型会破真空带&rdquo;</strong></td>
+<td><strong>有据但早</strong></td>
+<td>Apple Intelligence / Qwen 3B / Phi-4-mini 在路上，2026 H2 成熟</td>
+</tr>
+<tr>
+<td><strong>&ldquo;UGC playable 是 AI 时代的 Roblox&rdquo;</strong></td>
+<td><strong>强判断</strong></td>
+<td>2025 年 Rezona/LoopIt/YouTube PB 同时冒出不是巧合</td>
+</tr>
+<tr>
+<td><strong>&ldquo;Hidden Door 那种 AI 多人 RP 有大市场&rdquo;</strong></td>
+<td>炒作</td>
+<td>Hidden Door 2025 Q1 传缩编，a16z $20M 烧完后方向不清</td>
+</tr>
+<tr>
+<td><strong>&ldquo;Inworld middleware 稳赢&rdquo;</strong></td>
+<td>半真</td>
+<td>估值 $500M 但客户深度有限，Krafton 是唯一 AAA 成功案例</td>
+</tr>
+<tr>
+<td><strong>&ldquo;Character.AI 被 Google 收购等于胜利&rdquo;</strong></td>
+<td><strong>错</strong></td>
+<td>reverse acqui-hire 是失败的&rdquo;成功退出&rdquo;，老股东亏钱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4. 行业洗牌：谁在赢 / 谁在输 / 谁在观望<a class="headerlink" href="#4" title="Permanent link">#</a></h2>
+<h3 id="2024-2025">正在赢（2024-2025)<a class="headerlink" href="#2024-2025" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>Inworld AI</strong> — middleware 领跑，Krafton 投资，AAA 客户</li>
+<li><strong>Character.AI</strong> — 28M MAU 峰值然后卖给 Google（表面赢，实质出局）</li>
+<li><strong>星野</strong>(MiniMax）— 中国 AI 陪伴跑通，2024 流水 &gt; 3 亿</li>
+<li><strong>猫箱</strong>（字节）— DAU 百万，归属豆包家族</li>
+<li><strong>Krafton MOGIA + inZOI Smart Zoi</strong> — 东亚大厂唯一 Runtime AI 首次跑通</li>
+<li><strong>Suck Up!</strong>(Proxima Enterprises）— 独立爆款，&lt; 5 人团队，Steam 买断 $9.99</li>
+<li><strong>Infinite Craft</strong>(Neal Agarwal）— solo 零融资 Poki 现象级</li>
+<li><strong>Rezona / LoopIt</strong>(MWM.ai）— GPF 新品类定义者之一</li>
+<li><strong>YouTube Playables Builder</strong>(Google）— 平台级降维打击的潜在赢家</li>
+</ol>
+<h3 id="2024-2025_1">正在输（2024-2025)<a class="headerlink" href="#2024-2025_1" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>AI Dungeon / Latitude</strong> — 2021 NSFW 事件后萎缩，GenAI 游戏鼻祖掉队</li>
+<li><strong>Hidden Door</strong> — $20M 烧后 2025 Q1 传缩编</li>
+<li><strong>Fable / Faulty / Vibecheck / Artie / Dreamworld</strong> — 2024H2 死亡潮</li>
+<li><strong>Inflection / Pi</strong> — $1.3B 估值 → $650M 卖给 MS，不是胜利是失败</li>
+<li><strong>逆水寒 AI NPC</strong>（网易）— AI-washed 的反面案例，被玩家识破</li>
+<li><strong>Glow</strong>(MiniMax 前身）— 下架，中国 AI 陪伴鼻祖</li>
+<li><strong>日本 Cotomo / Rinna</strong> — 被 VTuber 挤占，半年下滑 DAU ~10 万</li>
+<li><strong>字节 PICO 嘘嘘岛</strong> — 停摆</li>
+</ol>
+<h3 id="_1">正在观望 / 延后爆发<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>NCSoft VARCO / Nexon Intelligence Labs / Smilegate FutureLab AI</strong> — 4 大韩国 Lab 但 2026-2027 才爆</li>
+<li><strong>Square Enix / Capcom / Bandai Namco</strong> — 日本 AAA 内部工具化，不对外</li>
+<li><strong>字节跳动（PICO / 抖音小游戏 AI)</strong> — 大象缓慢转身</li>
+<li><strong>腾讯 Hunyuan Game</strong> — Lab 状态，没有明星产品</li>
+<li><strong>Meta Horizon AI</strong> — VR + AI 但 VR 本身不火</li>
+<li><strong>米哈游 Anuttacon</strong> — Whispers from the Star 2025.11 刚出，评估中</li>
+<li><strong>Apple Intelligence 游戏应用</strong> — 待 SDK 开放</li>
+</ol>
+<h3 id="_2">新物种（最值得关注）<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>Rezona</strong>(MWM.ai）— &ldquo;最离谱的 meme 游戏平台&rdquo;,iOS+Android</li>
+<li><strong>LoopIt</strong>(MWM.ai）— &ldquo;触感互动玩具&rdquo;</li>
+<li><strong>YouTube Playables Builder</strong>(Google）— 平台级</li>
+<li><strong>Upit</strong> — Build games with AI</li>
+<li><strong>Rosebud AI</strong> — no-code 游戏生成</li>
+<li><strong>Jabali.ai</strong> — Africa 团队的 AI 游戏创作工具</li>
+<li><strong>Websim</strong> — browser-native AI 生成</li>
+</ol>
+<hr />
+<h2 id="5-4">5. 行业内部的 4 个反直觉事实<a class="headerlink" href="#5-4" title="Permanent link">#</a></h2>
+<h3 id="1">反直觉 1：玩家心理瓶颈比技术瓶颈更严重<a class="headerlink" href="#1" title="Permanent link">#</a></h3>
+<p><strong>数据</strong>:Replika Pro Churn &lt; 3%/月（接近 Netflix）但<strong>退坑的最强触发器不是无聊</strong>，是 &ldquo;<strong>人格漂移</strong>&rdquo; 导致的 <strong>grief（哀伤）反应</strong>（模块 4.4)</p>
+<p><strong>意义</strong>:A/B 测试 / filter 更新 / 上下文截断在 AI 游戏里是<strong>有毒的</strong> — 传统互联网实验文化需要被<strong>抛弃</strong>。大厂的产品文化必须改变才能做好 AI 游戏。</p>
+<h3 id="2-ltv-20-40">反直觉 2：纯陪伴 LTV 天花板只有 $20-40<a class="headerlink" href="#2-ltv-20-40" title="Permanent link">#</a></h3>
+<p><strong>数据</strong>:Character.AI $2.7B 谷歌授权，但 a16z 实得远低 10x,MAU 28M 但转化不够</p>
+<p><strong>意义</strong>:&rdquo;AI 陪伴&rdquo;作为独立商业模式<strong>存在天花板</strong>，除非转型为 B2B(middleware 路径）或进入情感 MMO 小众（5-10% 付费）模式。</p>
+<h3 id="3ai">反直觉 3:AI 游戏的留存曲线不是&rdquo;三消曲线&rdquo;<a class="headerlink" href="#3ai" title="Permanent link">#</a></h3>
+<p><strong>数据</strong>:AI 游戏 D1/D7 高（新奇感），但 D7-D30 断崖式下跌，D30 之后<strong>反而高于传统小游戏</strong>（筛选出的情感投入用户）</p>
+<p><strong>意义</strong>:<strong>传统 D1/D7 KPI 会系统性误导 AI 游戏产品决策</strong>。AI 游戏应该用 D30/D90 作为主 KPI。</p>
+<h3 id="4-gpf">反直觉 4：中国的&rdquo;版号压力&rdquo;意外成为 GPF 的催化剂<a class="headerlink" href="#4-gpf" title="Permanent link">#</a></h3>
+<p><strong>数据</strong>：量子绘梦 Anuttacon 团队注册美国 / 星野 / 猫箱 / 筑梦岛 全部不在游戏分类下</p>
+<p><strong>意义</strong>:<strong>中国版号制度倒逼了&rdquo;游戏性定义权脱离&rdquo;</strong> — 这是中国独有的&rdquo;监管反向助推创新&rdquo;模式。GPF 在中国的最终形态可能是&rdquo;<strong>一个不自称游戏的 AI 生成 playable 平台</strong>&ldquo;，反而因此绕开版号。</p>
+<hr />
+<h2 id="6-5">6. 给行业媒体 / 研究员的 5 条&rdquo;追什么&rdquo;建议<a class="headerlink" href="#6-5" title="Permanent link">#</a></h2>
+<h3 id="1-token">1. <strong>Token 经济学</strong> 是唯一真正重要的数字<a class="headerlink" href="#1-token" title="Permanent link">#</a></h3>
+<p>别的指标都是干扰。盯紧 GPT-4o-mini / Gemini Flash / Claude Haiku 的 pricing 变化，每次下降都会打开一个子赛道。</p>
+<h3 id="2-gpf-12-24">2. <strong>GPF 窗口期</strong>(12-24 个月）<a class="headerlink" href="#2-gpf-12-24" title="Permanent link">#</a></h3>
+<p>Rezona / LoopIt / YouTube Playables Builder / Upit 的月活 / 留存 / 商业化数据如果 2026 年底之前没出来，这个赛道就是泡沫。</p>
+<h3 id="3-ai">3. <strong>中国版号和 AI 备案</strong> 的具体政策演变<a class="headerlink" href="#3-ai" title="Permanent link">#</a></h3>
+<p>2024 年 AI 备案制度开始严格执行，但 &ldquo;AI 游戏&rdquo; 的边界还没划清。任何 AI 游戏公司都受这个影响。</p>
+<h3 id="4-apple-intelligence-sdk">4. <strong>Apple Intelligence SDK 对游戏开发者的开放</strong><a class="headerlink" href="#4-apple-intelligence-sdk" title="Permanent link">#</a></h3>
+<p>这是&rdquo;端侧小模型 × 小游戏&rdquo;的关键时间节点。iOS 游戏 + Apple Intelligence 可能是 2026 的大事件。</p>
+<h3 id="5-krafton-mogia-inzoi-smart-zoi">5. <strong>Krafton MOGIA + inZOI Smart Zoi 的商业验证</strong><a class="headerlink" href="#5-krafton-mogia-inzoi-smart-zoi" title="Permanent link">#</a></h3>
+<p>它是东亚唯一跑通 Runtime AI AAA 的案例。2026 年 EA 阶段的用户反馈 / 数据 / 销量将决定这条路径是否可复制。</p>
+<hr />
+<h2 id="7-3">7. 本赛道的 3 个&rdquo;假命题&rdquo; 警示<a class="headerlink" href="#7-3" title="Permanent link">#</a></h2>
+<h3 id="1ai-10">假命题 1:&rdquo;AI 会让游戏开发成本降 10 倍&rdquo;<a class="headerlink" href="#1ai-10" title="Permanent link">#</a></h3>
+<p><strong>真相</strong>:AI 降的是<strong>美术素材 / 对话脚本 / 买量创意</strong>成本（Pipeline-Dev），但游戏开发的<strong>设计 / 代码 / 运营</strong> 成本没降。顶级游戏（原神 / GTA）的 AI 含量仍然极低。</p>
+<h3 id="2ai">假命题 2:&rdquo;AI 陪伴会颠覆人类关系&rdquo;<a class="headerlink" href="#2ai" title="Permanent link">#</a></h3>
+<p><strong>真相</strong>:Character.AI / Replika 的用户自述<strong>都很清楚 AI 是 AI</strong>，他们要的不是真人替代，而是&rdquo;<strong>无压力、低门槛、随时在线</strong>&ldquo;的互动对象。这和&rdquo;人际替代论&rdquo;完全不同。</p>
+<h3 id="3ai_1">假命题 3:&rdquo;AI 游戏会把小游戏开发变成人人可做&rdquo;<a class="headerlink" href="#3ai_1" title="Permanent link">#</a></h3>
+<p><strong>真相</strong>:GPF(Rezona/LoopIt) 做的是<strong>简单 playable</strong>，不是完整游戏。想做真游戏还是需要专业开发者。GPF 更接近&rdquo;<strong>AI 时代的表情包 meme</strong>&ldquo;，而不是&rdquo;AI 时代的 Unity&rdquo;。</p>
+<hr />
+<h2 id="8-2">8. 本赛道的 2 个&rdquo;真命题&rdquo; 判断<a class="headerlink" href="#8-2" title="Permanent link">#</a></h2>
+<h3 id="1-2-ai-c-b2b-gpf">真命题 1:&rdquo;未来 2 年，AI 游戏的主角不是 C 端游戏本身，是 B2B 工具 + GPF 新物种&rdquo;<a class="headerlink" href="#1-2-ai-c-b2b-gpf" title="Permanent link">#</a></h3>
+<p><strong>证据</strong>:
+- 资本从 C 端转向 B2B（模块 1.2:2024 AI-native 融资回落 30%,middleware 崛起）
+- GPF 新物种 2025 Q3-Q4 集中涌现（模块 2.5)
+- Character.AI / Inflection 两个头部 C 端退出定义天花板</p>
+<h3 id="2-ai">真命题 2:&rdquo;中国的 AI 游戏创新会通过&rsquo;不叫游戏&rsquo;的产品实现&rdquo;<a class="headerlink" href="#2-ai" title="Permanent link">#</a></h3>
+<p><strong>证据</strong>:
+- 星野 / 猫箱 / 筑梦岛 全部藏在陪伴品类
+- Anuttacon 团队注册美国
+- 版号制度 + 情感消费 + 女性三四线用户 = 独特的扭曲力
+- 中国 GPF 版如果出现，一定不叫游戏，叫&rdquo;AI 创作玩具&rdquo;或&rdquo;AI 互动 meme&rdquo;或类似</p>
+<hr />
+<h2 id="9">9. 来源与引用<a class="headerlink" href="#9" title="Permanent link">#</a></h2>
+<p>本文件综合 Phase 1-3 的全部模块，特别重引用：
+- 模块 1.1 AI 可移除性刀 + AI 存在位置双刀分类
+- 模块 1.2 市场规模 / 融资曲线
+- 模块 1.4 玩家全景图 92 家 / 双刀象限统计
+- 模块 2.1-2.3 中美日韩区域差异
+- 模块 2.4 跨区域综合 5 条迁移路径
+- 模块 2.5 GPF 新品类定义
+- 模块 3 18 条 GAP 清单
+- 模块 4 玩家心理学反直觉洞察
+- 模块 5 游戏性定义权脱离
+- PROGRESS.md 全局闭环叙事</p>
+<hr />
+<h2 id="10-gaps">10. Gaps（行业观察的盲区）<a class="headerlink" href="#10-gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>中国大厂内部 AI 游戏 R&amp;D 进展</strong> — 字节 / 腾讯 / 米哈游的真实内部数据</li>
+<li><strong>Apple Intelligence SDK 的游戏开放时间表</strong></li>
+<li><strong>YouTube Playables Builder 的实际用户量</strong></li>
+<li><strong>日本 Galgame 中型厂商的 AI 动作</strong>(Marvelous / FuRyu / Key / Visual Arts)</li>
+<li><strong>印度 / 东南亚 / 拉美</strong> 市场的 AI 游戏动作（本研究只覆盖中美日韩欧）</li>
+<li><strong>Character.AI → Google 授权</strong> 后 a16z 实际回报倍数</li>
+<li><strong>端侧小模型</strong>的性能 benchmark（在真实游戏 session 中的表现）</li>
+</ol>
+<hr />
+<p><strong>本文件与 A 产品机会 / B 投资机会 / D 战略进入路径 互补，共同构成模块 06 的四视角整合。</strong></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#0-tldr-30">0. TL;DR（给行业从业者的 30 秒版本）</a></li>
+<li class=""><a href="#1-2022-2026">1. 赛道演变时间线（2022-2026)</a></li>
+<li class=""><a href="#2">2. 三大行业级趋势</a></li>
+<li class="toc-h3"><a href="#t1">T1. 从 &amp;ldquo;自己淘金&amp;rdquo; 到 &amp;ldquo;卖铲子给淘金者&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#t2">T2. &amp;ldquo;游戏性定义权脱离&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#t3-pipeline-ai-ugc">T3. Pipeline AI × UGC 浮现为 &amp;ldquo;真空带&amp;rdquo; 的正确答案</a></li>
+<li class=""><a href="#3-vs">3. 行业&amp;rdquo;炒概念&amp;rdquo; vs &amp;ldquo;真趋势&amp;rdquo; 辨别清单</a></li>
+<li class=""><a href="#4">4. 行业洗牌：谁在赢 / 谁在输 / 谁在观望</a></li>
+<li class="toc-h3"><a href="#2024-2025">正在赢（2024-2025)</a></li>
+<li class="toc-h3"><a href="#2024-2025_1">正在输（2024-2025)</a></li>
+<li class="toc-h3"><a href="#_1">正在观望 / 延后爆发</a></li>
+<li class="toc-h3"><a href="#_2">新物种（最值得关注）</a></li>
+<li class=""><a href="#5-4">5. 行业内部的 4 个反直觉事实</a></li>
+<li class="toc-h3"><a href="#1">反直觉 1：玩家心理瓶颈比技术瓶颈更严重</a></li>
+<li class="toc-h3"><a href="#2-ltv-20-40">反直觉 2：纯陪伴 LTV 天花板只有 $20-40</a></li>
+<li class="toc-h3"><a href="#3ai">反直觉 3:AI 游戏的留存曲线不是&amp;rdquo;三消曲线&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#4-gpf">反直觉 4：中国的&amp;rdquo;版号压力&amp;rdquo;意外成为 GPF 的催化剂</a></li>
+<li class=""><a href="#6-5">6. 给行业媒体 / 研究员的 5 条&amp;rdquo;追什么&amp;rdquo;建议</a></li>
+<li class="toc-h3"><a href="#1-token">1. Token 经济学 是唯一真正重要的数字</a></li>
+<li class="toc-h3"><a href="#2-gpf-12-24">2. GPF 窗口期(12-24 个月）</a></li>
+<li class="toc-h3"><a href="#3-ai">3. 中国版号和 AI 备案 的具体政策演变</a></li>
+<li class="toc-h3"><a href="#4-apple-intelligence-sdk">4. Apple Intelligence SDK 对游戏开发者的开放</a></li>
+<li class="toc-h3"><a href="#5-krafton-mogia-inzoi-smart-zoi">5. Krafton MOGIA + inZOI Smart Zoi 的商业验证</a></li>
+<li class=""><a href="#7-3">7. 本赛道的 3 个&amp;rdquo;假命题&amp;rdquo; 警示</a></li>
+<li class="toc-h3"><a href="#1ai-10">假命题 1:&amp;rdquo;AI 会让游戏开发成本降 10 倍&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#2ai">假命题 2:&amp;rdquo;AI 陪伴会颠覆人类关系&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#3ai_1">假命题 3:&amp;rdquo;AI 游戏会把小游戏开发变成人人可做&amp;rdquo;</a></li>
+<li class=""><a href="#8-2">8. 本赛道的 2 个&amp;rdquo;真命题&amp;rdquo; 判断</a></li>
+<li class="toc-h3"><a href="#1-2-ai-c-b2b-gpf">真命题 1:&amp;rdquo;未来 2 年，AI 游戏的主角不是 C 端游戏本身，是 B2B 工具 + GPF 新物种&amp;rdquo;</a></li>
+<li class="toc-h3"><a href="#2-ai">真命题 2:&amp;rdquo;中国的 AI 游戏创新会通过&amp;rsquo;不叫游戏&amp;rsquo;的产品实现&amp;rdquo;</a></li>
+<li class=""><a href="#9">9. 来源与引用</a></li>
+<li class=""><a href="#10-gaps">10. Gaps（行业观察的盲区）</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

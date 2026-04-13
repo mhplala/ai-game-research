@@ -1,0 +1,1858 @@
+[
+  {
+    "obj": {
+      "file": "research-plan.md",
+      "name": "research-plan",
+      "bytes": 9588,
+      "word_count": 1923,
+      "cjk_chars": 1660,
+      "ascii_words": 263,
+      "sent_count": 136,
+      "avg_sent_len": 36.0,
+      "para_count": 59,
+      "h1": 1,
+      "h2": 11,
+      "h3": 12,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 3,
+      "list_items": 57,
+      "bold_count": 40,
+      "five_sections": 2,
+      "has_facts": true,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": false,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 7,
+      "sharpness": 8,
+      "actionability": 9,
+      "top_strengths": [
+        "研究结构极其清晰，模块化设计利于执行",
+        "多视角服务目标读者，洞察输出全面",
+        "AI 工具链与安全网设计周密，保障项目质量"
+      ],
+      "top_issues": [
+        "信息源策略中，对“低”优先级来源的利用方式需更明确，避免主观偏差。",
+        "“技术栈与可行性GAP”模块，需更具体地说明如何识别“市场期待”。",
+        "“安全网设计”中，关键数字/品牌关键词库的构建方法可更详尽。"
+      ],
+      "missing_facts": [
+        "缺乏对AI小游戏/Playable体验赛道早期（2018-2021）萌芽期案例的提及。",
+        "未明确提及对用户隐私、数据安全及AI伦理在游戏中的考量。",
+        "缺少对Web3/区块链技术与AI游戏结合的潜在影响分析。"
+      ],
+      "one_line_verdict": "一份极为专业和全面的研究方案，结构严谨，执行路径清晰，有望产出高质量报告。",
+      "_usage": {
+        "promptTokenCount": 3365,
+        "candidatesTokenCount": 317,
+        "totalTokenCount": 3682,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3365
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "01-赛道现状与市场结构/1.1-赛道定义与边界.md",
+      "name": "1.1-赛道定义与边界",
+      "bytes": 26069,
+      "word_count": 5330,
+      "cjk_chars": 4189,
+      "ascii_words": 1141,
+      "sent_count": 229,
+      "avg_sent_len": 63.6,
+      "para_count": 54,
+      "h1": 1,
+      "h2": 7,
+      "h3": 11,
+      "h4": 4,
+      "citations": 36,
+      "citation_density": 6.75,
+      "tables": 4,
+      "list_items": 73,
+      "bold_count": 138,
+      "five_sections": 5,
+      "has_facts": true,
+      "has_summary": true,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "赛道边界定义清晰且具创新性",
+        "时间线梳理精准，洞察深刻",
+        "多视角分析（PM/投资人/大厂）"
+      ],
+      "top_issues": [
+        "“AI 小游戏”的经济学模型估算需前置",
+        "中国 AI 陪伴类 App 数据缺失严重，需补足",
+        "对 Character.AI / Replika 游戏属性的争议需更深入探讨"
+      ],
+      "missing_facts": [
+        "AI 小游戏每个 DAU 的 LLM 成本 vs 单日 IAA 收入比值",
+        "微信小游戏 TOP200 中 AI-native 作品的具体案例及数据",
+        "中国 AI 陪伴类 App（Glow/星野等）的 MAU、ARPU、留存数据"
+      ],
+      "one_line_verdict": "一份结构严谨、洞察锋利、边界定义清晰的赛道研究报告，为后续深入分析奠定坚实基础。",
+      "_usage": {
+        "promptTokenCount": 8788,
+        "candidatesTokenCount": 297,
+        "totalTokenCount": 9085,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 8788
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "01-赛道现状与市场结构/1.2-市场规模与增速.md",
+      "name": "1.2-市场规模与增速",
+      "bytes": 12834,
+      "word_count": 2472,
+      "cjk_chars": 2009,
+      "ascii_words": 463,
+      "sent_count": 125,
+      "avg_sent_len": 63.0,
+      "para_count": 39,
+      "h1": 1,
+      "h2": 5,
+      "h3": 12,
+      "h4": 0,
+      "citations": 44,
+      "citation_density": 17.8,
+      "tables": 11,
+      "list_items": 24,
+      "bold_count": 30,
+      "five_sections": 5,
+      "has_facts": true,
+      "has_summary": true,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 7,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "数据表格详尽，结构清晰，易于查阅。",
+        "洞察部分视角多元，观点有深度和前瞻性。",
+        "对中美市场差异的分析精准到位。"
+      ],
+      "top_issues": [
+        "部分核心数据来源为“二手”或“估算”，影响置信度，建议明确估算方法。",
+        "AI 游戏融资数据缺乏更细致的分类（如按应用场景），影响洞察颗粒度。",
+        "Gaps 部分应更具体地提出如何弥补数据缺失的行动方案。"
+      ],
+      "missing_facts": [
+        "中国小游戏用户画像、付费习惯及 LTV 数据。",
+        "海外 Playable Ads 在非休闲游戏领域的应用案例及效果数据。",
+        "AI 游戏在用户留存、付费转化等核心指标上的表现数据。"
+      ],
+      "one_line_verdict": "一份结构严谨、数据丰富、洞察深刻的市场报告，虽有数据来源瑕疵，但整体质量上乘，具备高参考价值。",
+      "_usage": {
+        "promptTokenCount": 5316,
+        "candidatesTokenCount": 304,
+        "totalTokenCount": 5620,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5316
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "01-赛道现状与市场结构/1.3-平台格局.md",
+      "name": "1.3-平台格局",
+      "bytes": 14852,
+      "word_count": 3206,
+      "cjk_chars": 2649,
+      "ascii_words": 557,
+      "sent_count": 194,
+      "avg_sent_len": 42.5,
+      "para_count": 58,
+      "h1": 1,
+      "h2": 8,
+      "h3": 13,
+      "h4": 12,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 6,
+      "list_items": 72,
+      "bold_count": 121,
+      "five_sections": 3,
+      "has_facts": true,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，易于理解",
+        "数据丰富，细节具体，支撑有力",
+        "洞察深刻，对各方参与者有明确建议"
+      ],
+      "top_issues": [
+        "部分数据来源未在文中直接标注，影响即时验证",
+        "“待验证”部分可更聚焦于核心判断的风险点",
+        "对小红书等新兴平台的分析可更深入，而非仅停留在“非正式”"
+      ],
+      "missing_facts": [
+        "中国超级App小游戏用户画像与重叠度数据",
+        "海外Web/Instant Games平台的用户留存率数据",
+        "AI游戏在不同平台的用户付费意愿差异数据"
+      ],
+      "one_line_verdict": "一份结构严谨、数据翔实、洞察深刻的平台格局分析，为商业决策提供有力支撑。",
+      "_usage": {
+        "promptTokenCount": 5223,
+        "candidatesTokenCount": 271,
+        "totalTokenCount": 5494,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5223
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "01-赛道现状与市场结构/1.4-玩家全景图.md",
+      "name": "1.4-玩家全景图",
+      "bytes": 30737,
+      "word_count": 5818,
+      "cjk_chars": 4027,
+      "ascii_words": 1791,
+      "sent_count": 276,
+      "avg_sent_len": 77.2,
+      "para_count": 70,
+      "h1": 1,
+      "h2": 7,
+      "h3": 22,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 31,
+      "list_items": 8,
+      "bold_count": 64,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "数据详实，覆盖面广，结构化清晰。",
+        "洞察深刻，尤其对“Token 经济学真空带”的揭示。",
+        "对中美日韩节奏差的分析精准，具有前瞻性。"
+      ],
+      "top_issues": [
+        "“Pipeline AI for Creator 占位”部分信息过少，建议补充关键产品细节。",
+        "“Gaps”部分提及的未来数据（如 inZOI 销量）应在报告更新时及时补齐。",
+        "部分产品状态描述（如 Character.AI 的“准退出”）略显模糊，可更明确。"
+      ],
+      "missing_facts": [
+        "Character.AI 退出后的具体用户留存和营收变化数据。",
+        "Hidden Door 缩编后的具体业务调整和产品方向。",
+        "欧洲除 MWM 和 Embark 外，缺乏更多 AI 游戏玩家的案例。"
+      ],
+      "one_line_verdict": "一份高质量、洞察深刻的市场全景报告，数据详实且分析锋利，对赛道演变有极强的预判性。",
+      "_usage": {
+        "promptTokenCount": 11440,
+        "candidatesTokenCount": 317,
+        "totalTokenCount": 11757,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 11440
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "02-产品与玩法前沿/2.1-中国市场.md",
+      "name": "2.1-中国市场",
+      "bytes": 13477,
+      "word_count": 3070,
+      "cjk_chars": 2689,
+      "ascii_words": 381,
+      "sent_count": 106,
+      "avg_sent_len": 67.9,
+      "para_count": 36,
+      "h1": 1,
+      "h2": 5,
+      "h3": 9,
+      "h4": 0,
+      "citations": 29,
+      "citation_density": 9.45,
+      "tables": 7,
+      "list_items": 19,
+      "bold_count": 74,
+      "five_sections": 5,
+      "has_facts": true,
+      "has_summary": true,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "分类清晰，案例丰富，数据密度高。",
+        "洞察锋利，尤其对“非游戏化游戏”和“战略真空”的判断。",
+        "结构严谨，从事实到总结再到多视角洞察，逻辑流畅。"
+      ],
+      "top_issues": [
+        "部分数据来源未官方披露，精确性有待进一步交叉验证。",
+        "“可移除性分类”在部分案例中略显主观，可增加判断依据。",
+        "Gaps 部分应明确后续如何填补，增加可执行性。"
+      ],
+      "missing_facts": [
+        "AI 陪伴产品用户留存率（次日、7日、30日）。",
+        "AI 陪伴产品用户画像中，不同年龄段和地域的付费差异。",
+        "平台方（微信/抖音）对 AI 游戏/小游戏的具体扶持政策细节。"
+      ],
+      "one_line_verdict": "一份高质量的中国 AI 游戏市场研究，事实密度高，洞察犀利，对行业趋势判断精准，具有很强的战略参考价值。",
+      "_usage": {
+        "promptTokenCount": 4912,
+        "candidatesTokenCount": 315,
+        "totalTokenCount": 5227,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4912
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "02-产品与玩法前沿/2.2-美国市场.md",
+      "name": "2.2-美国市场",
+      "bytes": 18120,
+      "word_count": 3533,
+      "cjk_chars": 2452,
+      "ascii_words": 1081,
+      "sent_count": 156,
+      "avg_sent_len": 77.6,
+      "para_count": 51,
+      "h1": 1,
+      "h2": 5,
+      "h3": 8,
+      "h4": 5,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 12,
+      "list_items": 22,
+      "bold_count": 117,
+      "five_sections": 5,
+      "has_facts": true,
+      "has_summary": true,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 7,
+      "top_strengths": [
+        "事实密度高，数据引用具体且有来源",
+        "洞察锋利，尤其对资本退出和产品经济学有反共识判断",
+        "结构清晰，从事实到总结再到洞察层层递进"
+      ],
+      "top_issues": [
+        "部分推断缺乏直接数据支撑，需在Gaps中明确列出并尝试补充",
+        "对“AI可移除性刀”的量化标准和应用需更严谨，避免主观判断",
+        "“行动建议”部分略显不足，可进一步提炼对品牌方的策略启示"
+      ],
+      "missing_facts": [
+        "C端AI-native游戏（如Hidden Door）的DAU/留存数据",
+        "Character.AI的月度Token成本估算",
+        "Steam上AI披露游戏商业成功率的具体数据"
+      ],
+      "one_line_verdict": "一份高质量、洞察深刻的美国AI游戏市场报告，对资本和产品逻辑的分析尤为出色，但部分数据黑箱仍待填补。",
+      "_usage": {
+        "promptTokenCount": 6585,
+        "candidatesTokenCount": 312,
+        "totalTokenCount": 6897,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6585
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "02-产品与玩法前沿/2.3-日韩市场.md",
+      "name": "2.3-日韩市场",
+      "bytes": 22432,
+      "word_count": 5370,
+      "cjk_chars": 4595,
+      "ascii_words": 775,
+      "sent_count": 156,
+      "avg_sent_len": 73.7,
+      "para_count": 59,
+      "h1": 1,
+      "h2": 5,
+      "h3": 16,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 1,
+      "list_items": 57,
+      "bold_count": 81,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，论点支撑充分。",
+        "横向比较维度全面，洞察力强。",
+        "对日韩市场差异的归因深刻且具原创性。"
+      ],
+      "top_issues": [
+        "Krafton MOGIA 财务贡献数据缺失，影响量化分析。",
+        "日本中型发行商（尤其Galgame主力厂）AI动向覆盖不足。",
+        "部分案例（如hololive）AI应用描述略显宽泛，可更聚焦游戏相关。"
+      ],
+      "missing_facts": [
+        "Krafton MOGIA 团队具体预算、项目投入与财务回报数据。",
+        "日本 Visual Arts / Key 等 Galgame 主力厂商对 AI 的具体态度和尝试。",
+        "日本 CyberAgent Extreme AI 广告业务的具体营收或增长数据。"
+      ],
+      "one_line_verdict": "一份高质量的日韩市场AI游戏报告，结构严谨，洞察深刻，但部分数据与中型厂商覆盖仍有提升空间。",
+      "_usage": {
+        "promptTokenCount": 6759,
+        "candidatesTokenCount": 300,
+        "totalTokenCount": 7059,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6759
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "02-产品与玩法前沿/2.4-跨区域趋势综合.md",
+      "name": "2.4-跨区域趋势综合",
+      "bytes": 25712,
+      "word_count": 5725,
+      "cjk_chars": 4785,
+      "ascii_words": 940,
+      "sent_count": 296,
+      "avg_sent_len": 48.9,
+      "para_count": 111,
+      "h1": 1,
+      "h2": 11,
+      "h3": 22,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 7,
+      "list_items": 95,
+      "bold_count": 273,
+      "five_sections": 4,
+      "has_facts": false,
+      "has_summary": true,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "结构清晰，论点明确，逻辑严谨。",
+        "洞察锋利，提出“经济学真空带”等反共识判断。",
+        "对不同区域市场画像精准，战略建议具可执行性。"
+      ],
+      "top_issues": [
+        "“游戏壳 ≠ 游戏”路径描述过于简略，缺乏具体案例支撑，应扩充。",
+        "对“UGC AI Playable Maker”路径的商业化瓶颈分析可更深入，如盈利模式探讨。",
+        "部分数据（如补贴金额、团队规模）缺失，影响报告严谨性，建议明确标注为估算或待核实。"
+      ],
+      "missing_facts": [
+        "“游戏壳 ≠ 游戏”路径中，除星野/猫箱外，缺乏其他区域或更细分品类的具体案例。",
+        "豆包/Hunyuan/可灵对小游戏开发者的具体补贴机制或金额数据。",
+        "Rezona/LoopIt等UGC AI Playable Maker的早期商业化数据或盈利模式探索。"
+      ],
+      "one_line_verdict": "一份结构严谨、洞察锋利、极具战略指导意义的跨区域趋势报告，对“AI×小游戏”真空带的分析尤为出色。",
+      "_usage": {
+        "promptTokenCount": 8399,
+        "candidatesTokenCount": 355,
+        "totalTokenCount": 8754,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 8399
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.md",
+      "name": "2.5-UGC-AI-Playable-Maker",
+      "bytes": 20645,
+      "word_count": 4503,
+      "cjk_chars": 3674,
+      "ascii_words": 829,
+      "sent_count": 255,
+      "avg_sent_len": 44.2,
+      "para_count": 75,
+      "h1": 1,
+      "h2": 5,
+      "h3": 19,
+      "h4": 19,
+      "citations": 31,
+      "citation_density": 6.88,
+      "tables": 1,
+      "list_items": 123,
+      "bold_count": 43,
+      "five_sections": 5,
+      "has_facts": true,
+      "has_summary": true,
+      "has_insights": true,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "品类定义精准，命名“GPF”具前瞻性",
+        "经济学分析透彻，Pipeline AI洞察犀利",
+        "风险与死亡场景分析全面且具警示性"
+      ],
+      "top_issues": [
+        "核心运营数据缺失，影响经济学论证的严谨性",
+        "中国市场案例分析较弱，缺乏具体产品佐证",
+        "变现模式探讨不够深入，需提出更具创新性的方案"
+      ],
+      "missing_facts": [
+        "Rezona/LoopIt的MAU/DAU/留存数据",
+        "MWM旗下产品广告eCPM数据",
+        "YouTube Playables Builder的AI能力边界与开放策略"
+      ],
+      "one_line_verdict": "一份对新兴AI社交化游戏品类GPF的深度报告，洞察犀利，结构清晰，但核心数据缺失影响论证力度。",
+      "_usage": {
+        "promptTokenCount": 6729,
+        "candidatesTokenCount": 279,
+        "totalTokenCount": 7008,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6729
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "03-技术栈与可行性GAP/3.1-现有技术栈能力.md",
+      "name": "3.1-现有技术栈能力",
+      "bytes": 9596,
+      "word_count": 2134,
+      "cjk_chars": 1818,
+      "ascii_words": 316,
+      "sent_count": 104,
+      "avg_sent_len": 49.8,
+      "para_count": 36,
+      "h1": 1,
+      "h2": 5,
+      "h3": 6,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 2,
+      "list_items": 32,
+      "bold_count": 41,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 9,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "数据详实，引用来源权威且具体",
+        "约束条件清晰，评估维度务实",
+        "洞察深刻，直指商业瓶颈与大厂策略"
+      ],
+      "top_issues": [
+        "部分表格数据未注明时间点，影响时效性判断",
+        "对国内模型（如DeepSeek）的评估略显单薄，可增加更多维度",
+        "“待解决问题”可更具体化，例如给出调研方向或初步假设"
+      ],
+      "missing_facts": [
+        "国内小游戏平台（微信/字节）对AI内容审核的具体政策与案例",
+        "AI小游戏在不同国家/地区的合规性差异（如数据隐私）",
+        "除LLM外，其他AI技术（如CV）在小游戏中的具体应用案例与成本"
+      ],
+      "one_line_verdict": "一份高质量的技术栈能力评估，数据详实，洞察深刻，为小游戏AI化提供了坚实的决策基础。",
+      "_usage": {
+        "promptTokenCount": 3520,
+        "candidatesTokenCount": 296,
+        "totalTokenCount": 3816,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3520
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "03-技术栈与可行性GAP/3.2-市场期待清单.md",
+      "name": "3.2-市场期待清单",
+      "bytes": 7842,
+      "word_count": 1826,
+      "cjk_chars": 1596,
+      "ascii_words": 230,
+      "sent_count": 86,
+      "avg_sent_len": 45.2,
+      "para_count": 27,
+      "h1": 1,
+      "h2": 5,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 19,
+      "bold_count": 50,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，易于理解。",
+        "多角色视角全面，洞察深入且有数据支撑。",
+        "语言精炼，信息密度高，符合商业报告风格。"
+      ],
+      "top_issues": [
+        "玩家付费上限的调研数据缺失，影响商业决策精度。",
+        "投资人具体出手规模和阶段分布不够细化，需补充。",
+        "大厂自研与采购边界的判断，需更多访谈数据支持。"
+      ],
+      "missing_facts": [
+        "玩家对AI陪伴的实际付费意愿（具体金额区间）的量化调研数据。",
+        "投资机构在AI游戏领域的平均单笔投资额和投资阶段分布。",
+        "大厂（如腾讯、字节）内部对AI工具采购与自研的成本效益分析案例。"
+      ],
+      "one_line_verdict": "一份结构严谨、视角全面、洞察深刻的市场期待清单，为后续GAP分析提供了扎实输入。",
+      "_usage": {
+        "promptTokenCount": 2718,
+        "candidatesTokenCount": 291,
+        "totalTokenCount": 3009,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2718
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "03-技术栈与可行性GAP/3.3-真实GAP清单.md",
+      "name": "3.3-真实GAP清单",
+      "bytes": 8247,
+      "word_count": 2007,
+      "cjk_chars": 1708,
+      "ascii_words": 299,
+      "sent_count": 111,
+      "avg_sent_len": 37.2,
+      "para_count": 42,
+      "h1": 1,
+      "h2": 5,
+      "h3": 5,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 4,
+      "list_items": 9,
+      "bold_count": 41,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 9,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，易于理解",
+        "GAP 识别精准，分类细致且有优先级",
+        "多视角洞察深刻，直接指向决策"
+      ],
+      "top_issues": [
+        "部分数据来源未直接引用，影响严谨性",
+        "对中国特色 GAP 的解决方案探讨不足",
+        "部分 S2/S3 GAP 的商业影响量化可更具体"
+      ],
+      "missing_facts": [
+        "G01 中 RAG+vector DB 方案的实际成本与主流供应商对比",
+        "G06 中 ARPDAU 数据的具体来源与行业平均水平对比",
+        "G10 中 Suck Up!、AI Dungeon、Character.ai LTV 数据的具体来源与计算方法"
+      ],
+      "one_line_verdict": "一份高质量的 GAP 分析报告，结构严谨、洞察深刻，为后续策略制定提供了坚实基础。",
+      "_usage": {
+        "promptTokenCount": 3043,
+        "candidatesTokenCount": 281,
+        "totalTokenCount": 3324,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3043
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "03-技术栈与可行性GAP/3.4-机会识别.md",
+      "name": "3.4-机会识别",
+      "bytes": 8266,
+      "word_count": 2015,
+      "cjk_chars": 1754,
+      "ascii_words": 261,
+      "sent_count": 117,
+      "avg_sent_len": 34.2,
+      "para_count": 41,
+      "h1": 1,
+      "h2": 5,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 38,
+      "bold_count": 46,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 7,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，层层递进。",
+        "机会识别框架独特，结合了可行性、差异度、时间窗。",
+        "对创业、投资、大厂视角切分精准，洞察深刻。"
+      ],
+      "top_issues": [
+        "部分机会的收入模型和规模测算缺失，影响决策依据。",
+        "案例数据点略显单薄，可增加更多量化数据支撑。",
+        "对“GAP时间表”的论证可更深入，例如具体技术进展预测。"
+      ],
+      "missing_facts": [
+        "每个机会点的潜在市场规模（TAM/SAM/SOM）估算。",
+        "大厂收购创业公司的历史案例及价格区间。",
+        "更多关于WebGPU、小模型能力进化的具体技术里程碑。"
+      ],
+      "one_line_verdict": "一份高质量的市场机会识别报告，框架严谨，洞察锋利，为不同角色提供了清晰的行动指引。",
+      "_usage": {
+        "promptTokenCount": 2970,
+        "candidatesTokenCount": 289,
+        "totalTokenCount": 3259,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2970
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "04-玩家行为与留存心理/4.1-付费心理与Token经济学.md",
+      "name": "4.1-付费心理与Token经济学",
+      "bytes": 9647,
+      "word_count": 2354,
+      "cjk_chars": 2106,
+      "ascii_words": 248,
+      "sent_count": 107,
+      "avg_sent_len": 43.9,
+      "para_count": 38,
+      "h1": 1,
+      "h2": 6,
+      "h3": 10,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 3,
+      "list_items": 20,
+      "bold_count": 38,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 7,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "问题界定精准，切入点独特",
+        "“关系付费”与“算力订阅”区分深刻",
+        "创业者与投资人视角建议极具价值"
+      ],
+      "top_issues": [
+        "部分数据来源标注不够严谨，影响可信度",
+        "“情感投入”心理机制的理论深度可再加强",
+        "对“Token通胀”与“降智”的量化分析不足"
+      ],
+      "missing_facts": [
+        "Character.AI c.ai+ 订阅转化率的官方或第三方数据",
+        "Replika Pro 用户留存率（Churn Rate）的具体数据",
+        "AI Dungeon 各档位订阅用户的具体画像与行为数据"
+      ],
+      "one_line_verdict": "一份洞察深刻、结构清晰的报告，对AI游戏订阅模式的心理与经济学分析极具启发性，对创业者和投资人有很强的指导意义。",
+      "_usage": {
+        "promptTokenCount": 3182,
+        "candidatesTokenCount": 286,
+        "totalTokenCount": 3468,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3182
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "04-玩家行为与留存心理/4.2-留存曲线特征.md",
+      "name": "4.2-留存曲线特征",
+      "bytes": 10684,
+      "word_count": 2618,
+      "cjk_chars": 2382,
+      "ascii_words": 236,
+      "sent_count": 125,
+      "avg_sent_len": 40.3,
+      "para_count": 42,
+      "h1": 1,
+      "h2": 6,
+      "h3": 12,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 1,
+      "list_items": 42,
+      "bold_count": 53,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "对AI游戏留存曲线的精准分段与心理机制剖析",
+        "提出“关系门槛”与“关系留存”的核心洞察",
+        "给出了具体的创业者和投资人行动建议"
+      ],
+      "top_issues": [
+        "“关系门槛”的量化指标和具体转化路径可更细化",
+        "对AI游戏付费模式与留存的关联分析可更深入",
+        "缺乏对不同AI游戏品类（如工具型、陪伴型）留存差异的探讨"
+      ],
+      "missing_facts": [
+        "缺乏AI游戏用户生命周期价值（LTV）的具体测算案例",
+        "缺少AI游戏用户流失原因的定性研究数据（如用户访谈）",
+        "未提及AI模型迭代对留存曲线的具体影响案例"
+      ],
+      "one_line_verdict": "一份对AI游戏留存曲线分析深刻、洞察锋利、且极具实操指导价值的专业报告。",
+      "_usage": {
+        "promptTokenCount": 3552,
+        "candidatesTokenCount": 298,
+        "totalTokenCount": 3850,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3552
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.md",
+      "name": "4.3-情感依恋与AI_NPC",
+      "bytes": 11714,
+      "word_count": 2932,
+      "cjk_chars": 2663,
+      "ascii_words": 269,
+      "sent_count": 134,
+      "avg_sent_len": 40.6,
+      "para_count": 49,
+      "h1": 1,
+      "h2": 6,
+      "h3": 16,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 49,
+      "bold_count": 46,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 9,
+      "top_strengths": [
+        "理论框架扎实，跨学科整合能力强",
+        "案例分析深入，现象学观察敏锐",
+        "设计杠杆与创业者启示具高度可操作性"
+      ],
+      "top_issues": [
+        "伦理风险部分可更深入探讨应对策略，而非仅警示",
+        "“情感机制的设计杠杆”部分可增加负面案例分析",
+        "“AI Dungeon”部分与主线关联性略弱，可精简或更紧密结合"
+      ],
+      "missing_facts": [
+        "缺乏AI NPC情感依恋对用户现实社交影响的量化数据",
+        "缺少Character.AI在2024年测试主动性功能的具体进展或数据",
+        "未提及AI NPC情感设计中可能遇到的技术瓶颈（如算力、模型大小）"
+      ],
+      "one_line_verdict": "一份高质量的AI NPC情感依恋研究，理论与实践结合紧密，对商业决策有极高参考价值。",
+      "_usage": {
+        "promptTokenCount": 3522,
+        "candidatesTokenCount": 297,
+        "totalTokenCount": 3819,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3522
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.md",
+      "name": "4.4-退坑模式与长期留存难题",
+      "bytes": 14055,
+      "word_count": 3589,
+      "cjk_chars": 3330,
+      "ascii_words": 259,
+      "sent_count": 157,
+      "avg_sent_len": 39.2,
+      "para_count": 35,
+      "h1": 1,
+      "h2": 6,
+      "h3": 9,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 1,
+      "list_items": 54,
+      "bold_count": 85,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "退坑模式分类清晰，洞察深刻",
+        "对策建议具体，可操作性强",
+        "多视角分析全面，富有启发性"
+      ],
+      "top_issues": [
+        "部分案例的量化数据可进一步补充，增强说服力",
+        "对策部分可增加优先级排序或成本效益分析",
+        "“回流路径”的对策可更具体化，例如产品功能设计"
+      ],
+      "missing_facts": [
+        "各退坑模式在不同产品类型（如角色扮演 vs. 陪伴）中的具体占比数据。",
+        "不同市场（如中日韩）对AI陪伴污名化的量化差异数据或案例。",
+        "“关系门槛”的具体定义和衡量指标，以及如何触发的详细产品设计案例。"
+      ],
+      "one_line_verdict": "一份对AI游戏退坑模式分析透彻、对策建议极具价值的报告，为产品运营和战略决策提供了坚实基础。",
+      "_usage": {
+        "promptTokenCount": 4256,
+        "candidatesTokenCount": 295,
+        "totalTokenCount": 4551,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4256
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "05-跨品类启发/5.1-广告与游戏.md",
+      "name": "5.1-广告与游戏",
+      "bytes": 7836,
+      "word_count": 1934,
+      "cjk_chars": 1724,
+      "ascii_words": 210,
+      "sent_count": 67,
+      "avg_sent_len": 58.0,
+      "para_count": 26,
+      "h1": 1,
+      "h2": 6,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 4,
+      "bold_count": 37,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "赛道定义精准，演变路径清晰。",
+        "数据引用具体，支撑力强。",
+        "启示与洞察具有高度可操作性。"
+      ],
+      "top_issues": [
+        "“B · 风险视角（D)” 标题编号错误，应修正。",
+        "部分 AI 工具的实际技术细节可再深入，如LLM在代码合成上的具体挑战。",
+        "对中国市场（广点通、字节）的案例分析可更深入，与海外案例形成对比。"
+      ],
+      "missing_facts": [
+        "缺乏对 AI 生成 Playable 在不同广告平台（如Google UAC）表现的具体数据对比。",
+        "缺少对 Playable Ads 在非游戏类应用（如电商、工具）中应用效果的数据或案例。",
+        "未提及 AI Playable 生成中版权归属和内容审核的潜在挑战及解决方案。"
+      ],
+      "one_line_verdict": "一份高质量的市场研究报告，对“广告×游戏”的同源演化分析深刻，数据翔实，洞察具有极强的商业价值和前瞻性。",
+      "_usage": {
+        "promptTokenCount": 2625,
+        "candidatesTokenCount": 316,
+        "totalTokenCount": 2941,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2625
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "05-跨品类启发/5.2-社交与游戏.md",
+      "name": "5.2-社交与游戏",
+      "bytes": 7731,
+      "word_count": 1922,
+      "cjk_chars": 1679,
+      "ascii_words": 243,
+      "sent_count": 78,
+      "avg_sent_len": 49.5,
+      "para_count": 29,
+      "h1": 1,
+      "h2": 6,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 9,
+      "bold_count": 46,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，论点环环相扣。",
+        "案例丰富且具代表性，数据支撑有力。",
+        "洞察深刻，尤其对AI与社交结合的潜力分析独到。"
+      ],
+      "top_issues": [
+        "风险视角部分可进一步细化多平台策略的具体建议。",
+        "商业视角中，对非Web3生态的变现模式探讨略显不足。",
+        "可增加对中国市场特有社交游戏化模式的深度分析。"
+      ],
+      "missing_facts": [
+        "中国市场除微信外，其他社交平台（如抖音、快手）在游戏化方面的具体案例与数据。",
+        "AI小游戏在用户隐私保护和数据合规方面的挑战及应对策略。",
+        "关于AI小游戏开发成本、技术门槛及商业化周期的数据或预估。"
+      ],
+      "one_line_verdict": "一份高质量的跨品类研究报告，对社交与游戏结合的未来趋势洞察深刻，具有很强的启发性和参考价值。",
+      "_usage": {
+        "promptTokenCount": 2473,
+        "candidatesTokenCount": 304,
+        "totalTokenCount": 2777,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2473
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "05-跨品类启发/5.3-教育与游戏.md",
+      "name": "5.3-教育与游戏",
+      "bytes": 7713,
+      "word_count": 1996,
+      "cjk_chars": 1845,
+      "ascii_words": 151,
+      "sent_count": 72,
+      "avg_sent_len": 48.6,
+      "para_count": 26,
+      "h1": 1,
+      "h2": 6,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 8,
+      "bold_count": 41,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 8,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，论证有力。",
+        "案例选择精准，数据支撑充分。",
+        "洞察深刻，对跨品类启发性强。"
+      ],
+      "top_issues": [
+        "“学习幻觉”风险的论述可更深入，提出具体规避策略。",
+        "对中国市场AI教育游戏化的具体挑战和机遇可进一步展开。",
+        "可增加对AI小游戏商业模式多样性的探讨，如广告、道具等。"
+      ],
+      "missing_facts": [
+        "Duolingo在非语言学习领域的探索或尝试。",
+        "中国AI教育产品在用户隐私和数据安全方面的应对策略。",
+        "AI小游戏在不同年龄段用户群体中的接受度差异数据。"
+      ],
+      "one_line_verdict": "一份高质量的跨品类研究报告，对教育与游戏结合的趋势洞察深刻，为AI小游戏提供了极具价值的启发。",
+      "_usage": {
+        "promptTokenCount": 2501,
+        "candidatesTokenCount": 282,
+        "totalTokenCount": 2783,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2501
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "05-跨品类启发/5.4-陪伴与工具.md",
+      "name": "5.4-陪伴与工具",
+      "bytes": 8165,
+      "word_count": 2078,
+      "cjk_chars": 1907,
+      "ascii_words": 171,
+      "sent_count": 83,
+      "avg_sent_len": 45.4,
+      "para_count": 30,
+      "h1": 1,
+      "h2": 6,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 0,
+      "list_items": 6,
+      "bold_count": 42,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": true,
+      "has_sources": false,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "核心论点“伪装成工具的游戏”新颖且具洞察力",
+        "案例选择精准，数据支撑有力",
+        "结构清晰，逻辑严谨，启示和风险分析全面"
+      ],
+      "top_issues": [
+        "“游戏化工具”与“工具化游戏”的边界定义可更深入探讨",
+        "对中国市场案例的深度分析和数据支撑略显不足",
+        "风险部分可增加应对策略的建议，提升可操作性"
+      ],
+      "missing_facts": [
+        "Character.AI 和 Replika 在中国市场的具体用户数据或渗透率",
+        "中国AI陪伴产品（如猫箱）的详细用户画像和付费模式",
+        "AI小游戏在订阅制下的具体ARPU与传统IAP游戏的对比数据"
+      ],
+      "one_line_verdict": "一份极具前瞻性和洞察力的报告，精准捕捉AI时代产品边界的模糊化，为AI小游戏提供了清晰的战略方向。",
+      "_usage": {
+        "promptTokenCount": 2621,
+        "candidatesTokenCount": 296,
+        "totalTokenCount": 2917,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2621
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "05-跨品类启发/5.5-可迁移矩阵.md",
+      "name": "5.5-可迁移矩阵",
+      "bytes": 8241,
+      "word_count": 1849,
+      "cjk_chars": 1623,
+      "ascii_words": 226,
+      "sent_count": 73,
+      "avg_sent_len": 60.2,
+      "para_count": 22,
+      "h1": 1,
+      "h2": 6,
+      "h3": 4,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 4,
+      "list_items": 12,
+      "bold_count": 43,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": true,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": false,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 9,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，易于理解。",
+        "概念提炼精准，来源赛道与代表品牌具体。",
+        "可执行性强，提供了明确的短期、中期、长期建议。"
+      ],
+      "top_issues": [
+        "“可迁移性”评估标准略显主观，建议增加具体量化指标或解释。",
+        "部分“机会强度”打分理由可更具体，如市场空白、赛道增速数据支撑。",
+        "“已有 AI 游戏案例”部分，可补充更多具体数据或用户反馈以增强说服力。"
+      ],
+      "missing_facts": [
+        "各赛道（广告、社交等）的整体市场规模与增速数据。",
+        "AI 小游戏赛道的具体市场规模、用户画像及增长趋势。",
+        "部分“已有 AI 游戏案例”的用户数据或商业化表现。"
+      ],
+      "one_line_verdict": "一份高质量、高可执行性的跨品类迁移策略报告，为 AI 小游戏赛道提供了丰富且具前瞻性的洞察与行动指南。",
+      "_usage": {
+        "promptTokenCount": 2724,
+        "candidatesTokenCount": 312,
+        "totalTokenCount": 3036,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2724
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "06-机会地图整合/A-产品机会.md",
+      "name": "A-产品机会",
+      "bytes": 24207,
+      "word_count": 5470,
+      "cjk_chars": 4714,
+      "ascii_words": 756,
+      "sent_count": 268,
+      "avg_sent_len": 46.4,
+      "para_count": 146,
+      "h1": 1,
+      "h2": 6,
+      "h3": 15,
+      "h4": 38,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 2,
+      "list_items": 112,
+      "bold_count": 96,
+      "five_sections": 1,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": false,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 8,
+      "actionability": 9,
+      "top_strengths": [
+        "结构清晰，逻辑严谨，易于理解。",
+        "机会点分析全面，包含市场、技术、中国特色。",
+        "风险与规避措施具体，可执行性强。"
+      ],
+      "top_issues": [
+        "P1内容审核成本估算需更具体，直接影响经济模型。",
+        "豆包Token补贴政策细节应与BD对齐，明确可持续性。",
+        "P2端侧模型中文RP质量需A/B测试验证，避免盲目乐观。"
+      ],
+      "missing_facts": [
+        "P1内容审核的单DAU实际成本区间。",
+        "豆包Token补贴对外部创业团队的具体门槛、额度与持续时间。",
+        "P2中Qwen2.5-3B在中文RP场景下与GPT-4o的A/B测试数据。"
+      ],
+      "one_line_verdict": "一份结构清晰、洞察深刻、可执行性强的产品机会报告，为创业者提供了明确方向，但部分关键成本与技术细节需进一步验证。",
+      "_usage": {
+        "promptTokenCount": 7784,
+        "candidatesTokenCount": 307,
+        "totalTokenCount": 8091,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7784
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "06-机会地图整合/B-投资机会.md",
+      "name": "B-投资机会",
+      "bytes": 15638,
+      "word_count": 3154,
+      "cjk_chars": 2479,
+      "ascii_words": 675,
+      "sent_count": 265,
+      "avg_sent_len": 35.9,
+      "para_count": 109,
+      "h1": 1,
+      "h2": 12,
+      "h3": 25,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 8,
+      "list_items": 119,
+      "bold_count": 175,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "洞察锋利，反共识判断精准",
+        "结构清晰，投资主题拆解细致",
+        "数据引用丰富，论证扎实"
+      ],
+      "top_issues": [
+        "中国市场退出路径的分析深度不足，缺乏具体案例支撑",
+        "部分数据来源未明确具体模块，影响溯源性",
+        "Gaps 部分应更聚焦于可获取且对投资决策有关键影响的数据"
+      ],
+      "missing_facts": [
+        "中国大厂（字节/腾讯/米哈游）战投部在AI游戏赛道的具体投资案例及金额",
+        "Inworld AI最新的估值和收入数据（2025 Q4），以更新对标",
+        "MWM Rezona/LoopIt的真实DAU/月活/付费率，以验证PMF"
+      ],
+      "one_line_verdict": "一份极具洞察力和实操性的投资地图，对一级市场决策者有极高参考价值，但需补充中国退出路径的深度分析与最新数据。",
+      "_usage": {
+        "promptTokenCount": 5747,
+        "candidatesTokenCount": 309,
+        "totalTokenCount": 6056,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5747
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "06-机会地图整合/C-行业趋势判断.md",
+      "name": "C-行业趋势判断",
+      "bytes": 13957,
+      "word_count": 2708,
+      "cjk_chars": 2230,
+      "ascii_words": 478,
+      "sent_count": 163,
+      "avg_sent_len": 42.5,
+      "para_count": 101,
+      "h1": 1,
+      "h2": 11,
+      "h3": 21,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 2,
+      "list_items": 30,
+      "bold_count": 126,
+      "five_sections": 3,
+      "has_facts": true,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 5
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 8,
+      "top_strengths": [
+        "时间线梳理清晰，关键事件节点把握精准。",
+        "“游戏性定义权脱离”和 GPF 新物种的洞察极具前瞻性。",
+        "“炒概念”与“真趋势”辨别清单，提供实用决策框架。"
+      ],
+      "top_issues": [
+        "部分数据来源（如a16z回报远低10x）可更具体，增强说服力。",
+        "“正在观望”部分可尝试预测爆发时间或触发条件，提升行动指导性。",
+        "“Gaps”部分可尝试提出研究方法建议，帮助读者填补盲区。"
+      ],
+      "missing_facts": [
+        "Character.AI 2.7B 技术授权的具体条款和 Google 支付方式。",
+        "中国大厂（腾讯/字节/米哈游）内部 AI 游戏研发投入的具体预算或团队规模。",
+        "Rezona/LoopIt 等 GPF 新物种的早期用户增长和留存数据。"
+      ],
+      "one_line_verdict": "一份洞察深刻、结构严谨的 AI 游戏行业报告，对趋势判断和新物种的捕捉尤为出色，为从业者提供了清晰的导航图。",
+      "_usage": {
+        "promptTokenCount": 4873,
+        "candidatesTokenCount": 343,
+        "totalTokenCount": 5216,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4873
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "06-机会地图整合/D-战略进入路径.md",
+      "name": "D-战略进入路径",
+      "bytes": 13849,
+      "word_count": 3084,
+      "cjk_chars": 2631,
+      "ascii_words": 453,
+      "sent_count": 189,
+      "avg_sent_len": 40.6,
+      "para_count": 86,
+      "h1": 1,
+      "h2": 9,
+      "h3": 17,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 6,
+      "list_items": 39,
+      "bold_count": 138,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 8,
+      "readability": 8,
+      "clarity": 9,
+      "evidence": 7,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "战略判断清晰，TL;DR 精炼有力",
+        "路径拆解细致，推荐度与适合方明确",
+        "风险与规避策略具体，具备高度可执行性"
+      ],
+      "top_issues": [
+        "S1 GPF 创作工具的商业模式和盈利预期需更具体。",
+        "Token 补贴的财务模型和可持续性风险需量化分析。",
+        "对中国市场监管和版号风险的应对策略可更深入。"
+      ],
+      "missing_facts": [
+        "GPF 创作工具的潜在用户规模和市场渗透率预测。",
+        "Token 补贴的投资回报周期和具体财务测算。",
+        "中国市场对 AI 生成内容的具体监管政策和趋势。"
+      ],
+      "one_line_verdict": "一份极具洞察力与执行性的战略报告，为大厂布局 AI 小游戏赛道提供了清晰且大胆的路线图。",
+      "_usage": {
+        "promptTokenCount": 4602,
+        "candidatesTokenCount": 280,
+        "totalTokenCount": 4882,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4602
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "06-机会地图整合/机会地图.md",
+      "name": "机会地图",
+      "bytes": 27576,
+      "word_count": 5300,
+      "cjk_chars": 4218,
+      "ascii_words": 1082,
+      "sent_count": 290,
+      "avg_sent_len": 54.0,
+      "para_count": 120,
+      "h1": 1,
+      "h2": 12,
+      "h3": 22,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 18,
+      "list_items": 54,
+      "bold_count": 214,
+      "five_sections": 2,
+      "has_facts": false,
+      "has_summary": false,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 12
+    },
+    "review": {
+      "overall": 8,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 8,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "核心判断锋利且反共识，直指经济学真空",
+        "结构清晰，多维度交叉分析，逻辑严谨",
+        "行动清单具体，时间窗口和路径明确"
+      ],
+      "top_issues": [
+        "GPF 创作者留存/付费数据缺失，影响核心论证强度",
+        "部分 TAM 估算依据略显单薄，需更具体测算模型",
+        "探索性机会的风险评估可更深入，而非仅标签"
+      ],
+      "missing_facts": [
+        "中国 Pipeline-Creator 头部公司（字节/腾讯/米哈游）的内部产品或专利具体信息",
+        "Catizen/Hamster Kombat 真实 CPM/ARPDAU 数据",
+        "GPF 品类已上线产品的创作者留存与付费数据"
+      ],
+      "one_line_verdict": "一份极具洞察力与行动指导性的报告，核心判断锋利，结构严谨，但部分关键数据仍需补足以强化论证。",
+      "_usage": {
+        "promptTokenCount": 9660,
+        "candidatesTokenCount": 301,
+        "totalTokenCount": 9961,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9660
+          }
+        ]
+      }
+    }
+  },
+  {
+    "obj": {
+      "file": "06-机会地图整合/风险警示.md",
+      "name": "风险警示",
+      "bytes": 13316,
+      "word_count": 3199,
+      "cjk_chars": 2767,
+      "ascii_words": 432,
+      "sent_count": 183,
+      "avg_sent_len": 38.4,
+      "para_count": 84,
+      "h1": 1,
+      "h2": 8,
+      "h3": 19,
+      "h4": 0,
+      "citations": 0,
+      "citation_density": 0.0,
+      "tables": 2,
+      "list_items": 104,
+      "bold_count": 133,
+      "five_sections": 3,
+      "has_facts": false,
+      "has_summary": true,
+      "has_insights": false,
+      "has_sources": true,
+      "has_gaps": true,
+      "half_punct_residue": 0
+    },
+    "review": {
+      "overall": 9,
+      "readability": 9,
+      "clarity": 9,
+      "evidence": 9,
+      "sharpness": 9,
+      "actionability": 9,
+      "top_strengths": [
+        "论点鲜明，直击行业痛点，具备反共识的洞察力。",
+        "证据链完整，引用内部模块，形成严密的逻辑闭环。",
+        "结构清晰，TL;DR、清单、反直觉坑、时间/监管风险层层递进。"
+      ],
+      "top_issues": [
+        "部分反面证据的数字对比可以更直观，如Token成本与ARPDAU的直接差额。",
+        "对“例外情况”的描述可以更具体，例如提供成功案例或具体操作建议。",
+        "Gaps部分可以尝试提出一些可能的解决方案或预测，而非仅列出未知。"
+      ],
+      "missing_facts": [
+        "Character.AI 2.7B 技术授权的具体交易细节或背景。",
+        "中国市场“星野/猫箱/筑梦岛”的具体用户规模或营收数据。",
+        "Krafton MOGIA + inZOI Smart Zoi 跑通案例的更多细节或成功要素。"
+      ],
+      "one_line_verdict": "一份极其专业且具有高度行动指导意义的风险警示报告，洞察深刻，证据充分，对商业决策价值极高。",
+      "_usage": {
+        "promptTokenCount": 4481,
+        "candidatesTokenCount": 335,
+        "totalTokenCount": 4816,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4481
+          }
+        ]
+      }
+    }
+  }
+]

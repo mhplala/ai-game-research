@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="AI 小游戏 不是一个已被官方定义的品类，而是三个已有概念的 交集 ：轻量游戏（小游戏 / playable)× AI native 玩法（生成式 AI 作为核心机制）× 可即开即玩的分发形态。 本报告采用一条 强边界 : AI 是否不可移除地参与了玩法循环（gameplay loop) 。若移除 LLM / 扩散模型后产品不能运行，则为 AI native…">
+<title>1.1-赛道定义与边界 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class=" active" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构</a> · 1.1-赛道定义与边界</div><h1 id="11">1.1 赛道定义与边界<a class="headerlink" href="#11" title="Permanent link">#</a></h1>
+<blockquote>
+<p>模块：AI 小游戏与 Playable 体验研究 / 模块 1.1
+负责：子研究员
+日期：2026-04-13
+状态：草稿 v1</p>
+</blockquote>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI 小游戏</strong>不是一个已被官方定义的品类，而是三个已有概念的<strong>交集</strong>：轻量游戏（小游戏 / playable)× AI-native 玩法（生成式 AI 作为核心机制）× 可即开即玩的分发形态。</li>
+<li>本报告采用一条<strong>强边界</strong>:<em>AI 是否不可移除地参与了玩法循环（gameplay loop)</em>。若移除 LLM / 扩散模型后产品不能运行，则为 AI-native；若只是美术/文案管线使用了 AI，则为 AI-augmented，不计入本赛道核心。</li>
+<li>赛道时间线从 2019 年 AI Dungeon 起步，2022-2023 因 ChatGPT / GPT-3.5 出现爆发，2024-2025 进入 &ldquo;AI NPC + UGC 世界&rdquo; 的商业化试水期，2026 年正处于&rdquo;能否形成稳定留存&rdquo;的分水岭。</li>
+<li>三种玩家类型学：<strong>AI-native（原生）</strong>、<strong>AI-augmented（增强）</strong>、<strong>AI-adjacent（相邻）</strong>。羊了个羊/寻道大千属于 AI-adjacent 或完全无关；AI Dungeon / Suck Up! / 1001 Nights 属于 AI-native；多数 Roblox UGC 和腾讯自研 MMO 的 &ldquo;AI NPC 模块&rdquo; 属于 AI-augmented。</li>
+</ul>
+<hr />
+<h2 id="1-facts">1. Facts<a class="headerlink" href="#1-facts" title="Permanent link">#</a></h2>
+<h3 id="11_1">1.1 三个基础术语的事实定义<a class="headerlink" href="#11_1" title="Permanent link">#</a></h3>
+<p><strong>(a) 小游戏（hyper-casual / instant game)</strong>
+- 中国语境：微信小游戏自 2017 年底上线，技术上是基于微信 JS 引擎的 H5/WebGL 包，<strong>包体通常 &lt; 20MB，免下载，即点即玩</strong>。2024 年 Q2 腾讯公开披露微信小游戏 MAU 突破 5 亿，季度流水 1000 万以上的游戏达 240 多款 [S-1.1-01]。另一口径（QuestMobile/游戏陀螺）显示 2024 Q2 活跃用户体量约 7.5 亿 [S-1.1-02]。
+- 海外语境：HTML5 browser games，代表平台 Poki(~60M MAU）、CrazyGames(~35M MAU），以及 Facebook Instant Games、Google Play Instant [S-1.1-03]。
+- 共同特征：低启动成本、广告变现主导（IAA）、单局时长 1-10 分钟。</p>
+<p><strong>(b) AI-native game</strong>
+- 学术界惯用定义：<strong>若移除生成式 AI 模块，游戏核心循环不再成立</strong>，即为 AI-native。AAAI AIIDE 2023 收录的 1001 Nights 论文明确把&rdquo;language as reality&rdquo;（语言即世界）作为 AI-native 设计原则 [S-1.1-04]。
+- 代表作：AI Dungeon(2019,GPT-2）、1001 Nights(2023,GPT-4 + SD）、Suck Up!(2024,ChatGPT 3.5 → GPT-5 迭代）[S-1.1-05]、Whispers from the Star(2025,Anuttacon / 蔡浩宇）[S-1.1-06]。</p>
+<p><strong>(c) Playable 体验</strong>
+- 广告行业&rdquo;playable ad&rdquo;:15 秒到 2 分钟的 H5 互动，目的是诱导点击跳转到 App Store。
+- 更宽泛的用法（研究本文采用）：任何<strong>可即开即玩、低承诺时长（≤ 10 min/session)</strong>的互动娱乐，包括小游戏、Playable ads、微信/QQ/Discord bot 小剧场、Character.AI 式 chat adventures。</p>
+<h3 id="12-15">1.2 15+ 具体案例定位表<a class="headerlink" href="#12-15" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>案例</th>
+<th>出生年</th>
+<th>形态</th>
+<th>AI 依赖度</th>
+<th>本研究归类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Dungeon (Latitude)</td>
+<td>2019</td>
+<td>文本冒险 / Web+App</td>
+<td>核心</td>
+<td>AI-native，重度</td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>2022</td>
+<td>Chat + 角色扮演</td>
+<td>核心</td>
+<td>AI-native,Playable(chat-as-game)</td>
+</tr>
+<tr>
+<td>1001 Nights (Ada Eden)</td>
+<td>2023</td>
+<td>叙事解谜，Steam</td>
+<td>核心</td>
+<td>AI-native，重度</td>
+</tr>
+<tr>
+<td>Suck Up! (Proxima)</td>
+<td>2024</td>
+<td>声控社交潜入</td>
+<td>核心</td>
+<td>AI-native，重度</td>
+</tr>
+<tr>
+<td>Whispers from the Star (Anuttacon)</td>
+<td>2025</td>
+<td>实时 AI 女主 陪伴</td>
+<td>核心</td>
+<td>AI-native，移动 + Steam</td>
+</tr>
+<tr>
+<td>Hidden Door</td>
+<td>2022 起测</td>
+<td>多人叙事桌游</td>
+<td>核心</td>
+<td>AI-native,Web Playable</td>
+</tr>
+<tr>
+<td>Inworld AI</td>
+<td>2021</td>
+<td>NPC 中间件</td>
+<td>N/A</td>
+<td>基础设施（非游戏）</td>
+</tr>
+<tr>
+<td>Altera</td>
+<td>2023 底</td>
+<td>Minecraft 多智能体</td>
+<td>核心</td>
+<td>AI-native 研究 / mod 形态</td>
+</tr>
+<tr>
+<td>Replika</td>
+<td>2017</td>
+<td>AI 陪伴</td>
+<td>核心</td>
+<td>争议地带（非 game-loop)</td>
+</tr>
+<tr>
+<td>羊了个羊 （简游科技）</td>
+<td>2022</td>
+<td>微信连连看</td>
+<td>零</td>
+<td>小游戏，非 AI</td>
+</tr>
+<tr>
+<td>寻道大千 （三七互娱）</td>
+<td>2023</td>
+<td>放置修仙</td>
+<td>零 / 运营侧 AI</td>
+<td>小游戏，AI-adjacent</td>
+</tr>
+<tr>
+<td>咸鱼之王 （豪腾嘉科）</td>
+<td>2022</td>
+<td>放置卡牌</td>
+<td>零 / 运营侧 AI</td>
+<td>小游戏，AI-adjacent</td>
+</tr>
+<tr>
+<td>微信小游戏平台</td>
+<td>2017</td>
+<td>平台</td>
+<td>N/A</td>
+<td>渠道</td>
+</tr>
+<tr>
+<td>Poki</td>
+<td>2014</td>
+<td>H5 聚合</td>
+<td>N/A</td>
+<td>渠道</td>
+</tr>
+<tr>
+<td>CrazyGames</td>
+<td>2014</td>
+<td>H5 聚合</td>
+<td>N/A</td>
+<td>渠道</td>
+</tr>
+<tr>
+<td>Facebook Instant Games</td>
+<td>2016</td>
+<td>社交轻游戏</td>
+<td>N/A</td>
+<td>渠道</td>
+</tr>
+<tr>
+<td>Minecraft (+ Altera / Voyager)</td>
+<td>2011 / 2024</td>
+<td>沙盒 + AI mod</td>
+<td>外挂式</td>
+<td>AI-augmented</td>
+</tr>
+<tr>
+<td>GTA V / Stardew Valley / Skyrim + Inworld mods</td>
+<td>2013-2016 原作</td>
+<td>AI NPC mod</td>
+<td>外挂式</td>
+<td>AI-augmented，非原生</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 关键数字与融资时间线<a class="headerlink" href="#13" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>AI Dungeon</strong> (2019.05) Nick Walton 在 BYU 黑客松基于 GPT-2 小模型做出首版；2019.11 基于 1.5B GPT-2 重写为 AI Dungeon 2，首周即 10 万玩家，6 周内破百万用户、600 万故事 [S-1.1-07]。Latitude 后续累计融资 3.3M 美元 [S-1.1-08]。</li>
+<li><strong>Inworld AI</strong> 2021 年创立，2023.08 完成新一轮融资后总融资超 1 亿美元，估值 5 亿美元+；投资方包括 Lightspeed、Stanford、三星 Next、Microsoft M12、LG Technology Ventures、First Spark(Eric Schmidt)[S-1.1-09]。AAA 合作方包括 NetEase 的 Team Miaozi、Niantic 8th Wall [S-1.1-09]。</li>
+<li><strong>Character.AI</strong> 2022 年公测，2024 年中 MAU 峰值约 2800 万；2024.08 Google 以 27 亿美元&rdquo;非独家技术授权 + 返聘两位创始人&rdquo;方式收购，联合创始人 Noam Shazeer / Daniel De Freitas 回到 Google Gemini 团队 [S-1.1-10]。2025 年底 MAU 约 2000 万，下滑。</li>
+<li><strong>Altera</strong> 2023.12 成立，2024.05 完成约 900 万-1110 万美元种子，投资方 Patron、First Spark(Eric Schmidt）、A16z Speedrun、Mitch Lasky;2024.11 MIT Tech Review 报道其 Minecraft 小镇实验——AI 智能体自发分工、传教、征税 [S-1.1-11]。创始人 Robert Yang 原 MIT 神经科学教授。</li>
+<li><strong>Whispers from the Star</strong> 2025.03 预告，2025.08.15 Steam 上线（$9.99);2025.11 iOS 上线。游戏核心循环是通过语音/视频/文本实时与 AI 女主 Stella 对话，帮她在外星球 GAIA 生存 [S-1.1-12]。开发商 Anuttacon 为 miHoYo 创始人蔡浩宇所创。</li>
+<li><strong>Suck Up!</strong>(Proxima Enterprises) 2024 年 Steam EA 上线，$16.99；玩家扮演吸血鬼，通过 LLM 对话骗邻居邀请入屋。v1.0 从 ChatGPT 3.5 迁移到 ChatGPT 5 [S-1.1-05]。</li>
+<li><strong>微信小游戏</strong>:2024 Q2 MAU ~5 亿（官方口径）/~7.5 亿（第三方口径），240+ 款季度流水超千万 [S-1.1-01][S-1.1-02]。</li>
+<li><strong>《寻道大千》</strong>（三七互娱，2023 发行）：2024.02 MAU 峰值约 1.6 亿（月活破亿）；9-10 月回落至 6773-6898 万仍居品类第一 [S-1.1-13]。游戏本身玩法（放置 + 抽卡修仙）<strong>与 AI 核心机制无关</strong>，但 AI 被用于买量素材生成、渠道投放、运营侧文案。</li>
+<li><strong>《羊了个羊》</strong>（简游科技，2022):2024.02 MAU ~2400 万，第 8 位；玩法为三消层叠，<strong>零 AI 成分</strong>。</li>
+</ul>
+<h3 id="14-2022-2026-ai-playable">1.4 2022-2026 时间线（AI × playable 视角）<a class="headerlink" href="#14-2022-2026-ai-playable" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>2019-2021</strong>:AI Dungeon 单点突破，Replika、Character.AI 还处于&rdquo;心理陪伴&rdquo;叙事而非游戏化。Inworld 成立（2021）。</li>
+<li><strong>2022.03</strong>:Hidden Door 官宣 AI 叙事多宇宙平台（Hilary Mason、Matt Brandwein 创立），2M 种子 [S-1.1-14]。</li>
+<li><strong>2022.11</strong>:ChatGPT 发布 → 成为赛道转折点。</li>
+<li><strong>2023</strong>:1001 Nights 进 Steam(3 篇 AAAI/AIIDE 论文）；Inworld 估值到 5 亿美元；Character.AI 进入主流。国内&rdquo;GPT + 二次元&rdquo;出现 Glow（聚言） 等 C 端陪伴产品。</li>
+<li><strong>2024</strong>:Suck Up! EA;Altera Minecraft 小镇；Google-CharacterAI 2.7B 交易；AAA 游戏开始量产&rdquo;AI NPC&rdquo; demo(NetEase《逆水寒》手游为代表的&rdquo;智能 NPC&rdquo;营销）；Inworld 与 Team Miaozi / 8th Wall 合作落地。</li>
+<li><strong>2025</strong>:Whispers from the Star 上线 Steam/iOS;Anuttacon 被视为&rdquo;中国首个 AI-native 游戏公司&rdquo;标杆；OpenAI 公开与 Altera 合作（Minecraft 智能体）。</li>
+<li><strong>2026 Q1（现在）</strong>：赛道处于&rdquo;能否形成稳定留存 / DAU × ARPU 双飞&rdquo;的验证期，尚未见到任何 AI-native 游戏跑出羊了个羊量级（千万 DAU）的轻量爆款。</li>
+</ul>
+<hr />
+<h2 id="2-summary">2. Summary<a class="headerlink" href="#2-summary" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>&ldquo;AI 小游戏&rdquo; 目前不是一个被行业官方定义的品类</strong>，而是 {小游戏 / playable 渠道} × {AI-native 玩法} 的交集；交集区域目前样本极少，大部分&rdquo;AI + 游戏&rdquo;案例要么是重度 PC/移动（Suck Up！、Whispers）、要么是非 game-loop 的陪伴（Character.AI、Replika）、要么是 AI 只进入美术/运营侧（寻道大千、咸鱼之王）。</li>
+<li><strong>划界的锋利标准是 &ldquo;AI 可移除性&rdquo;</strong>：移除 LLM 后核心循环是否仍成立。移除后仍成立 → AI-augmented；不成立 → AI-native。本研究将 AI-native 作为赛道主战场，AI-augmented 作为存量升级赛道。</li>
+<li><strong>三型分类</strong>:AI-native（原生，AI Dungeon / 1001 Nights / Suck Up! / Whispers / Hidden Door / Altera）、AI-augmented（增强，Inworld 接入的 NPC mod / AAA 自研 NPC 系统）、AI-adjacent（相邻，寻道大千 / 咸鱼之王 / 羊了个羊——AI 仅用于买量或运营）。</li>
+<li><strong>Character.AI / Replika 的归属</strong>：本研究倾向把 Character.AI <strong>部分纳入</strong>——因为其 &ldquo;Scenarios / Roleplay&rdquo; 模式确实提供了文本冒险式 playable 体验，且 2024 年峰值 28M MAU 的量级证明了&rdquo;chat 即游戏&rdquo;可成立；但 Replika 这类纯陪伴应用<strong>不计入</strong>，因缺乏 win/lose/progress 结构。</li>
+<li><strong>轻量 vs 重度的边界，目前强烈偏向重度</strong>：本轮 AI-native 爆款全部是 Steam / iOS 付费下载或订阅（AI Dungeon Premium 每月 $9.99、Suck Up! $16.99、Whispers $9.99）。<strong>小游戏 × AI 的空白地带最大</strong>——一个&rdquo;进入即玩、Token 成本 &lt; 单日 ARPU&rdquo;的 AI-native 小游戏尚未出现。</li>
+<li><strong>2022-2026 的行业叙事线</strong>是：2019 单点 → 2022.11 ChatGPT 触发 → 2023 叙事游戏集群出现 → 2024 NPC 中间件 + 大厂收编 → 2025 第一批&rdquo;AI 原生工作室&rdquo;作品上架 → 2026 进入留存验证期。</li>
+<li><strong>对研究主命题的意义</strong>:AI 真正重塑&rdquo;小游戏与 playable&rdquo;的拐点，不在 AI-native 重度游戏，而在<strong>当 LLM 推理成本降到可以嵌入 15 秒 playable ads / 微信小游戏广告 tCPM 之下时</strong>——这是本研究后续模块（1.2 市场规模 / 2.x 玩法前沿）的关键观察指标。</li>
+</ol>
+<hr />
+<h2 id="3-insights">3. Insights<a class="headerlink" href="#3-insights" title="Permanent link">#</a></h2>
+<h3 id="a-pm">A. PM / 创业者视角：边界清晰，能做什么？<a class="headerlink" href="#a-pm" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>定义清楚 = 不再被&rdquo;AI 游戏&rdquo;宣传污染</strong>。很多项目把 Midjourney 出立绘当作&rdquo;AI 游戏&rdquo;，这只是 AI-augmented，本质竞争力仍在传统玩法。创业者需要明确：若融的是&rdquo;AI-native&rdquo;故事，产品的 gameplay loop 必须对 LLM/扩散模型<strong>不可移除地依赖</strong>——否则估值逻辑是&rdquo;美术省钱&rdquo;，不是&rdquo;AI 原生&rdquo;。</li>
+<li><strong>最可能的 PMF 不在&rdquo;全新品类&rdquo;，而在&rdquo;用 AI 把某个已被验证的轻量玩法做到 10x&rdquo;</strong>。候选：（a) AI 版《狼人杀》/《谁是卧底》（LLM 扮演狼 / 卧底，Replit 已有 demo);(b) AI 剧本杀小程序（用 GPT 代替主持人）；（c) AI 即兴漫才/相声播客式 playable。这几种形态的天然优势是<strong>用户对&rdquo;对话即游戏&rdquo;已有认知</strong>，不需要教育市场。</li>
+<li><strong>成本模型是生死线</strong>。目前 AI Dungeon Premium $9.99/月，Suck Up! $16.99 买断，都是因为每个玩家的 token 推理成本显著（预估 $0.1-0.5/session）。如果要做小游戏（IAA 变现，单用户日收益 &lt; $0.05),<strong>必须等待更便宜的本地推理或专用小模型</strong>(&lt; 1B 参数、手机端推理、延迟 &lt; 800ms）。这是 2026-2027 的关键 tech gating factor。</li>
+</ol>
+<h3 id="b">B. 投资人视角：哪些子领域值得投？<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>基础设施层（最拥挤但最清晰）</strong>:NPC 中间件（Inworld 已 5 亿+ 估值）、AI 运行时 / 推理优化、游戏内语音栈。已经拥挤，除非团队能做垂直小模型或端侧推理，否则晚期进入的回报空间有限。</li>
+<li><strong>工作室层（最高风险也最高回报）</strong>：像 Anuttacon、Proxima、Ada Eden、Latitude 这样的&rdquo;AI-native 原生工作室&rdquo;。投资逻辑类似 2010 年投早期 mobile-first 工作室——<strong>不是赌玩法，而是赌&rdquo;从第一天起为 AI 设计 gameplay loop&rdquo;的组织能力</strong>。</li>
+<li><strong>Agents-in-games（最前沿、最学术但可能是下一个平台机会）</strong>:Altera、Hidden Door，以及围绕 Minecraft/Roblox/VRChat 的 AI 智能体。2024.11 Altera 的 Minecraft 自治小镇实验是关键信号——它证明了&rdquo;多智能体 × UGC 世界&rdquo;的新物种可能。关注指标是<strong>智能体行为的 novelty / 留存驱动力</strong>，而非单次 demo 的 WOW。</li>
+<li><strong>谨慎 / 跳过</strong>：纯 AI 美术管线 SaaS（价值被下游内卷吃掉）、单一 IP 聊天机器人（Character.AI Google 收编已是该子赛道的&rdquo;天花板退出&rdquo;）。</li>
+</ol>
+<h3 id="c-2022-2026">C. 行业视角：2022-2026 发生了什么？<a class="headerlink" href="#c-2022-2026" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>2019-2022：单点时代</strong>。AI Dungeon 是孤例，业界视为 novelty 而非 category。Replika / Character.AI 的早期用户增长被归入&rdquo;陪伴聊天&rdquo;，而非&rdquo;游戏&rdquo;。</li>
+<li><strong>2022.11-2023:ChatGPT 冲击波</strong>。GPT-3.5 API 成本（&lt; $0.002/1k token）第一次让&rdquo;对话作为玩法&rdquo;变得经济可行，学术界（AAAI AIIDE 2023）和独立开发者几乎同步开始做 AI-native 原型。</li>
+<li><strong>2023-2024：基础设施期</strong>。Inworld 融到 5 亿估值成为代表，AAA 厂商开始在 NPC demo 上秀肌肉（NetEase 逆水寒手游、Ubisoft NEO NPC、EA NPC 实验、腾讯光子 / 天美 AI NPC 内部原型）。但几乎没有 AI NPC 进入出货版本的核心玩法，仍处于&rdquo;营销 demo + 小规模实验&rdquo;阶段。</li>
+<li><strong>2024-2025:AI-native 原生工作室上架</strong>。Suck Up！、Whispers from the Star、Altera Minecraft civilization 是三个关键节点。Google-Character.AI 的 2.7B 交易 是该阶段的资本事件顶点：它既证明了 AI 陪伴的价值，也暴露了&rdquo;纯 chatbot → 商业化 / 留存&rdquo;的天花板。</li>
+<li><strong>2025-2026：验证期</strong>。目前（2026 Q1）还没有一款 AI-native 游戏进入全球畅销榜前 50（对比：《羊了个羊》巅峰期日活 6000 万、《寻道大千》月活破亿，二者都是零 AI 成分的传统玩法）。行业的 unanswered question 是：<strong>AI 不可移除性是否真的能换来&rdquo;不可替代性&rdquo; / 更高留存</strong>，还是只是新奇效应。</li>
+<li><strong>轻 vs 重的分化</strong>:AI 在重度游戏（Steam/iOS 付费）先跑出来，因为 ARPU 足以覆盖 token 成本；在小游戏（IAA,ARPU 极低）仍然<strong>几乎空白</strong>。微信小游戏 TOP10 中没有一款是 AI-native；国内最接近的尝试是 Glow / 星野 / 筑梦岛等陪伴 app 的 &ldquo;剧情副本&rdquo; 模块，它们严格来说是 chat app，不是 WeChat 小游戏技术栈。</li>
+</ul>
+<h3 id="d">D. 战略视角：大厂 / 平台应该关注哪个边界？<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>腾讯 / 微信</strong>：真正的战略问题不是&rdquo;要不要做 AI 小游戏&rdquo;，而是&rdquo;<strong>微信小游戏运行时是否要原生集成端侧 LLM</strong>&ldquo;。一旦运行时内置 Qwen/Mini-Claude 等端侧小模型，开发者就能在包体 &lt; 20MB、推理零 API 成本的条件下构建 AI-native gameplay loop。这是腾讯能从底层重新定义品类的一次机会——类似当年 H5 Canvas + JS 引擎重新定义了小游戏。</li>
+<li><strong>字节 / 抖音小游戏 / TikTok Playables</strong>：最适合的切入点是&rdquo;Playable ads + AI NPC&rdquo;——用 AI NPC 做广告 hook,CTR 与转化率的提升空间较大。抖音已经在 2024 年下半年开始实验 &ldquo;AI 主播 × 小游戏预览&rdquo; 的混合形态。</li>
+<li><strong>Roblox / 字节 LATAM / Epic (Fortnite)</strong>:UGC 平台的战略问题是&rdquo;Agents 是不是下一种创作单元&rdquo;。Altera 的 Minecraft 实验提示这条路径——未来的 UGC 可能不是&rdquo;地图/物品&rdquo;，而是&rdquo;会 living 的 NPC 群落&rdquo;。谁先提供&rdquo;Agent SDK + 玩家可驯化 NPC 经济&rdquo;，谁就有可能定义下一代 UGC。</li>
+<li><strong>Steam / Apple</strong>：边界关注点是<strong>政策</strong>——AI 生成内容的版权（Steam 2023 年短暂禁止 AI 生成内容、后改为披露制）、未成年人保护（Character.AI 2024 青少年自杀诉讼余波）、LLM 输出的合规。平台规则会直接决定 AI-native 赛道的&rdquo;可上架&rdquo;边界。</li>
+<li><strong>miHoYo / HoYoverse 等传统大厂 vs Anuttacon 这类&rdquo;AI 原生分拆&rdquo;</strong>：蔡浩宇自己把 AI 游戏做成独立公司（Anuttacon）而非 miHoYo 内部项目，是一个强信号——<strong>AI-native 组织与传统游戏工作室的开发流程 / KPI / 成本结构差异太大，无法在旧组织内部孵化</strong>。这对所有大厂都是启示：如果真信 AI-native，最优解是分拆而不是&rdquo;内部 AI lab&rdquo;。</li>
+</ol>
+<hr />
+<h2 id="4-sources">4. Sources<a class="headerlink" href="#4-sources" title="Permanent link">#</a></h2>
+<p>格式：<code>编号 | 标题 | URL | 日期 | 类型 | 可信度</code></p>
+<ul>
+<li><strong>[S-1.1-01]</strong> 李卿：微信小游戏双位数增长，MAU 破 5 亿，240 多款季度流水超千万 | http://www.gamelook.com.cn/2024/07/549448/ | 2024-07 | 行业媒体（GameLook，转述腾讯公开分享）| 中</li>
+<li><strong>[S-1.1-02]</strong> 报告：微信小游戏活跃用户 7.5 亿，《寻道大千》月活破亿，腾讯占行业 4 成流量 | https://news.qq.com/rain/a/20240417A0A3AW00 | 2024-04 | 行业媒体（腾讯新闻转 DataEye)| 中</li>
+<li><strong>[S-1.1-03]</strong> Return of the Web: Why your game should have a web version in 2024 | https://metaplay.io/blog/return-of-the-web-why-your-game-should-have-a-web-version-in-2024 | 2024 | 厂商 blog(Metaplay)| 中</li>
+<li><strong>[S-1.1-04]</strong> Language as Reality: A Co-Creative Storytelling Game Experience in 1001 Nights using Generative AI | https://arxiv.org/abs/2308.12915 | 2023-08 | 学术（AAAI AIIDE 2023)| 高</li>
+<li><strong>[S-1.1-05]</strong> Indie vampire game highlights future for AI-driven games | https://www.hypergridbusiness.com/2025/10/indie-vampire-game-highlights-future-for-ai-driven-games/ | 2025-10 | 行业媒体 | 中</li>
+<li><strong>[S-1.1-06]</strong> miHoYo founder&rsquo;s AI game Whispers From The Star features real-time AI interaction | https://technode.com/2025/03/17/mihoyo-founders-ai-game-whispers-from-the-star-features-real-time-ai-interaction/ | 2025-03 | 行业媒体（TechNode)| 中</li>
+<li><strong>[S-1.1-07]</strong> AI Dungeon (Wikipedia 综合条目） | https://en.wikipedia.org/wiki/AI_Dungeon | 2024 更新 | 百科（可追溯原始来源）| 中-高</li>
+<li><strong>[S-1.1-08]</strong> The creators of the AI Dungeon text sandbox have raised $3.3 million | https://wnhub.io/news/Generative_AI/item-18179 | 2021 | 行业媒体 | 中</li>
+<li><strong>[S-1.1-09]</strong> Inworld AI raises $50M round at $500M valuation for AI game characters | https://venturebeat.com/games/inworld-ai-raises-new-round-at-500m-valuation-for-ai-game-characters/ | 2023-08 | 行业媒体（GamesBeat/VentureBeat) | 高</li>
+<li><strong>[S-1.1-10]</strong> Character.AI (Wikipedia) &amp; Exclusive: Character.AI CEO Noam Shazeer returns to Google | https://en.wikipedia.org/wiki/Character.ai ; https://techcrunch.com/2024/08/02/character-ai-ceo-noam-shazeer-returns-to-google/ | 2024-08 | 百科 + TechCrunch | 高</li>
+<li><strong>[S-1.1-11]</strong> A Minecraft town of AI characters made friends, invented jobs, and spread religion | https://www.technologyreview.com/2024/11/27/1107377/a-minecraft-town-of-ai-characters-made-friends-invented-jobs-and-spread-religion/ | 2024-11 | MIT Tech Review | 高</li>
+<li><strong>[S-1.1-12]</strong> Whispers from the Star, an AI-Driven Sci-Fi Game by HoYoverse Devs, Announces Closed-Beta Test for iOS | https://game8.co/articles/latest/whispers-from-the-star-an-ai-driven-sci-fi-game-by-hoyoverse-devs-announces-closed-beta-test-for-ios | 2025 | 行业媒体 | 中</li>
+<li><strong>[S-1.1-13]</strong> 疯抢用户！《寻道大千》MAU 近 7000 万 | https://www.youxituoluo.com/532846.html | 2024-11 | 行业媒体（游戏陀螺，转述 QuestMobile 2024 秋报）| 中</li>
+<li><strong>[S-1.1-14]</strong> Hidden Door Launches AI Game Platform to Build the Narrative Multiverse | https://www.businesswire.com/news/home/20220316005334/en/ | 2022-03 | 公司新闻稿（BusinessWire)| 高</li>
+<li><strong>[S-1.1-15]</strong> Altera raises $9M to develop AI for digital humans | https://venturebeat.com/games/altera-raises-9m-to-develop-ai-for-digital-humans/ | 2024-05 | 行业媒体 | 高</li>
+<li><strong>[S-1.1-16]</strong> Bye-bye bots: Altera&rsquo;s game-playing AI agents get backing from Eric Schmidt | https://techcrunch.com/2024/05/08/bye-bye-bots-alteras-game-playing-ai-agents-get-backing-from-eric-schmidt/ | 2024-05 | TechCrunch | 高</li>
+<li><strong>[S-1.1-17]</strong> 20 款微信小游戏月活破 1000 万 | http://www.gamelook.com.cn/2024/12/559967/ | 2024-12 | 行业媒体 | 中</li>
+<li><strong>[S-1.1-18]</strong> Character AI Statistics 2026 | https://sqmagazine.co.uk/character-ai-statistics/ | 2026 | 二级统计（须交叉核对）| 低-中</li>
+</ul>
+<p><strong>可信度分布</strong>：高 6，中 10，低 1，总 17 条（另含 Wikipedia 综合 1 条）。</p>
+<hr />
+<h2 id="5-gaps">5. Gaps<a class="headerlink" href="#5-gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>小游戏 × AI 的真空地带</strong>尚未有公开数据可追溯。微信小游戏 TOP200 中是否存在任何&rdquo;AI-native&rdquo;作品？目前没有看到任何行业报告按这个维度切片。需要模块 1.2 通过 DataEye / QuestMobile 的小游戏榜单反查，或直接写爬虫抓微信小游戏元数据。</li>
+<li><strong>Token 成本 vs 小游戏 ARPU 的经济学</strong>没有公开测算。一款 AI 小游戏每个 DAU 的 LLM 成本 vs 单日 IAA 收入的比值，是决定赛道能否成立的核心数字，目前无公开来源。需要在模块 3.x（玩法前沿 / 可行性）用实验或估算补上。</li>
+<li><strong>Character.AI / Replika 是否&rdquo;游戏&rdquo;</strong>仍有争议。本研究采用了&rdquo;部分纳入&rdquo;的折中方案（含 scenarios / roleplay 模块），但学界和行业的归类并不一致。后续可能需要做一次小型类型学调查。</li>
+<li><strong>中国 AI 陪伴类 App(Glow、星野、筑梦岛、猫箱）的 MAU、ARPU、留存</strong>公开数据极度缺失。它们是国内最接近&rdquo;AI × playable&rdquo;交集的产品形态，但大多数数字只来自媒体软文，需要专门的一节去求证。</li>
+<li><strong>AAA 大厂（NetEase Miaozi、Ubisoft NEO NPC、EA、腾讯光子/天美、米哈游）内部的 AI NPC 项目</strong>都处于 demo / 营销阶段，是否有任何出货版本真正把 LLM 对话作为核心循环，公开数据为零。需要通过开发者访谈补。</li>
+<li><strong>Playable ads 作为独立赛道</strong>(AppLovin、Mintegral、IronSource）与 AI 的交集，本节未展开，属于模块 2.x 范畴。</li>
+<li><strong>政策 / 合规边界</strong>(Steam AI 生成内容政策、Character.AI 未成年人案、欧盟 AI Act 对 gameplay LLM 的界定）本节未处理，应作为独立模块（5.x 风险）。</li>
+</ol>
+<hr />
+<h2 id="6-ai-2026-04">6. 赛道边界扩展 — &ldquo;AI 存在位置&rdquo;第二把刀（2026-04 补入）<a class="headerlink" href="#6-ai-2026-04" title="Permanent link">#</a></h2>
+<p><strong>Scope 修订说明</strong>：原研究方案把&rdquo;AI 作为玩法机制本身&rdquo;作为唯一入场券，排除了&rdquo;AI 辅助开发&rdquo;。研究中期发现 Rezona / LoopIt / YouTube Playables Builder 等 2025 新物种后，<strong>必须扩大定义</strong>。新定义加一把刀：<strong>&ldquo;AI 存在位置&rdquo;</strong>。</p>
+<h3 id="_1">双刀分类框架<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>第一把刀</strong>（原有）：<strong>&ldquo;AI 可移除性&rdquo;</strong> — 移除 LLM 后 gameplay loop 是否仍成立？</li>
+<li><strong>第二把刀</strong>（新增）：<strong>&ldquo;AI 存在位置&rdquo;</strong> — AI 在产品生命周期的哪个阶段被调用？</li>
+</ul>
+<p>组合起来得到<strong>四象限</strong>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>AI 可移除 → 不成立（Runtime 依赖）</strong></th>
+<th><strong>AI 可移除 → 仍成立 / 静态</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pipeline AI</strong>（只在开发 / 创作期调用）</td>
+<td><em>（不存在：不调用 LLM 就没游戏 ≠ 只在创作时调）</em></td>
+<td><strong>Pipeline AI Static</strong>：寻道大千买量素材 / 1001 Nights 预生成叙事 / Square Enix AI Division 内部工具 / <strong>Rezona / LoopIt / YouTube Playables Builder / Upit / Jabali</strong></td>
+</tr>
+<tr>
+<td><strong>Runtime AI</strong>（游戏运行时实时调用）</td>
+<td><strong>Runtime AI-native</strong>:Character.AI / 星野 / Suck Up! / AI Dungeon / Hidden Door / Altera / inZOI Smart Zoi</td>
+<td><strong>Runtime AI-augmented</strong>：逆水寒 AI NPC（移除后仍是 MMO)/ Ubisoft NEO NPC / 元梦之星 AI 动作</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">四类产品的核心区别<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h4 id="1-runtime-ai-native">1. <strong>Runtime AI-native</strong>（原研究主战场）<a class="headerlink" href="#1-runtime-ai-native" title="Permanent link">#</a></h4>
+<ul>
+<li>AI 必须在玩家每次 session 中实时推理</li>
+<li><strong>经济学真空带</strong>(Token 成本 vs ARPDAU)</li>
+<li>代表：Character.AI / 星野 / Suck Up! / AI Dungeon</li>
+<li>本研究原命题聚焦于此，但发现它<strong>现在基本不成立</strong></li>
+</ul>
+<h4 id="2-runtime-ai-augmented">2. <strong>Runtime AI-augmented</strong><a class="headerlink" href="#2-runtime-ai-augmented" title="Permanent link">#</a></h4>
+<ul>
+<li>AI 在 runtime 调用但游戏没它也能玩</li>
+<li><strong>风险</strong>：被玩家识破&rdquo;AI-washed&rdquo;（逆水寒 10 万条对话反刍设定案例）</li>
+<li>代表：逆水寒 AI NPC / Ubisoft NEO NPC / 寻道大千 AI 客服</li>
+<li>商业化不如传统 MMO，但也没有 AI-native 的突破</li>
+</ul>
+<h4 id="3-pipeline-ai-static">3. <strong>Pipeline AI Static</strong>（新纳入）<a class="headerlink" href="#3-pipeline-ai-static" title="Permanent link">#</a></h4>
+<ul>
+<li>AI 只在开发 / 创作时被调用，玩家玩的是已生成的静态内容</li>
+<li><strong>根本性绕过了 Token 经济学真空带</strong> — Runtime AI 成本 = 0</li>
+<li>细分 3 类：</li>
+<li><strong>3a. Pipeline AI for Dev</strong>(B2B 开发者工具）：寻道大千买量素材 / Square Enix AI / Kinetix 动作生成 / Scenario 贴图生成</li>
+<li><strong>3b. Pipeline AI for Creator</strong>(C2C 创作者工具）⭐ <strong>2025 新物种</strong>:<strong>Rezona / LoopIt / YouTube Playables Builder / Upit / Jabali / Rosebud</strong></li>
+<li><strong>3c. Pipeline AI Embedded</strong>（预烘焙型）：游戏把 AI 生成的内容预烘焙进 build，玩家玩的是&rdquo;AI 生成但已定型&rdquo;的体验（1001 Nights 预生成图像集）</li>
+</ul>
+<h4 id="4-ai-free">4. <strong>AI-free</strong><a class="headerlink" href="#4-ai-free" title="Permanent link">#</a></h4>
+<ul>
+<li>完全不用 AI 的传统游戏（羊了个羊 / 大部分传统小游戏）</li>
+</ul>
+<h3 id="3">这个双刀分类对本研究的 3 个重要影响<a class="headerlink" href="#3" title="Permanent link">#</a></h3>
+<p><strong>影响 1:&rdquo;AI × 小游戏真空带&rdquo; 的原因更清楚了</strong>
+- 真空带只存在于 <strong>&ldquo;Runtime AI × IAA 小游戏&rdquo;</strong> 的交集
+- <strong>&ldquo;Pipeline AI × IAA 小游戏&rdquo;不存在真空带</strong> — 因为 Runtime 成本 = 0
+- Rezona / LoopIt / YouTube Playables Builder 正在填这个空位</p>
+<p><strong>影响 2：原研究方案主动排除的&rdquo;AI 辅助开发&rdquo;需要重新定义</strong>
+- <strong>排除</strong>:B2B 专业游戏开发者工具（Scenario / Leonardo / Kinetix 纯开发者向，这些是&rdquo;Adobe + AI&rdquo;的话题，不属于&rdquo;游戏赛道&rdquo;)
+- <strong>纳入</strong>：面向<strong>玩家 / 创作者本身</strong>的 Pipeline AI Playable Maker(Rezona / LoopIt / YouTube Playables Builder）— 因为它们的终端用户是<strong>玩家</strong>，属于&rdquo;游戏赛道&rdquo;</p>
+<p><strong>影响 3：模块 06 机会地图的主命题需要修订</strong>
+- <strong>原命题</strong>:&rdquo;AI × 小游戏是真空带&rdquo; — 仍然成立，但限定在 Runtime AI
+- <strong>修订后</strong>:&rdquo;<strong>Runtime AI × IAA 小游戏</strong>是真空带，但 <strong>Pipeline AI × UGC Feed</strong> 是正在兴起的破局路径&rdquo;
+- Pipeline AI 路径可能是未来 2-3 年最真实的 AI × 小游戏赛道</p>
+<p><strong>详见模块 2.5 &ldquo;UGC AI Playable Maker 独立章节&rdquo;</strong>（研究中期补入）。</p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#tldr">TL;DR</a></li>
+<li class=""><a href="#1-facts">1. Facts</a></li>
+<li class="toc-h3"><a href="#11_1">1.1 三个基础术语的事实定义</a></li>
+<li class="toc-h3"><a href="#12-15">1.2 15+ 具体案例定位表</a></li>
+<li class="toc-h3"><a href="#13">1.3 关键数字与融资时间线</a></li>
+<li class="toc-h3"><a href="#14-2022-2026-ai-playable">1.4 2022-2026 时间线（AI × playable 视角）</a></li>
+<li class=""><a href="#2-summary">2. Summary</a></li>
+<li class=""><a href="#3-insights">3. Insights</a></li>
+<li class="toc-h3"><a href="#a-pm">A. PM / 创业者视角：边界清晰，能做什么？</a></li>
+<li class="toc-h3"><a href="#b">B. 投资人视角：哪些子领域值得投？</a></li>
+<li class="toc-h3"><a href="#c-2022-2026">C. 行业视角：2022-2026 发生了什么？</a></li>
+<li class="toc-h3"><a href="#d">D. 战略视角：大厂 / 平台应该关注哪个边界？</a></li>
+<li class=""><a href="#4-sources">4. Sources</a></li>
+<li class=""><a href="#5-gaps">5. Gaps</a></li>
+<li class=""><a href="#6-ai-2026-04">6. 赛道边界扩展 — &amp;ldquo;AI 存在位置&amp;rdquo;第二把刀（2026-04 补入）</a></li>
+<li class="toc-h3"><a href="#_1">双刀分类框架</a></li>
+<li class="toc-h3"><a href="#_2">四类产品的核心区别</a></li>
+<li class="toc-h4"><a href="#1-runtime-ai-native">1. Runtime AI-native（原研究主战场）</a></li>
+<li class="toc-h4"><a href="#2-runtime-ai-augmented">2. Runtime AI-augmented</a></li>
+<li class="toc-h4"><a href="#3-pipeline-ai-static">3. Pipeline AI Static（新纳入）</a></li>
+<li class="toc-h4"><a href="#4-ai-free">4. AI-free</a></li>
+<li class="toc-h3"><a href="#3">这个双刀分类对本研究的 3 个重要影响</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

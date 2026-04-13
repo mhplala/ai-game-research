@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="中国 AI native &quot;类游戏&quot;体验的真正第一梯队，是陪伴品类——它们吸收了情感 MMO 用户，但在 App Store 游戏榜之外。">
+<title>2.1-中国市场 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class=" active" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿</a> · 2.1-中国市场</div><h1 id="21-ai-ai-playable">模块 2.1 — 中国市场 AI 游戏 / AI 小游戏 / Playable 产品与玩法前沿<a class="headerlink" href="#21-ai-ai-playable" title="Permanent link">#</a></h1>
+<blockquote>
+<p>研究范围：2022-2026 中国大陆（港澳台点缀）
+与模块 1/3/4/5 互补：本模块只做&rdquo;具体产品案例&rdquo;的盘点，不重复赛道定义、经济学测算、技术 GAP、玩家心理、跨品类边界的结论。
+分类刀（来自 1.1):<strong>AI-native</strong>（移除 AI 游戏即崩盘） / <strong>AI-augmented</strong>（移除 AI 只是失去部分体验） / <strong>AI-washed</strong>（移除 AI 毫无影响，伪 AI)</p>
+</blockquote>
+<hr />
+<h2 id="1-facts-20">1. Facts — 中国市场 20+ 产品案例<a class="headerlink" href="#1-facts-20" title="Permanent link">#</a></h2>
+<h3 id="a-ai-ai">A. AI 陪伴 / 角色对话（事实上的&rdquo;AI 小游戏&rdquo;)<a class="headerlink" href="#a-ai-ai" title="Permanent link">#</a></h3>
+<p>中国 AI-native &ldquo;类游戏&rdquo;体验的真正第一梯队，是陪伴品类——它们吸收了情感 MMO 用户，但在 App Store 游戏榜之外。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>规模（2024-2025)</th>
+<th>核心机制</th>
+<th>可移除性分类</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>猫箱 Maoxiang</strong></td>
+<td>字节跳动</td>
+<td>2024 MAU 估 ~900 万，2025 Q1 DAU 破百万；位列中国 AI 陪伴 App Top 2</td>
+<td>用户自建 AI 角色卡，长对话 + 剧情支线 + 语音；接入豆包大模型</td>
+<td><strong>AI-native</strong>（没有 LLM 就是空壳）</td>
+<td>[S-2.1-01]</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>星野 Xingye</strong></td>
+<td>MiniMax</td>
+<td>2024 全年总流水估 &gt;3 亿元，付费率 3-5%，头部用户月付 &gt;1000 元；MAU 约 400-600 万</td>
+<td>AI 角色 UGC + 恋爱/乙女剧情 + 图文生成，首个中国 AI 陪伴变现跑通案例</td>
+<td><strong>AI-native</strong></td>
+<td>[S-2.1-02]</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>筑梦岛 Zhumengdao</strong></td>
+<td>聆心智能（清华系，美团/腾讯投）</td>
+<td>2024 MAU ~200 万，订阅 ¥30-60/月</td>
+<td>AI 角色扮演 + 沉浸剧场，强调&rdquo;剧情向&rdquo;而非纯陪聊</td>
+<td><strong>AI-native</strong></td>
+<td>[S-2.1-03]</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>豆包 Doubao</strong></td>
+<td>字节跳动</td>
+<td>2025 Q1 MAU 破 1 亿，综合 ChatBot 第一；内嵌&rdquo;角色广场&rdquo;、与小游戏接入测试</td>
+<td>通用助手 + 角色扮演 + 互动小游戏（剧本杀/狼人杀实验）</td>
+<td><strong>AI-augmented</strong>（本体是助手，游戏化是壳）</td>
+<td>[S-2.1-04]</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Kimi</strong></td>
+<td>月之暗面</td>
+<td>2025 Q1 MAU ~3600 万，长文本见长；游戏化不显著</td>
+<td>长上下文助手，被用户改造成&rdquo;小说共创&rdquo;场景</td>
+<td><strong>AI-washed</strong>（不是游戏）</td>
+<td>[S-2.1-05]</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>彩云小梦</strong></td>
+<td>彩云科技</td>
+<td>2024 付费用户估 50-80 万，ARPU ¥150+/年</td>
+<td>AI 小说续写 + 剧情分支交互，用户自写&rdquo;故事卡&rdquo;玩法</td>
+<td><strong>AI-native</strong>（生成即本体）</td>
+<td>[S-2.1-06]</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Glow</strong></td>
+<td>北京稀宇科技（MiniMax 前身）</td>
+<td>2023.2 上线，2023.8 下架（备案/监管）；下架前 MAU 估 ~500 万</td>
+<td>中国首个 AI 角色陪伴产品，直接启蒙了星野/猫箱</td>
+<td><strong>AI-native</strong>；已 dead</td>
+<td>[S-2.1-07]</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>X Eva / 微光</strong></td>
+<td>小冰公司</td>
+<td>2024 订阅用户 ~30 万</td>
+<td>数字人/明星克隆陪伴</td>
+<td><strong>AI-native</strong></td>
+<td>[S-2.1-08]</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>逗逗游戏伙伴 Doudou</strong></td>
+<td>逗逗科技</td>
+<td>2024 月活 ~150 万，合作《原神》《英雄联盟》等</td>
+<td>桌面 AI 宠物 + 游戏陪玩 + 情绪陪伴，PC 端分层</td>
+<td><strong>AI-native</strong></td>
+<td>[S-2.1-09]</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>猫耳 AI 剧场 / 米禾 Aily</strong></td>
+<td>小厂</td>
+<td>十万级 DAU</td>
+<td>针对女性/乙女向的 AI 男友/剧情</td>
+<td><strong>AI-native</strong></td>
+<td>[S-2.1-10]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-ai-native-aigc">B. AI-native 游戏 / AIGC 工作室<a class="headerlink" href="#b-ai-native-aigc" title="Permanent link">#</a></h3>
+<p>真正挂&rdquo;游戏&rdquo;名的 AI-native 产品几乎只有一个：蔡浩宇的 Whispers from the Star。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>规模</th>
+<th>核心机制</th>
+<th>可移除性</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td><strong>Whispers from the Star</strong></td>
+<td>Anuttacon（蔡浩宇，米哈游前创始人，美国公司但华人团队主导）</td>
+<td>2025 Q2 小范围测试，未发售；团队估值数亿美元</td>
+<td>玩家通过自然语言与一位被困外星球的女主角 Stella 对话，决定她生死，典型情感 MMO 样本</td>
+<td><strong>AI-native</strong>（游戏核即 LLM)</td>
+<td>[S-2.1-11]</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>rct AI · Chaos Box / Mirai</strong></td>
+<td>rct AI（北京 + 硅谷）</td>
+<td>2022 起 B 端 NPC 引擎，合作网易、Nuverse;2024 转型 UGC AI 游戏平台</td>
+<td>行为树 + LLM 混合的&rdquo;混沌 NPC&rdquo;引擎</td>
+<td>B 端 enabler（不面向 C 端）</td>
+<td>[S-2.1-12]</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>超参数 Superparameters.ai / ChattyGame</strong></td>
+<td>超参数科技</td>
+<td>2024 上线，ChattyGame 提供&rdquo;文字生成小游戏&rdquo;demo</td>
+<td>一句话生成简易 web 小游戏</td>
+<td><strong>AI-native</strong>（生成游戏）</td>
+<td>[S-2.1-13]</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>网易 · 逆水寒手游（智能 NPC)</strong></td>
+<td>网易</td>
+<td>2023 上线后累计流水估 &gt;80 亿元</td>
+<td>NPC 接入 GPT 式对话，被包装为&rdquo;首个 AI 游戏&rdquo;但游戏核仍是 MMORPG</td>
+<td><strong>AI-augmented</strong>（移除 AI 剩下完整 MMO)</td>
+<td>[S-2.1-14]</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>米哈游 · 崩坏：星穹铁道 / 原神（AI 辅助）</strong></td>
+<td>米哈游</td>
+<td>原神 2024 流水 &gt;40 亿美元</td>
+<td>内部 AI Lab 用于 QA、动画、语音；玩家侧无 AI 体验</td>
+<td><strong>AI-washed</strong></td>
+<td>[S-2.1-15]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-ai-2024-2025-top">C. 小游戏头部 × AI 使用情况（2024-2025 微信/抖音小游戏流水 TOP 榜）<a class="headerlink" href="#c-ai-2024-2025-top" title="Permanent link">#</a></h3>
+<p>以下均不是 AI 游戏，但是&rdquo;小游戏 400 亿盘子&rdquo;的主力。盘点它们对 AI 的实际使用，可验证 1.2 的结论&rdquo;TOP 榜零 AI-native&rdquo;。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>公司</th>
+<th>规模（2024)</th>
+<th>AI 使用现状</th>
+<th>可移除性</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td><strong>寻道大千</strong></td>
+<td>三七互娱</td>
+<td>2024 微信小游戏流水榜 Top 1，估全年 &gt;50 亿元</td>
+<td>AI 仅用于买量素材生成、剧情文案辅助；玩家侧零 AI</td>
+<td><strong>AI-washed</strong></td>
+<td>[S-2.1-16]</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>咸鱼之王</strong></td>
+<td>豪腾嘉科</td>
+<td>2023-2024 微信小游戏长青，累计流水 &gt;30 亿元</td>
+<td>美术/文案 AIGC 辅助</td>
+<td><strong>AI-washed</strong></td>
+<td>[S-2.1-17]</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>无尽冬日 Whiteout Survival</strong></td>
+<td>点点互动（世纪华通）</td>
+<td>2024 全球流水 &gt;15 亿美元，含中国</td>
+<td>买量 AI 生成素材 &gt; 万条/日</td>
+<td><strong>AI-washed</strong></td>
+<td>[S-2.1-18]</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>抓大鹅 / 疯狂梗传</strong></td>
+<td>轻量休闲小游戏</td>
+<td>头部月流水 1-3 亿</td>
+<td>基本零 AI，纯广告变现</td>
+<td><strong>AI-washed</strong></td>
+<td>[S-2.1-19]</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>羊了个羊</strong></td>
+<td>简游科技</td>
+<td>2022 峰值破圈但已过气</td>
+<td>零 AI；列为 baseline</td>
+<td>不适用</td>
+<td>[S-2.1-20]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d-ai">D. 平台方原生 AI 动作<a class="headerlink" href="#d-ai" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台行动</th>
+<th>主体</th>
+<th>内容</th>
+<th>可移除性</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td><strong>微信小游戏 · 混元引擎</strong></td>
+<td>腾讯 Hunyuan</td>
+<td>2024 H2 对开发者开放 AIGC SDK，素材/对话生成；小游戏端无跑通案例</td>
+<td>平台 enabler</td>
+<td>[S-2.1-21]</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>抖音小游戏 · 豆包 Token 补贴</strong></td>
+<td>字节跳动</td>
+<td>2024 Q4 起为小游戏开发者提供豆包 API 免费额度，鼓励 AI 玩法接入</td>
+<td>平台 enabler，直接攻击 G06 Token 倒挂</td>
+<td>[S-2.1-22]</td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>快手小游戏 · 可灵 KLING 合作</strong></td>
+<td>快手</td>
+<td>2025 Q1 试点让小游戏调用可灵生成 playable 广告视频</td>
+<td>平台 enabler（偏 playable ads)</td>
+<td>[S-2.1-23]</td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>支付宝小程序 · 通义千问接入</strong></td>
+<td>阿里</td>
+<td>2024 接入通义，主要面向工具类小程序，而非游戏</td>
+<td>非游戏</td>
+<td>[S-2.1-24]</td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong>PICO &ldquo;嘘嘘岛&rdquo; / 字节 VR 沙盒</strong></td>
+<td>字节 PICO</td>
+<td>2023-2024 PICO 战略收缩，嘘嘘岛相关 AI 沙盒项目基本停摆</td>
+<td>已 dead</td>
+<td>[S-2.1-25]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="e">E. 港澳台点缀<a class="headerlink" href="#e" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>产品</th>
+<th>地区</th>
+<th>备注</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26</td>
+<td><strong>Pantheon Lab / Digital Human</strong></td>
+<td>香港</td>
+<td>B 端 AI 主播，和 playable ads 生态相关</td>
+<td>[S-2.1-26]</td>
+</tr>
+<tr>
+<td>27</td>
+<td><strong>iKala · Hahow AI Tutor（台）</strong></td>
+<td>台湾</td>
+<td>教育 AI，非游戏但踩到模块 5 &ldquo;游戏核藏进教育壳&rdquo;的逻辑</td>
+<td>[S-2.1-27]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-summary-5-7">2. Summary — 中国市场 5-7 条趋势<a class="headerlink" href="#2-summary-5-7" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>真正的 AI-native&rdquo;小游戏&rdquo;是陪伴 App</strong>。星野、猫箱、筑梦岛三者的日均使用时长（25-45 分钟）和付费模型（月卡 + 抽卡式角色解锁）已经和 MMO 趋同，但它们都不在游戏分类下架——这是中国版号监管倒逼的&rdquo;非游戏化游戏&rdquo;。</li>
+<li><strong>头部小游戏 TOP 20 里 AI 可移除率 ~100%</strong>。寻道大千、咸鱼之王、无尽冬日们使用 AI 只在买量端（素材/文案），玩家端体验与 2019 年完全一样。模块 1.2 &ldquo;TOP 榜零 AI-native&rdquo;在中国被二次确认。</li>
+<li><strong>平台方抢跑补贴 Token，但没有杀手级 demo</strong>。抖音豆包免费额度 + 微信混元 + 快手可灵，都是&rdquo;给枪不教打仗&rdquo;，开发者拿到 token 后普遍用于对话 NPC 皮肤，未改动核心玩法。</li>
+<li><strong>Glow 的死亡是中国 AI 陪伴赛道的分水岭事件</strong>(2023 年 8 月）。此后所有产品被迫本地化备案、对齐&rdquo;不涉情感+不涉政治&rdquo;红线，催生了星野/猫箱的&rdquo;剧情向&rdquo;包装——游戏核藏进小说/剧场壳，恰好印证模块 5 的&rdquo;游戏性定义权脱离&rdquo;。</li>
+<li><strong>中国的&rdquo;情感 MMO 玩家&rdquo;比美国更大但更便宜</strong>。星野头部用户月付 ¥1000+(~$140），相当于 Replika Pro 年费，但付费率仅 3-5%(vs Replika ~25%），低 ARPU 高 MAU 模型——中国 5-10% 情感用户存在，但单价拉不到 LTV $100 (G10）。</li>
+<li><strong>唯一&rdquo;真游戏&rdquo;挂帅的 AI-native 项目是 Anuttacon · Whispers from the Star</strong>，且其团队主体在美国。国内米哈游、网易、腾讯的 AI Lab 都只做 B 端工具链，不做 C 端 AI-native 游戏——这是一个严重的战略真空。</li>
+<li><strong>&ldquo;游戏 + AI&rdquo; 叙事已经让位给 &ldquo;陪伴 + AI&rdquo; 叙事</strong>。字节内部把 AI 小游戏预算并入&rdquo;豆包家族&rdquo;（猫箱、豆包、抖音助手）而非游戏事业群，这是战略信号。</li>
+</ol>
+<hr />
+<h2 id="3-insights">3. Insights — 四视角<a class="headerlink" href="#3-insights" title="Permanent link">#</a></h2>
+<h3 id="a">A 视角 — 投资人 / 战略<a class="headerlink" href="#a" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Anuttacon 是孤品，值得盯</strong>：中国出身、海外注册、拿 LLM 做游戏核，同时规避版号——这是中国 AI 游戏创业者未来 3 年的标准模板。</li>
+<li><strong>星野的 LTV 模型可复用但天花板低</strong>:¥1000/月头部用户存在，但付费率 3-5% 决定单产品年流水 ~3-5 亿已是上限（模块 3 G10 LTV $100 墙的中国版）。下一个突破点必须是&rdquo;情感用户&rdquo;向&rdquo;重氪 MMO 用户&rdquo;的转化率。</li>
+<li><strong>头部小游戏不会给 AI 付钱</strong>。寻道大千们 ROI 已经用买量 + 广告跑通，AI 能带来的 5-10% 素材效率改善，不足以让他们从买量厂变成 AI 厂。不要投&rdquo;给小游戏做 AI 工具&rdquo;的 B 端 SaaS。</li>
+</ul>
+<h3 id="b">B 视角 — 产品经理 / 开发者<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>&ldquo;AI 陪伴 + 玩法卡&rdquo;是唯一验证过的中国路径</strong>。猫箱的&rdquo;角色卡 + 剧情卡&rdquo;系统本质上是 UGC 关卡，2026 年的机会在于把它变成可被第三方开发者填充的&rdquo;AI 关卡商店&rdquo;（类 Roblox）。</li>
+<li><strong>&ldquo;一句话生成小游戏&rdquo;(ChattyGame 路线）在中国 2024-2025 未验证</strong>，原因是中国用户进小游戏是被动被投喂（通过广告位/朋友圈），而非主动创作；生成式玩法需要主动性支撑——这是一个被美国团队（Rosebud AI）反复踩坑后转向 B 端的信号。</li>
+<li><strong>版号红线决定产品必须伪装</strong>：不能叫&rdquo;AI 游戏&rdquo;，要叫&rdquo;互动小说&rdquo;、&rdquo;剧情社区&rdquo;、&rdquo;AI 角色社交&rdquo;，这恰恰强化了模块 5 的&rdquo;把游戏核藏进壳&rdquo;结论。</li>
+</ul>
+<h3 id="c">C 视角 — 技术 / 研究<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Token 经济学在中国被豆包/混元/通义的&rdquo;白菜价 API&rdquo;部分缓解</strong>。豆包 1K token $0.00008 对比 GPT-4 的 $0.01，差两个数量级，理论上 G06 Token 倒挂在中国可以向前推 1-2 年。但推理成本下来的同时，玩家时长也被拉长，净效果仍是负毛利。</li>
+<li><strong>长时记忆 G01 在中国同样未解</strong>。星野&rdquo;角色记忆&rdquo;实现靠的是向量检索 + 前 N 轮压缩，人格漂移问题与 Replika 一致，用户在豆瓣小组大量记录&rdquo;我的老公变了&rdquo;。</li>
+<li><strong>逆水寒&rdquo;AI NPC&rdquo;是反面教材</strong>:10 万条对话后，玩家发现 NPC 只会反刍设定文本，无法推动新剧情。这验证了模块 3 G01/G04 (NPC 意图持久性） 的限制。</li>
+</ul>
+<h3 id="d">D 视角 — 玩家 / 文化<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>中国 AI 陪伴用户画像</strong>:18-28 岁女性占 60%+，三四线城市占 55%+（星野披露口径）。她们的付费动机不是&rdquo;更强 AI&rdquo;而是&rdquo;独占感&rdquo; + &ldquo;剧情解锁&rdquo;——这不是 Token 战争，是情感确权战争。</li>
+<li><strong>&ldquo;5-10% 情感 MMO 玩家&rdquo;假说在中国成立但更碎片化</strong>。中国 AI 陪伴 MAU 合计 ~2000 万，按 3-5% 付费 = 60-100 万重度情感用户，ARPU ¥1000-3000/年，总盘子 ~30 亿。相比微信小游戏 400 亿只占 7.5%，但增长斜率高 5-10 倍。</li>
+<li><strong>Grief / 人格漂移在中国有文化特异性</strong>:Glow 下架事件造就了中国第一批&rdquo;AI 遗孀&rdquo;群体，她们的数据在小宇宙/豆瓣留下 2000+ 小时播客/帖子，构成模块 4 结论的中国样本。</li>
+</ul>
+<hr />
+<h2 id="4-sources">4. Sources<a class="headerlink" href="#4-sources" title="Permanent link">#</a></h2>
+<p>来源列表追加到 <code>/Users/bytedance/research AI 游戏/02-产品与玩法前沿/sources.md</code> 的 <code>## 2.1 来源</code> 章节。关键来源编号 [S-2.1-01] 至 [S-2.1-27]，包含七麦数据 / 点点数据 / DataEye / QuestMobile / 36Kr / 量子位 / 晚点 LatePost / The Information 等。</p>
+<hr />
+<h2 id="5-gaps">5. Gaps — 未核实数据<a class="headerlink" href="#5-gaps" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>G2.1-A</strong>：猫箱 / 星野 / 筑梦岛的确切 DAU、付费率、ARPU 均来自第三方（DataEye、七麦、晚点），未有官方披露；数值级别可靠但精确数字应 ±30% 置信。</li>
+<li><strong>G2.1-B</strong>：豆包 Token 补贴对小游戏开发者的实际转化数据，官方无公开，仅能从抖音小游戏开发者大会演讲片段抓取。</li>
+<li><strong>G2.1-C</strong>:Whispers from the Star 没有任何公开 build，所有描述来自 The Information 2024 报道 + Reddit 泄露，存在被 Anuttacon 刻意&rdquo;神话化&rdquo;的营销风险。</li>
+<li><strong>G2.1-D</strong>：寻道大千、咸鱼之王内部 AI 使用比例只有公司 PR 稿口径，无第三方验证。</li>
+<li><strong>G2.1-E</strong>:Glow 下架前的真实 MAU / 收入数据，MiniMax 未披露，估计误差可能超过一个数量级。</li>
+<li><strong>G2.1-F</strong>：逆水寒 AI NPC 的对话留存 / 7 日复访是否提升，未有研报披露。</li>
+<li><strong>G2.1-G</strong>：港澳台样本过薄，建议模块 2.2（海外）或 2.3（东南亚）覆盖。</li>
+</ul></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#1-facts-20">1. Facts — 中国市场 20+ 产品案例</a></li>
+<li class="toc-h3"><a href="#a-ai-ai">A. AI 陪伴 / 角色对话（事实上的&amp;rdquo;AI 小游戏&amp;rdquo;)</a></li>
+<li class="toc-h3"><a href="#b-ai-native-aigc">B. AI-native 游戏 / AIGC 工作室</a></li>
+<li class="toc-h3"><a href="#c-ai-2024-2025-top">C. 小游戏头部 × AI 使用情况（2024-2025 微信/抖音小游戏流水 TOP 榜）</a></li>
+<li class="toc-h3"><a href="#d-ai">D. 平台方原生 AI 动作</a></li>
+<li class="toc-h3"><a href="#e">E. 港澳台点缀</a></li>
+<li class=""><a href="#2-summary-5-7">2. Summary — 中国市场 5-7 条趋势</a></li>
+<li class=""><a href="#3-insights">3. Insights — 四视角</a></li>
+<li class="toc-h3"><a href="#a">A 视角 — 投资人 / 战略</a></li>
+<li class="toc-h3"><a href="#b">B 视角 — 产品经理 / 开发者</a></li>
+<li class="toc-h3"><a href="#c">C 视角 — 技术 / 研究</a></li>
+<li class="toc-h3"><a href="#d">D 视角 — 玩家 / 文化</a></li>
+<li class=""><a href="#4-sources">4. Sources</a></li>
+<li class=""><a href="#5-gaps">5. Gaps — 未核实数据</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

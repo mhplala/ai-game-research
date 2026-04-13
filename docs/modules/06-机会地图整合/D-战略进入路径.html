@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="一句话判断 :">
+<title>D-战略进入路径 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class=" active" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/06-机会地图整合/index.html">机会地图整合</a> · D-战略进入路径</div><h1 id="06d">06D. 战略进入路径 — 给大厂 / 平台 / 战投的路线图<a class="headerlink" href="#06d" title="Permanent link">#</a></h1>
+<blockquote>
+<p><strong>视角</strong>：大厂（腾讯 / 字节 / 阿里 / 米哈游 / 网易 / Krafton / Google / Meta / Microsoft）、平台方、战投部、新业务负责人
+<strong>核心问题</strong>:&rdquo;我们公司 / 平台应该如何布局 AI 小游戏与 playable 体验赛道？&rdquo;
+<strong>最后更新</strong>:2026-04-13</p>
+</blockquote>
+<hr />
+<h2 id="0-tldr-ceo-30">0. TL;DR（给 CEO 的 30 秒版本）<a class="headerlink" href="#0-tldr-ceo-30" title="Permanent link">#</a></h2>
+<p><strong>一句话判断</strong>:</p>
+<blockquote>
+<p><strong>&ldquo;不要自己做 AI 游戏。做 GPF 创作工具 + 投资 middleware + 补贴 Token — 这三件事是未来 24 个月大厂在这个赛道应该做的全部事情。&rdquo;</strong></p>
+</blockquote>
+<p><strong>三条战略路径优先级</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>路径</th>
+<th>推荐度</th>
+<th>时间窗</th>
+<th>成本</th>
+<th>回报</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S1. 做 Generative Playable Feed 创作工具</strong></td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>12-24 个月窗口</td>
+<td>中（50-200 人团队）</td>
+<td>新子赛道所有权</td>
+</tr>
+<tr>
+<td><strong>S2. 补贴 Token 养生态</strong></td>
+<td>⭐⭐⭐⭐</td>
+<td>已在发生</td>
+<td>高（10 亿级年度补贴）</td>
+<td>生态占位</td>
+</tr>
+<tr>
+<td><strong>S3. 投资 / 收购 middleware</strong></td>
+<td>⭐⭐⭐⭐</td>
+<td>2024-2026 窗口</td>
+<td>中（战投级）</td>
+<td>技术 / 人才 / 退出通道</td>
+</tr>
+<tr>
+<td><strong>S4. AAA Runtime AI 合作 / 授权</strong></td>
+<td>⭐⭐⭐</td>
+<td>长期</td>
+<td>中高</td>
+<td>品牌 + 技术护城河</td>
+</tr>
+<tr>
+<td><strong>S5. 自己做 AI-native C 端产品</strong></td>
+<td>⭐</td>
+<td>随时</td>
+<td>低</td>
+<td><strong>高风险低回报，不推荐</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1">1. 核心战略判断（引用修订后主命题）<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<blockquote>
+<p><strong>&ldquo;Runtime AI × 小游戏是真空带（Token 经济学卡死），但 Generative Playable Feed(GPF）子品类正在用 Pipeline AI + UGC 飞轮打破它 — 窗口期 12-24 个月，之后被 YouTube / TikTok / Roblox 平台化吃掉。&rdquo;</strong></p>
+</blockquote>
+<h3 id="_1">这个判断对大厂意味着什么<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>不要自己下场做 AI-native C 端产品</strong> — Character.AI $2.7B &ldquo;准退出&rdquo; 已经证明了 C 端独立天花板</li>
+<li><strong>GPF 窗口期极短</strong>(12-24 个月）— 慢了就被 MWM / YouTube / Roblox 抢走中国市场</li>
+<li><strong>Pipeline-Creator 象限全球仅 7 家</strong>（模块 1.4 数据）— <strong>中国零玩家</strong></li>
+<li><strong>模块 1.1 双刀分类</strong>给了清晰的战略坐标：不要做 &ldquo;Runtime AI × IAA 小游戏&rdquo;（真空），要做 &ldquo;Pipeline AI × UGC&rdquo;（蓝海）</li>
+</ol>
+<hr />
+<h2 id="2">2. 五条战略路径详细拆解<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<h3 id="s1-generative-playable-feed">S1. 做 Generative Playable Feed 创作工具 ⭐⭐⭐⭐⭐ 最强推荐<a class="headerlink" href="#s1-generative-playable-feed" title="Permanent link">#</a></h3>
+<p><strong>逻辑</strong>：中国 Pipeline-Creator 象限零玩家，这是<strong>全球最空白的单一象限</strong>。MWM.ai（法国）+ YouTube Playables Builder(Google)+ Upit / Jabali / Rosebud（美国）都在抢这个位置，中国必须在 12-24 个月内入场。</p>
+<p><strong>核心产品形态</strong>:
+- <strong>Text-to-playable 移动 App</strong>（对标 Rezona / LoopIt)
+- 用户输入&rdquo;一个吃糖果的狐狸被捕&rdquo;→ AI 生成可玩的 mini game → 一键发布 → TikTok 式 feed 消费
+- 内置 remix 机制：看到别人的作品 → 点击 &ldquo;remix&rdquo; → 修改一行 prompt → 变成自己的</p>
+<p><strong>谁最适合做</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>候选</th>
+<th>优势</th>
+<th>障碍</th>
+<th>推荐度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>字节跳动</strong></td>
+<td>抖音分发 + 豆包 Token 免费 + 即梦生成 + TikTok 海外协同</td>
+<td>内部 BU 协同困难</td>
+<td>⭐⭐⭐⭐⭐ 最优</td>
+</tr>
+<tr>
+<td><strong>腾讯</strong></td>
+<td>微信 / QQ / 视频号分发 + 混元模型 + 小游戏原生生态</td>
+<td>内部创新抑制文化</td>
+<td>⭐⭐⭐⭐ 强</td>
+</tr>
+<tr>
+<td><strong>快手</strong></td>
+<td>可灵模型领先 + 短视频二级平台</td>
+<td>小游戏规模小</td>
+<td>⭐⭐⭐ 中</td>
+</tr>
+<tr>
+<td><strong>小红书</strong></td>
+<td>UGC 社区文化 + 女性用户密度</td>
+<td>技术能力不足</td>
+<td>⭐⭐⭐ 中</td>
+</tr>
+<tr>
+<td><strong>B 站</strong></td>
+<td>创作者生态 + Z 世代</td>
+<td>无模型能力</td>
+<td>⭐⭐ 弱</td>
+</tr>
+<tr>
+<td><strong>米哈游</strong></td>
+<td>美术 / 叙事品味 + 资金充裕</td>
+<td>没有分发平台</td>
+<td>⭐⭐ 弱</td>
+</tr>
+</tbody>
+</table>
+<p><strong>推荐战略</strong>:<strong>字节跳动立即立项，用&rdquo;豆包 + 即梦 + 抖音&rdquo;三合一</strong>做中国版 GPF，目标 2025 Q4 MVP 上线，2026 Q2 冲 500 万 MAU,2026 年内被抖音买量生态吸纳。</p>
+<p><strong>与现有业务的关系</strong>:
+- <strong>抖音小游戏</strong>:GPF 不是小游戏的竞争者，是<strong>小游戏的上游工具</strong>（用 GPF 生成的作品，最好的那些可以孵化成正式小游戏）
+- <strong>豆包</strong>:GPF 本身就是豆包的一个游戏化 vertical
+- <strong>即梦</strong>：即梦负责视觉层，GPF 负责 playable 层
+- <strong>TikTok</strong>:GPF 可以先在抖音冷启动，再用 TikTok 全球化</p>
+<p><strong>ROI 估算（3 年）</strong>:
+- 成本：50-200 人团队 × 3 年 = <strong>3-10 亿人民币</strong>
+- 回报：如果拿下 Pipeline-Creator 中国市场 80%+，就是 <strong>&ldquo;下一个 Roblox&rdquo; 级别</strong> 的战略资产</p>
+<h3 id="s2-token">S2. 补贴 Token 养生态 ⭐⭐⭐⭐ （已在发生，需持续）<a class="headerlink" href="#s2-token" title="Permanent link">#</a></h3>
+<p><strong>逻辑</strong>:Token 经济学真空带的直接破法之一是平台方用<strong>补贴</strong>把 AI 税归零。豆包免费 Token 给抖音小游戏开发者 / 腾讯 Hunyuan 免费给微信小游戏开发者 / 快手可灵给视频化游戏开发者，<strong>三家已在各自赛道执行</strong>。</p>
+<p><strong>战略价值</strong>:
+- 构建<strong>开发者生态依赖</strong>，未来哪怕模型能力被追上，生态锁定已形成
+- 对标<strong>抖音当年补贴短视频创作者</strong>的路径
+- 补贴让原本经济学不成立的&rdquo;AI × 小游戏&rdquo; 暂时可行，等端侧小模型成熟后顺势过渡</p>
+<p><strong>建议</strong>:
+- <strong>维持</strong>目前的 Token 补贴策略，延长到 2027 年
+- <strong>透明化补贴规则</strong>，吸引更多独立开发者
+- <strong>和 S1(GPF 创作工具）结合</strong>，补贴作为 GPF 内置技术</p>
+<p><strong>风险</strong>:
+- 如果补贴停（被财务砍），整个生态崩塌
+- 财务上需要战略耐心</p>
+<h3 id="s3-middleware">S3. 投资 / 收购 middleware ⭐⭐⭐⭐<a class="headerlink" href="#s3-middleware" title="Permanent link">#</a></h3>
+<p><strong>逻辑</strong>:2024H2 全球资本已经从 C 端 AI 游戏转向 B2B middleware(Inworld 估值 $500M / Rho $28M Series A / Convai / Rosebud）。中国大厂应该：</p>
+<ol>
+<li><strong>投资美国 middleware</strong>：腾讯投资部 / 字节跳动战投对 <strong>Inworld / Convai / Kinetix</strong> 下注，拿到技术 + 人才接触</li>
+<li><strong>孵化中国 middleware</strong>：中国 Pipeline-Dev 象限只有 rct AI 在转型，<strong>可以孵化 2-3 家中国 Inworld 版</strong></li>
+<li><strong>和 Krafton MOGIA 学习</strong>:Krafton 把自己变成 Inworld 的&rdquo;中国出口&rdquo;，这个路径对腾讯 / 米哈游都开放</li>
+</ol>
+<p><strong>最值得收购或投资的标的</strong>:
+- <strong>Inworld AI</strong>($500M，美国）— 技术 + AAA 客户 + 中国市场准入
+- <strong>Convai</strong>（美国）— NPC API 简化版
+- <strong>rct AI / Chaos Box</strong>（中国，转型中）— 中国稀缺的本土 middleware
+- <strong>Kinetix</strong>（法国）— AI 动作生成</p>
+<h3 id="s4-aaa-runtime-ai">S4. AAA Runtime AI 合作 / 授权 ⭐⭐⭐<a class="headerlink" href="#s4-aaa-runtime-ai" title="Permanent link">#</a></h3>
+<p><strong>逻辑</strong>:Krafton MOGIA 与 Inworld 的合作（inZOI Smart Zoi 2025.03 EA）证明了&rdquo;<strong>AAA × middleware</strong>&rdquo; 模式可行。中国 AAA 大厂（米哈游 / 腾讯 / 网易）可以：</p>
+<ol>
+<li><strong>和 Inworld / Convai 合作</strong>，为旗下 AAA 游戏（原神 / 逆水寒 / PUBG 等）加 AI NPC</li>
+<li><strong>学习 Krafton</strong>，投资 Inworld 拿到优先权</li>
+<li><strong>自研小型 Runtime AI 能力</strong>（米哈游可能已经在做）</li>
+</ol>
+<p><strong>避免的坑</strong>:
+- <strong>不要做&rdquo;AI NPC&rdquo;PR 式项目</strong>（逆水寒反面案例：玩家 10 万条对话后发现 NPC 只会反刍设定）
+- <strong>要做就做到 inZOI 的水准</strong>，真正让玩家&rdquo;看得出 AI 的价值&rdquo;</p>
+<h3 id="s5-ai-native-c">S5. 自己做 AI-native C 端产品 ⭐(<strong>不推荐</strong>)<a class="headerlink" href="#s5-ai-native-c" title="Permanent link">#</a></h3>
+<p><strong>为什么不推荐</strong>:
+- Character.AI $2.7B &ldquo;准退出&rdquo; 证明 C 端独立天花板 $20-40 LTV
+- 纯 C 端 AI 陪伴 2024H2 死亡潮（Fable / Faulty / Vibecheck / Dreamworld)
+- 大厂做 C 端 AI 游戏只会是&rdquo;AI-washed&rdquo;（逆水寒模式），浪费资源
+- <strong>情感 MMO 5-10% 付费玩家</strong>的运营，大厂的组织不擅长（需要小团队 / 用户社区 / 内容运营文化）</p>
+<p><strong>唯一的例外</strong>:<strong>米哈游 Anuttacon</strong>（蔡浩宇分拆出去的独立工作室 / 注册美国规避版号）— 这种分拆模式可能是大厂的唯一做 AI-native 的正确方式。</p>
+<hr />
+<h2 id="3">3. 分公司战略建议<a class="headerlink" href="#3" title="Permanent link">#</a></h2>
+<h3 id="_2">字节跳动<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p><strong>推荐路径</strong>:S1(GPF 创作工具） + S2（豆包补贴） 并行 + S3（投资 Inworld 或中国 middleware) + 维持猫箱现状</p>
+<p><strong>具体动作</strong>:
+1. <strong>立项&rdquo;抖音版 Rezona&rdquo;</strong>（内部 codename GPF-CN),2025 Q4 MVP,2026 Q2 500 万 MAU
+2. 豆包 Token 对游戏开发者<strong>延长免费 tokens</strong> 至 2027
+3. 战投部评估 Inworld / Rosebud / Convai 投资机会
+4. PICO &ldquo;嘘嘘岛&rdquo;停摆不再复活（模块 2.1 已标注死亡）
+5. <strong>猫箱保持陪伴品类定位</strong>，不转游戏事业群（目前做法正确）</p>
+<h3 id="_3">腾讯<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p><strong>推荐路径</strong>:S1(GPF × 微信/视频号） + S4(Hunyuan Game 和 AAA 合作） + S3（投资 middleware)</p>
+<p><strong>具体动作</strong>:
+1. <strong>微信小游戏 Team 立项 GPF</strong>，基于混元 + 微信社交图谱 + 视频号分发
+2. Hunyuan Game 从&rdquo;自研游戏&rdquo; 转向&rdquo;给腾讯游戏 AAA 做 NPC 能力&rdquo;（参考 Inworld 模式）
+3. 腾讯投资 / IEG 战投关注 Inworld / Rho / Convai
+4. <strong>天美 / 光子</strong>不应自己做 AI 游戏，而是和 Hunyuan Game 内部合作</p>
+<h3 id="_4">米哈游<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p><strong>推荐路径</strong>：维持 Anuttacon 分拆 + S4（和 Inworld 合作 for 原神）</p>
+<p><strong>具体动作</strong>:
+1. <strong>Anuttacon 继续独立运营</strong>（注册美国策略正确）
+2. <strong>原神 / 星穹铁道内的 AI NPC</strong> 应与 Inworld 合作，不自研
+3. <strong>不要做 C 端 AI 陪伴独立品牌</strong>（米哈游没有社区运营基因）
+4. <strong>Whispers from the Star 2025.11 iOS 上线是关键里程碑</strong>，决定 Anuttacon 继续投入还是转型</p>
+<h3 id="_5">网易<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p><strong>推荐路径</strong>:S4(AAA 合作 / 授权）+ 小心做 S5</p>
+<p><strong>具体动作</strong>:
+1. <strong>承认逆水寒 AI NPC 是失败案例</strong>，停止作为 PR 亮点
+2. 和 Inworld / Convai 深度合作做下一代 AI NPC
+3. 评估 NetEase Team Miaozi 的 Inworld 合作是否可以扩展
+4. <strong>不要再做&rdquo;AI-washed&rdquo; AAA</strong> 了</p>
+<h3 id="krafton">Krafton（韩国）<a class="headerlink" href="#krafton" title="Permanent link">#</a></h3>
+<p><strong>推荐路径</strong>：延续 MOGIA + 授权出海 + 孵化 2-3 个 AI game studio</p>
+<p><strong>具体动作</strong>:
+1. MOGIA 继续深化，2026 推第二款 Runtime AI 游戏
+2. 基于 inZOI Smart Zoi 的经验做<strong>&ldquo;AI NPC 技术授权&rdquo;</strong> 给其他大厂
+3. 孵化 2-3 个<strong>&ldquo;MOGIA × 美国中间层&rdquo;</strong> 的跨国合作产品</p>
+<h3 id="google">Google<a class="headerlink" href="#google" title="Permanent link">#</a></h3>
+<p><strong>推荐路径</strong>:YouTube Playables Builder 继续深化 + Character.AI 整合 + Gemini 成本优势</p>
+<p><strong>具体动作</strong>:
+1. <strong>YouTube Playables Builder 是现阶段最重要的战略产品</strong> — Google 在 Phase 2 研究中被低估，它可能是全球 GPF 赛道的最强玩家
+2. <strong>整合 Shazeer + De Freitas 团队</strong> 做 Gemini Game（可能已在进行）
+3. 用 Gemini 成本优势把 Token 打到 OpenAI / Anthropic 之下</p>
+<hr />
+<h2 id="4-ceo">4. 三大行动优先级（给战投部 / CEO)<a class="headerlink" href="#4-ceo" title="Permanent link">#</a></h2>
+<h3 id="p02025-q4">P0(2025 Q4 必须做）<a class="headerlink" href="#p02025-q4" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>立项 GPF 创作工具</strong>(S1）— 字节 / 腾讯 / 快手至少一家必须做，否则被 YouTube Playables Builder 抢走中国市场</li>
+<li><strong>维持 Token 补贴生态</strong>(S2）— 延长 2 年，作为 GPF 的底层基础设施</li>
+<li><strong>战投部立即开始跟 Inworld / Convai / Rosebud / Kinetix 谈</strong>(S3)</li>
+</ol>
+<h3 id="p12026-h1">P1(2026 H1 应该做）<a class="headerlink" href="#p12026-h1" title="Permanent link">#</a></h3>
+<ol start="4">
+<li><strong>AAA 合作试点</strong>(S4）— 腾讯 / 米哈游 / 网易 的下一代 AAA 至少选 1 款做 Runtime AI 合作</li>
+<li><strong>孵化 2-3 家中国 middleware</strong>(S3 扩展）— 字节 / 腾讯投资部拨出 5000 万人民币基金</li>
+<li><strong>现有 AI 陪伴产品保持陪伴定位</strong>（猫箱 / 星野）— 不要转&rdquo;游戏&rdquo;</li>
+</ol>
+<h3 id="p22026-h2-2027">P2(2026 H2 - 2027)<a class="headerlink" href="#p22026-h2-2027" title="Permanent link">#</a></h3>
+<ol start="7">
+<li><strong>GPF 从中国到全球</strong> — 通过 TikTok 海外扩张</li>
+<li><strong>自研 middleware</strong>（字节 / 腾讯）— 如果 S3 投资无法完成</li>
+<li><strong>端侧小模型游戏化</strong>（跟 Apple / Google / Qualcomm 合作）— Apple Intelligence 到位后</li>
+</ol>
+<hr />
+<h2 id="5">5. 组织能力匹配<a class="headerlink" href="#5" title="Permanent link">#</a></h2>
+<h3 id="gpfs1">做 GPF(S1）需要什么样的组织<a class="headerlink" href="#gpfs1" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>必须</th>
+<th>对标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>产品 / 创作者社区运营</strong></td>
+<td>必须</td>
+<td>字节 TikTok / Roblox</td>
+</tr>
+<tr>
+<td><strong>LLM / 生成式 AI 工程</strong></td>
+<td>必须</td>
+<td>需要 20+ 工程师</td>
+</tr>
+<tr>
+<td><strong>移动端高性能游戏引擎</strong></td>
+<td>必须</td>
+<td>WebGPU / Unity / Godot</td>
+</tr>
+<tr>
+<td><strong>TikTok 式 feed 算法</strong></td>
+<td>必须</td>
+<td>字节 / 快手已有</td>
+</tr>
+<tr>
+<td><strong>Remix / UGC 工具链</strong></td>
+<td>新能力</td>
+<td>Roblox Studio / Figma 模板</td>
+</tr>
+<tr>
+<td><strong>创作者激励 / 分成体系</strong></td>
+<td>必须</td>
+<td>Roblox / YouTube</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>:<strong>只有字节跳动完整具备所有能力</strong>，其他家缺 1-2 项但可以补。</p>
+<h3 id="middlewares3s4">做 middleware(S3/S4）需要什么样的组织<a class="headerlink" href="#middlewares3s4" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>B2B 销售能力</strong>（中国大厂普遍弱）</li>
+<li><strong>与国际 AAA 建立客户关系</strong></li>
+<li><strong>开源社区运营</strong>(Inworld 部分开源）</li>
+<li><strong>SDK 文档 / 开发者布道</strong></li>
+</ul>
+<p><strong>结论</strong>:<strong>中国大厂都缺 B2B 销售文化</strong>，自建 middleware 很难。<strong>投资美国 middleware 反而是更好的路径</strong>。</p>
+<hr />
+<h2 id="6">6. 风险与规避<a class="headerlink" href="#6" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>规避</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPF 窗口期关闭</strong>（被 MWM/YouTube 抢走）</td>
+<td>S1 必须 2025 Q4 前立项</td>
+</tr>
+<tr>
+<td><strong>Token 补贴不可持续</strong>（财务压力）</td>
+<td>每年滚动评估 + 结合 S1 内生造血</td>
+</tr>
+<tr>
+<td><strong>middleware 投资泡沫</strong>(2024H2 已过峰值）</td>
+<td>投资窗口关闭前完成</td>
+</tr>
+<tr>
+<td><strong>AAA 合作失败</strong>（逆水寒教训）</td>
+<td>只做 inZOI 级的深度合作</td>
+</tr>
+<tr>
+<td><strong>自己做 C 端 AI 陪伴</strong>(Character.AI 警示）</td>
+<td>除 Anuttacon 式分拆外不推荐</td>
+</tr>
+<tr>
+<td><strong>监管 / 版号风险</strong></td>
+<td>GPF 定位在&rdquo;创作工具&rdquo; 而非&rdquo;游戏&rdquo;</td>
+</tr>
+<tr>
+<td><strong>内部 BU 协同</strong>（字节豆包 × 抖音小游戏）</td>
+<td>CEO 直接汇报的新 BU</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7">7. 来源与引用<a class="headerlink" href="#7" title="Permanent link">#</a></h2>
+<p>本文件主要引用自：
+- 修订后主命题（PROGRESS.md 全局命题更新）
+- 模块 1.4 玩家全景图（92 家，Pipeline-Creator 象限零中国玩家）
+- 模块 2.4 五条迁移路径（Scenario A-E)
+- 模块 2.5 GPF 品类定义
+- 模块 3 18 条 GAP 清单（特别是 G06 Token 倒挂）
+- 模块 4 玩家心理（情感 MMO 5-10% 付费）
+- 模块 2.2 美国市场退出模式（Character.AI / Inflection)
+- 模块 2.3 日韩市场（Krafton MOGIA 案例）</p>
+<hr />
+<h2 id="8-gaps">8. Gaps<a class="headerlink" href="#8-gaps" title="Permanent link">#</a></h2>
+<ol>
+<li><strong>字节 / 腾讯 / 快手在 GPF 方向的内部动作</strong>未公开确认，只能从招聘 / 专利 / 代码仓库侧面推测</li>
+<li><strong>Inworld 估值和收购价</strong>的真实区间未公开</li>
+<li><strong>端侧小模型 + WebGPU</strong> 的具体成熟时点（Apple Intelligence SDK 开放时间）未明</li>
+<li><strong>YouTube Playables Builder 对中国市场是否开放</strong>未明</li>
+</ol>
+<hr />
+<p><strong>本文件是给大厂 / 平台 / 战投的战略路线图，与 A 产品机会 / B 投资机会 / C 行业趋势 互补，共同构成模块 06 的四视角整合。</strong></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#0-tldr-ceo-30">0. TL;DR（给 CEO 的 30 秒版本）</a></li>
+<li class=""><a href="#1">1. 核心战略判断（引用修订后主命题）</a></li>
+<li class="toc-h3"><a href="#_1">这个判断对大厂意味着什么</a></li>
+<li class=""><a href="#2">2. 五条战略路径详细拆解</a></li>
+<li class="toc-h3"><a href="#s1-generative-playable-feed">S1. 做 Generative Playable Feed 创作工具 ⭐⭐⭐⭐⭐ 最强推荐</a></li>
+<li class="toc-h3"><a href="#s2-token">S2. 补贴 Token 养生态 ⭐⭐⭐⭐ （已在发生，需持续）</a></li>
+<li class="toc-h3"><a href="#s3-middleware">S3. 投资 / 收购 middleware ⭐⭐⭐⭐</a></li>
+<li class="toc-h3"><a href="#s4-aaa-runtime-ai">S4. AAA Runtime AI 合作 / 授权 ⭐⭐⭐</a></li>
+<li class="toc-h3"><a href="#s5-ai-native-c">S5. 自己做 AI-native C 端产品 ⭐(不推荐)</a></li>
+<li class=""><a href="#3">3. 分公司战略建议</a></li>
+<li class="toc-h3"><a href="#_2">字节跳动</a></li>
+<li class="toc-h3"><a href="#_3">腾讯</a></li>
+<li class="toc-h3"><a href="#_4">米哈游</a></li>
+<li class="toc-h3"><a href="#_5">网易</a></li>
+<li class="toc-h3"><a href="#krafton">Krafton（韩国）</a></li>
+<li class="toc-h3"><a href="#google">Google</a></li>
+<li class=""><a href="#4-ceo">4. 三大行动优先级（给战投部 / CEO)</a></li>
+<li class="toc-h3"><a href="#p02025-q4">P0(2025 Q4 必须做）</a></li>
+<li class="toc-h3"><a href="#p12026-h1">P1(2026 H1 应该做）</a></li>
+<li class="toc-h3"><a href="#p22026-h2-2027">P2(2026 H2 - 2027)</a></li>
+<li class=""><a href="#5">5. 组织能力匹配</a></li>
+<li class="toc-h3"><a href="#gpfs1">做 GPF(S1）需要什么样的组织</a></li>
+<li class="toc-h3"><a href="#middlewares3s4">做 middleware(S3/S4）需要什么样的组织</a></li>
+<li class=""><a href="#6">6. 风险与规避</a></li>
+<li class=""><a href="#7">7. 来源与引用</a></li>
+<li class=""><a href="#8-gaps">8. Gaps</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

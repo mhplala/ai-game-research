@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="术语 英文 定义 GenAI Generative AI 生成式 AI，包括文本 / 图像 / 音频 / 视频生成 LLM Large Language Model 大语言模型（GPT 4 / Claude / Gemini / Llama 等） LLM Agent — 由 LLM 驱动的自主 agent，可调用工具 / 记忆 / 决策">
+<title>glossary · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class=" active" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/00-方法论与术语/index.html">方法论与术语</a> · glossary</div><h1 id="glossarymd">术语表 — glossary.md<a class="headerlink" href="#glossarymd" title="Permanent link">#</a></h1>
+<blockquote>
+<p>AI 游戏 / 小游戏 / Playable 体验赛道的核心术语。研究过程中持续补充。</p>
+</blockquote>
+<hr />
+<h2 id="ai">AI / 技术<a class="headerlink" href="#ai" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GenAI</td>
+<td>Generative AI</td>
+<td>生成式 AI，包括文本 / 图像 / 音频 / 视频生成</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td>Large Language Model</td>
+<td>大语言模型（GPT-4 / Claude / Gemini / Llama 等）</td>
+</tr>
+<tr>
+<td>LLM Agent</td>
+<td>—</td>
+<td>由 LLM 驱动的自主 agent，可调用工具 / 记忆 / 决策</td>
+</tr>
+<tr>
+<td>Agentic Gameplay</td>
+<td>—</td>
+<td>AI agent 作为玩法核心机制的游戏（非 scripted NPC)</td>
+</tr>
+<tr>
+<td>NPC</td>
+<td>Non-Player Character</td>
+<td>非玩家角色，AI NPC 指 LLM 驱动的对话 / 行为动态的角色</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>Retrieval-Augmented Generation</td>
+<td>检索增强生成，让 LLM 有&rdquo;记忆&rdquo; / 世界观上下文</td>
+</tr>
+<tr>
+<td>Character Consistency</td>
+<td>—</td>
+<td>AI 角色在长对话 / 多轮交互中保持人格一致性</td>
+</tr>
+<tr>
+<td>Token Economics</td>
+<td>—</td>
+<td>基于 LLM token 计费的成本结构 / 利润模型</td>
+</tr>
+<tr>
+<td>PCG</td>
+<td>Procedural Content Generation</td>
+<td>程序化内容生成，传统方法 + AI 增强</td>
+</tr>
+<tr>
+<td>Fine-tuning</td>
+<td>—</td>
+<td>针对特定任务 / 角色 / 世界观微调基础模型</td>
+</tr>
+<tr>
+<td>Diffusion</td>
+<td>—</td>
+<td>扩散模型，用于生成图像 / 贴图 / 角色立绘</td>
+</tr>
+<tr>
+<td>WebGPU</td>
+<td>—</td>
+<td>浏览器内 GPU 通用计算 API，小游戏高性能渲染</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">游戏 / 商业<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小游戏</td>
+<td>Light Game / Instant Game</td>
+<td>&lt;50MB 即开即玩的轻量级游戏，主要在微信 / 抖音 / Meta 等平台</td>
+</tr>
+<tr>
+<td>Playable Ads</td>
+<td>—</td>
+<td>可互动的广告形式，用户可实际操作产品体验</td>
+</tr>
+<tr>
+<td>互动 H5</td>
+<td>—</td>
+<td>基于 HTML5 的互动内容，常用于营销 / 品牌推广</td>
+</tr>
+<tr>
+<td>H5 游戏</td>
+<td>—</td>
+<td>基于 HTML5 标准的轻量游戏，可在浏览器 / 移动端直接运行</td>
+</tr>
+<tr>
+<td>PWA</td>
+<td>Progressive Web App</td>
+<td>渐进式 Web 应用，可离线运行的 web-first 应用</td>
+</tr>
+<tr>
+<td>GaaS</td>
+<td>Games as a Service</td>
+<td>游戏即服务，持续运营 + 内容更新的游戏商业模式</td>
+</tr>
+<tr>
+<td>IAP</td>
+<td>In-App Purchase</td>
+<td>应用内购买 / 内购</td>
+</tr>
+<tr>
+<td>Gacha</td>
+<td>—</td>
+<td>抽卡机制（日式扭蛋），主要变现手段</td>
+</tr>
+<tr>
+<td>Live Ops</td>
+<td>—</td>
+<td>持续运营（活动 / 更新 / 商品），维持玩家留存</td>
+</tr>
+<tr>
+<td>D1 / D7 / D30</td>
+<td>—</td>
+<td>次日 / 7 日 / 30 日留存率</td>
+</tr>
+<tr>
+<td>CAC</td>
+<td>Customer Acquisition Cost</td>
+<td>用户获取成本</td>
+</tr>
+<tr>
+<td>LTV</td>
+<td>Lifetime Value</td>
+<td>用户生命周期价值</td>
+</tr>
+<tr>
+<td>ARPPU</td>
+<td>Average Revenue Per Paying User</td>
+<td>每付费用户平均收入</td>
+</tr>
+<tr>
+<td>ARPDAU</td>
+<td>Average Revenue Per Daily Active User</td>
+<td>每日活用户平均收入</td>
+</tr>
+<tr>
+<td>CPM</td>
+<td>Cost Per Mille</td>
+<td>每千次展示成本（广告）</td>
+</tr>
+<tr>
+<td>DAU / MAU</td>
+<td>Daily / Monthly Active Users</td>
+<td>日活 / 月活</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">玩法范式<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text Adventure</td>
+<td>文本冒险（AI Dungeon 范式）</td>
+</tr>
+<tr>
+<td>Visual Novel / VN</td>
+<td>视觉小说，AI VN 指 LLM 动态生成剧情的视觉小说（1001 Nights 等）</td>
+</tr>
+<tr>
+<td>Sandbox</td>
+<td>沙盒游戏，AI 沙盒代表为 Altera 的智能 NPC 社区</td>
+</tr>
+<tr>
+<td>Dating Sim</td>
+<td>恋爱模拟，AI 恋爱指 Character.AI / Replika 方向</td>
+</tr>
+<tr>
+<td>Role Play / RP</td>
+<td>角色扮演，AI RP 指用户与 AI 扮演不同角色互动</td>
+</tr>
+<tr>
+<td>Roguelike</td>
+<td>每局随机生成的地下城游戏，AI 增强 PCG</td>
+</tr>
+<tr>
+<td>Idle / Incremental</td>
+<td>挂机 / 放置游戏，小游戏主流品类（《咸鱼之王》《寻道大千》）</td>
+</tr>
+<tr>
+<td>Match-3</td>
+<td>三消（《羊了个羊》式）</td>
+</tr>
+<tr>
+<td>Simulation</td>
+<td>模拟经营，AI 模拟可能应用于 NPC 行为</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">平台<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微信小游戏</td>
+<td>腾讯微信内的小游戏生态，最大中国小游戏平台</td>
+</tr>
+<tr>
+<td>抖音小游戏</td>
+<td>字节跳动抖音内小游戏，增速最快</td>
+</tr>
+<tr>
+<td>快手小游戏</td>
+<td>快手小游戏</td>
+</tr>
+<tr>
+<td>QQ 小游戏</td>
+<td>腾讯 QQ 内小游戏</td>
+</tr>
+<tr>
+<td>Meta Horizon</td>
+<td>Meta 元宇宙平台</td>
+</tr>
+<tr>
+<td>Facebook Instant Games</td>
+<td>Facebook 内即时小游戏平台</td>
+</tr>
+<tr>
+<td>Poki</td>
+<td>荷兰的浏览器小游戏聚合平台</td>
+</tr>
+<tr>
+<td>CrazyGames</td>
+<td>比利时的浏览器小游戏聚合</td>
+</tr>
+<tr>
+<td>itch.io</td>
+<td>独立游戏 / 实验游戏聚合平台</td>
+</tr>
+<tr>
+<td>Steam</td>
+<td>Valve 的 PC 游戏分发平台</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">代表公司 / 游戏<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>名字</th>
+<th>类别</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inworld AI</td>
+<td>美国</td>
+<td>AI NPC SDK 提供商，融资 ~$50M+</td>
+</tr>
+<tr>
+<td>Hidden Door</td>
+<td>美国</td>
+<td>多人 AI RP 游戏，IP 改编为叙事游戏</td>
+</tr>
+<tr>
+<td>Latitude</td>
+<td>美国</td>
+<td>AI Dungeon 母公司，GenAI 游戏最早玩家</td>
+</tr>
+<tr>
+<td>Altera</td>
+<td>美国</td>
+<td>AI 智能 NPC 社区（Minecraft 内 AI 村民）</td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>美国</td>
+<td>AI 角色对话平台，月活 &gt; 1 亿，$1B+ 估值</td>
+</tr>
+<tr>
+<td>Replika</td>
+<td>美国</td>
+<td>AI 情感陪伴应用，老牌 AI 陪伴代表</td>
+</tr>
+<tr>
+<td>AI Dungeon</td>
+<td>美国</td>
+<td>Latitude 的文本冒险游戏，GenAI 游戏鼻祖</td>
+</tr>
+<tr>
+<td>Suck Up!</td>
+<td>美国</td>
+<td>2024 年 AI 吸血鬼对话游戏，Steam 爆款</td>
+</tr>
+<tr>
+<td>1001 Nights</td>
+<td>—</td>
+<td>AI 生成图像 + 故事的独立实验游戏</td>
+</tr>
+<tr>
+<td>Whispers from the Star</td>
+<td>中国</td>
+<td>量子绘梦 2024 发布的 AI 叙事游戏</td>
+</tr>
+<tr>
+<td>量子绘梦</td>
+<td>中国</td>
+<td>AI 叙事游戏创业公司</td>
+</tr>
+<tr>
+<td>rct AI</td>
+<td>中国</td>
+<td>AI NPC / procedural content 技术方</td>
+</tr>
+<tr>
+<td>彩云小梦</td>
+<td>中国</td>
+<td>AI 生成小说 / 剧情对话平台</td>
+</tr>
+<tr>
+<td>筑梦岛</td>
+<td>中国</td>
+<td>美团投的 AI 陪伴产品</td>
+</tr>
+<tr>
+<td>Krafton MOGIA</td>
+<td>韩国</td>
+<td>Krafton 的 AI 游戏 lab</td>
+</tr>
+<tr>
+<td>Kinetix</td>
+<td>法国</td>
+<td>AI 动作捕捉 / UGC 动画</td>
+</tr>
+<tr>
+<td>Poki</td>
+<td>荷兰</td>
+<td>浏览器小游戏平台，月活 ~1 亿</td>
+</tr>
+<tr>
+<td>羊了个羊</td>
+<td>中国</td>
+<td>2022 年现象级小游戏，三消玩法</td>
+</tr>
+<tr>
+<td>咸鱼之王</td>
+<td>中国</td>
+<td>放置卡牌小游戏，2023 年营收王</td>
+</tr>
+<tr>
+<td>寻道大千</td>
+<td>中国</td>
+<td>三七互娱 2023-2024 增长最快小游戏</td>
+</tr>
+</tbody>
+</table>
+<p><em>（持续补充）</em></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#ai">AI / 技术</a></li>
+<li class=""><a href="#_1">游戏 / 商业</a></li>
+<li class=""><a href="#_2">玩法范式</a></li>
+<li class=""><a href="#_3">平台</a></li>
+<li class=""><a href="#_4">代表公司 / 游戏</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>

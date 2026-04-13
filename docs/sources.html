@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="高(H) :Crunchbase / Dealroom / SteamDB / Data.ai / Sensor Tower / 官方融资公告 / 学术论文 中(M) :TechCrunch / Game Developer / 游戏陀螺 / GameLook / 36Kr / 开发者官方 blog 低(L) :Reddit / 小红书 / 知乎 / You…">
+<title>全局来源 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="index.html">总览</a>
+      <a href="校验点5-最终简报.html">最终简报</a>
+      <a href="research-plan.html">研究方案</a>
+      <a href="downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="README.html">总览</a></li>
+<li><a class="" href="research-plan.html">研究方案</a></li>
+<li><a class="" href="校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="PROGRESS.html">进度跟踪</a></li>
+<li><a class=" active" href="sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class="" href="modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="index.html">总览</a> · 全局来源</div><h1 id="sourcesmd">全局来源清单 — sources.md<a class="headerlink" href="#sourcesmd" title="Permanent link">#</a></h1>
+<blockquote>
+<p>所有模块引用的来源在此汇总。每个模块另有独立 <code>sources.md</code>。
+格式:<code>[编号] 标题 | URL | 访问日期 | 类型 | 可信度</code></p>
+</blockquote>
+<h2 id="_1">可信度评级<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>高(H)</strong>:Crunchbase / Dealroom / SteamDB / Data.ai / Sensor Tower / 官方融资公告 / 学术论文</li>
+<li><strong>中(M)</strong>:TechCrunch / Game Developer / 游戏陀螺 / GameLook / 36Kr / 开发者官方 blog</li>
+<li><strong>低(L)</strong>:Reddit / 小红书 / 知乎 / YouTube / Twitter anon</li>
+</ul>
+<hr />
+<h2 id="00">模块 00 — 方法论与术语<a class="headerlink" href="#00" title="Permanent link">#</a></h2>
+<p><em>待填</em></p>
+<h2 id="01">模块 01 — 赛道现状与市场结构<a class="headerlink" href="#01" title="Permanent link">#</a></h2>
+<h3 id="13">1.3 来源<a class="headerlink" href="#13" title="Permanent link">#</a></h3>
+<ul>
+<li>腾讯 2024 微信公开课 PRO / 小游戏专场(2024.01 + 2025.01)— 微信小游戏 MAU 500M+、2024 流水突破 400 亿元公开披露</li>
+<li>腾讯 2024Q4 / 2025Q1 财报电话会 — Hunyuan Game 商业化进展</li>
+<li>字节跳动巨量引擎《2024 小游戏行业白皮书》— 抖音小游戏流水 ~150 亿元,增速 +80%</li>
+<li>火山引擎豆包大模型定价页 + 开发者文档(volcengine.com) — doubao-pro / doubao-lite 免费额度</li>
+<li>快手 2024 光合创作者大会 — 快手小游戏与可灵 KLING 合作披露</li>
+<li>支付宝开放平台小程序游戏类目规则 — 广告分成 70/30、通义千问接入</li>
+<li>蚂蚁百灵大模型发布会(2024.09)</li>
+<li>Meta Quarterly Report Q4 2024 — Instant Games MAU 约 250M;Horizon Worlds AI 功能</li>
+<li>Poki 官网 About 页(poki.com/en/about)+ 2024 Poki for Developers 博客 — 100M MAU,50/50 收入分成</li>
+<li>Poki Labs 2025 Q1 &ldquo;Playables Grant&rdquo; 公告</li>
+<li>CrazyGames Developer Portal(developer.crazygames.com)— Happy Dev Program 70% 分成、AI Games 分类(2024)</li>
+<li>itch.io 分成规则页(itch.io/docs/creators/fees)— 默认 10% 可自设</li>
+<li>Steam AI 内容披露政策更新(Steamworks 博客 2024.01.10)— Pre-Generated / Live-Generated</li>
+<li>SteamDB / GameDiscoverCo 2025.12 AI 内容披露游戏累计数据(~8000+)</li>
+<li>Valve Steamworks SDK 2025 更新日志 — AI Content Disclosure API</li>
+<li>Epic Games Store Developer Program 分成政策(12%)</li>
+<li>Krafton 公告:MOGIA(2024.06)Generative AI Game Studio</li>
+<li>Nexon Intelligence Labs 博客(intelligencelabs.nexon.com)</li>
+<li>NCSoft VARCO LLM 发布(2023.08)+ Project G 更新</li>
+<li>七麦数据 / DataEye / 点点数据 2024-2025 小游戏榜单 —《羊了个羊》《咸鱼之王》《无尽冬日》《抓大鹅》《疯狂梗传》流水与 DAU</li>
+<li>Suck Up! by Proxima — Steam 商店页 + SteamDB 销量估算(~50 万+)</li>
+<li>Infinite Craft by Neal Agarwal — Poki 上线数据 + 推特传播数据</li>
+<li>AI Roguelite — Steam 商店页(AI 生成剧情披露)</li>
+<li>Inworld Origins(2023)Steam demo 发布</li>
+<li>1001 Nights(2024)AI 文字冒险 Steam 上架</li>
+<li>itch.io &ldquo;AI Game Jam 2024&rdquo; 参赛项目统计(1200+)</li>
+<li>Rosebud AI / Websim 2024 产品公告(与 CrazyGames 合作)</li>
+</ul>
+<h2 id="02">模块 02 — 产品与玩法前沿<a class="headerlink" href="#02" title="Permanent link">#</a></h2>
+<p><em>待 sub-agents 填充</em></p>
+<h2 id="03-gap">模块 03 — 技术栈与可行性 GAP<a class="headerlink" href="#03-gap" title="Permanent link">#</a></h2>
+<h3 id="3">3 来源<a class="headerlink" href="#3" title="Permanent link">#</a></h3>
+<p><strong>LLM / 模型能力与定价</strong>
+- Artificial Analysis LLM Benchmarks 2025(artificialanalysis.ai)— 延迟/成本/质量对比
+- OpenAI 定价页(platform.openai.com/pricing)— GPT-4o / 4o-mini / Realtime API
+- Anthropic 定价页(anthropic.com/pricing)— Claude 3.5 Sonnet / Haiku,prompt caching
+- Google AI Studio 定价(ai.google.dev/pricing)— Gemini 2.5 Flash / Pro,2M context
+- DeepSeek API 定价(api-docs.deepseek.com)— V3 / R1
+- Meta Llama 3.1 技术报告(ai.meta.com/research)
+- Epoch AI &ldquo;Trends in Machine Learning&rdquo;(epochai.org)— 模型价格下降曲线</p>
+<p><strong>Diffusion / 美术</strong>
+- Black Forest Labs Flux.1 发布博客(blackforestlabs.ai, 2024.08)
+- Stability AI SDXL / SD3 技术报告
+- Replicate / Fal.ai 公开定价对比
+- CivitAI LoRA 社区使用数据(2024–2025)
+- Runway Gen-3 / OpenAI Sora / Luma Dream Machine / 快手可灵官方发布</p>
+<p><strong>Voice / TTS</strong>
+- ElevenLabs Flash v2.5 发布(elevenlabs.io/blog, 2024)
+- OpenAI Realtime API 发布(openai.com/blog, 2024.10)
+- Kyutai Moshi 技术报告(2024.09)
+- Sesame 发布(sesame.com, 2025)
+- 火山引擎语音合成 / 腾讯云 TTS 定价页</p>
+<p><strong>Agent / SDK / Middleware</strong>
+- Inworld AI 官方文档 + 2024.07 C 轮融资公告(5000 万美元)
+- Convai 官网 + Unity Asset Store 列表
+- rct AI 官网 + 公开访谈(36Kr / GameLook)
+- Microsoft AutoGen GitHub repo
+- LangChain / LangGraph 文档
+- Anthropic Computer Use 发布(2024.10)</p>
+<p><strong>渲染 / 前端</strong>
+- WebGPU Chrome 113 正式发布公告(chromestatus.com)
+- Cocos Creator 3.8 发布说明 + 微信小游戏包体规范
+- Unity WebGL 2023 LTS 文档
+- PlayCanvas / Babylon.js / Three.js 官网</p>
+<p><strong>玩家 / 开发者 / 投资人 / 大厂期待</strong>
+- Reddit r/AIDungeon / r/CharacterAI / r/SuckUpGame 评论采样(2024–2026)
+- Steam 评论(Suck Up! / AI Roguelite / 1001 Nights)
+- 小红书 &ldquo;AI 女友&rdquo;/&rdquo;AI 恋爱&rdquo; 标签定性采样
+- TapTap《逆水寒》智能 NPC 评论
+- a16z Games 博客 &ldquo;Generative AI for Games&rdquo;(2023)+ &ldquo;The Creative Singularity&rdquo;(2024)
+- Bitkraft Ventures &ldquo;AI Thesis&rdquo;(2024)
+- Makers Fund / Index Ventures 博客
+- Brookings Institution &ldquo;AI Companions&rdquo; report(2024)
+- 字节 GDC 2025 豆包演讲
+- 腾讯 2024 微信公开课 + 混元接入元梦之星公告
+- 米哈游 2024 年 AI 招聘 JD + HoYoverse AI 部门公开信息
+- 网易伏羲实验室官网 + 《逆水寒手游》智能 NPC 发布(2023.07)
+- Google DeepMind Genie(2024.02)/ Microsoft WHAM(2025)/ Sony Project GT AI(2024)</p>
+<p><strong>案例 / 数据</strong>
+- Suck Up!(Proxima Enterprises)SteamDB + 2024 开发者访谈(LLM 成本披露)
+- AI Dungeon(Latitude)历史融资 + 2023 收入披露
+- Character.ai 被 Google &ldquo;技术授权&rdquo;收购(2024.08, 25 亿美元)
+- Replika 用户调研(Brookings 2024)
+- Volley / Hidden Door / Series AI 融资公告(TechCrunch / PitchBook)
+- 字节跳动 2025 Q1 财报电话会(GenAI 研发提效 ~25%)</p>
+<p><strong>可信度</strong>
+- 技术能力/定价:H(官方)
+- 玩家评论:L
+- 投资人博客 / 大厂招聘:M
+- 未公开收入估算(Suck Up / AI Dungeon):M</p>
+<h2 id="04">模块 04 — 玩家行为与留存心理<a class="headerlink" href="#04" title="Permanent link">#</a></h2>
+<p><em>待 sub-agents 填充</em></p>
+<h2 id="05">模块 05 — 跨品类启发<a class="headerlink" href="#05" title="Permanent link">#</a></h2>
+<p><em>待 sub-agents 填充</em></p>
+<h2 id="06">模块 06 — 机会地图整合<a class="headerlink" href="#06" title="Permanent link">#</a></h2>
+<p><em>最终整合阶段填充</em></p></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#_1">可信度评级</a></li>
+<li class=""><a href="#00">模块 00 — 方法论与术语</a></li>
+<li class=""><a href="#01">模块 01 — 赛道现状与市场结构</a></li>
+<li class="toc-h3"><a href="#13">1.3 来源</a></li>
+<li class=""><a href="#02">模块 02 — 产品与玩法前沿</a></li>
+<li class=""><a href="#03-gap">模块 03 — 技术栈与可行性 GAP</a></li>
+<li class="toc-h3"><a href="#3">3 来源</a></li>
+<li class=""><a href="#04">模块 04 — 玩家行为与留存心理</a></li>
+<li class=""><a href="#05">模块 05 — 跨品类启发</a></li>
+<li class=""><a href="#06">模块 06 — 机会地图整合</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="sources.html">来源索引</a>
+</footer>
+
+<script src="assets/script.js" defer></script>
+</body>
+</html>

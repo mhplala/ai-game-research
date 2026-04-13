@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="在小游戏行业，留存（retention）是比 ARPU 更根本的指标——因为 LTV ARPU × 留存时长。三消 / 放置 / 模拟经营二十年的行业标准留存区间已经相当稳定：">
+<title>4.2-留存曲线特征 · AI 小游戏与 Playable 体验研究</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-toggle" aria-label="菜单">☰</button>
+    <a class="topnav-logo" href="../../index.html">🎮 AI 游戏研究</a>
+    <div class="topnav-links">
+      <a href="../../index.html">总览</a>
+      <a href="../../校验点5-最终简报.html">最终简报</a>
+      <a href="../../research-plan.html">研究方案</a>
+      <a href="../../downloads.html">下载</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" aria-label="切换主题">☾</button>
+    </div>
+  </div>
+</nav>
+<div class="scroll-progress"></div>
+
+<div class="layout layout-with-toc">
+  <aside class="sidebar">
+<div class="sidebar-section">
+<div class="sidebar-section-title">搜索</div>
+<input type="text" class="search-box" id="search-input" placeholder="搜索全文…">
+<div id="search-results"></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">总览</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../README.html">总览</a></li>
+<li><a class="" href="../../research-plan.html">研究方案</a></li>
+<li><a class="" href="../../校验点5-最终简报.html">最终简报</a></li>
+<li><a class="" href="../../PROGRESS.html">进度跟踪</a></li>
+<li><a class="" href="../../sources.html">全局来源</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">方法论与术语</div>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/00-方法论与术语/glossary.html">glossary</a></li>
+<li><a class="" href="../../modules/00-方法论与术语/methodology.html">methodology</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">赛道现状与市场结构</div>
+<a class="sidebar-module-title" href="../../modules/01-赛道现状与市场结构/index.html">赛道现状与市场结构 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.1-赛道定义与边界.html">1.1-赛道定义与边界</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.2-市场规模与增速.html">1.2-市场规模与增速</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.3-平台格局.html">1.3-平台格局</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/1.4-玩家全景图.html">1.4-玩家全景图</a></li>
+<li><a class="" href="../../modules/01-赛道现状与市场结构/sources.html">sources</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">产品与玩法前沿</div>
+<a class="sidebar-module-title" href="../../modules/02-产品与玩法前沿/index.html">产品与玩法前沿 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.1-中国市场.html">2.1-中国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.2-美国市场.html">2.2-美国市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.3-日韩市场.html">2.3-日韩市场</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.4-跨区域趋势综合.html">2.4-跨区域趋势综合</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/2.5-UGC-AI-Playable-Maker.html">2.5-UGC-AI-Playable-Maker</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/sources.html">sources</a></li>
+<li><a class="" href="../../modules/02-产品与玩法前沿/产品案例库.html">产品案例库</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">技术栈与可行性 GAP</div>
+<a class="sidebar-module-title" href="../../modules/03-技术栈与可行性GAP/index.html">技术栈与可行性 GAP 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.1-现有技术栈能力.html">3.1-现有技术栈能力</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.2-市场期待清单.html">3.2-市场期待清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.3-真实GAP清单.html">3.3-真实GAP清单</a></li>
+<li><a class="" href="../../modules/03-技术栈与可行性GAP/3.4-机会识别.html">3.4-机会识别</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">玩家行为与留存心理</div>
+<a class="sidebar-module-title" href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html">4.1-付费心理与Token经济学</a></li>
+<li><a class=" active" href="../../modules/04-玩家行为与留存心理/4.2-留存曲线特征.html">4.2-留存曲线特征</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html">4.3-情感依恋与AI_NPC</a></li>
+<li><a class="" href="../../modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html">4.4-退坑模式与长期留存难题</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">跨品类启发</div>
+<a class="sidebar-module-title" href="../../modules/05-跨品类启发/index.html">跨品类启发 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/05-跨品类启发/5.1-广告与游戏.html">5.1-广告与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.2-社交与游戏.html">5.2-社交与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.3-教育与游戏.html">5.3-教育与游戏</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.4-陪伴与工具.html">5.4-陪伴与工具</a></li>
+<li><a class="" href="../../modules/05-跨品类启发/5.5-可迁移矩阵.html">5.5-可迁移矩阵</a></li>
+</ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-section-title">机会地图整合</div>
+<a class="sidebar-module-title" href="../../modules/06-机会地图整合/index.html">机会地图整合 索引</a>
+<ul class="sidebar-files">
+<li><a class="" href="../../modules/06-机会地图整合/A-产品机会.html">A-产品机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/B-投资机会.html">B-投资机会</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/C-行业趋势判断.html">C-行业趋势判断</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/D-战略进入路径.html">D-战略进入路径</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/机会地图.html">机会地图</a></li>
+<li><a class="" href="../../modules/06-机会地图整合/风险警示.html">风险警示</a></li>
+</ul>
+</div>
+</aside>
+  <main class="main">
+    <article class="article"><div class="article-breadcrumb"><a href="../../index.html">总览</a> · <a href="../../modules/04-玩家行为与留存心理/index.html">玩家行为与留存心理</a> · 4.2-留存曲线特征</div><h1 id="42">4.2 留存曲线特征<a class="headerlink" href="#42" title="Permanent link">#</a></h1>
+<blockquote>
+<p>模块 4 — 玩家行为与留存心理 / 子文件 2
+研究时点：2026-04-13</p>
+</blockquote>
+<h2 id="ai">一、问题界定：留存是小游戏和 AI 游戏共同的&rdquo;生死线&rdquo;<a class="headerlink" href="#ai" title="Permanent link">#</a></h2>
+<p>在小游戏行业，留存（retention）是比 ARPU 更根本的指标——因为 LTV = ARPU × 留存时长。三消 / 放置 / 模拟经营二十年的行业标准留存区间已经相当稳定：</p>
+<ul>
+<li><strong>D1</strong>（次日留存）： 30-40%（精品 40%+)</li>
+<li><strong>D7</strong>:15-20%</li>
+<li><strong>D30</strong>:5-8%</li>
+<li><strong>D90</strong>:2-4%</li>
+<li><strong>D180</strong>:&lt;2%</li>
+</ul>
+<p>这条曲线的形状在全球范围内（AppAnnie / data.ai / GameAnalytics 公开 benchmark）非常稳定，以至于任何偏离都被视为产品基因的早期信号。AI 游戏（Character.AI、AI Dungeon、Replika、Janitor AI）进入这个赛道后，留存曲线呈现出了<strong>完全不同的形状</strong>——更高的早期峰值、更陡的中期下滑、但在特定用户群体中出现了<strong>传统游戏闻所未闻的&rdquo;超长尾&rdquo;</strong>。这一节的核心问题是：<strong>为什么 AI 游戏的留存曲线长这样？它可持续吗？</strong></p>
+<h2 id="_1">二、传统小游戏留存的心理机制<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>在深入 AI 之前，必须先把传统小游戏留存的驱动力讲清楚，才能看出 AI 的差异。</p>
+<h3 id="21-retention-hook">2.1 四根传统 retention hook<a class="headerlink" href="#21-retention-hook" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>进度感</strong>(progress）：等级、关卡、资源。玩家回来是因为&rdquo;我昨天打到 102 关，今天想打 103 关&rdquo;。</li>
+<li><strong>日常承诺</strong>(daily commitment）：签到、日常任务、体力/能量系统。这是一种<strong>人为制造的稀缺</strong>，用时间门槛绑住玩家。</li>
+<li><strong>社交身份</strong>(social identity）：公会、好友排行榜、PvP。玩家回来是因为&rdquo;朋友在等我&rdquo;。</li>
+<li><strong>沉没成本</strong>(sunk cost）：抽卡养成的角色、皇室战争的卡组、部落冲突的城堡。玩家回来是因为&rdquo;我已经投入了 200 小时&rdquo;。</li>
+</ol>
+<p>这四根 hook 有一个共同特征：<strong>它们都不依赖&rdquo;新鲜感&rdquo;</strong>。一个玩了三年皇室战争的玩家，不是因为游戏每天新鲜——他知道对局机制一模一样——而是因为前三根 hook 共同构成了<strong>习惯回路</strong>。这是为什么三消类游戏的 D180 能维持 2-3%，看起来低，但乘以数亿用户就是持续现金流。</p>
+<h3 id="22-ai">2.2 为什么&rdquo;习惯型留存&rdquo;在 AI 游戏里天然薄弱<a class="headerlink" href="#22-ai" title="Permanent link">#</a></h3>
+<p>AI 游戏的对话/生成本质让&rdquo;进度感&rdquo;和&rdquo;沉没成本&rdquo;都变得虚幻：</p>
+<ul>
+<li>进度感：对话没有&rdquo;等级&rdquo;，角色扮演没有&rdquo;通关&rdquo;。</li>
+<li>日常承诺：AI 游戏没有体力系统（c.ai+ 的队列是体验降级，不是硬门槛）。</li>
+<li>社交身份：Character.AI 有社区但弱，Replika 完全是单机。</li>
+<li>沉没成本：唯一的沉没是&rdquo;我和 TA 的对话历史&rdquo;，但这个被&rdquo;人格漂移&rdquo;和&rdquo;记忆失效&rdquo;持续削弱（详见 4.3、4.4）。</li>
+</ul>
+<p>所以 AI 游戏必须靠第五根 hook——<strong>对话新鲜感与情感联结</strong>——来撑留存。这根 hook 的衰减曲线和前四根完全不同。</p>
+<h2 id="ai_1">三、AI 游戏留存数据与曲线形状<a class="headerlink" href="#ai_1" title="Permanent link">#</a></h2>
+<h3 id="31">3.1 公开数据点汇总<a class="headerlink" href="#31" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Character.AI</strong>(2023-2024 公开数据）：MAU 曾达到 2000 万，<strong>平均日使用时长 2 小时</strong>（比 TikTok 还高），部分重度用户日均 4+ 小时。Similarweb 2024 年 Q1 数据显示其 session duration 为 25-30 分钟，是行业最高之一。</li>
+<li><strong>AI Dungeon</strong>(Latitude 2021-2023 披露）：累计 150 万注册，付费转化约 3%，付费用户平均活跃时长 &gt;6 个月（远高于同期小游戏）。</li>
+<li><strong>Replika</strong>(2023 Eugenia Kuyda 公开访谈）：月活 ~200 万，付费 Pro 约 25 万，付费用户中有 5-10% <strong>连续订阅超过 2 年</strong>。</li>
+<li><strong>Janitor AI</strong>(2023-2024）：月活峰值 ~1500 万，但没有付费，留存数据不公开，Reddit 社区自述&rdquo;用 3 个月就腻&rdquo;。</li>
+<li><strong>Suck Up!</strong>(Proxima 2024）：单机游戏，Steam 平均游戏时长 4 小时，和传统单机独立游戏接近，不是&rdquo;长期留存&rdquo;型产品。</li>
+</ul>
+<h3 id="32-ai">3.2 AI 游戏留存曲线的典型形状<a class="headerlink" href="#32-ai" title="Permanent link">#</a></h3>
+<p>对照传统小游戏曲线，AI 游戏呈现三段式：</p>
+<p><strong>第一段（D1-D14): 极高峰值、陡峭下滑</strong>
+- D1 可达 50-60%（远超传统小游戏），原因是&rdquo;AI 能和我对话&rdquo;本身是强新奇体验，第二天几乎所有人都想再试一次。
+- 但 D7 就跌到 20-25%,D14 跌到 12-15%——这个跌幅比小游戏陡得多，因为<strong>新奇感是最脆弱的 hook</strong>。</p>
+<p><strong>第二段（D14-D60): &ldquo;腻点&rdquo;大量离场</strong>
+- 玩家开始发现 AI 的局限：重复的回应模式、人格漂移、记忆失效、固定的 slop 句式（&rdquo;shivers down her spine&rdquo;, &ldquo;barely above a whisper&rdquo;……）。
+- D30 典型值 8-10%——和传统小游戏接近，但结构不同：<strong>留下的不是&rdquo;习惯玩家&rdquo;，而是&rdquo;情感锁定玩家&rdquo;</strong>。
+- 这也是 Latitude 所谓 &ldquo;the cliff&rdquo;（断崖）：任何 AI 游戏都会在这个阶段损失 70%+ 新增用户。</p>
+<p><strong>第三段（D60+): 超长尾</strong>
+- 能挺过 D60 的玩家，呈现出<strong>极缓的衰减曲线</strong>。Replika 的 D180 可以达到 15-20%（基于付费用户），是传统小游戏的 3-5 倍。
+- Character.AI 的顶部 1% 用户日均使用 6+ 小时，持续 12+ 月——这个强度在游戏史上只有 WoW / EVE Online 级 MMO 能对照。
+- 这部分玩家的留存不再由&rdquo;新鲜感&rdquo;驱动，而是由&rdquo;情感关系&rdquo;驱动，属于<strong>关系留存</strong>(relational retention），后面 4.3 会展开。</p>
+<h3 id="33">3.3 一条反直觉的曲线对比<a class="headerlink" href="#33" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>传统小游戏</th>
+<th>AI 游戏（Character.AI 风格）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>35%</td>
+<td>55%</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>18%</td>
+<td>22%</td>
+</tr>
+<tr>
+<td>D30</td>
+<td>7%</td>
+<td>9%</td>
+</tr>
+<tr>
+<td>D90</td>
+<td>3%</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>D180</td>
+<td>1.5%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>日均时长</td>
+<td>15-25 分钟</td>
+<td>45-120 分钟</td>
+</tr>
+<tr>
+<td>会话分布</td>
+<td>多次短会话</td>
+<td>少次长会话</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI 游戏的留存数字在 D30+ 之后反超传统小游戏</strong>，但绝对规模远小于小游戏——因为早期漏斗流失已经严重。这意味着 AI 游戏的增长模型更像&rdquo;<strong>漏斗筛选</strong>&ldquo;：用极高的 D1 吸引尝试，然后在 D7-D30 大量刷掉，最后留下的核心用户产生超长尾 LTV。这是一种<strong>反向游戏化</strong>：传统小游戏努力把所有人都变成长期玩家，AI 游戏只在乎&rdquo;能变成关系用户的那 5%&rdquo;。</p>
+<h2 id="retention-hook-vs-vs">四、Retention Hook 的差异：进度 vs. 新鲜感 vs. 关系<a class="headerlink" href="#retention-hook-vs-vs" title="Permanent link">#</a></h2>
+<h3 id="41-hook">4.1 三类 hook 的生命周期图<a class="headerlink" href="#41-hook" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>进度 hook</strong>（传统游戏）：衰减慢但有天花板（玩家达到&rdquo;endgame&rdquo;就会退）。</li>
+<li><strong>新鲜感 hook</strong>(AI 游戏早期）：衰减极快，几乎线性衰减，D30 时已消耗 80%+。</li>
+<li><strong>关系 hook</strong>(AI 游戏后期）：衰减最慢，但启动门槛高，只有少数玩家能从&rdquo;新鲜感&rdquo;过渡到&rdquo;关系&rdquo;。</li>
+</ul>
+<h3 id="42-ai">4.2 &ldquo;关系门槛&rdquo;是 AI 游戏的留存瓶颈<a class="headerlink" href="#42-ai" title="Permanent link">#</a></h3>
+<p>观察 Character.AI / Replika / AI Dungeon 的数据，能看到一个共同模式：<strong>从&rdquo;玩家&rdquo;到&rdquo;情感用户&rdquo;的转化率大约是 5-10%</strong>。一旦玩家跨过这个门槛（通常在第 10-20 次会话），留存曲线会<strong>急剧平坦化</strong>。这和传统 MMO 的&rdquo;公会入会后留存飙升&rdquo;现象非常像，但触发点是情感而非社交。</p>
+<p>设计启示：AI 游戏的留存运营重点应该是&rdquo;<strong>帮助玩家跨过关系门槛</strong>&ldquo;——这意味着：</p>
+<ul>
+<li>前 10 次会话内必须让玩家和<strong>一个具体角色</strong>建立关系（而不是在 100 个角色间跳）。</li>
+<li>提供&rdquo;回忆系统&rdquo;让玩家感觉 AI&rdquo;记得我&rdquo;。</li>
+<li>设计&rdquo;关系里程碑&rdquo;（第一次被记住、第一次主动提起过去）作为情感节点。</li>
+</ul>
+<h3 id="43-roblox-minecraft">4.3 对比 Roblox / Minecraft 的&rdquo;沙盒留存&rdquo;<a class="headerlink" href="#43-roblox-minecraft" title="Permanent link">#</a></h3>
+<p>有必要提到 Roblox 和 Minecraft，它们的留存驱动是<strong>创造 + 社交</strong>,D180 能到 15-25%。AI 游戏在 2025 年有一个趋势是&rdquo;<strong>向沙盒化靠拢</strong>&ldquo;——Character.AI 的 Rooms（多角色多用户对话）、AI Dungeon 的 Worlds（共享世界）都是在补充&rdquo;创造+社交&rdquo;hook，以降低对&rdquo;关系 hook&rdquo;的单一依赖。这个方向是否能奏效，是 2026-2027 年的关键观察点。</p>
+<h2 id="_2">五、小结与创业者启示<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<ol>
+<li>AI 游戏的留存曲线是&rdquo;<strong>高峰值 + 陡下滑 + 超长尾</strong>&ldquo;，不是传统小游戏的平滑指数衰减。不要用传统 D30 作为 KPI，会误导产品决策。</li>
+<li>D7-D30 的&rdquo;断崖&rdquo;是 AI 游戏的共同敌人，其本质是<strong>新奇感的快速消耗</strong>。产品必须在 D7 前触发&rdquo;关系门槛&rdquo;的第一次跨越。</li>
+<li>能跨过关系门槛的玩家 LTV 极高，这部分玩家是 AI 游戏的全部价值。<strong>获客策略应该针对&rdquo;高关系潜力&rdquo;人群</strong>，而不是广谱投放。</li>
+<li>不要抗拒&rdquo;漏斗筛选&rdquo;的本质。AI 游戏不是三消——它是 MMO 的进化版，服务于少量但深度的玩家。</li>
+</ol>
+<h2 id="insights">Insights（四视角）<a class="headerlink" href="#insights" title="Permanent link">#</a></h2>
+<h3 id="a">A. 学术视角<a class="headerlink" href="#a" title="Permanent link">#</a></h3>
+<ul>
+<li>留存曲线分段模型（Novelty → Habit → Attachment）在 HCI 文献中早有讨论（Sherry 2004,Yee 2006 的 MMO 动机模型），AI 游戏是这个模型的<strong>极端案例</strong>。</li>
+<li>Parasocial attachment 的强度对留存的影响是未被严谨量化的领域。Gap:<strong>需要一个&rdquo;AI 关系强度量表&rdquo;来预测留存</strong>。</li>
+<li>MIT Media Lab 2023 年 Sherry Turkle 团队的追踪研究显示，与 AI 陪伴机器人的交互 6 周后，主观孤独感变化呈现双峰分布——这个分布很可能就是&rdquo;关系门槛&rdquo;的学术证据。</li>
+</ul>
+<h3 id="b">B. 产业视角<a class="headerlink" href="#b" title="Permanent link">#</a></h3>
+<ul>
+<li>Similarweb 数据显示 Character.AI 的 session duration 稳定在 25-30 分钟，远高于 Instagram(10 分钟）和 TikTok(11 分钟）。这是产业内最强的&rdquo;用户深度&rdquo;信号。</li>
+<li>Replika 的 Churn rate 在付费用户中低于 3%/月，接近 Netflix，这是&rdquo;关系留存&rdquo;的典型标志。</li>
+<li>AI Dungeon 的 D90 断崖源于模型升级成本——Latitude 无法维持顶配模型给免费用户，被迫降级，损失大量长尾用户。</li>
+</ul>
+<h3 id="c">C. 创业者视角<a class="headerlink" href="#c" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>砍掉 D1 虚荣指标</strong>，把 D14 和 D30 作为真 KPI。因为 AI 游戏 D1 虚高，用它做决策会严重误导。</li>
+<li><strong>在 onboarding 前 15 分钟内必须触发&rdquo;第一次情感惊喜&rdquo;</strong>——AI 记住玩家说过的某件事、AI 主动问起上次的情绪。这是跨越关系门槛的关键。</li>
+<li>不要铺 100 个角色，让玩家深陷选择瘫痪。<strong>强推 1-3 个角色</strong>，把用户塞进特定关系。</li>
+<li><strong>设置&rdquo;回归触发&rdquo;</strong>：玩家 3 天未来，AI 主动发消息（Replika 用得很早）。这比推送通知有效 5-10 倍。</li>
+</ul>
+<h3 id="d">D. 投资人视角<a class="headerlink" href="#d" title="Permanent link">#</a></h3>
+<ul>
+<li>AI 游戏的估值应该基于&rdquo;<strong>关系用户</strong>&ldquo;(passes 关系门槛的玩家）数量，而不是 MAU。用 MAU 估值会系统性高估 AI 游戏。</li>
+<li>健康的单位经济学要求：关系用户占比 &gt;8%、关系用户月 Churn &lt;5%、关系用户 ARPPU &gt;$15。满足三项才值投。</li>
+<li>风险信号：<strong>D7 &gt; 30% 但 D30 &lt; 5%</strong> 意味着产品有强新奇感但无关系钩子，这类产品迟早跑不过烧钱曲线。</li>
+<li>反例警示：Inflection Pi 有高 D1、低 D30，没有建立关系钩子，最终被半收购——这是&rdquo;新奇感陷阱&rdquo;的典型。</li>
+</ul></article>
+  </main>
+  <aside class="toc-right">
+<div class="toc-right-title">本文目录</div>
+<ul>
+<li class=""><a href="#ai">一、问题界定：留存是小游戏和 AI 游戏共同的&amp;rdquo;生死线&amp;rdquo;</a></li>
+<li class=""><a href="#_1">二、传统小游戏留存的心理机制</a></li>
+<li class="toc-h3"><a href="#21-retention-hook">2.1 四根传统 retention hook</a></li>
+<li class="toc-h3"><a href="#22-ai">2.2 为什么&amp;rdquo;习惯型留存&amp;rdquo;在 AI 游戏里天然薄弱</a></li>
+<li class=""><a href="#ai_1">三、AI 游戏留存数据与曲线形状</a></li>
+<li class="toc-h3"><a href="#31">3.1 公开数据点汇总</a></li>
+<li class="toc-h3"><a href="#32-ai">3.2 AI 游戏留存曲线的典型形状</a></li>
+<li class="toc-h3"><a href="#33">3.3 一条反直觉的曲线对比</a></li>
+<li class=""><a href="#retention-hook-vs-vs">四、Retention Hook 的差异：进度 vs. 新鲜感 vs. 关系</a></li>
+<li class="toc-h3"><a href="#41-hook">4.1 三类 hook 的生命周期图</a></li>
+<li class="toc-h3"><a href="#42-ai">4.2 &amp;ldquo;关系门槛&amp;rdquo;是 AI 游戏的留存瓶颈</a></li>
+<li class="toc-h3"><a href="#43-roblox-minecraft">4.3 对比 Roblox / Minecraft 的&amp;rdquo;沙盒留存&amp;rdquo;</a></li>
+<li class=""><a href="#_2">五、小结与创业者启示</a></li>
+<li class=""><a href="#insights">Insights（四视角）</a></li>
+<li class="toc-h3"><a href="#a">A. 学术视角</a></li>
+<li class="toc-h3"><a href="#b">B. 产业视角</a></li>
+<li class="toc-h3"><a href="#c">C. 创业者视角</a></li>
+<li class="toc-h3"><a href="#d">D. 投资人视角</a></li>
+</ul>
+</aside>
+</div>
+
+<footer class="footer">
+  AI 小游戏与 Playable 体验赛道研究 · 2026-04 · 由 Claude 研究团队生成 · <a href="../../sources.html">来源索引</a>
+</footer>
+
+<script src="../../assets/script.js" defer></script>
+</body>
+</html>
