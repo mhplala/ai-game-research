@@ -185,17 +185,18 @@
   },
   "active": "c0cfd64a24ec8c1c",
   "lastOpenFiles": [
+    "docs/downloads.html",
+    "docs/index.html",
+    "docs/modules/06-机会地图整合/风险警示.html",
+    "docs/modules/06-机会地图整合/机会地图.html",
+    "docs/modules/06-机会地图整合/index.html",
+    "docs/assets/script.js",
+    "docs/assets/style.css",
     "项目认知与市场认知.md",
     "docs/校验点5-最终简报.html",
     "docs/assets/search-index.json",
-    "docs/downloads.html",
-    "docs/index.html",
     "docs/modules/04-玩家行为与留存心理/index.html",
     "docs/modules/04-玩家行为与留存心理/4.4-退坑模式与长期留存难题.html",
-    "docs/modules/04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.html",
-    "docs/modules/04-玩家行为与留存心理/4.2-留存曲线特征.html",
-    "docs/modules/04-玩家行为与留存心理/4.1-付费心理与Token经济学.html",
-    "docs/modules/06-机会地图整合/风险警示.html",
     "质量评审报告.md",
     "校验点5-最终简报.md",
     "06-机会地图整合/风险警示.md",
@@ -219,7 +220,6 @@
     "04-玩家行为与留存心理/4.3-情感依恋与AI_NPC.md",
     "04-玩家行为与留存心理/4.2-留存曲线特征.md",
     "04-玩家行为与留存心理/4.1-付费心理与Token经济学.md",
-    "03-技术栈与可行性GAP/3.1-现有技术栈能力.md",
-    "02-产品与玩法前沿/2.2-美国市场.md"
+    "03-技术栈与可行性GAP/3.1-现有技术栈能力.md"
   ]
 }
